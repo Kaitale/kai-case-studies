@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.png binary
+# data files stay byte-for-byte as published (checksums in DATA.md)
+*/data/** -text

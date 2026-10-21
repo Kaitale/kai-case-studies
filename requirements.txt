@@ -1,0 +1,14 @@
+# Python 3.11+. MODFLOW 6 itself: run `get-modflow :flopy --subset mf6` once after installing.
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+matplotlib>=3.8
+jinja2>=3.1
+ttim>=0.8
+flopy>=3.9
+pastas>=2.0
+tqdm>=4            # used by pastas
+swmm-toolkit>=0.15
+jupyterlab>=4
+nbclient>=0.10
+ipykernel>=6
