@@ -1,0 +1,31 @@
+name: Run the notebooks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * 1"   # every Monday, 06:17 Kampala
+
+permissions:
+  contents: read
+
+jobs:
+  notebooks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: MODFLOW 6
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: get-modflow :flopy --subset mf6
+      - name: Check the data checksums
+        run: python .github/check_data.py
+      - name: Run every notebook
+        run: python .github/run_notebooks.py
