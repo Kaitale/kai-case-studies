@@ -4,7 +4,7 @@
 treatment plant, it is tested on real, openly licensed data. This repository publishes those tests as
 step-by-step notebooks, with their data, so anyone can rerun them and check the results.
 
-[**KAI Water & Energy**](https://kai-water.charkaks0.workers.dev/) · [**Explore the cases on the KAI platform**](https://hydro-saas.charkaks0.workers.dev/explore) · [**Start free**](https://hydro-saas.charkaks0.workers.dev/portal?plan=hydrosaas:free) · [Contact](https://kai-water.charkaks0.workers.dev/contact.html)
+[**KAI Water & Energy**](https://kai-water.charkaks0.workers.dev/) · [**KAI Academy: all tutorials**](https://kai-water.charkaks0.workers.dev/academy.html) · [**Explore the cases on the KAI platform**](https://hydro-saas.charkaks0.workers.dev/explore) · [**Start free**](https://hydro-saas.charkaks0.workers.dev/portal?plan=hydrosaas:free) · [Contact](https://kai-water.charkaks0.workers.dev/contact.html)
 
 | Case | Data from | Question | Notebooks | Key result | On the platform |
 |---|---|---|---|---|---|
@@ -47,6 +47,12 @@ jupyter lab
 Python 3.11 or newer. Open a notebook from its own folder (the paths are relative to it). Each one runs in one
 or two minutes on a laptop. A GitHub Actions workflow checks the data checksums and reruns every notebook each week
 and on every change; the notebooks stop with an error if their key numbers drift from the published results.
+
+## Part of KAI Academy
+
+These notebooks are the free tutorials of [KAI Academy](https://kai-water.charkaks0.workers.dev/academy.html), grouped there into
+learning tracks with their level and running time. New tutorials are added here as each KAI product launches; KAI Academy
+also runs hands-on courses on your own data.
 
 ## Using KAI on your own data
 
