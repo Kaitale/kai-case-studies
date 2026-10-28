@@ -60,4 +60,4 @@ and stops if a file's SHA-256 differs from the one listed in [DATA.md](../DATA.m
   the heterogeneity that controls vertical flow and pressure.
 
 *References:* Amaefule, J.O. et al. (1993) SPE 26436 · Nordahl, K. and Ringrose, P.S. (2008) Mathematical
-Geosciences 40, 753–771 · Ringrose, P.S. et al. (2003) Petroleum Geoscience 9, 13–23.
+Geosciences 40, 753–771 · Ringrose, P.S., Nordahl, K. and Wen, R. (2005) Petroleum Geoscience 11, 29–36.
