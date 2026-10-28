@@ -10,13 +10,17 @@ the Groningen gas field and cored over 199.8 m. Its core analysis and logs are p
 |---|---|---|
 | [1 · Core QC and rock typing](01_core_qc_rock_typing.ipynb) | Do a few rock types predict permeability better than one porosity–permeability trend? | **96 %** of 409 plugs within a factor of 3 with three FZI rock types, against **77 %** with one trend |
 | [2 · Permeability from logs, tested blind](02_permeability_from_logs_blind_test.ipynb) | Without core, how well do logs predict permeability? | With each core hidden in turn: **60 %** within a factor of 3, **93 %** within a factor of 10; rock types predicted from logs do not help at log resolution. A permeability log with P10–P90, marked where the rock is unlike anything cored |
-| [3 · Bedding, REV and upscaling](03_bedding_rev_upscaling.ipynb) | At what scale does permeability become representative, and how wrong are plugs for vertical flow? | Plugs show kv/kh ≈ **1**; bedding models calibrated on the same plugs give **0.001–0.06** at 1 m. A sandstone plug can overstate bed-scale vertical permeability by up to **3,000 times** |
+| [3 · Bedding, REV and upscaling](03_bedding_rev_upscaling.ipynb) | At what scale does permeability become representative, and how wrong are plugs for vertical flow? | Plugs show kv/kh ≈ **1**; ripple-bedding models calibrated on the same plugs give **0.003–0.05** at 1 m for 20–40 % mud. Plugs cut in sandstone, as a laboratory cuts them, overstate bed-scale vertical permeability **20 to 1,200 times** |
 
 ![Rock types on the porosity–permeability plot](figures/zrp_rock_types.png)
 
 ![Permeability from logs with its uncertainty](figures/zrp_k_log.png)
 
+![Ripple-laminated bedding templates calibrated on the plugs](figures/bedding_blocks.png)
+
 ![REV and upscaling](figures/rev_upscaling.png)
+
+**Try it in the browser:** the [KAI Plug-to-Block Lab](https://kai-water.charkaks0.workers.dev/plug-to-block-lab) runs the same bedding generator and flow solver in a web page. It drills virtual plugs and whole cores, and shows which sample size gives a vertical permeability you can trust.
 
 ## Data
 
