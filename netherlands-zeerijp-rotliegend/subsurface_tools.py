@@ -8,6 +8,8 @@ Small, dependency-light functions used by the Zeerijp-3A notebooks:
 * bedding()             synthetic heterolithic bedding model (sand/mud) with anisotropic lenses
 * keff()                flow-based effective permeability of a 2D grid (two-point flux, no-flow sides)
 * rev_scan()            effective kx, kz for windows of growing size: the representative elementary volume
+* ripple_bedding()      SBED-style ripple-laminated bedding (flaser, wavy, lenticular) in 2D or 3D
+* bedding_figure()      clean 3D block renderings of bedding templates
 
 Code: MIT licence, KAI Water & Energy, 2026.
 """
@@ -143,3 +145,70 @@ def rev_scan(k, sizes):
         a, c = (nz - s) // 2, (nx - s) // 2; sub = k[a:a + s, c:c + s]
         out.append((s, keff(sub, "x"), keff(sub, "z")))
     return pd.DataFrame(out, columns=["cells", "kx", "kz"])
+
+
+# --- ripple-laminated bedding templates (SBED-style) and 3D block rendering --------------------
+def ripple_bedding(nx, ny, nz, mud, cell=0.005, T=0.04, lam=0.09, A=0.014, seed=0):
+    """Ripple-laminated heterolithic bedding (SBED-style template).
+    Returns mud (bool, nz x ny x nx; True = mud) and lam (0/1 foreset lamina parity in sand)."""
+    r = np.random.default_rng(seed)
+    x = np.arange(nx) * cell; y = np.arange(ny) * cell; z = np.arange(nz) * cell
+    Z, Y, X = np.meshgrid(z, y, x, indexing="ij")
+    nsets = int(np.ceil(nz * cell / T)) + 2
+    shifts = r.uniform(0, lam, nsets); wob = r.uniform(0.15, 0.3, nsets); ph = r.uniform(0, 2*np.pi, nsets)
+    noise = gaussian_filter(r.standard_normal((nsets, ny, nx)), (0, 6, 6)); noise /= noise.std()
+    mudv = np.zeros(Z.shape, bool); lamv = np.zeros(Z.shape, float); best = np.full(Z.shape, -1.0)
+    for k in range(-1, nsets - 1):
+        s = X[0] - shifts[k] + 0.012 * np.sin(2*np.pi*Y[0]/wob[k] + ph[k])
+        f = (s / lam) % 1.0
+        prof = np.where(f < 0.72, f / 0.72, (1 - f) / 0.28)            # stoss long, lee short
+        base = k * T + A * prof                                         # undulating set base
+        h = Z - base[None]
+        inset = (h >= 0) & (h < T + A)
+        newer = inset & (base[None] > best)
+        best = np.where(newer, base[None], best)
+        d = T * mud * 2.2 * (1.15 - prof) * (1 + 0.35 * noise[k])      # drape thicker in troughs
+        m = h < d[None]
+        mudv = np.where(newer, m, mudv)
+        q = 0.5 + 0.5 * np.sin(2 * np.pi * (s[None] - h * 1.6) / 0.0075)  # dipping foresets, smooth tone
+        lamv = np.where(newer, q, lamv)
+    return mudv, lamv
+
+
+def calibrated_bedding(nx, ny, nz, target, seed=0, **kw):
+    """Bedding whose mud fraction matches `target` (bisection on the drape parameter)."""
+    lo, hi = 0.0, 1.5
+    for _ in range(18):
+        mid = (lo + hi) / 2
+        m, l = ripple_bedding(nx, ny, nz, mid, seed=seed, **kw)
+        lo, hi = (mid, hi) if m.mean() < target else (lo, mid)
+    return ripple_bedding(nx, ny, nz, (lo + hi) / 2, seed=seed, **kw)
+
+
+import matplotlib.pyplot as plt
+S1=np.array([0.95,0.83,0.55]); S2=np.array([0.82,0.66,0.38]); M1=np.array([0.40,0.30,0.27]); M2=np.array([0.30,0.22,0.20])
+def _rgb(mud,lam):
+    t=lam[...,None]; sand=S2+(S1-S2)*t; m=M2+(M1-M2)*(0.5+0.5*t)
+    return np.where(mud[...,None],m,sand)
+def draw_block(ax,mud,lam,cell):
+    nz,ny,nx=mud.shape; C=np.clip(_rgb(mud,lam),0,1)
+    X=np.arange(nx+1)*cell; Y=np.arange(ny+1)*cell; Zs=np.arange(nz+1)*cell
+    kw=dict(shade=False,rstride=1,cstride=1,linewidth=0,antialiased=False)
+    xx,zz=np.meshgrid(X,Zs); ax.plot_surface(xx,np.zeros_like(xx),zz,facecolors=C[:,0,:]*0.98,**kw)
+    yy,zz=np.meshgrid(Y,Zs); ax.plot_surface(np.full_like(yy,X[-1]),yy,zz,facecolors=C[:,:,-1]*0.80,**kw)
+    xx,yy=np.meshgrid(X,Y); ax.plot_surface(xx,yy,np.full_like(xx,Zs[-1]),facecolors=np.clip(C[-1]*1.06,0,1),**kw)
+    x1,y1,z1=X[-1],Y[-1],Zs[-1]
+    for a,b in [((0,0,0),(x1,0,0)),((x1,0,0),(x1,y1,0)),((0,0,0),(0,0,z1)),((x1,0,0),(x1,0,z1)),((x1,y1,0),(x1,y1,z1)),
+                ((0,0,z1),(x1,0,z1)),((x1,0,z1),(x1,y1,z1)),((x1,y1,z1),(0,y1,z1)),((0,y1,z1),(0,0,z1))]:
+        ax.plot(*zip(a,b),color="#3a3a3a",lw=0.8)
+    ax.set_box_aspect((x1,y1,z1)); ax.view_init(elev=24,azim=-58); ax.set_axis_off()
+    ax.set_xlim(0,x1); ax.set_ylim(0,y1); ax.set_zlim(0,z1)
+def bedding_figure(path, cases=((0.12,"Flaser"),(0.35,"Wavy"),(0.62,"Lenticular")), cell=0.0025, seed=4, kvals=None):
+    fig=plt.figure(figsize=(13.5,4.8),facecolor="white")
+    for i,(m,name) in enumerate(cases):
+        mud,lam=calibrated_bedding(220,130,110,m,seed=seed,cell=cell)
+        ax=fig.add_subplot(1,3,i+1,projection="3d"); draw_block(ax,mud,lam,cell)
+        ax.set_title(f"{name} bedding\nmud {mud.mean():.0%}",fontsize=12,pad=-4,color="#222")
+        if kvals: ax.text2D(0.5,0.02,kvals[i],transform=ax.transAxes,ha="center",fontsize=10,color="#333")
+    fig.text(0.5,0.015,"Synthetic bedding templates, 55 cm x 32 cm x 27 cm, 2.5 mm cells · sand in yellow (foreset laminae shaded), claystone in brown",ha="center",fontsize=9,color="#666")
+    fig.subplots_adjust(left=0,right=1,top=0.9,bottom=0.05,wspace=-0.02); fig.savefig(path,dpi=140)

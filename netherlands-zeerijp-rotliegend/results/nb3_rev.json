@@ -3,60 +3,67 @@
  "k_mud_mD": 0.005,
  "cell_m": 0.005,
  "realisations": 10,
+ "template": "ripple-laminated (flaser-wavy-lenticular)",
  "summary": [
   {
    "mud fraction": 0.1,
-   "kx 1 m (mD)": 41.15,
-   "kz 1 m (mD)": 2.5764,
-   "kv/kh 1 m": 0.06261,
-   "REV kx (m)": 0.26,
-   "REV kz (m)": NaN,
-   "plug kz P90 / bed kz": 18.0
+   "kx 1 m (mD)": 39.32,
+   "kz 1 m (mD)": 18.0561,
+   "kv/kh 1 m": 0.45925,
+   "REV kx (m)": 0.04,
+   "REV kz (m)": 0.085,
+   "random plug kz P90 / bed kz": 2.1,
+   "lab plug kz median / bed kz": 2.2
   },
   {
    "mud fraction": 0.2,
-   "kx 1 m (mD)": 35.16,
-   "kz 1 m (mD)": 0.0804,
-   "kv/kh 1 m": 0.00229,
-   "REV kx (m)": 0.585,
-   "REV kz (m)": NaN,
-   "plug kz P90 / bed kz": 577.5
+   "kx 1 m (mD)": 34.15,
+   "kz 1 m (mD)": 1.7641,
+   "kv/kh 1 m": 0.05166,
+   "REV kx (m)": 0.05,
+   "REV kz (m)": 0.78,
+   "random plug kz P90 / bed kz": 13.1,
+   "lab plug kz median / bed kz": 22.4
   },
   {
    "mud fraction": 0.3,
-   "kx 1 m (mD)": 29.56,
-   "kz 1 m (mD)": 0.0282,
-   "kv/kh 1 m": 0.00095,
-   "REV kx (m)": 0.585,
-   "REV kz (m)": 0.34,
-   "plug kz P90 / bed kz": 1647.7
+   "kx 1 m (mD)": 27.24,
+   "kz 1 m (mD)": 0.1158,
+   "kv/kh 1 m": 0.00425,
+   "REV kx (m)": 0.225,
+   "REV kz (m)": 0.61,
+   "random plug kz P90 / bed kz": 27.6,
+   "lab plug kz median / bed kz": 321.3
   },
   {
    "mud fraction": 0.4,
-   "kx 1 m (mD)": 24.28,
-   "kz 1 m (mD)": 0.0192,
-   "kv/kh 1 m": 0.00079,
+   "kx 1 m (mD)": 11.79,
+   "kz 1 m (mD)": 0.0329,
+   "kv/kh 1 m": 0.00279,
    "REV kx (m)": NaN,
-   "REV kz (m)": 0.585,
-   "plug kz P90 / bed kz": 2421.6
+   "REV kz (m)": 0.17500000000000002,
+   "random plug kz P90 / bed kz": 351.9,
+   "lab plug kz median / bed kz": 954.5
   },
   {
    "mud fraction": 0.5,
-   "kx 1 m (mD)": 16.82,
-   "kz 1 m (mD)": 0.0139,
-   "kv/kh 1 m": 0.00082,
+   "kx 1 m (mD)": 1.31,
+   "kz 1 m (mD)": 0.0176,
+   "kv/kh 1 m": 0.01344,
    "REV kx (m)": NaN,
-   "REV kz (m)": 0.115,
-   "plug kz P90 / bed kz": 3348.2
+   "REV kz (m)": 0.04,
+   "random plug kz P90 / bed kz": 1.0,
+   "lab plug kz median / bed kz": 1224.6
   },
   {
    "mud fraction": 0.6,
-   "kx 1 m (mD)": 12.06,
-   "kz 1 m (mD)": 0.01,
-   "kv/kh 1 m": 0.00083,
+   "kx 1 m (mD)": 0.11,
+   "kz 1 m (mD)": 0.0129,
+   "kv/kh 1 m": 0.11442,
    "REV kx (m)": NaN,
-   "REV kz (m)": 0.2,
-   "plug kz P90 / bed kz": 464.9
+   "REV kz (m)": 0.085,
+   "random plug kz P90 / bed kz": 1.5,
+   "lab plug kz median / bed kz": 3.1
   }
  ]
 }
