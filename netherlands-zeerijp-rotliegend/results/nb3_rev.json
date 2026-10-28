@@ -1,0 +1,62 @@
+{
+ "k_sand_mD": 46.44,
+ "k_mud_mD": 0.005,
+ "cell_m": 0.005,
+ "realisations": 10,
+ "summary": [
+  {
+   "mud fraction": 0.1,
+   "kx 1 m (mD)": 41.15,
+   "kz 1 m (mD)": 2.5764,
+   "kv/kh 1 m": 0.06261,
+   "REV kx (m)": 0.26,
+   "REV kz (m)": NaN,
+   "plug kz P90 / bed kz": 18.0
+  },
+  {
+   "mud fraction": 0.2,
+   "kx 1 m (mD)": 35.16,
+   "kz 1 m (mD)": 0.0804,
+   "kv/kh 1 m": 0.00229,
+   "REV kx (m)": 0.585,
+   "REV kz (m)": NaN,
+   "plug kz P90 / bed kz": 577.5
+  },
+  {
+   "mud fraction": 0.3,
+   "kx 1 m (mD)": 29.56,
+   "kz 1 m (mD)": 0.0282,
+   "kv/kh 1 m": 0.00095,
+   "REV kx (m)": 0.585,
+   "REV kz (m)": 0.34,
+   "plug kz P90 / bed kz": 1647.7
+  },
+  {
+   "mud fraction": 0.4,
+   "kx 1 m (mD)": 24.28,
+   "kz 1 m (mD)": 0.0192,
+   "kv/kh 1 m": 0.00079,
+   "REV kx (m)": NaN,
+   "REV kz (m)": 0.585,
+   "plug kz P90 / bed kz": 2421.6
+  },
+  {
+   "mud fraction": 0.5,
+   "kx 1 m (mD)": 16.82,
+   "kz 1 m (mD)": 0.0139,
+   "kv/kh 1 m": 0.00082,
+   "REV kx (m)": NaN,
+   "REV kz (m)": 0.115,
+   "plug kz P90 / bed kz": 3348.2
+  },
+  {
+   "mud fraction": 0.6,
+   "kx 1 m (mD)": 12.06,
+   "kz 1 m (mD)": 0.01,
+   "kv/kh 1 m": 0.00083,
+   "REV kx (m)": NaN,
+   "REV kz (m)": 0.2,
+   "plug kz P90 / bed kz": 464.9
+  }
+ ]
+}

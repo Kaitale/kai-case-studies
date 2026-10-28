@@ -1,0 +1,35 @@
+{
+ "qc": {
+  "horizontal plugs with k": 423,
+  "damaged (set aside)": 4,
+  "below 0.01 mD detection (all plugs)": 17,
+  "used": 409
+ },
+ "rock_types": {
+  "1": {
+   "plugs": 27,
+   "fzi": 0.489
+  },
+  "2": {
+   "plugs": 169,
+   "fzi": 1.241
+  },
+  "3": {
+   "plugs": 213,
+   "fzi": 2.757
+  }
+ },
+ "bic_choice": 2,
+ "core_level": {
+  "one trend: within x3": 0.768,
+  "three rock types: within x3": 0.956,
+  "one trend: rmse log10 k": 0.451,
+  "three rock types: rmse log10 k": 0.292
+ },
+ "plug_kv_kh": {
+  "pairs within 0.3 m": 78,
+  "P10": 0.163,
+  "P50": 0.954,
+  "P90": 4.12
+ }
+}
