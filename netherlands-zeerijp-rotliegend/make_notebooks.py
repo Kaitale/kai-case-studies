@@ -239,10 +239,10 @@ mid = summary[summary["mud fraction"].between(0.2, 0.4)]
 assert mid["kv/kh 1 m"].max() < 0.2 and mid["lab plug kz median / bed kz"].min() > 10"""),
 ("md", """## Result and limits
 * Horizontal permeability settles within decimetres in sand-rich bedding and stays close to the arithmetic average; it needs longer windows as mud increases.
-* Vertical permeability is the problem. A plug cut where a laboratory cuts it, in competent sandstone, overstates bed-scale kz by one to three orders of magnitude in wavy bedding (column `lab plug kz median / bed kz`); random plugs scatter both ways (`random plug kz P90 / bed kz`), and bed-scale kv/kh falls far below the plug value of about 1 (notebook 1). kz moves from the geometric towards the harmonic average as mud increases: the flow upscaling regimes of Ringrose et al. (2003).
+* Vertical permeability is the problem. A plug cut where a laboratory cuts it, in competent sandstone, overstates bed-scale kz by one to three orders of magnitude in wavy bedding (column `lab plug kz median / bed kz`); random plugs scatter both ways (`random plug kz P90 / bed kz`), and bed-scale kv/kh falls far below the plug value of about 1 (notebook 1). kz moves from the geometric towards the harmonic average as mud increases: the flow upscaling regimes of Ringrose et al. (2005).
 * Limits: 2D sections for the flow, one ripple geometry, two components. Real templates come from the core description of each facies; the workflow, not these exact numbers, is what transfers to a client's core.
 
-*References:* Nordahl, K. and Ringrose, P.S. (2008) Math. Geosci. 40, 753-771 · Ringrose, P.S. et al. (2003) Petroleum Geoscience 9, 13-23."""),
+*References:* Nordahl, K. and Ringrose, P.S. (2008) Math. Geosci. 40, 753-771 · Ringrose, P.S., Nordahl, K. and Wen, R. (2005) Petroleum Geoscience 11, 29–36."""),
 ])
 for name, n in [("01_core_qc_rock_typing.ipynb", nb1), ("02_permeability_from_logs_blind_test.ipynb", nb2), ("03_bedding_rev_upscaling.ipynb", nb3)]:
     nbf.write(n, name)
