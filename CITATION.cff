@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "KAI case studies on real data: boreholes, sewer source tracing and an effluent soft sensor"
+title: "KAI case studies on real data: boreholes, sewer source tracing, an effluent soft sensor and Rotliegend reservoir core"
 message: "If you use these notebooks or results, please cite them as below, and cite the original data authors listed in DATA.md."
 type: software
 authors:
@@ -22,3 +22,8 @@ keywords:
   - source tracing
   - soft sensor
   - wastewater
+  - rock typing
+  - permeability
+  - upscaling
+  - representative elementary volume
+  - Rotliegend

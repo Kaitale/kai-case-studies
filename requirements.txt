@@ -12,3 +12,6 @@ swmm-toolkit>=0.15
 jupyterlab>=4
 nbclient>=0.10
 ipykernel>=6
+lasio>=0.31        # LAS logs (subsurface case)
+scikit-learn>=1.4  # rock types and log models (subsurface case)
+openpyxl>=3.1      # core analysis workbook (subsurface case)

@@ -1,7 +1,7 @@
 # KAI case studies on real data
 
-**Water and energy models, tested in the open.** Before a KAI model runs on a client's borehole, sewer or
-treatment plant, it is tested on real, openly licensed data. This repository publishes those tests as
+**Water and energy models, tested in the open.** Before a KAI model runs on a client's borehole, sewer,
+treatment plant or reservoir core, it is tested on real, openly licensed data. This repository publishes those tests as
 step-by-step notebooks, with their data, so anyone can rerun them and check the results.
 
 [**KAI Water & Energy**](https://kai-water.charkaks0.workers.dev/) · [**KAI Academy: all tutorials**](https://kai-water.charkaks0.workers.dev/academy.html) · [**Explore the cases on the KAI platform**](https://hydro-saas.charkaks0.workers.dev/explore) · [**Start free**](https://hydro-saas.charkaks0.workers.dev/portal?plan=hydrosaas:free) · [Contact](https://kai-water.charkaks0.workers.dev/contact.html)
@@ -11,6 +11,7 @@ step-by-step notebooks, with their data, so anyone can rerun them and check the 
 | [Boreholes: pumping tests, a borehole model and 55 years of levels](netherlands-boreholes/) | Netherlands | What is under the borehole, how far will it draw down, and is it the pumping or the weather? | [1 · pumping tests (TTim)](netherlands-boreholes/01_pumping_tests_ttim.ipynb) · [2 · MODFLOW 6](netherlands-boreholes/02_borehole_model_modflow6.ipynb) · [3 · Pastas](netherlands-boreholes/03_pumping_or_weather_pastas.ipynb) | Trained on 1960–1999, levels for 2000–2015 predicted to **0.22 m** RMSE of monthly means (weather alone: 0.77 m) | [Boreholes case](https://hydro-saas.charkaks0.workers.dev/demo/reference/boreholes) |
 | [Pollution source tracing in a real sewer](denmark-bellinge-sewer/) | Denmark | Which manhole did the pollution come from? | [Tracer tests on the Bellinge network (EPA SWMM)](denmark-bellinge-sewer/01_source_tracing_bellinge.ipynb) | Right manhole named first in **58 %** of 53 blind releases with 5 sensors (random pick: 3 %) | [Bellinge case](https://hydro-saas.charkaks0.workers.dev/demo/reference/bellinge) |
 | [Effluent BOD soft sensor](treatment-plant-soft-sensor/) | An urban treatment plant (UCI open data) | Can outlet BOD5 be known on the day instead of five days later? | [Soft sensor from a turbidity/TSS probe](treatment-plant-soft-sensor/01_bod_soft_sensor.ipynb) | Typical error **4.4 mg/L**, against 7.4 for the last lab result and 5.5 for the typical value; a 3-day failure flagged on the day, though its size was underestimated | [Soft-sensor case](https://hydro-saas.charkaks0.workers.dev/demo/reference/soft-sensor) |
+| [Groningen Rotliegend core: rock typing, permeability from logs, REV and upscaling](netherlands-zeerijp-rotliegend/) | Netherlands (NLOG, well Zeerijp-3A) | Can rock types predict permeability, how well do logs do without core, and at what scale is permeability representative? | [1 · core QC and rock typing](netherlands-zeerijp-rotliegend/01_core_qc_rock_typing.ipynb) · [2 · permeability from logs, blind](netherlands-zeerijp-rotliegend/02_permeability_from_logs_blind_test.ipynb) · [3 · bedding, REV, upscaling](netherlands-zeerijp-rotliegend/03_bedding_rev_upscaling.ipynb) | Three rock types put **96 %** of 409 plugs within a factor of 3 (one trend: 77 %); logs alone, blind: **60 %**. Plugs show kv/kh ≈ 1, bed scale **0.001–0.06** | [KAI-Subsurface](https://kai-water.charkaks0.workers.dev/kai-subsurface.html) |
 
 ![Fitted until 1999, predicted after: the Dutch groundwater record](docs/img/nl-blind-test.png)
 
@@ -29,7 +30,7 @@ Every case folder holds:
 The notebooks use open tools only: [TTim](https://github.com/mbakker7/ttim), [MODFLOW 6](https://github.com/MODFLOW-ORG/modflow6)
 through [FloPy](https://github.com/modflowpy/flopy), [Pastas](https://github.com/pastas/pastas) and
 [EPA SWMM 5](https://github.com/USEPA/Stormwater-Management-Model) through
-[swmm-toolkit](https://github.com/pyswmm/swmm-python). Where a result depends on KAI's own engine (the
+[swmm-toolkit](https://github.com/pyswmm/swmm-python), and [lasio](https://github.com/kinverarity1/lasio), scikit-learn and SciPy for the subsurface case. Where a result depends on KAI's own engine (the
 probabilistic source search and sensor placement in the Bellinge case), the notebook shows the engine's
 published results and says so; the engine itself is not part of this repository.
 
@@ -62,13 +63,15 @@ These cases are the public test bench. On the platform, the same models run on a
   pollutant loads and source tracing, borehole drawdown, effluent compliance (NEMA 2020).
 * [**GroundWater Analyst**](https://kai-water.charkaks0.workers.dev/groundwater-analyst.html): 3D groundwater models from borehole records.
 * [**KAI-Hydro**](https://kai-water.charkaks0.workers.dev/kai-hydro.html): flood and drought forecasts that end in a plain Normal, Watch or Warning.
+* [**KAI-Subsurface**](https://kai-water.charkaks0.workers.dev/kai-subsurface.html): core and log interpretation, rock typing and permeability prediction.
+* [**KAI-GeoEnergy**](https://kai-water.charkaks0.workers.dev/kai-geoenergy.html): geothermal, CO₂ and hydrogen storage models that keep the heterogeneity that matters.
 * [All products and pricing](https://kai-water.charkaks0.workers.dev/pricing.html), each with a free tier.
 
 ## Licences and citation
 
 * **Code** in the notebooks: [MIT](LICENSE).
 * **Text, figures and KAI result files**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), © 2026 KAI Water & Energy.
-* **Data** keep their own licences (MIT, BSD-2-Clause and CC BY 4.0); sources, licences and checksums are listed in
+* **Data** keep their own licences (MIT, BSD-2-Clause and CC BY 4.0; the Dutch NLOG files are fetched from NLOG, not copied here); sources, licences and checksums are listed in
   [DATA.md](DATA.md), and the upstream licence texts are in [LICENSES/](LICENSES/).
   Please cite the original data authors when you use the data.
 

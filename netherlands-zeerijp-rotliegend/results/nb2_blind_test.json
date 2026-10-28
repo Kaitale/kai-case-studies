@@ -1,0 +1,23 @@
+{
+ "depth_shift_m": 0.0,
+ "core_log_phi_corr": 0.7,
+ "blind_test": {
+  "A_trend": {
+   "within x3": 0.565,
+   "within x10": 0.922,
+   "rmse log10 k": 0.614
+  },
+  "B_rocktypes": {
+   "within x3": 0.548,
+   "within x10": 0.844,
+   "rmse log10 k": 0.724
+  },
+  "C_forest": {
+   "within x3": 0.601,
+   "within x10": 0.927,
+   "rmse log10 k": 0.595
+  },
+  "rock type from logs: accuracy": 0.587
+ },
+ "plugs": 409
+}

@@ -72,3 +72,15 @@ Not used: the Bellinge rain-gauge records, which are licensed for non-commercial
 
 Results produced by the KAI engine (`kai-engine reference …`, October 2026) and published on the KAI platform.
 © 2026 KAI Water & Energy, licence **CC BY 4.0**.
+
+## Netherlands: Zeerijp-3A, Groningen Rotliegend (`netherlands-zeerijp-rotliegend/`)
+
+These files are **not vendored**. They are public on [NLOG](https://www.nlog.nl), the Dutch subsurface portal, under
+the Mining Act and free to download; the notebooks fetch them on first run into `nlog_cache/` and stop if a SHA-256
+differs from the table. Borehole ZEERIJP-03-SIDETRACK1, operator NAM. Please cite *NAM / NLOG* when you reuse them.
+
+| File | NLOG id | SHA-256 |
+|---|---|---|
+| `ZRP-3A_final_core_analysis.xlsx` (Final Core Analysis data ZRP-3A, 28 Jul 2015) | document 3484333644 | `f362cd8b114573bb6ec6462755190e06b7884ea339330e94df4e9fc69e026049` |
+| `mdn_mpd_mai_18aug15_LF1_FRM1.las` (density, neutron, induction, 3490–3872 m) | log document 2085821327 | `66941d92fd7461f49e457029aade0c10b112be5f6419dc3aee636d6f60965ba5` |
+| `cxd_18aug15_LF1_FRM1.las` (sonic, 3480–3835 m) | log document 2085820326 | `0250708406f927d299beb03a1c86a5fc9b496231d9483c9c14c4a273e7668794` |
