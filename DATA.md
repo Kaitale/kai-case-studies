@@ -84,3 +84,33 @@ differs from the table. Borehole ZEERIJP-03-SIDETRACK1, operator NAM. Please cit
 | `ZRP-3A_final_core_analysis.xlsx` (Final Core Analysis data ZRP-3A, 28 Jul 2015) | document 3484333644 | `f362cd8b114573bb6ec6462755190e06b7884ea339330e94df4e9fc69e026049` |
 | `mdn_mpd_mai_18aug15_LF1_FRM1.las` (density, neutron, induction, 3490–3872 m) | log document 2085821327 | `66941d92fd7461f49e457029aade0c10b112be5f6419dc3aee636d6f60965ba5` |
 | `cxd_18aug15_LF1_FRM1.las` (sonic, 3480–3835 m) | log document 2085820326 | `0250708406f927d299beb03a1c86a5fc9b496231d9483c9c14c4a273e7668794` |
+
+## Spain: Guadalquivir flood triggers (`spain-guadalquivir-flood-triggers/`)
+
+### Derived values in this repository (`data/`)
+
+Each water year's largest daily flow at 14 Guadalquivir gauges and at the matched GloFAS river cell, and the gauge
+list. Derived by `rebuild_data.py` from the two sources below. Licence: **CC BY 4.0**, © 2026 KAI Water & Energy, with
+the source credits below.
+
+| File | SHA-256 |
+|---|---|
+| `annual_maxima.csv` | `4a42889d01e6ed7281eb1ef5388dd32814be5e1a72d0f4ab1bf2d48ec5636011` |
+| `gauges.csv` | `10392dea0bf872a2261e910e1b2b0175e69a7bb741e222092fd93578aae14402` |
+
+### Sources (not vendored)
+
+* **CEDEX, *Anuario de Aforos 2021-2022*, Guadalquivir basin** (Spain's Ministry for the Ecological Transition and the
+  Demographic Challenge, MITECO), https://ceh-flumen64.cedex.es/anuarioaforos/. The daily files are **not copied
+  here**: `rebuild_data.py` downloads them on your own connection (CEDEX refuses some cloud machines) and stops if a
+  SHA-256 differs from the table. Please cite *Fuente: CEDEX, Anuario de Aforos 2021-2022 (MITECO)*.
+
+| File | SHA-256 |
+|---|---|
+| `estaf.csv` (stations: area, position) | `862e812acb71efb1decc1a4ac3b2c5bdd8f66e9a6f8458a9d7f00156cef42ac8` |
+| `afliq.csv` (daily mean flow) | `a32995d11447a3b57d642772a14dc046cb5a397ddc5200813d76d39d77ed1ed3` |
+
+* **GloFAS reanalysis**, LISFLOOD, consolidated, version 4.0, Copernicus Emergency Management Service, through the
+  Open-Meteo flood API (https://open-meteo.com/en/docs/flood-api; data CC BY 4.0, free API for non-commercial use).
+  *Contains modified Copernicus Emergency Management Service information 2026.* GloFAS data are provided for
+  information purposes only and are not a flood warning.

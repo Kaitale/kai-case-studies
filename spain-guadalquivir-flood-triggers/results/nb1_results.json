@@ -1,0 +1,27 @@
+{
+ "gauges": 14,
+ "median_10yr_ratio": 0.22,
+ "median_rank_correlation": 0.421,
+ "pooled_1in5": {
+  "return period": {
+   "caught": 30,
+   "missed": 30,
+   "false_payouts": 27
+  },
+  "fixed m\u00b3/s": {
+   "caught": 6,
+   "missed": 54,
+   "false_payouts": 10
+  }
+ },
+ "model": {
+  "source": "Open-Meteo Flood API",
+  "dataset": "cems-glofas-historical",
+  "version": "version_4_0",
+  "product": "consolidated",
+  "window": [
+   "1984-10-01",
+   "2022-09-30"
+  ]
+ }
+}
