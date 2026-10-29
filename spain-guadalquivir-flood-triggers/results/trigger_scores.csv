@@ -1,0 +1,9 @@
+trigger,written as,caught,missed,false_payouts,flood_years,share caught
+1 in 2,return period,93,50,50,143,0.65
+1 in 2,fixed m³/s,33,110,20,143,0.23
+1 in 5,return period,30,30,27,60,0.5
+1 in 5,fixed m³/s,6,54,10,60,0.1
+1 in 10,return period,13,23,19,36,0.36
+1 in 10,fixed m³/s,2,34,4,36,0.06
+1 in 25,return period,3,8,15,11,0.27
+1 in 25,fixed m³/s,0,11,3,11,0.0

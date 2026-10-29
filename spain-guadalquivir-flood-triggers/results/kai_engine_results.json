@@ -1,0 +1,3113 @@
+{
+ "case": "guadalquivir",
+ "question": "Can a global flood model (GloFAS) set a flood trigger where there is no gauge?",
+ "data": {
+  "observed": {
+   "source": "CEDEX Anuario de Aforos",
+   "edition": "2021-2022",
+   "files": {
+    "estaf.csv": "862e812acb71efb1decc1a4ac3b2c5bdd8f66e9a6f8458a9d7f00156cef42ac8",
+    "afliq.csv": "a32995d11447a3b57d642772a14dc046cb5a397ddc5200813d76d39d77ed1ed3"
+   },
+   "url": "https://ceh-flumen64.cedex.es/anuarioaforos/anuario-2021-2022/GUADALQUIVIR%5C"
+  },
+  "model": {
+   "source": "Open-Meteo Flood API",
+   "dataset": "cems-glofas-historical",
+   "version": "version_4_0",
+   "product": "consolidated",
+   "window": [
+    "1984-10-01",
+    "2022-09-30"
+   ]
+  },
+  "attribution": [
+   "Fuente: CEDEX, Anuario de Aforos 2021-2022 (Ministerio para la Transicion Ecologica y el Reto Demografico).",
+   "Contains modified Copernicus Emergency Management Service information 2026 (GloFAS v4.0) via Open-Meteo (CC BY 4.0)."
+  ]
+ },
+ "method": {
+  "selection": "catchment >= 500 km2 and >= 25 years of daily flow in the window",
+  "annual_maxima": "largest daily mean flow per hydrological year (Oct-Sep), years both sources cover",
+  "fits": "GEV and LP3 by L-moments; the better probability-plot correlation used per series",
+  "cell": "GloFAS cell within +-0.1 deg whose mean flow is closest to the gauge's (a best case: it uses the gauge, which an ungauged site does not have); 'model biased' when the best cell's mean flow is outside x0.5-x2",
+  "trigger": "1-in-5 annual-maximum trigger: return-period (each source's own level) and absolute (gauge level applied to GloFAS)",
+  "method_version": "trigger.extremes 0.1"
+ },
+ "summary": {
+  "gauges": 14,
+  "median_ratio_glofas_to_observed": {
+   "2": 0.211,
+   "5": 0.188,
+   "10": 0.217,
+   "25": 0.291,
+   "50": 0.358
+  },
+  "gauges_with_10yr_level_within_x2": 4,
+  "median_rank_correlation": 0.421,
+  "pooled_1in5_return_period_trigger": {
+   "hits": 30,
+   "misses": 30,
+   "false_payouts": 27,
+   "hit_rate": 0.5
+  },
+  "pooled_1in5_absolute_value_trigger": {
+   "hits": 6,
+   "misses": 54,
+   "false_payouts": 10,
+   "hit_rate": 0.1
+  },
+  "median_mean_flow_ratio": 0.38,
+  "gauges_with_mean_flow_within_x2": 4,
+  "mean_flow_within_x2": {
+   "gauges": 4,
+   "median_ratio_glofas_to_observed": {
+    "2": 0.714,
+    "5": 0.709,
+    "10": 0.77,
+    "25": 0.884,
+    "50": 0.946
+   },
+   "gauges_with_10yr_level_within_x2": 3,
+   "median_rank_correlation": 0.315,
+   "pooled_1in5_return_period_trigger": {
+    "hits": 6,
+    "misses": 10,
+    "false_payouts": 9,
+    "hit_rate": 0.375
+   },
+   "pooled_1in5_absolute_value_trigger": {
+    "hits": 4,
+    "misses": 12,
+    "false_payouts": 8,
+    "hit_rate": 0.25
+   }
+  }
+ },
+ "gauges": [
+  {
+   "id": 5004,
+   "name": "Mengibar",
+   "area_km2": 16166.0,
+   "lat": 37.9842,
+   "lon": -3.7994,
+   "observed_years": 28.0,
+   "glofas_cell": {
+    "cell_lat": 38.025,
+    "cell_lon": -3.875,
+    "km_from_gauge": 8.0,
+    "mean_flow_ratio": 0.158,
+    "mean_flow_match": "model biased",
+    "cells_searched": 25
+   },
+   "comparison": {
+    "years": 23,
+    "first_year": 1998,
+    "last_year": 2022,
+    "observed_fit": "GEV",
+    "glofas_fit": "GEV",
+    "levels": {
+     "2": {
+      "observed": 130.3,
+      "observed_band": [
+       92.5,
+       188.0
+      ],
+      "glofas": 27.7,
+      "glofas_band": [
+       24.0,
+       36.8
+      ],
+      "ratio": 0.213
+     },
+     "5": {
+      "observed": 251.1,
+      "observed_band": [
+       174.0,
+       339.5
+      ],
+      "glofas": 48.0,
+      "glofas_band": [
+       35.8,
+       70.6
+      ],
+      "ratio": 0.191
+     },
+     "10": {
+      "observed": 354.6,
+      "observed_band": [
+       242.0,
+       460.3
+      ],
+      "glofas": 70.2,
+      "glofas_band": [
+       46.3,
+       108.5
+      ],
+      "ratio": 0.198
+     },
+     "25": {
+      "observed": 520.0,
+      "observed_band": [
+       350.5,
+       631.3
+      ],
+      "glofas": 114.6,
+      "glofas_band": [
+       56.2,
+       176.5
+      ],
+      "ratio": 0.22
+     },
+     "50": {
+      "observed": 673.8,
+      "observed_band": [
+       447.8,
+       807.7
+      ],
+      "glofas": 165.9,
+      "glofas_band": [
+       60.8,
+       257.2
+      ],
+      "ratio": 0.246
+     }
+    },
+    "annual_max_rank_correlation": 0.71,
+    "trigger_1in5": {
+     "observed_level_m3s": 251.1,
+     "glofas_level_m3s": 48.0,
+     "return_period_trigger": {
+      "hits": 5,
+      "misses": 1,
+      "false_payouts": 0,
+      "hit_rate": 0.833,
+      "years_observed": [
+       1998,
+       2001,
+       2011,
+       2014,
+       2018,
+       2020
+      ],
+      "years_fired": [
+       1998,
+       2001,
+       2011,
+       2018,
+       2020
+      ]
+     },
+     "absolute_value_trigger": {
+      "hits": 0,
+      "misses": 6,
+      "false_payouts": 0,
+      "hit_rate": 0.0,
+      "years_observed": [
+       1998,
+       2001,
+       2011,
+       2014,
+       2018,
+       2020
+      ],
+      "years_fired": []
+     }
+    },
+    "input_sha256": {
+     "observed": "3632aabf6ced1e69803a6e31433282426d74b1738402e8affb4b2ba767d84bee",
+     "glofas": "c3b1f1d64ccdd796f9e46fea54263d27c3d4d3137575fbf6abe6b699a05abae6"
+    },
+    "annual_maxima": {
+     "1998": {
+      "observed": 354.46,
+      "glofas": 54.72
+     },
+     "1999": {
+      "observed": 75.93,
+      "glofas": 15.07
+     },
+     "2000": {
+      "observed": 89.89,
+      "glofas": 25.55
+     },
+     "2001": {
+      "observed": 442.0,
+      "glofas": 51.36
+     },
+     "2002": {
+      "observed": 149.0,
+      "glofas": 22.6
+     },
+     "2003": {
+      "observed": 198.0,
+      "glofas": 36.41
+     },
+     "2004": {
+      "observed": 87.5,
+      "glofas": 31.43
+     },
+     "2005": {
+      "observed": 50.0,
+      "glofas": 12.12
+     },
+     "2006": {
+      "observed": 44.9,
+      "glofas": 14.52
+     },
+     "2007": {
+      "observed": 157.0,
+      "glofas": 23.1
+     },
+     "2008": {
+      "observed": 186.0,
+      "glofas": 26.16
+     },
+     "2009": {
+      "observed": 171.0,
+      "glofas": 38.9
+     },
+     "2011": {
+      "observed": 591.2,
+      "glofas": 53.33
+     },
+     "2012": {
+      "observed": 58.82,
+      "glofas": 33.43
+     },
+     "2014": {
+      "observed": 260.0,
+      "glofas": 31.58
+     },
+     "2015": {
+      "observed": 90.7,
+      "glofas": 16.74
+     },
+     "2016": {
+      "observed": 58.5,
+      "glofas": 23.21
+     },
+     "2017": {
+      "observed": 51.7,
+      "glofas": 31.51
+     },
+     "2018": {
+      "observed": 368.64,
+      "glofas": 117.3
+     },
+     "2019": {
+      "observed": 112.99,
+      "glofas": 21.7
+     },
+     "2020": {
+      "observed": 330.47,
+      "glofas": 211.32
+     },
+     "2021": {
+      "observed": 100.43,
+      "glofas": 41.17
+     },
+     "2022": {
+      "observed": 27.22,
+      "glofas": 25.0
+     }
+    }
+   }
+  },
+  {
+   "id": 5045,
+   "name": "Loja",
+   "area_km2": 4210.0,
+   "lat": 37.175,
+   "lon": -4.1667,
+   "observed_years": 31.2,
+   "glofas_cell": {
+    "cell_lat": 37.225,
+    "cell_lon": -4.275,
+    "km_from_gauge": 11.1,
+    "mean_flow_ratio": 0.388,
+    "mean_flow_match": "model biased",
+    "cells_searched": 25
+   },
+   "comparison": {
+    "years": 23,
+    "first_year": 1998,
+    "last_year": 2022,
+    "observed_fit": "GEV",
+    "glofas_fit": "GEV",
+    "levels": {
+     "2": {
+      "observed": 42.9,
+      "observed_band": [
+       28.5,
+       68.7
+      ],
+      "glofas": 30.2,
+      "glofas_band": [
+       25.3,
+       39.4
+      ],
+      "ratio": 0.704
+     },
+     "5": {
+      "observed": 91.6,
+      "observed_band": [
+       57.9,
+       134.5
+      ],
+      "glofas": 47.3,
+      "glofas_band": [
+       37.6,
+       61.0
+      ],
+      "ratio": 0.517
+     },
+     "10": {
+      "observed": 135.0,
+      "observed_band": [
+       88.5,
+       181.5
+      ],
+      "glofas": 62.2,
+      "glofas_band": [
+       47.6,
+       77.9
+      ],
+      "ratio": 0.46
+     },
+     "25": {
+      "observed": 207.1,
+      "observed_band": [
+       137.4,
+       246.8
+      ],
+      "glofas": 86.1,
+      "glofas_band": [
+       62.0,
+       104.9
+      ],
+      "ratio": 0.416
+     },
+     "50": {
+      "observed": 276.5,
+      "observed_band": [
+       189.8,
+       310.9
+      ],
+      "glofas": 108.5,
+      "glofas_band": [
+       69.8,
+       127.9
+      ],
+      "ratio": 0.392
+     }
+    },
+    "annual_max_rank_correlation": 0.542,
+    "trigger_1in5": {
+     "observed_level_m3s": 91.6,
+     "glofas_level_m3s": 47.3,
+     "return_period_trigger": {
+      "hits": 3,
+      "misses": 2,
+      "false_payouts": 2,
+      "hit_rate": 0.6,
+      "years_observed": [
+       1998,
+       2000,
+       2009,
+       2013,
+       2018
+      ],
+      "years_fired": [
+       1998,
+       2001,
+       2011,
+       2013,
+       2018
+      ]
+     },
+     "absolute_value_trigger": {
+      "hits": 1,
+      "misses": 4,
+      "false_payouts": 0,
+      "hit_rate": 0.2,
+      "years_observed": [
+       1998,
+       2000,
+       2009,
+       2013,
+       2018
+      ],
+      "years_fired": [
+       2018
+      ]
+     }
+    },
+    "input_sha256": {
+     "observed": "86a026322e79807cb8640f5540d392e728dc603bdbec31c9dbb2384f3c4af2eb",
+     "glofas": "78a51293d85f3c5fcbf64236591b81fe7202e9fca21ccb329113265b8c6f35a2"
+    },
+    "annual_maxima": {
+     "1998": {
+      "observed": 163.12,
+      "glofas": 88.13
+     },
+     "1999": {
+      "observed": 15.37,
+      "glofas": 23.15
+     },
+     "2000": {
+      "observed": 174.93,
+      "glofas": 35.48
+     },
+     "2001": {
+      "observed": 71.5,
+      "glofas": 49.23
+     },
+     "2002": {
+      "observed": 48.9,
+      "glofas": 17.32
+     },
+     "2003": {
+      "observed": 42.7,
+      "glofas": 29.55
+     },
+     "2004": {
+      "observed": 58.2,
+      "glofas": 41.85
+     },
+     "2005": {
+      "observed": 15.4,
+      "glofas": 23.21
+     },
+     "2006": {
+      "observed": 24.9,
+      "glofas": 20.83
+     },
+     "2007": {
+      "observed": 26.4,
+      "glofas": 15.0
+     },
+     "2008": {
+      "observed": 14.0,
+      "glofas": 23.21
+     },
+     "2009": {
+      "observed": 126.0,
+      "glofas": 38.99
+     },
+     "2011": {
+      "observed": 0.0,
+      "glofas": 61.37
+     },
+     "2013": {
+      "observed": 213.0,
+      "glofas": 60.94
+     },
+     "2014": {
+      "observed": 72.4,
+      "glofas": 34.16
+     },
+     "2015": {
+      "observed": 21.1,
+      "glofas": 18.19
+     },
+     "2016": {
+      "observed": 23.3,
+      "glofas": 18.95
+     },
+     "2017": {
+      "observed": 26.0,
+      "glofas": 45.99
+     },
+     "2018": {
+      "observed": 174.28,
+      "glofas": 94.06
+     },
+     "2019": {
+      "observed": 25.46,
+      "glofas": 26.61
+     },
+     "2020": {
+      "observed": 75.92,
+      "glofas": 32.57
+     },
+     "2021": {
+      "observed": 29.48,
+      "glofas": 26.86
+     },
+     "2022": {
+      "observed": 13.07,
+      "glofas": 22.33
+     }
+    }
+   }
+  },
+  {
+   "id": 5080,
+   "name": "Puente Tocon",
+   "area_km2": 2944.0,
+   "lat": 37.2022,
+   "lon": -3.9422,
+   "observed_years": 26.5,
+   "glofas_cell": {
+    "cell_lat": 37.225,
+    "cell_lon": -3.875,
+    "km_from_gauge": 6.5,
+    "mean_flow_ratio": 0.481,
+    "mean_flow_match": "model biased",
+    "cells_searched": 25
+   },
+   "comparison": {
+    "years": 18,
+    "first_year": 1999,
+    "last_year": 2022,
+    "observed_fit": "LP3",
+    "glofas_fit": "GEV",
+    "levels": {
+     "2": {
+      "observed": 26.6,
+      "observed_band": [
+       20.3,
+       34.7
+      ],
+      "glofas": 23.2,
+      "glofas_band": [
+       21.1,
+       26.5
+      ],
+      "ratio": 0.874
+     },
+     "5": {
+      "observed": 47.3,
+      "observed_band": [
+       33.6,
+       62.8
+      ],
+      "glofas": 30.7,
+      "glofas_band": [
+       26.0,
+       35.2
+      ],
+      "ratio": 0.649
+     },
+     "10": {
+      "observed": 65.6,
+      "observed_band": [
+       42.0,
+       85.7
+      ],
+      "glofas": 36.7,
+      "glofas_band": [
+       29.1,
+       42.5
+      ],
+      "ratio": 0.559
+     },
+     "25": {
+      "observed": 94.5,
+      "observed_band": [
+       52.0,
+       128.1
+      ],
+      "glofas": 45.5,
+      "glofas_band": [
+       31.9,
+       53.6
+      ],
+      "ratio": 0.482
+     },
+     "50": {
+      "observed": 121.0,
+      "observed_band": [
+       59.4,
+       173.9
+      ],
+      "glofas": 53.2,
+      "glofas_band": [
+       33.9,
+       63.3
+      ],
+      "ratio": 0.44
+     }
+    },
+    "annual_max_rank_correlation": 0.391,
+    "trigger_1in5": {
+     "observed_level_m3s": 47.3,
+     "glofas_level_m3s": 30.7,
+     "return_period_trigger": {
+      "hits": 1,
+      "misses": 3,
+      "false_payouts": 3,
+      "hit_rate": 0.25,
+      "years_observed": [
+       2004,
+       2009,
+       2018,
+       2020
+      ],
+      "years_fired": [
+       2000,
+       2014,
+       2017,
+       2018
+      ]
+     },
+     "absolute_value_trigger": {
+      "hits": 0,
+      "misses": 4,
+      "false_payouts": 1,
+      "hit_rate": 0.0,
+      "years_observed": [
+       2004,
+       2009,
+       2018,
+       2020
+      ],
+      "years_fired": [
+       2017
+      ]
+     }
+    },
+    "input_sha256": {
+     "observed": "418a26298a8b466eaac1bf64e922ba3939b957da72028af2630872004934a6c8",
+     "glofas": "1ee34163a9237bdad8157b9599c0c43c21e91aa3e2685f77b08ec0ba378506bf"
+    },
+    "annual_maxima": {
+     "1999": {
+      "observed": 17.85,
+      "glofas": 21.08
+     },
+     "2000": {
+      "observed": 18.01,
+      "glofas": 33.99
+     },
+     "2001": {
+      "observed": 30.7,
+      "glofas": 28.38
+     },
+     "2002": {
+      "observed": 27.1,
+      "glofas": 15.94
+     },
+     "2003": {
+      "observed": 28.5,
+      "glofas": 24.94
+     },
+     "2004": {
+      "observed": 56.0,
+      "glofas": 24.29
+     },
+     "2005": {
+      "observed": 9.97,
+      "glofas": 21.7
+     },
+     "2006": {
+      "observed": 10.9,
+      "glofas": 20.18
+     },
+     "2007": {
+      "observed": 27.4,
+      "glofas": 13.22
+     },
+     "2008": {
+      "observed": 23.6,
+      "glofas": 21.23
+     },
+     "2009": {
+      "observed": 85.5,
+      "glofas": 22.39
+     },
+     "2014": {
+      "observed": 42.2,
+      "glofas": 32.34
+     },
+     "2017": {
+      "observed": 27.3,
+      "glofas": 48.43
+     },
+     "2018": {
+      "observed": 93.33,
+      "glofas": 42.55
+     },
+     "2019": {
+      "observed": 26.41,
+      "glofas": 19.46
+     },
+     "2020": {
+      "observed": 51.13,
+      "glofas": 24.76
+     },
+     "2021": {
+      "observed": 22.17,
+      "glofas": 25.18
+     },
+     "2022": {
+      "observed": 10.88,
+      "glofas": 20.53
+     }
+    }
+   }
+  },
+  {
+   "id": 5140,
+   "name": "Villanueva De Las Torres",
+   "area_km2": 1685.0,
+   "lat": 37.5347,
+   "lon": -3.1053,
+   "observed_years": 31.0,
+   "glofas_cell": {
+    "cell_lat": 37.625,
+    "cell_lon": -3.075,
+    "km_from_gauge": 10.4,
+    "mean_flow_ratio": 0.9,
+    "mean_flow_match": "within x2",
+    "cells_searched": 25
+   },
+   "comparison": {
+    "years": 21,
+    "first_year": 1999,
+    "last_year": 2022,
+    "observed_fit": "LP3",
+    "glofas_fit": "GEV",
+    "levels": {
+     "2": {
+      "observed": 3.0,
+      "observed_band": [
+       2.4,
+       3.8
+      ],
+      "glofas": 4.6,
+      "glofas_band": [
+       3.9,
+       5.9
+      ],
+      "ratio": 1.546
+     },
+     "5": {
+      "observed": 5.4,
+      "observed_band": [
+       4.0,
+       7.0
+      ],
+      "glofas": 6.8,
+      "glofas_band": [
+       5.3,
+       8.4
+      ],
+      "ratio": 1.256
+     },
+     "10": {
+      "observed": 7.3,
+      "observed_band": [
+       5.0,
+       9.8
+      ],
+      "glofas": 8.5,
+      "glofas_band": [
+       6.4,
+       10.2
+      ],
+      "ratio": 1.16
+     },
+     "25": {
+      "observed": 10.2,
+      "observed_band": [
+       6.0,
+       14.5
+      ],
+      "glofas": 11.1,
+      "glofas_band": [
+       8.1,
+       12.5
+      ],
+      "ratio": 1.093
+     },
+     "50": {
+      "observed": 12.6,
+      "observed_band": [
+       6.7,
+       19.4
+      ],
+      "glofas": 13.4,
+      "glofas_band": [
+       9.7,
+       14.9
+      ],
+      "ratio": 1.068
+     }
+    },
+    "annual_max_rank_correlation": 0.019,
+    "trigger_1in5": {
+     "observed_level_m3s": 5.4,
+     "glofas_level_m3s": 6.8,
+     "return_period_trigger": {
+      "hits": 2,
+      "misses": 3,
+      "false_payouts": 3,
+      "hit_rate": 0.4,
+      "years_observed": [
+       2001,
+       2002,
+       2004,
+       2006,
+       2011
+      ],
+      "years_fired": [
+       2004,
+       2009,
+       2011,
+       2017,
+       2018
+      ]
+     },
+     "absolute_value_trigger": {
+      "hits": 2,
+      "misses": 3,
+      "false_payouts": 5,
+      "hit_rate": 0.4,
+      "years_observed": [
+       2001,
+       2002,
+       2004,
+       2006,
+       2011
+      ],
+      "years_fired": [
+       2004,
+       2009,
+       2011,
+       2012,
+       2017,
+       2018,
+       2021
+      ]
+     }
+    },
+    "input_sha256": {
+     "observed": "25b0c2d9a864db4337e1a2319ca394b96112871be8a80bfbe596d9dbdb91603b",
+     "glofas": "4fffa2f4114d4031735217654fa87d97f086b0d6d046376782755a9c5461630b"
+    },
+    "annual_maxima": {
+     "1999": {
+      "observed": 2.6,
+      "glofas": 3.14
+     },
+     "2000": {
+      "observed": 0.53,
+      "glofas": 5.31
+     },
+     "2001": {
+      "observed": 11.6,
+      "glofas": 3.8
+     },
+     "2002": {
+      "observed": 5.5,
+      "glofas": 3.17
+     },
+     "2003": {
+      "observed": 3.35,
+      "glofas": 4.9
+     },
+     "2004": {
+      "observed": 5.88,
+      "glofas": 8.68
+     },
+     "2005": {
+      "observed": 1.36,
+      "glofas": 3.19
+     },
+     "2006": {
+      "observed": 6.4,
+      "glofas": 2.72
+     },
+     "2007": {
+      "observed": 3.83,
+      "glofas": 3.88
+     },
+     "2008": {
+      "observed": 2.6,
+      "glofas": 2.94
+     },
+     "2009": {
+      "observed": 3.1,
+      "glofas": 7.24
+     },
+     "2011": {
+      "observed": 9.06,
+      "glofas": 8.89
+     },
+     "2012": {
+      "observed": 2.12,
+      "glofas": 6.53
+     },
+     "2015": {
+      "observed": 1.58,
+      "glofas": 4.04
+     },
+     "2016": {
+      "observed": 1.57,
+      "glofas": 4.04
+     },
+     "2017": {
+      "observed": 2.18,
+      "glofas": 9.74
+     },
+     "2018": {
+      "observed": 4.37,
+      "glofas": 11.16
+     },
+     "2019": {
+      "observed": 2.79,
+      "glofas": 3.5
+     },
+     "2020": {
+      "observed": 2.64,
+      "glofas": 4.26
+     },
+     "2021": {
+      "observed": 1.78,
+      "glofas": 5.95
+     },
+     "2022": {
+      "observed": 3.73,
+      "glofas": 5.12
+     }
+    }
+   }
+  },
+  {
+   "id": 5081,
+   "name": "Castro Del Rio",
+   "area_km2": 1665.0,
+   "lat": 37.6908,
+   "lon": -4.5036,
+   "observed_years": 29.1,
+   "glofas_cell": {
+    "cell_lat": 37.725,
+    "cell_lon": -4.575,
+    "km_from_gauge": 7.3,
+    "mean_flow_ratio": 0.217,
+    "mean_flow_match": "model biased",
+    "cells_searched": 25
+   },
+   "comparison": {
+    "years": 17,
+    "first_year": 1998,
+    "last_year": 2021,
+    "observed_fit": "GEV",
+    "glofas_fit": "LP3",
+    "levels": {
+     "2": {
+      "observed": 21.6,
+      "observed_band": [
+       17.6,
+       29.9
+      ],
+      "glofas": 3.5,
+      "glofas_band": [
+       2.9,
+       4.7
+      ],
+      "ratio": 0.162
+     },
+     "5": {
+      "observed": 38.9,
+      "observed_band": [
+       28.3,
+       57.8
+      ],
+      "glofas": 7.2,
+      "glofas_band": [
+       4.6,
+       12.2
+      ],
+      "ratio": 0.185
+     },
+     "10": {
+      "observed": 55.5,
+      "observed_band": [
+       31.2,
+       84.3
+      ],
+      "glofas": 12.7,
+      "glofas_band": [
+       5.6,
+       24.6
+      ],
+      "ratio": 0.228
+     },
+     "25": {
+      "observed": 85.2,
+      "observed_band": [
+       32.5,
+       130.3
+      ],
+      "glofas": 27.2,
+      "glofas_band": [
+       6.9,
+       61.5
+      ],
+      "ratio": 0.32
+     },
+     "50": {
+      "observed": 115.9,
+      "observed_band": [
+       33.4,
+       178.9
+      ],
+      "glofas": 49.0,
+      "glofas_band": [
+       7.9,
+       131.8
+      ],
+      "ratio": 0.422
+     }
+    },
+    "annual_max_rank_correlation": 0.735,
+    "trigger_1in5": {
+     "observed_level_m3s": 38.9,
+     "glofas_level_m3s": 7.2,
+     "return_period_trigger": {
+      "hits": 2,
+      "misses": 0,
+      "false_payouts": 1,
+      "hit_rate": 1.0,
+      "years_observed": [
+       1998,
+       2001
+      ],
+      "years_fired": [
+       1998,
+       2001,
+       2013
+      ]
+     },
+     "absolute_value_trigger": {
+      "hits": 0,
+      "misses": 2,
+      "false_payouts": 0,
+      "hit_rate": 0.0,
+      "years_observed": [
+       1998,
+       2001
+      ],
+      "years_fired": []
+     }
+    },
+    "input_sha256": {
+     "observed": "4238ca958100c5e9eee0cc2f4c2d6a1c2f9aacc3411e2a86e724490276d82dea",
+     "glofas": "9eb29ec7d1f48d9a8857dee47bacaa5aaba32444f07caa403af1cc4829d206e0"
+    },
+    "annual_maxima": {
+     "1998": {
+      "observed": 124.12,
+      "glofas": 37.19
+     },
+     "1999": {
+      "observed": 7.96,
+      "glofas": 2.52
+     },
+     "2000": {
+      "observed": 31.69,
+      "glofas": 2.87
+     },
+     "2001": {
+      "observed": 69.5,
+      "glofas": 7.22
+     },
+     "2002": {
+      "observed": 16.1,
+      "glofas": 3.32
+     },
+     "2003": {
+      "observed": 30.4,
+      "glofas": 3.92
+     },
+     "2004": {
+      "observed": 29.8,
+      "glofas": 6.19
+     },
+     "2005": {
+      "observed": 8.64,
+      "glofas": 2.13
+     },
+     "2006": {
+      "observed": 10.8,
+      "glofas": 2.28
+     },
+     "2007": {
+      "observed": 17.2,
+      "glofas": 3.72
+     },
+     "2008": {
+      "observed": 28.2,
+      "glofas": 4.87
+     },
+     "2009": {
+      "observed": 21.2,
+      "glofas": 4.81
+     },
+     "2013": {
+      "observed": 29.6,
+      "glofas": 18.72
+     },
+     "2014": {
+      "observed": 26.2,
+      "glofas": 4.78
+     },
+     "2015": {
+      "observed": 27.0,
+      "glofas": 2.6
+     },
+     "2016": {
+      "observed": 10.3,
+      "glofas": 2.86
+     },
+     "2021": {
+      "observed": 26.56,
+      "glofas": 3.66
+     }
+    }
+   }
+  },
+  {
+   "id": 5057,
+   "name": "Guadaira Encauzamiento",
+   "area_km2": 1318.0,
+   "lat": 37.3531,
+   "lon": -5.9594,
+   "observed_years": 25.9,
+   "glofas_cell": {
+    "cell_lat": 37.325,
+    "cell_lon": -6.025,
+    "km_from_gauge": 6.6,
+    "mean_flow_ratio": 0.559,
+    "mean_flow_match": "within x2",
+    "cells_searched": 25
+   },
+   "comparison": {
+    "years": 18,
+    "first_year": 1998,
+    "last_year": 2021,
+    "observed_fit": "GEV",
+    "glofas_fit": "LP3",
+    "levels": {
+     "2": {
+      "observed": 141.8,
+      "observed_band": [
+       99.7,
+       213.6
+      ],
+      "glofas": 16.8,
+      "glofas_band": [
+       15.1,
+       22.0
+      ],
+      "ratio": 0.119
+     },
+     "5": {
+      "observed": 284.4,
+      "observed_band": [
+       194.8,
+       411.0
+      ],
+      "glofas": 28.9,
+      "glofas_band": [
+       21.2,
+       45.0
+      ],
+      "ratio": 0.101
+     },
+     "10": {
+      "observed": 403.6,
+      "observed_band": [
+       264.4,
+       560.0
+      ],
+      "glofas": 45.4,
+      "glofas_band": [
+       28.9,
+       81.0
+      ],
+      "ratio": 0.112
+     },
+     "25": {
+      "observed": 589.9,
+      "observed_band": [
+       330.6,
+       782.1
+      ],
+      "glofas": 84.8,
+      "glofas_band": [
+       37.6,
+       171.9
+      ],
+      "ratio": 0.144
+     },
+     "50": {
+      "observed": 759.5,
+      "observed_band": [
+       370.4,
+       1002.9
+      ],
+      "glofas": 137.9,
+      "glofas_band": [
+       45.0,
+       309.7
+      ],
+      "ratio": 0.182
+     }
+    },
+    "annual_max_rank_correlation": 0.329,
+    "trigger_1in5": {
+     "observed_level_m3s": 284.4,
+     "glofas_level_m3s": 28.9,
+     "return_period_trigger": {
+      "hits": 2,
+      "misses": 1,
+      "false_payouts": 2,
+      "hit_rate": 0.667,
+      "years_observed": [
+       1998,
+       2008,
+       2009
+      ],
+      "years_fired": [
+       1998,
+       2004,
+       2008,
+       2018
+      ]
+     },
+     "absolute_value_trigger": {
+      "hits": 0,
+      "misses": 3,
+      "false_payouts": 0,
+      "hit_rate": 0.0,
+      "years_observed": [
+       1998,
+       2008,
+       2009
+      ],
+      "years_fired": []
+     }
+    },
+    "input_sha256": {
+     "observed": "97446cd1dad57704f0c604f4a94f71cce1d3ca3ffd7f78c8d410198d00068166",
+     "glofas": "4b9125e161549131ec521ed31a553fc009fc74f3f07427582bb06eec06812efc"
+    },
+    "annual_maxima": {
+     "1998": {
+      "observed": 670.83,
+      "glofas": 113.29
+     },
+     "1999": {
+      "observed": 6.66,
+      "glofas": 14.74
+     },
+     "2000": {
+      "observed": 177.66,
+      "glofas": 15.6
+     },
+     "2001": {
+      "observed": 255.0,
+      "glofas": 23.72
+     },
+     "2002": {
+      "observed": 71.4,
+      "glofas": 20.93
+     },
+     "2003": {
+      "observed": 107.0,
+      "glofas": 16.3
+     },
+     "2004": {
+      "observed": 114.0,
+      "glofas": 37.82
+     },
+     "2005": {
+      "observed": 12.8,
+      "glofas": 15.33
+     },
+     "2006": {
+      "observed": 40.4,
+      "glofas": 16.22
+     },
+     "2007": {
+      "observed": 166.0,
+      "glofas": 21.8
+     },
+     "2008": {
+      "observed": 530.0,
+      "glofas": 51.24
+     },
+     "2009": {
+      "observed": 325.0,
+      "glofas": 14.28
+     },
+     "2014": {
+      "observed": 217.0,
+      "glofas": 13.42
+     },
+     "2015": {
+      "observed": 203.9,
+      "glofas": 14.21
+     },
+     "2016": {
+      "observed": 97.1,
+      "glofas": 15.94
+     },
+     "2018": {
+      "observed": 284.15,
+      "glofas": 29.2
+     },
+     "2019": {
+      "observed": 110.41,
+      "glofas": 11.42
+     },
+     "2021": {
+      "observed": 87.18,
+      "glofas": 19.8
+     }
+    }
+   }
+  },
+  {
+   "id": 5025,
+   "name": "Llano De Vela",
+   "area_km2": 1240.0,
+   "lat": 38.3175,
+   "lon": -2.9431,
+   "observed_years": 27.4,
+   "glofas_cell": {
+    "cell_lat": 38.275,
+    "cell_lon": -3.025,
+    "km_from_gauge": 8.6,
+    "mean_flow_ratio": 0.15,
+    "mean_flow_match": "model biased",
+    "cells_searched": 25
+   },
+   "comparison": {
+    "years": 20,
+    "first_year": 1998,
+    "last_year": 2021,
+    "observed_fit": "LP3",
+    "glofas_fit": "GEV",
+    "levels": {
+     "2": {
+      "observed": 14.6,
+      "observed_band": [
+       8.6,
+       21.2
+      ],
+      "glofas": 2.0,
+      "glofas_band": [
+       1.8,
+       2.4
+      ],
+      "ratio": 0.137
+     },
+     "5": {
+      "observed": 26.7,
+      "observed_band": [
+       19.2,
+       31.3
+      ],
+      "glofas": 3.1,
+      "glofas_band": [
+       2.4,
+       3.9
+      ],
+      "ratio": 0.114
+     },
+     "10": {
+      "observed": 30.8,
+      "observed_band": [
+       24.4,
+       37.0
+      ],
+      "glofas": 4.0,
+      "glofas_band": [
+       2.8,
+       5.2
+      ],
+      "ratio": 0.13
+     },
+     "25": {
+      "observed": 33.3,
+      "observed_band": [
+       26.7,
+       45.1
+      ],
+      "glofas": 5.6,
+      "glofas_band": [
+       3.2,
+       7.3
+      ],
+      "ratio": 0.169
+     },
+     "50": {
+      "observed": 34.0,
+      "observed_band": [
+       27.3,
+       53.1
+      ],
+      "glofas": 7.2,
+      "glofas_band": [
+       3.4,
+       9.5
+      ],
+      "ratio": 0.212
+     }
+    },
+    "annual_max_rank_correlation": -0.062,
+    "trigger_1in5": {
+     "observed_level_m3s": 26.7,
+     "glofas_level_m3s": 3.1,
+     "return_period_trigger": {
+      "hits": 1,
+      "misses": 2,
+      "false_payouts": 2,
+      "hit_rate": 0.333,
+      "years_observed": [
+       1998,
+       1999,
+       2014
+      ],
+      "years_fired": [
+       2001,
+       2014,
+       2018
+      ]
+     },
+     "absolute_value_trigger": {
+      "hits": 0,
+      "misses": 3,
+      "false_payouts": 0,
+      "hit_rate": 0.0,
+      "years_observed": [
+       1998,
+       1999,
+       2014
+      ],
+      "years_fired": []
+     }
+    },
+    "input_sha256": {
+     "observed": "b6e3cb3f3fdcdb09ddadad4b240a30af92503bcef4ea174b6ed98d163e238cd5",
+     "glofas": "ca633c7662d9238e4db17c91d0b81550fe9c60db1d0ce9c48a7d32ff8d783230"
+    },
+    "annual_maxima": {
+     "1998": {
+      "observed": 38.73,
+      "glofas": 2.06
+     },
+     "1999": {
+      "observed": 26.79,
+      "glofas": 1.16
+     },
+     "2000": {
+      "observed": 8.84,
+      "glofas": 1.61
+     },
+     "2001": {
+      "observed": 14.7,
+      "glofas": 5.28
+     },
+     "2002": {
+      "observed": 17.3,
+      "glofas": 1.72
+     },
+     "2003": {
+      "observed": 1.03,
+      "glofas": 2.25
+     },
+     "2004": {
+      "observed": 25.9,
+      "glofas": 2.37
+     },
+     "2005": {
+      "observed": 23.2,
+      "glofas": 0.99
+     },
+     "2006": {
+      "observed": 24.7,
+      "glofas": 1.13
+     },
+     "2007": {
+      "observed": 8.49,
+      "glofas": 1.75
+     },
+     "2008": {
+      "observed": 0.19,
+      "glofas": 1.69
+     },
+     "2009": {
+      "observed": 23.7,
+      "glofas": 2.94
+     },
+     "2012": {
+      "observed": 12.95,
+      "glofas": 2.38
+     },
+     "2014": {
+      "observed": 28.4,
+      "glofas": 3.56
+     },
+     "2015": {
+      "observed": 3.23,
+      "glofas": 1.94
+     },
+     "2016": {
+      "observed": 17.8,
+      "glofas": 2.0
+     },
+     "2017": {
+      "observed": 6.23,
+      "glofas": 2.91
+     },
+     "2018": {
+      "observed": 5.1,
+      "glofas": 7.15
+     },
+     "2019": {
+      "observed": 5.51,
+      "glofas": 1.62
+     },
+     "2021": {
+      "observed": 7.92,
+      "glofas": 2.69
+     }
+    }
+   }
+  },
+  {
+   "id": 5029,
+   "name": "Mengibar Guadalbullon",
+   "area_km2": 1111.0,
+   "lat": 37.9742,
+   "lon": -3.7811,
+   "observed_years": 27.3,
+   "glofas_cell": {
+    "cell_lat": 37.975,
+    "cell_lon": -3.725,
+    "km_from_gauge": 4.9,
+    "mean_flow_ratio": 0.925,
+    "mean_flow_match": "within x2",
+    "cells_searched": 25
+   },
+   "comparison": {
+    "years": 17,
+    "first_year": 2000,
+    "last_year": 2021,
+    "observed_fit": "GEV",
+    "glofas_fit": "GEV",
+    "levels": {
+     "2": {
+      "observed": 18.1,
+      "observed_band": [
+       11.7,
+       26.1
+      ],
+      "glofas": 13.9,
+      "glofas_band": [
+       11.1,
+       19.5
+      ],
+      "ratio": 0.771
+     },
+     "5": {
+      "observed": 32.3,
+      "observed_band": [
+       22.7,
+       40.0
+      ],
+      "glofas": 24.4,
+      "glofas_band": [
+       18.0,
+       35.2
+      ],
+      "ratio": 0.755
+     },
+     "10": {
+      "observed": 41.9,
+      "observed_band": [
+       30.1,
+       48.8
+      ],
+      "glofas": 34.7,
+      "glofas_band": [
+       22.4,
+       50.3
+      ],
+      "ratio": 0.829
+     },
+     "25": {
+      "observed": 54.1,
+      "observed_band": [
+       37.7,
+       61.9
+      ],
+      "glofas": 53.5,
+      "glofas_band": [
+       27.6,
+       79.6
+      ],
+      "ratio": 0.99
+     },
+     "50": {
+      "observed": 63.2,
+      "observed_band": [
+       42.8,
+       74.7
+      ],
+      "glofas": 73.4,
+      "glofas_band": [
+       31.5,
+       110.2
+      ],
+      "ratio": 1.161
+     }
+    },
+    "annual_max_rank_correlation": 0.4,
+    "trigger_1in5": {
+     "observed_level_m3s": 32.3,
+     "glofas_level_m3s": 24.4,
+     "return_period_trigger": {
+      "hits": 1,
+      "misses": 2,
+      "false_payouts": 2,
+      "hit_rate": 0.333,
+      "years_observed": [
+       2001,
+       2003,
+       2007
+      ],
+      "years_fired": [
+       2001,
+       2009,
+       2018
+      ]
+     },
+     "absolute_value_trigger": {
+      "hits": 1,
+      "misses": 2,
+      "false_payouts": 1,
+      "hit_rate": 0.333,
+      "years_observed": [
+       2001,
+       2003,
+       2007
+      ],
+      "years_fired": [
+       2001,
+       2018
+      ]
+     }
+    },
+    "input_sha256": {
+     "observed": "498eacbe349f3c75d1f00a0a16ec4a84df0b5b1a9f9c262d4901de43e7c65a50",
+     "glofas": "921221a17bfc88ff68ea1d9973c7186a4236278ccbdb65766bd231f1cdbe0b87"
+    },
+    "annual_maxima": {
+     "2000": {
+      "observed": 20.85,
+      "glofas": 14.6
+     },
+     "2001": {
+      "observed": 53.8,
+      "glofas": 37.37
+     },
+     "2002": {
+      "observed": 13.6,
+      "glofas": 10.35
+     },
+     "2003": {
+      "observed": 42.4,
+      "glofas": 23.6
+     },
+     "2004": {
+      "observed": 29.0,
+      "glofas": 18.1
+     },
+     "2005": {
+      "observed": 3.61,
+      "glofas": 5.65
+     },
+     "2006": {
+      "observed": 5.25,
+      "glofas": 6.73
+     },
+     "2007": {
+      "observed": 38.3,
+      "glofas": 12.06
+     },
+     "2008": {
+      "observed": 32.0,
+      "glofas": 7.85
+     },
+     "2009": {
+      "observed": 29.5,
+      "glofas": 27.05
+     },
+     "2012": {
+      "observed": 8.29,
+      "glofas": 13.39
+     },
+     "2015": {
+      "observed": 20.7,
+      "glofas": 9.57
+     },
+     "2016": {
+      "observed": 10.6,
+      "glofas": 15.41
+     },
+     "2017": {
+      "observed": 3.15,
+      "glofas": 17.97
+     },
+     "2018": {
+      "observed": 26.65,
+      "glofas": 76.45
+     },
+     "2019": {
+      "observed": 10.7,
+      "glofas": 12.18
+     },
+     "2021": {
+      "observed": 5.76,
+      "glofas": 23.1
+     }
+    }
+   }
+  },
+  {
+   "id": 5077,
+   "name": "Central De Cala",
+   "area_km2": 1010.0,
+   "lat": 37.6689,
+   "lon": -6.1331,
+   "observed_years": 33.3,
+   "glofas_cell": {
+    "cell_lat": 37.575,
+    "cell_lon": -6.075,
+    "km_from_gauge": 11.6,
+    "mean_flow_ratio": 0.419,
+    "mean_flow_match": "model biased",
+    "cells_searched": 25
+   },
+   "comparison": {
+    "years": 19,
+    "first_year": 2000,
+    "last_year": 2022,
+    "observed_fit": "GEV",
+    "glofas_fit": "LP3",
+    "levels": {
+     "2": {
+      "observed": 16.6,
+      "observed_band": [
+       4.6,
+       40.0
+      ],
+      "glofas": 4.0,
+      "glofas_band": [
+       3.2,
+       5.3
+      ],
+      "ratio": 0.241
+     },
+     "5": {
+      "observed": 48.1,
+      "observed_band": [
+       13.8,
+       86.5
+      ],
+      "glofas": 7.4,
+      "glofas_band": [
+       5.1,
+       10.2
+      ],
+      "ratio": 0.153
+     },
+     "10": {
+      "observed": 78.8,
+      "observed_band": [
+       25.8,
+       121.2
+      ],
+      "glofas": 11.2,
+      "glofas_band": [
+       6.9,
+       16.0
+      ],
+      "ratio": 0.142
+     },
+     "25": {
+      "observed": 134.2,
+      "observed_band": [
+       54.3,
+       165.4
+      ],
+      "glofas": 18.8,
+      "glofas_band": [
+       8.7,
+       30.4
+      ],
+      "ratio": 0.14
+     },
+     "50": {
+      "observed": 192.0,
+      "observed_band": [
+       88.1,
+       217.3
+      ],
+      "glofas": 27.5,
+      "glofas_band": [
+       10.4,
+       49.7
+      ],
+      "ratio": 0.143
+     }
+    },
+    "annual_max_rank_correlation": 0.688,
+    "trigger_1in5": {
+     "observed_level_m3s": 48.1,
+     "glofas_level_m3s": 7.4,
+     "return_period_trigger": {
+      "hits": 3,
+      "misses": 3,
+      "false_payouts": 1,
+      "hit_rate": 0.5,
+      "years_observed": [
+       2001,
+       2002,
+       2003,
+       2013,
+       2014,
+       2018
+      ],
+      "years_fired": [
+       2001,
+       2003,
+       2008,
+       2013
+      ]
+     },
+     "absolute_value_trigger": {
+      "hits": 0,
+      "misses": 6,
+      "false_payouts": 0,
+      "hit_rate": 0.0,
+      "years_observed": [
+       2001,
+       2002,
+       2003,
+       2013,
+       2014,
+       2018
+      ],
+      "years_fired": []
+     }
+    },
+    "input_sha256": {
+     "observed": "096b1b4bc1c5825482e542851ecb5df492044bb2b6111ddf872155b745398528",
+     "glofas": "380ee8ab23b0b59dce1cf375bd50f7d0ed0da88901cc11cb0684bf77cfeca7dc"
+    },
+    "annual_maxima": {
+     "2000": {
+      "observed": 5.92,
+      "glofas": 3.04
+     },
+     "2001": {
+      "observed": 67.1,
+      "glofas": 23.6
+     },
+     "2002": {
+      "observed": 62.1,
+      "glofas": 5.07
+     },
+     "2003": {
+      "observed": 127.0,
+      "glofas": 9.96
+     },
+     "2005": {
+      "observed": 0.86,
+      "glofas": 2.41
+     },
+     "2006": {
+      "observed": 3.4,
+      "glofas": 2.66
+     },
+     "2007": {
+      "observed": 4.41,
+      "glofas": 6.29
+     },
+     "2008": {
+      "observed": 3.05,
+      "glofas": 7.65
+     },
+     "2009": {
+      "observed": 1.32,
+      "glofas": 2.62
+     },
+     "2013": {
+      "observed": 128.0,
+      "glofas": 11.16
+     },
+     "2014": {
+      "observed": 83.3,
+      "glofas": 3.75
+     },
+     "2015": {
+      "observed": 34.6,
+      "glofas": 3.16
+     },
+     "2016": {
+      "observed": 2.36,
+      "glofas": 6.11
+     },
+     "2017": {
+      "observed": 8.73,
+      "glofas": 4.0
+     },
+     "2018": {
+      "observed": 86.75,
+      "glofas": 5.87
+     },
+     "2019": {
+      "observed": 0.91,
+      "glofas": 2.13
+     },
+     "2020": {
+      "observed": 2.07,
+      "glofas": 4.55
+     },
+     "2021": {
+      "observed": 1.25,
+      "glofas": 2.73
+     },
+     "2022": {
+      "observed": 1.75,
+      "glofas": 3.22
+     }
+    }
+   }
+  },
+  {
+   "id": 5076,
+   "name": "Aznalcazar Puente",
+   "area_km2": 960.0,
+   "lat": 37.3031,
+   "lon": -6.2597,
+   "observed_years": 28.7,
+   "glofas_cell": {
+    "cell_lat": 37.225,
+    "cell_lon": -6.275,
+    "km_from_gauge": 8.8,
+    "mean_flow_ratio": 0.317,
+    "mean_flow_match": "model biased",
+    "cells_searched": 25
+   },
+   "comparison": {
+    "years": 22,
+    "first_year": 1998,
+    "last_year": 2022,
+    "observed_fit": "GEV",
+    "glofas_fit": "GEV",
+    "levels": {
+     "2": {
+      "observed": 66.0,
+      "observed_band": [
+       51.8,
+       79.7
+      ],
+      "glofas": 8.4,
+      "glofas_band": [
+       6.7,
+       14.3
+      ],
+      "ratio": 0.128
+     },
+     "5": {
+      "observed": 98.4,
+      "observed_band": [
+       83.5,
+       113.8
+      ],
+      "glofas": 16.6,
+      "glofas_band": [
+       10.2,
+       30.8
+      ],
+      "ratio": 0.168
+     },
+     "10": {
+      "observed": 114.2,
+      "observed_band": [
+       95.8,
+       135.5
+      ],
+      "glofas": 26.5,
+      "glofas_band": [
+       14.3,
+       48.2
+      ],
+      "ratio": 0.232
+     },
+     "25": {
+      "observed": 129.4,
+      "observed_band": [
+       102.6,
+       162.0
+      ],
+      "glofas": 48.4,
+      "glofas_band": [
+       23.6,
+       82.5
+      ],
+      "ratio": 0.374
+     },
+     "50": {
+      "observed": 138.0,
+      "observed_band": [
+       106.0,
+       178.0
+      ],
+      "glofas": 76.3,
+      "glofas_band": [
+       33.8,
+       119.9
+      ],
+      "ratio": 0.553
+     }
+    },
+    "annual_max_rank_correlation": 0.752,
+    "trigger_1in5": {
+     "observed_level_m3s": 98.4,
+     "glofas_level_m3s": 16.6,
+     "return_period_trigger": {
+      "hits": 3,
+      "misses": 1,
+      "false_payouts": 2,
+      "hit_rate": 0.75,
+      "years_observed": [
+       1998,
+       2008,
+       2011,
+       2013
+      ],
+      "years_fired": [
+       1998,
+       2001,
+       2004,
+       2008,
+       2011
+      ]
+     },
+     "absolute_value_trigger": {
+      "hits": 0,
+      "misses": 4,
+      "false_payouts": 0,
+      "hit_rate": 0.0,
+      "years_observed": [
+       1998,
+       2008,
+       2011,
+       2013
+      ],
+      "years_fired": []
+     }
+    },
+    "input_sha256": {
+     "observed": "f922ae7f60317755f8e97059558909027707f5ddc592a95b8526c7117ebdf8ea",
+     "glofas": "a233d9627a68729701940b950e2d4d4b5cc0a0417b998727e0300a50c9b17c9a"
+    },
+    "annual_maxima": {
+     "1998": {
+      "observed": 106.25,
+      "glofas": 88.54
+     },
+     "1999": {
+      "observed": 7.46,
+      "glofas": 5.56
+     },
+     "2000": {
+      "observed": 31.09,
+      "glofas": 6.06
+     },
+     "2001": {
+      "observed": 92.4,
+      "glofas": 26.1
+     },
+     "2002": {
+      "observed": 69.3,
+      "glofas": 8.2
+     },
+     "2003": {
+      "observed": 60.4,
+      "glofas": 8.59
+     },
+     "2004": {
+      "observed": 78.8,
+      "glofas": 66.76
+     },
+     "2005": {
+      "observed": 74.3,
+      "glofas": 5.37
+     },
+     "2006": {
+      "observed": 72.3,
+      "glofas": 7.24
+     },
+     "2007": {
+      "observed": 87.9,
+      "glofas": 9.99
+     },
+     "2008": {
+      "observed": 101.0,
+      "glofas": 29.48
+     },
+     "2009": {
+      "observed": 57.6,
+      "glofas": 6.16
+     },
+     "2011": {
+      "observed": 154.91,
+      "glofas": 20.73
+     },
+     "2012": {
+      "observed": 30.02,
+      "glofas": 6.53
+     },
+     "2013": {
+      "observed": 101.0,
+      "glofas": 12.77
+     },
+     "2014": {
+      "observed": 52.8,
+      "glofas": 6.91
+     },
+     "2015": {
+      "observed": 91.8,
+      "glofas": 5.97
+     },
+     "2016": {
+      "observed": 70.3,
+      "glofas": 10.64
+     },
+     "2017": {
+      "observed": 63.7,
+      "glofas": 7.57
+     },
+     "2019": {
+      "observed": 9.95,
+      "glofas": 3.35
+     },
+     "2021": {
+      "observed": 3.48,
+      "glofas": 5.21
+     },
+     "2022": {
+      "observed": 20.5,
+      "glofas": 7.0
+     }
+    }
+   }
+  },
+  {
+   "id": 5127,
+   "name": "Huesna",
+   "area_km2": 678.0,
+   "lat": 37.6458,
+   "lon": -5.7372,
+   "observed_years": 34.6,
+   "glofas_cell": {
+    "cell_lat": 37.575,
+    "cell_lon": -5.675,
+    "km_from_gauge": 9.6,
+    "mean_flow_ratio": 0.371,
+    "mean_flow_match": "model biased",
+    "cells_searched": 25
+   },
+   "comparison": {
+    "years": 21,
+    "first_year": 2000,
+    "last_year": 2022,
+    "observed_fit": "GEV",
+    "glofas_fit": "GEV",
+    "levels": {
+     "2": {
+      "observed": 28.0,
+      "observed_band": [
+       17.7,
+       53.4
+      ],
+      "glofas": 5.9,
+      "glofas_band": [
+       3.8,
+       11.0
+      ],
+      "ratio": 0.209
+     },
+     "5": {
+      "observed": 74.3,
+      "observed_band": [
+       40.3,
+       133.1
+      ],
+      "glofas": 14.2,
+      "glofas_band": [
+       6.7,
+       28.2
+      ],
+      "ratio": 0.191
+     },
+     "10": {
+      "observed": 126.1,
+      "observed_band": [
+       59.2,
+       215.9
+      ],
+      "glofas": 24.4,
+      "glofas_band": [
+       10.2,
+       46.5
+      ],
+      "ratio": 0.193
+     },
+     "25": {
+      "observed": 232.8,
+      "observed_band": [
+       93.9,
+       363.9
+      ],
+      "glofas": 47.0,
+      "glofas_band": [
+       17.7,
+       82.5
+      ],
+      "ratio": 0.202
+     },
+     "50": {
+      "observed": 358.7,
+      "observed_band": [
+       119.9,
+       523.2
+      ],
+      "glofas": 75.9,
+      "glofas_band": [
+       28.0,
+       123.6
+      ],
+      "ratio": 0.212
+     }
+    },
+    "annual_max_rank_correlation": 0.518,
+    "trigger_1in5": {
+     "observed_level_m3s": 74.3,
+     "glofas_level_m3s": 14.2,
+     "return_period_trigger": {
+      "hits": 3,
+      "misses": 2,
+      "false_payouts": 2,
+      "hit_rate": 0.6,
+      "years_observed": [
+       2000,
+       2001,
+       2004,
+       2011,
+       2013
+      ],
+      "years_fired": [
+       2004,
+       2008,
+       2011,
+       2013,
+       2018
+      ]
+     },
+     "absolute_value_trigger": {
+      "hits": 1,
+      "misses": 4,
+      "false_payouts": 0,
+      "hit_rate": 0.2,
+      "years_observed": [
+       2000,
+       2001,
+       2004,
+       2011,
+       2013
+      ],
+      "years_fired": [
+       2004
+      ]
+     }
+    },
+    "input_sha256": {
+     "observed": "5b47c0d61b1ec2211afe720004d780e6b087c9c9a467bd6201a06e4dcea4f422",
+     "glofas": "023ecce9c34e97ff7698356a6ad0986052a13110b1e83b0ea5850f0e65029891"
+    },
+    "annual_maxima": {
+     "2000": {
+      "observed": 93.25,
+      "glofas": 3.53
+     },
+     "2001": {
+      "observed": 105.0,
+      "glofas": 11.76
+     },
+     "2002": {
+      "observed": 38.1,
+      "glofas": 4.32
+     },
+     "2003": {
+      "observed": 30.7,
+      "glofas": 7.71
+     },
+     "2004": {
+      "observed": 326.0,
+      "glofas": 87.72
+     },
+     "2005": {
+      "observed": 39.4,
+      "glofas": 3.22
+     },
+     "2006": {
+      "observed": 5.82,
+      "glofas": 2.69
+     },
+     "2007": {
+      "observed": 8.01,
+      "glofas": 5.03
+     },
+     "2008": {
+      "observed": 6.27,
+      "glofas": 14.31
+     },
+     "2009": {
+      "observed": 44.0,
+      "glofas": 7.47
+     },
+     "2011": {
+      "observed": 91.0,
+      "glofas": 53.83
+     },
+     "2012": {
+      "observed": 46.8,
+      "glofas": 3.82
+     },
+     "2013": {
+      "observed": 346.0,
+      "glofas": 19.99
+     },
+     "2014": {
+      "observed": 35.8,
+      "glofas": 2.81
+     },
+     "2015": {
+      "observed": 27.5,
+      "glofas": 3.25
+     },
+     "2016": {
+      "observed": 6.55,
+      "glofas": 2.28
+     },
+     "2018": {
+      "observed": 14.19,
+      "glofas": 40.98
+     },
+     "2019": {
+      "observed": 4.87,
+      "glofas": 2.2
+     },
+     "2020": {
+      "observed": 6.59,
+      "glofas": 3.43
+     },
+     "2021": {
+      "observed": 23.0,
+      "glofas": 6.66
+     },
+     "2022": {
+      "observed": 7.07,
+      "glofas": 3.94
+     }
+    }
+   }
+  },
+  {
+   "id": 5090,
+   "name": "Guijo, El",
+   "area_km2": 672.0,
+   "lat": 37.4364,
+   "lon": -6.215,
+   "observed_years": 32.6,
+   "glofas_cell": {
+    "cell_lat": 37.325,
+    "cell_lon": -6.125,
+    "km_from_gauge": 14.7,
+    "mean_flow_ratio": 0.313,
+    "mean_flow_match": "model biased",
+    "cells_searched": 25
+   },
+   "comparison": {
+    "years": 23,
+    "first_year": 1999,
+    "last_year": 2022,
+    "observed_fit": "GEV",
+    "glofas_fit": "GEV",
+    "levels": {
+     "2": {
+      "observed": 47.3,
+      "observed_band": [
+       36.3,
+       60.4
+      ],
+      "glofas": 7.3,
+      "glofas_band": [
+       6.6,
+       8.1
+      ],
+      "ratio": 0.154
+     },
+     "5": {
+      "observed": 84.4,
+      "observed_band": [
+       62.3,
+       108.4
+      ],
+      "glofas": 9.5,
+      "glofas_band": [
+       8.4,
+       10.8
+      ],
+      "ratio": 0.113
+     },
+     "10": {
+      "observed": 113.3,
+      "observed_band": [
+       73.9,
+       145.7
+      ],
+      "glofas": 11.2,
+      "glofas_band": [
+       9.3,
+       13.1
+      ],
+      "ratio": 0.099
+     },
+     "25": {
+      "observed": 155.8,
+      "observed_band": [
+       83.0,
+       201.6
+      ],
+      "glofas": 13.7,
+      "glofas_band": [
+       10.3,
+       17.0
+      ],
+      "ratio": 0.088
+     },
+     "50": {
+      "observed": 192.3,
+      "observed_band": [
+       86.7,
+       255.4
+      ],
+      "glofas": 15.9,
+      "glofas_band": [
+       10.8,
+       20.6
+      ],
+      "ratio": 0.083
+     }
+    },
+    "annual_max_rank_correlation": 0.442,
+    "trigger_1in5": {
+     "observed_level_m3s": 84.4,
+     "glofas_level_m3s": 9.5,
+     "return_period_trigger": {
+      "hits": 2,
+      "misses": 2,
+      "false_payouts": 2,
+      "hit_rate": 0.5,
+      "years_observed": [
+       2001,
+       2002,
+       2003,
+       2004
+      ],
+      "years_fired": [
+       2001,
+       2004,
+       2008,
+       2011
+      ]
+     },
+     "absolute_value_trigger": {
+      "hits": 0,
+      "misses": 4,
+      "false_payouts": 0,
+      "hit_rate": 0.0,
+      "years_observed": [
+       2001,
+       2002,
+       2003,
+       2004
+      ],
+      "years_fired": []
+     }
+    },
+    "input_sha256": {
+     "observed": "442146f91b8e409eafc42ada3ce7715399d73642b89e9d7daac1168f3443673f",
+     "glofas": "8d841ff9e116ba11189cb8f898fb638eb13bd54a3eb31b584e0b6c8f5dd962a3"
+    },
+    "annual_maxima": {
+     "1999": {
+      "observed": 11.8,
+      "glofas": 7.09
+     },
+     "2000": {
+      "observed": 63.2,
+      "glofas": 6.91
+     },
+     "2001": {
+      "observed": 153.0,
+      "glofas": 9.91
+     },
+     "2002": {
+      "observed": 92.6,
+      "glofas": 8.71
+     },
+     "2003": {
+      "observed": 118.0,
+      "glofas": 6.24
+     },
+     "2004": {
+      "observed": 195.0,
+      "glofas": 12.09
+     },
+     "2005": {
+      "observed": 59.0,
+      "glofas": 5.53
+     },
+     "2006": {
+      "observed": 42.3,
+      "glofas": 8.31
+     },
+     "2007": {
+      "observed": 58.3,
+      "glofas": 7.81
+     },
+     "2008": {
+      "observed": 54.7,
+      "glofas": 17.11
+     },
+     "2009": {
+      "observed": 27.5,
+      "glofas": 6.57
+     },
+     "2011": {
+      "observed": 57.7,
+      "glofas": 10.67
+     },
+     "2012": {
+      "observed": 15.8,
+      "glofas": 9.26
+     },
+     "2013": {
+      "observed": 67.4,
+      "glofas": 8.71
+     },
+     "2014": {
+      "observed": 36.7,
+      "glofas": 7.11
+     },
+     "2015": {
+      "observed": 55.3,
+      "glofas": 5.41
+     },
+     "2016": {
+      "observed": 53.5,
+      "glofas": 7.65
+     },
+     "2017": {
+      "observed": 51.2,
+      "glofas": 7.53
+     },
+     "2018": {
+      "observed": 60.69,
+      "glofas": 8.06
+     },
+     "2019": {
+      "observed": 5.58,
+      "glofas": 4.08
+     },
+     "2020": {
+      "observed": 28.21,
+      "glofas": 5.71
+     },
+     "2021": {
+      "observed": 9.13,
+      "glofas": 6.23
+     },
+     "2022": {
+      "observed": 31.13,
+      "glofas": 5.97
+     }
+    }
+   }
+  },
+  {
+   "id": 5142,
+   "name": "Porcuna",
+   "area_km2": 670.0,
+   "lat": 37.8758,
+   "lon": -4.2142,
+   "observed_years": 32.5,
+   "glofas_cell": {
+    "cell_lat": 37.875,
+    "cell_lon": -4.275,
+    "km_from_gauge": 5.3,
+    "mean_flow_ratio": 0.992,
+    "mean_flow_match": "within x2",
+    "cells_searched": 25
+   },
+   "comparison": {
+    "years": 20,
+    "first_year": 2000,
+    "last_year": 2022,
+    "observed_fit": "GEV",
+    "glofas_fit": "LP3",
+    "levels": {
+     "2": {
+      "observed": 9.5,
+      "observed_band": [
+       4.6,
+       18.6
+      ],
+      "glofas": 6.2,
+      "glofas_band": [
+       4.0,
+       9.7
+      ],
+      "ratio": 0.657
+     },
+     "5": {
+      "observed": 24.0,
+      "observed_band": [
+       12.0,
+       38.8
+      ],
+      "glofas": 15.9,
+      "glofas_band": [
+       9.4,
+       24.5
+      ],
+      "ratio": 0.663
+     },
+     "10": {
+      "observed": 37.6,
+      "observed_band": [
+       19.8,
+       54.2
+      ],
+      "glofas": 26.8,
+      "glofas_band": [
+       13.9,
+       45.6
+      ],
+      "ratio": 0.711
+     },
+     "25": {
+      "observed": 61.4,
+      "observed_band": [
+       34.6,
+       76.5
+      ],
+      "glofas": 47.8,
+      "glofas_band": [
+       19.5,
+       100.7
+      ],
+      "ratio": 0.778
+     },
+     "50": {
+      "observed": 85.4,
+      "observed_band": [
+       51.8,
+       96.5
+      ],
+      "glofas": 70.3,
+      "glofas_band": [
+       22.9,
+       177.9
+      ],
+      "ratio": 0.824
+     }
+    },
+    "annual_max_rank_correlation": 0.301,
+    "trigger_1in5": {
+     "observed_level_m3s": 24.0,
+     "glofas_level_m3s": 15.9,
+     "return_period_trigger": {
+      "hits": 1,
+      "misses": 4,
+      "false_payouts": 2,
+      "hit_rate": 0.2,
+      "years_observed": [
+       2003,
+       2004,
+       2008,
+       2009,
+       2013
+      ],
+      "years_fired": [
+       2013,
+       2018,
+       2020
+      ]
+     },
+     "absolute_value_trigger": {
+      "hits": 1,
+      "misses": 4,
+      "false_payouts": 2,
+      "hit_rate": 0.2,
+      "years_observed": [
+       2003,
+       2004,
+       2008,
+       2009,
+       2013
+      ],
+      "years_fired": [
+       2013,
+       2018,
+       2020
+      ]
+     }
+    },
+    "input_sha256": {
+     "observed": "f52bdda8428f05ef6e9de350f9de5d3f9090e5db618b9dad23c2607919fa0e59",
+     "glofas": "4db20eacc38f19277dc9fefb034bb5debf28fc79f2aea1b37a57ae06a9b2bb57"
+    },
+    "annual_maxima": {
+     "2000": {
+      "observed": 9.21,
+      "glofas": 5.17
+     },
+     "2001": {
+      "observed": 22.0,
+      "glofas": 10.56
+     },
+     "2002": {
+      "observed": 8.17,
+      "glofas": 9.57
+     },
+     "2003": {
+      "observed": 37.8,
+      "glofas": 5.75
+     },
+     "2004": {
+      "observed": 27.2,
+      "glofas": 7.32
+     },
+     "2005": {
+      "observed": 3.92,
+      "glofas": 1.19
+     },
+     "2006": {
+      "observed": 7.13,
+      "glofas": 3.03
+     },
+     "2007": {
+      "observed": 18.1,
+      "glofas": 9.96
+     },
+     "2008": {
+      "observed": 59.0,
+      "glofas": 14.14
+     },
+     "2009": {
+      "observed": 44.2,
+      "glofas": 6.1
+     },
+     "2012": {
+      "observed": 12.23,
+      "glofas": 3.86
+     },
+     "2013": {
+      "observed": 61.2,
+      "glofas": 67.87
+     },
+     "2015": {
+      "observed": 6.57,
+      "glofas": 1.38
+     },
+     "2016": {
+      "observed": 1.59,
+      "glofas": 3.12
+     },
+     "2017": {
+      "observed": 1.7,
+      "glofas": 7.99
+     },
+     "2018": {
+      "observed": 1.68,
+      "glofas": 31.43
+     },
+     "2019": {
+      "observed": 1.45,
+      "glofas": 2.5
+     },
+     "2020": {
+      "observed": 1.66,
+      "glofas": 25.61
+     },
+     "2021": {
+      "observed": 0.95,
+      "glofas": 10.8
+     },
+     "2022": {
+      "observed": 1.05,
+      "glofas": 1.59
+     }
+    }
+   }
+  },
+  {
+   "id": 5001,
+   "name": "Arroyo Maria",
+   "area_km2": 583.0,
+   "lat": 38.1792,
+   "lon": -2.8358,
+   "observed_years": 34.4,
+   "glofas_cell": {
+    "cell_lat": 38.175,
+    "cell_lon": -2.925,
+    "km_from_gauge": 7.8,
+    "mean_flow_ratio": 0.049,
+    "mean_flow_match": "model biased",
+    "cells_searched": 25
+   },
+   "comparison": {
+    "years": 24,
+    "first_year": 1998,
+    "last_year": 2022,
+    "observed_fit": "GEV",
+    "glofas_fit": "GEV",
+    "levels": {
+     "2": {
+      "observed": 19.8,
+      "observed_band": [
+       17.2,
+       24.5
+      ],
+      "glofas": 3.1,
+      "glofas_band": [
+       2.8,
+       4.0
+      ],
+      "ratio": 0.159
+     },
+     "5": {
+      "observed": 29.4,
+      "observed_band": [
+       24.1,
+       37.0
+      ],
+      "glofas": 5.2,
+      "glofas_band": [
+       4.1,
+       7.4
+      ],
+      "ratio": 0.178
+     },
+     "10": {
+      "observed": 37.5,
+      "observed_band": [
+       29.8,
+       47.1
+      ],
+      "glofas": 7.7,
+      "glofas_band": [
+       4.9,
+       11.7
+      ],
+      "ratio": 0.206
+     },
+     "25": {
+      "observed": 50.4,
+      "observed_band": [
+       38.0,
+       61.6
+      ],
+      "glofas": 13.2,
+      "glofas_band": [
+       6.0,
+       21.4
+      ],
+      "ratio": 0.262
+     },
+     "50": {
+      "observed": 62.4,
+      "observed_band": [
+       45.1,
+       76.7
+      ],
+      "glofas": 20.2,
+      "glofas_band": [
+       6.9,
+       34.1
+      ],
+      "ratio": 0.323
+     }
+    },
+    "annual_max_rank_correlation": -0.197,
+    "trigger_1in5": {
+     "observed_level_m3s": 29.4,
+     "glofas_level_m3s": 5.2,
+     "return_period_trigger": {
+      "hits": 1,
+      "misses": 4,
+      "false_payouts": 3,
+      "hit_rate": 0.2,
+      "years_observed": [
+       1998,
+       1999,
+       2007,
+       2008,
+       2013
+      ],
+      "years_fired": [
+       2001,
+       2013,
+       2018,
+       2020
+      ]
+     },
+     "absolute_value_trigger": {
+      "hits": 0,
+      "misses": 5,
+      "false_payouts": 1,
+      "hit_rate": 0.0,
+      "years_observed": [
+       1998,
+       1999,
+       2007,
+       2008,
+       2013
+      ],
+      "years_fired": [
+       2020
+      ]
+     }
+    },
+    "input_sha256": {
+     "observed": "1ddf44f11c006af543f1582f33a6e8dbfdce63310d1d33ad43982958d20eab09",
+     "glofas": "f67231f25db30dbf2c4570b0093291a3802748fb5fe89c0180d64982dd32b5d1"
+    },
+    "annual_maxima": {
+     "1998": {
+      "observed": 59.3,
+      "glofas": 2.79
+     },
+     "1999": {
+      "observed": 30.39,
+      "glofas": 2.1
+     },
+     "2000": {
+      "observed": 24.88,
+      "glofas": 2.77
+     },
+     "2001": {
+      "observed": 24.2,
+      "glofas": 6.8
+     },
+     "2002": {
+      "observed": 19.1,
+      "glofas": 2.25
+     },
+     "2003": {
+      "observed": 13.3,
+      "glofas": 3.17
+     },
+     "2004": {
+      "observed": 21.8,
+      "glofas": 2.66
+     },
+     "2005": {
+      "observed": 13.7,
+      "glofas": 1.49
+     },
+     "2006": {
+      "observed": 27.2,
+      "glofas": 1.84
+     },
+     "2007": {
+      "observed": 41.0,
+      "glofas": 2.9
+     },
+     "2008": {
+      "observed": 40.4,
+      "glofas": 2.44
+     },
+     "2009": {
+      "observed": 21.0,
+      "glofas": 4.04
+     },
+     "2011": {
+      "observed": 29.2,
+      "glofas": 3.62
+     },
+     "2012": {
+      "observed": 17.1,
+      "glofas": 4.2
+     },
+     "2013": {
+      "observed": 41.7,
+      "glofas": 9.52
+     },
+     "2014": {
+      "observed": 20.3,
+      "glofas": 4.6
+     },
+     "2015": {
+      "observed": 15.4,
+      "glofas": 3.47
+     },
+     "2016": {
+      "observed": 12.7,
+      "glofas": 3.5
+     },
+     "2017": {
+      "observed": 11.7,
+      "glofas": 3.58
+     },
+     "2018": {
+      "observed": 15.19,
+      "glofas": 8.62
+     },
+     "2019": {
+      "observed": 16.71,
+      "glofas": 3.19
+     },
+     "2020": {
+      "observed": 17.44,
+      "glofas": 33.91
+     },
+     "2021": {
+      "observed": 15.83,
+      "glofas": 3.52
+     },
+     "2022": {
+      "observed": 12.6,
+      "glofas": 4.35
+     }
+    }
+   }
+  }
+ ]
+}

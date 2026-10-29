@@ -3,3 +3,8 @@ __pycache__/
 .venv/
 */work/
 work/
+
+# Guadalquivir case: raw downloads and rebuilt files stay local
+spain-guadalquivir-flood-triggers/cedex_cache/
+spain-guadalquivir-flood-triggers/glofas_cache/
+spain-guadalquivir-flood-triggers/data/*_rebuilt.csv
