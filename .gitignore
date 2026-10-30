@@ -10,3 +10,6 @@ spain-guadalquivir-flood-triggers/glofas_cache/
 spain-guadalquivir-flood-triggers/data/*_rebuilt.csv
 spain-guadalquivir-flood-triggers/paper/*.html
 spain-guadalquivir-flood-triggers/power_cache/
+
+# Utah FORGE case: raw GDR downloads stay local
+usa-utah-forge-geothermal/gdr_cache/

@@ -1,0 +1,55 @@
+{
+ "georeferencing": {
+  "azimuth_x_deg": 114.99999999279922,
+  "fit_residual_m": 3.269812385734727e-07,
+  "x58_m": 1811.82,
+  "y58_m": 1066.44,
+  "model_ground_m": 1685.4066310861879,
+  "surveyed_ground_m": 1684.7724,
+  "difference_m": 0.6342310861878104
+ },
+ "structure": {
+  "depth_to_granite_min_m": 533.0800139563423,
+  "depth_to_granite_max_m": 1911.3174694606237,
+  "depth_to_granite_mean_m": 1189.7572946269445,
+  "granite_top_58_32_elev_m": 700.0,
+  "depth_to_granite_58_32_m": 985.4066310861879,
+  "granite_volume_km3": 12.32625
+ },
+ "granite_volume_km3_above": {
+  "150": 10.436625,
+  "175": 7.936,
+  "200": 5.247875,
+  "225": 2.427875
+ },
+ "well_58_32": {
+  "compared_from_m": 440.0,
+  "compared_to_m": 2290.0,
+  "n": 186,
+  "bias_c": 1.3759596834642362,
+  "rmse_c": 1.6807390015205999,
+  "max_abs_c": 4.356180664602327,
+  "gradient_basin_fill_log": 94.86142857142858,
+  "gradient_basin_fill_model": 88.6680178496357,
+  "gradient_granite_log": 71.9275134788875,
+  "gradient_granite_model": 73.19279238246965,
+  "T_log_max_c": 199.334,
+  "log_max_depth_m": 2295.0
+ },
+ "isotherm_depth_58_32_m": {
+  "150": 1541.860379931718,
+  "175": 1898.9219563905983,
+  "200": 2257.2317346744753,
+  "225": 2633.2980613708864
+ },
+ "pressure_stress": {
+  "pore_pressure_gradient_kpa_m": 8.884530701070927,
+  "Sv_gradient_kpa_m": 21.56,
+  "SHmax_gradient_kpa_m": 17.4,
+  "Shmin_gradient_kpa_m": 14.6,
+  "Sv_at_2000m_mpa": 43.12,
+  "SHmax_at_2000m_mpa": 34.8,
+  "Shmin_at_2000m_mpa": 29.2,
+  "pore_pressure_at_2000m_mpa": 17.779849299020952
+ }
+}

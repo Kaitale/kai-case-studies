@@ -123,3 +123,23 @@ the source credits below.
   Science/Applied Science Program.*
 * **HydroBASINS** level 8, Europe (Lehner and Grill, 2013), https://www.hydrosheds.org: catchments for the rainfall.
   Not vendored; only the sub-catchment IDs used are published.
+
+## USA: Utah FORGE geothermal site (`usa-utah-forge-geothermal/data/`)
+
+Derived values only (CC BY 4.0), rebuilt byte for byte by `rebuild_data.py`. *Credit: Utah FORGE, U.S. Department of
+Energy, via the Geothermal Data Repository (OpenEI), CC BY 4.0.*
+
+| File | SHA-256 |
+|---|---|
+| `forge_model.npz` | `8f827f9cad4ea4e5c3ba8b23a948eb2bdbce4f225d74c8f215e94d68f7708d5d` |
+| `well_58_32_log_2018.csv` | `0ee61ff2e65573aa2705c108e4ae0e0925b7388e7674f898dc0c1608d359f3cf` |
+| `wells.csv` | `9d9cbc26ad0757e5061f64b52ffc5a743db9cfcda22ead24b112f49bef084e77` |
+
+### Sources (not vendored; all CC BY 4.0, licence read from each GDR page on 30 Oct 2026)
+
+| File | GDR | SHA-256 |
+|---|---|---|
+| `Mesh Files.zip` (lithology, 50 m cells) | [1205](https://gdr.openei.org/submissions/1205), DOI 10.15121/1605155 | `ee4b35dffcceb4916d44bc3ac8882e715f154a0f9603d524940aee74a7534704` |
+| `Initial Conditions.zip` (temperature, pressure, stress) | [1205](https://gdr.openei.org/submissions/1205), DOI 10.15121/1605155 | `fc29649f321cff916849032c27c949e383709caeddae75b0a501c8334bbf826b` |
+| `58-32_Temp_Pres_11_08_18.zip` (58-32 log, 8 Nov 2018) | [1101](https://gdr.openei.org/submissions/1101), DOI 10.15121/1493769 | `04de1f0aebe92e6b3963fcc43f054033d0898cab3d9a238f78d8038ec2826ec8` |
+| `Utah FORGE Well and Seismic Locations.csv` (Dec 2021) | [1358](https://gdr.openei.org/submissions/1358) | `7bfc9cf730b8521a71a878ab38381a772ea06821e20f07c06c7ee5e3a5351471` |
