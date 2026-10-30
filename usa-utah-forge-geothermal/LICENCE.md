@@ -3,7 +3,7 @@
 | What | Licence |
 |---|---|
 | Code (`*.py`, the notebooks' code cells) | MIT, © 2026 KAI Water & Energy (see the repository's `LICENSE`) |
-| Figures, result files (`figures/`, `results/`), text | CC BY 4.0, © 2026 KAI Water & Energy |
+| Figures, result files (`figures/`, `results/`), text | CC BY 4.0, © 2026 KAI Water & Energy. Model results are simulated by the KAI Reservoir Lab engine (not open source); the notebooks check them against the data |
 | Derived data (`data/`) | CC BY 4.0, derived from Utah FORGE data (credit below) |
 
 CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
@@ -17,6 +17,11 @@ CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
 | [1205](https://gdr.openei.org/submissions/1205) | Utah FORGE: Data for 3-D Model Development - Lithology, Temperature, Pressure, and Stress (Podgorney, 2020) | [10.15121/1605155](https://doi.org/10.15121/1605155) | CC BY 4.0 | lithology, temperature, pressure, depth, stress formulas |
 | [1101](https://gdr.openei.org/submissions/1101) | Utah FORGE: Milford Deep Test Well 58-32 (MU-ESW1) Pressure and Temperature Logs | [10.15121/1493769](https://doi.org/10.15121/1493769) | CC BY 4.0 | 58-32 temperature log, 8 Nov 2018 |
 | [1358](https://gdr.openei.org/submissions/1358) | Utah FORGE: Updated Well, Well Pad, and Seismic Station GPS Coordinates December, 2021 | — | CC BY 4.0 | well-head coordinates |
+| [1299](https://gdr.openei.org/submissions/1299) | Utah FORGE: Well 58-32 (MU-ESW1) FMI Log Fracture Results (Blochowicz, 2021) | — | CC BY 4.0 | fracture density and apertures (notebook 2) |
+| [1646](https://gdr.openei.org/submissions/1646) | Utah FORGE: 2024 Discrete Fracture Network Model Data (Finnila and Jones, 2024) | [10.15121/2440870](https://doi.org/10.15121/2440870) | CC BY 4.0 | well trajectories, natural-fracture orientations and sizes, stimulated DFN (notebooks 2, 3) |
+| [1683](https://gdr.openei.org/submissions/1683) | Utah FORGE: Wells 16A(78)-32 and 16B(78)-32 Extended Circulation Test Data, Aug–Sep 2024 (McLennan, England and Swearingen, 2024) | [10.15121/2475065](https://doi.org/10.15121/2475065) | CC BY 4.0 | calibration and validation (notebook 3) |
+| [1611](https://gdr.openei.org/submissions/1611) | Utah FORGE: Wells 16A(78)-32 and 16B(78)-32 Stimulation Pressure and Circulation Data, April 2024 | [10.15121/2371032](https://doi.org/10.15121/2371032) | CC BY 4.0 | validation (notebook 3) |
+| [1222](https://gdr.openei.org/submissions/1222) | Utah FORGE: Discrete Fracture Network (DFN) Data (Finnila and Podgorney, 2020) | — | CC BY 4.0 | stress summary only (SHmax direction and range, Shmin gradient), quoted; no file used |
 
 Only derived values are published here (`data/`); the GDR files are not redistributed. `rebuild_data.py` downloads them
 and checks their SHA-256 (listed in `forge_tools.py` and the repository's `DATA.md`). The licence of each submission was
