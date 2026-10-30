@@ -24,6 +24,17 @@ paid, the ones it would have missed, and the payouts in years without a flood.
 
 ![All gauges: return period against fixed flow](figures/gq_triggers.png)
 
+## Paper, report and how to cite
+
+* **Research paper:** [paper/paper.pdf](paper/paper.pdf), Kakooza, C. (2026), *Writing parametric flood triggers from a
+  global flood model: a gauge-by-gauge test in the Guadalquivir basin, Spain*, version 1.0.
+* **Technical report for insurers, brokers and risk pools:** [paper/technical_report.pdf](paper/technical_report.pdf)
+  (KAI-Hydro KH-TR-2026-01), with every return level and the 1-in-5 trigger at every gauge.
+* Every number in both comes from the files here: `paper/paper_stats.py` recomputes the statistics and
+  `paper/build_documents.py` builds the documents from them ([paper/README.md](paper/README.md)).
+* Cite with [CITATION.cff](CITATION.cff). Licence and source credits: [LICENCE.md](LICENCE.md) (text, figures and
+  derived data CC BY 4.0; code MIT).
+
 ## Results
 
 | | All 14 gauges |

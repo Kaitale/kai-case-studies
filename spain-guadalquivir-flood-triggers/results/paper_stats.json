@@ -1,0 +1,36 @@
+{
+ "pair": {
+  "2": {
+   "rp_only": 63,
+   "abs_only": 3,
+   "mcnemar_p": 1.3e-15
+  },
+  "5": {
+   "rp_only": 24,
+   "abs_only": 0,
+   "mcnemar_p": 1.2e-07
+  },
+  "10": {
+   "rp_only": 11,
+   "abs_only": 0,
+   "mcnemar_p": 0.00098
+  },
+  "25": {
+   "rp_only": 3,
+   "abs_only": 0,
+   "mcnemar_p": 0.25
+  }
+ },
+ "rho_vs_share": [
+  0.797,
+  0.00064
+ ],
+ "area_vs_ratio10": [
+  0.224,
+  0.44
+ ],
+ "meanratio_vs_ratio10": [
+  0.535,
+  0.049
+ ]
+}

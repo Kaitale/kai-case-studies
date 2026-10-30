@@ -1,0 +1,45 @@
+{
+  "title": "Writing parametric flood triggers from a global flood model: a gauge-by-gauge test in the Guadalquivir basin, Spain",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "<p>A parametric flood policy pays when a river index crosses an agreed trigger. Where a river has no gauge, the index has to come from a global flood model, and the policy is only as good as the model's agreement with the floods that actually happen. We test how a trigger set from the GloFAS reanalysis performs against 14 river gauges in the Guadalquivir basin, Spain (583–16,166 km², water years 1985–2022, 286 gauge-years). Flood-frequency curves were fitted to annual maxima from both sources by L-moments (GEV and log-Pearson III), and 1-in-T triggers were scored year by year against the floods the gauges measured. The model's 10-year flood is 0.22 of the gauged one at the median gauge, so a trigger written in m³/s from the model caught only 6 of 60 1-in-5 flood years (Peirce skill 0.06, no better than chance). Written instead as the model's own 1-in-5 level, the same trigger caught 30 of 60 (hit rate 0.50, false-alarm rate 0.12, Peirce skill 0.38); 24 flood years were caught only by the return-period trigger and 0 only by the fixed-flow one (McNemar p = 1.2 × 10⁻⁷). Basis risk remained high (27 false payouts, 47% of all payouts). Across gauges, the rank correlation of annual floods between gauge and model predicted the share of flood years caught (Spearman ρ = 0.80, p = 0.0006), which gives a simple screen for basis risk wherever a short local record exists. Triggers from a global model should be written as the model's own return period and calibrated locally before they enter a contract. Data, code and a notebook that reproduces every number are published with this paper.</p><p>The record holds the research paper, a companion technical report (KAI-Hydro KH-TR-2026-01) and the data package: derived annual maxima at 14 CEDEX gauges and their GloFAS cells, the result files, the figures, a notebook that reproduces every number, and the scripts that rebuild the derived data from the sources and build the documents. Interactive version with maps: <a href=\"https://kai-water.charkaks0.workers.dev/case-guadalquivir\">https://kai-water.charkaks0.workers.dev/case-guadalquivir</a>.</p>",
+  "creators": [
+    {
+      "name": "Kakooza, Charles",
+      "affiliation": "KAI Water & Energy, Kampala, Uganda"
+    }
+  ],
+  "keywords": [
+    "parametric insurance",
+    "flood trigger",
+    "basis risk",
+    "GloFAS",
+    "flood frequency",
+    "L-moments",
+    "GEV",
+    "log-Pearson III",
+    "forecast verification",
+    "Peirce skill score",
+    "Guadalquivir",
+    "Spain",
+    "CEDEX"
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "version": "1.0",
+  "publication_date": "2026-10-30",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Kaitale/kai-case-studies/tree/main/spain-guadalquivir-flood-triggers",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://kai-water.charkaks0.workers.dev/case-guadalquivir",
+      "relation": "isDocumentedBy",
+      "resource_type": "other"
+    }
+  ],
+  "notes": "Gauge data: Fuente: CEDEX, Anuario de Aforos 2021-2022 (MITECO); raw CEDEX files are not redistributed, only derived annual maxima. Global model: contains modified Copernicus Emergency Management Service information 2026 (GloFAS 4.0), via the Open-Meteo flood API (CC BY 4.0). Code: MIT. Text, figures and derived data: CC BY 4.0. Analysis code and text were prepared with the help of an AI assistant (Claude, Anthropic) and checked by the author."
+}
