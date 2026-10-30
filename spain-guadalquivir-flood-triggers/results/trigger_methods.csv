@@ -1,0 +1,49 @@
+index,method,T,hits,misses,false_payouts,hit_rate,false_alarm_rate,peirce,false_payout_share,p_vs_chance,paid_share_min,paid_share_median,paid_share_max,common_level
+River flow (GloFAS),Absolute value,2,80,63,41,0.559,0.287,0.273,0.339,2.4e-06,0.0,0.45,1.0,7.5
+River flow (GloFAS),Quantile,2,94,49,53,0.657,0.371,0.287,0.361,9.5e-07,0.5,0.52,0.53,
+River flow (GloFAS),Return period,2,93,50,50,0.65,0.35,0.301,0.35,2.8e-07,0.41,0.5,0.62,
+River flow (GloFAS),Share of a reference,2,95,48,68,0.664,0.476,0.189,0.417,0.00092,0.27,0.53,0.96,0.68
+River flow (GloFAS),Absolute value,5,28,32,54,0.467,0.239,0.228,0.659,0.00065,0.0,0.24,0.78,10.8
+River flow (GloFAS),Quantile,5,29,31,23,0.483,0.102,0.382,0.442,4.6e-10,0.17,0.18,0.21,
+River flow (GloFAS),Return period,5,30,30,27,0.5,0.119,0.381,0.474,1.4e-09,0.15,0.21,0.24,
+River flow (GloFAS),Share of a reference,5,31,29,27,0.517,0.119,0.397,0.466,3.4e-10,0.12,0.21,0.29,1.2
+River flow (GloFAS),Absolute value,10,17,19,32,0.472,0.128,0.344,0.653,5.5e-06,0.0,0.15,0.44,14.0
+River flow (GloFAS),Quantile,10,10,26,14,0.278,0.056,0.222,0.583,0.00016,0.06,0.09,0.11,
+River flow (GloFAS),Return period,10,13,23,19,0.361,0.076,0.285,0.594,1.6e-05,0.05,0.11,0.19,
+River flow (GloFAS),Share of a reference,10,12,24,19,0.333,0.076,0.257,0.613,6.9e-05,0.04,0.11,0.16,1.69
+River flow (GloFAS),Absolute value,25,5,6,24,0.455,0.087,0.367,0.828,0.0023,0.0,0.06,0.29,20.4
+River flow (GloFAS),Quantile,25,3,8,11,0.273,0.04,0.233,0.786,0.012,0.04,0.05,0.06,
+River flow (GloFAS),Return period,25,3,8,15,0.273,0.055,0.218,0.833,0.025,0.04,0.06,0.1,
+River flow (GloFAS),Share of a reference,25,3,8,12,0.273,0.044,0.229,0.8,0.015,0.0,0.05,0.14,2.75
+Storm rainfall (wettest 3 days),Absolute value,2,72,71,56,0.503,0.392,0.112,0.438,0.037,0.09,0.51,0.78,48.8
+Storm rainfall (wettest 3 days),Quantile,2,83,60,64,0.58,0.448,0.133,0.435,0.017,0.5,0.52,0.53,
+Storm rainfall (wettest 3 days),Return period,2,82,61,62,0.573,0.434,0.14,0.431,0.012,0.41,0.5,0.61,
+Storm rainfall (wettest 3 days),Share of a reference,2,79,64,57,0.552,0.399,0.154,0.419,0.0064,0.33,0.49,0.67,0.97
+Storm rainfall (wettest 3 days),Absolute value,5,20,40,44,0.333,0.195,0.139,0.688,0.019,0.0,0.23,0.5,63.5
+Storm rainfall (wettest 3 days),Quantile,5,23,37,29,0.383,0.128,0.255,0.558,2e-05,0.17,0.18,0.21,
+Storm rainfall (wettest 3 days),Return period,5,23,37,28,0.383,0.124,0.259,0.549,1.3e-05,0.11,0.18,0.24,
+Storm rainfall (wettest 3 days),Share of a reference,5,23,37,29,0.383,0.128,0.255,0.558,2e-05,0.11,0.18,0.24,1.23
+Storm rainfall (wettest 3 days),Absolute value,10,8,28,21,0.222,0.084,0.138,0.724,0.017,0.0,0.1,0.39,73.2
+Storm rainfall (wettest 3 days),Quantile,10,6,30,18,0.167,0.072,0.095,0.75,0.064,0.06,0.09,0.11,
+Storm rainfall (wettest 3 days),Return period,10,8,28,19,0.222,0.076,0.146,0.704,0.011,0.04,0.1,0.15,
+Storm rainfall (wettest 3 days),Share of a reference,10,8,28,22,0.222,0.088,0.134,0.733,0.021,0.04,0.1,0.19,1.4
+Storm rainfall (wettest 3 days),Absolute value,25,2,9,9,0.182,0.033,0.149,0.818,0.061,0.0,0.04,0.17,85.5
+Storm rainfall (wettest 3 days),Quantile,25,1,10,13,0.091,0.047,0.044,0.929,0.43,0.04,0.05,0.06,
+Storm rainfall (wettest 3 days),Return period,25,0,11,10,0.0,0.036,-0.036,1.0,1.0,0.0,0.04,0.06,
+Storm rainfall (wettest 3 days),Share of a reference,25,1,10,16,0.091,0.058,0.033,0.941,0.5,0.0,0.05,0.15,1.55
+Wet-season rainfall (Oct–Apr total),Absolute value,2,82,61,51,0.573,0.357,0.217,0.383,0.00018,0.05,0.5,0.84,340.8
+Wet-season rainfall (Oct–Apr total),Quantile,2,96,47,51,0.671,0.357,0.315,0.347,7.7e-08,0.5,0.52,0.53,
+Wet-season rainfall (Oct–Apr total),Return period,2,90,53,43,0.629,0.301,0.329,0.323,1.9e-08,0.37,0.44,0.67,
+Wet-season rainfall (Oct–Apr total),Share of a reference,2,89,54,41,0.622,0.287,0.336,0.315,8.8e-09,0.37,0.43,0.67,1.0
+Wet-season rainfall (Oct–Apr total),Absolute value,5,22,38,21,0.367,0.093,0.274,0.488,1.4e-06,0.0,0.19,0.33,437.7
+Wet-season rainfall (Oct–Apr total),Quantile,5,28,32,24,0.467,0.106,0.36,0.462,3.6e-09,0.17,0.18,0.21,
+Wet-season rainfall (Oct–Apr total),Return period,5,31,29,28,0.517,0.124,0.393,0.475,6.3e-10,0.15,0.21,0.29,
+Wet-season rainfall (Oct–Apr total),Share of a reference,5,30,30,29,0.5,0.128,0.372,0.492,4.5e-09,0.15,0.21,0.29,1.26
+Wet-season rainfall (Oct–Apr total),Absolute value,10,11,25,21,0.306,0.084,0.222,0.656,0.00055,0.0,0.12,0.28,493.2
+Wet-season rainfall (Oct–Apr total),Quantile,10,10,26,14,0.278,0.056,0.222,0.583,0.00016,0.06,0.09,0.11,
+Wet-season rainfall (Oct–Apr total),Return period,10,10,26,19,0.278,0.076,0.202,0.655,0.001,0.04,0.11,0.16,
+Wet-season rainfall (Oct–Apr total),Share of a reference,10,9,27,18,0.25,0.072,0.178,0.667,0.0026,0.0,0.1,0.18,1.38
+Wet-season rainfall (Oct–Apr total),Absolute value,25,5,6,10,0.455,0.036,0.418,0.667,7.5e-05,0.0,0.02,0.22,543.4
+Wet-season rainfall (Oct–Apr total),Quantile,25,2,9,12,0.182,0.044,0.138,0.857,0.095,0.04,0.05,0.06,
+Wet-season rainfall (Oct–Apr total),Return period,25,2,9,8,0.182,0.029,0.153,0.8,0.051,0.0,0.04,0.06,
+Wet-season rainfall (Oct–Apr total),Share of a reference,25,2,9,6,0.182,0.022,0.16,0.75,0.033,0.0,0.04,0.06,1.51

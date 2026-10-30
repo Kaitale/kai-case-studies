@@ -1,4 +1,4 @@
-# Can a global flood model set a flood trigger where there is no gauge?
+# River flow or rainfall: can global data set a flood trigger where there is no gauge?
 
 **KAI-Hydro parametric flood triggers, tested in the open on 14 river gauges in Spain's Guadalquivir basin.**
 
@@ -10,6 +10,7 @@ paid, the ones it would have missed, and the payouts in years without a flood.
 | Notebook | Question | Key result |
 |---|---|---|
 | [1 · Global model against the gauges](01_global_model_flood_triggers.ipynb) | How big is a 10-year flood in the model, and would a trigger set from it pay in the right years? | The model's 10-year flood is **22 %** of the gauged one (median). At 1-in-5, a trigger written in m³/s from the model caught **6 of 60** flood years; the same trigger written as the model's own return period caught **30 of 60**, with 27 false payouts |
+| [`compare_triggers.py`](compare_triggers.py) · River flow or rainfall, four ways | Does a rainfall index do better than river flow, and does it matter how the trigger level is set? | Levels set from each site's own record (quantile, return period, share of the mean flood) perform alike; **one level for all sites pays in 0 % to 78 % of years** from gauge to gauge. Storm rainfall caught **23 of 60** flood years, the October–April total **31 of 60**, river flow 30. Requiring river and season rainfall to agree cut false payouts from 47 % to 29 % of payouts |
 
 **Interactive version, with a map to pick a forecast point:** [kai-water.charkaks0.workers.dev/case-guadalquivir](https://kai-water.charkaks0.workers.dev/case-guadalquivir) ·
 [trigger explorer on the KAI-Hydro page](https://kai-water.charkaks0.workers.dev/kai-hydro#triggers)
@@ -37,6 +38,8 @@ paid, the ones it would have missed, and the payouts in years without a flood.
 
 ## Results
 
+![River flow or rainfall, four ways](figures/gq_methods.png)
+
 | | All 14 gauges |
 |---|---|
 | Model's mean flow ÷ gauge's (median) | 0.38 (within a factor of 2 at 4 gauges) |
@@ -52,6 +55,10 @@ Per gauge, per return period: [`results/return_levels.csv`](results/return_level
 * The global model runs low in this dammed, irrigated, semi-arid basin. A search up to 25 km round the largest gauge
   found no bigger river cell, so it is the model, not the cell.
 * Never write a trigger in m³/s straight from a global model; write it as the model's own return period.
+* Set each site's level from its own record. One level for every site, as Model Library showed for Andalucía drought
+  cover, pays at a different frequency at each site.
+* In this basin flood years follow wet winters: the October–April rainfall total ranked them as well as the river
+  model, storm rainfall did not. Use river flow for event cover and test a second index beside it.
 * Even then, the basis risk is too high to sell on the global model alone. A contract needs local calibration on a
   gauge, satellite flood maps or local flood records.
 
@@ -65,9 +72,16 @@ Per gauge, per return period: [`results/return_levels.csv`](results/return_level
 * **Global model:** GloFAS reanalysis, LISFLOOD, consolidated, version 4.0, from the Copernicus Emergency Management
   Service, through the [Open-Meteo flood API](https://open-meteo.com/en/docs/flood-api) (data CC BY 4.0; the free API
   is for non-commercial use). *Contains modified Copernicus Emergency Management Service information 2026.*
+* **Rainfall:** NASA POWER daily precipitation (PRECTOTCORR, MERRA-2 bias-corrected, 0.5° × 0.625°), the source of
+  Model Library's Andalucía study, averaged over each gauge's catchment from HydroBASINS level 8 (Lehner and Grill,
+  2013). `rebuild_rainfall.py` rebuilds it (needs the HydroBASINS Europe level-8 shapefile). *Data obtained from the
+  NASA Langley Research Center POWER Project funded through the NASA Earth Science/Applied Science Program.*
 * **In this repository:** only derived values: each water year's largest daily flow at each gauge and at its GloFAS
   cell ([`data/annual_maxima.csv`](data/annual_maxima.csv), 286 gauge-years) and the gauge list with catchment area,
-  position and matched cell ([`data/gauges.csv`](data/gauges.csv)).
+  position and matched cell ([`data/gauges.csv`](data/gauges.csv)); each water year's largest 1- to 30-day catchment
+  rainfall and its October–April total ([`data/rainfall_maxima.csv`](data/rainfall_maxima.csv)), with the catchments and
+  rainfall cells behind them ([`data/rain_catchments.csv`](data/rain_catchments.csv),
+  [`data/rain_cell_weights.csv`](data/rain_cell_weights.csv)).
 
 ## Method
 
@@ -81,6 +95,11 @@ Per gauge, per return period: [`results/return_levels.csv`](results/return_level
 * a flood year is one in which the gauge passed its own 1-in-T level; a return-period trigger pays when the model
   passes its own 1-in-T level, a fixed-flow trigger when it passes the gauge's level in m³/s.
 
+`compare_triggers.py` sets every 1-in-T trigger in the four ways of Model Library (2026), *Four ways to set a
+parametric trigger, tested on Andalucía rainfall and yields*: one absolute level for all gauges, each gauge's own
+quantile, its fitted return period, or one share of its mean annual maximum; on river flow, storm rainfall (wettest
+3 days) and wet-season rainfall (October–April total); and scores each against the same flood years.
+
 The notebook ends by checking its numbers against the KAI engine's published results
 ([`results/kai_engine_results.json`](results/kai_engine_results.json)): the trigger scores must match exactly and
 the median ratios within 0.02.
@@ -92,6 +111,7 @@ the median ratios within 0.02.
 * Annual maxima of daily means: instantaneous peaks are higher.
 * 17 to 24 years per gauge, so levels beyond 1-in-25 are extrapolations and their bands are wide.
 * The cell choice uses the gauge's mean flow; at an ungauged site the cell is chosen by catchment area.
+* Rainfall from one product on a 50 km grid, over HydroBASINS catchments up to 2.7 times the gauge's area.
 
 ## What this becomes in KAI
 

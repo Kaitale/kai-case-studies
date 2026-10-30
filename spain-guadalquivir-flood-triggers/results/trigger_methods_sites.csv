@@ -1,0 +1,169 @@
+index,method,gauge_id,gauge,level,paid_share
+River flow (GloFAS),Absolute value,5001,Arroyo Maria,6.32,0.17
+River flow (GloFAS),Absolute value,5004,Mengibar,175.25,0.04
+River flow (GloFAS),Absolute value,5025,Llano De Vela,13.44,0.0
+River flow (GloFAS),Absolute value,5029,Mengibar Guadalbullon,12.04,0.71
+River flow (GloFAS),Absolute value,5045,Loja,45.64,0.26
+River flow (GloFAS),Absolute value,5057,Guadaira Encauzamiento,14.29,0.78
+River flow (GloFAS),Absolute value,5076,Aznalcazar Puente,10.41,0.32
+River flow (GloFAS),Absolute value,5077,Central De Cala,10.95,0.11
+River flow (GloFAS),Absolute value,5080,Puente Tocon,31.91,0.22
+River flow (GloFAS),Absolute value,5081,Castro Del Rio,18.05,0.12
+River flow (GloFAS),Absolute value,5090,"Guijo, El",7.28,0.52
+River flow (GloFAS),Absolute value,5127,Huesna,7.35,0.38
+River flow (GloFAS),Absolute value,5140,Villanueva De Las Torres,18.27,0.0
+River flow (GloFAS),Absolute value,5142,Porcuna,7.26,0.5
+River flow (GloFAS),Quantile,5001,Arroyo Maria,4.6,0.17
+River flow (GloFAS),Quantile,5004,Mengibar,51.75,0.17
+River flow (GloFAS),Quantile,5025,Llano De Vela,2.93,0.2
+River flow (GloFAS),Quantile,5029,Mengibar Guadalbullon,24.98,0.18
+River flow (GloFAS),Quantile,5045,Loja,51.57,0.17
+River flow (GloFAS),Quantile,5057,Guadaira Encauzamiento,30.92,0.17
+River flow (GloFAS),Quantile,5076,Aznalcazar Puente,22.88,0.18
+River flow (GloFAS),Quantile,5077,Central De Cala,7.65,0.21
+River flow (GloFAS),Quantile,5080,Puente Tocon,32.67,0.17
+River flow (GloFAS),Quantile,5081,Castro Del Rio,6.6,0.18
+River flow (GloFAS),Quantile,5090,"Guijo, El",9.39,0.17
+River flow (GloFAS),Quantile,5127,Huesna,17.72,0.19
+River flow (GloFAS),Quantile,5140,Villanueva De Las Torres,8.1,0.19
+River flow (GloFAS),Quantile,5142,Porcuna,13.47,0.2
+River flow (GloFAS),Return period,5001,Arroyo Maria,5.22,0.17
+River flow (GloFAS),Return period,5004,Mengibar,48.02,0.22
+River flow (GloFAS),Return period,5025,Llano De Vela,3.06,0.15
+River flow (GloFAS),Return period,5029,Mengibar Guadalbullon,24.4,0.18
+River flow (GloFAS),Return period,5045,Loja,47.34,0.22
+River flow (GloFAS),Return period,5057,Guadaira Encauzamiento,28.86,0.22
+River flow (GloFAS),Return period,5076,Aznalcazar Puente,16.57,0.23
+River flow (GloFAS),Return period,5077,Central De Cala,7.37,0.21
+River flow (GloFAS),Return period,5080,Puente Tocon,30.72,0.22
+River flow (GloFAS),Return period,5081,Castro Del Rio,7.18,0.18
+River flow (GloFAS),Return period,5090,"Guijo, El",9.51,0.17
+River flow (GloFAS),Return period,5127,Huesna,14.19,0.24
+River flow (GloFAS),Return period,5140,Villanueva De Las Torres,6.78,0.24
+River flow (GloFAS),Return period,5142,Porcuna,15.9,0.15
+River flow (GloFAS),Share of a reference,5001,Arroyo Maria,6.06,0.17
+River flow (GloFAS),Share of a reference,5004,Mengibar,49.95,0.22
+River flow (GloFAS),Share of a reference,5025,Llano De Vela,2.95,0.15
+River flow (GloFAS),Share of a reference,5029,Mengibar Guadalbullon,23.37,0.24
+River flow (GloFAS),Share of a reference,5045,Loja,44.2,0.26
+River flow (GloFAS),Share of a reference,5057,Guadaira Encauzamiento,30.99,0.17
+River flow (GloFAS),Share of a reference,5076,Aznalcazar Puente,19.33,0.23
+River flow (GloFAS),Share of a reference,5077,Central De Cala,6.94,0.21
+River flow (GloFAS),Share of a reference,5080,Puente Tocon,30.68,0.22
+River flow (GloFAS),Share of a reference,5081,Castro Del Rio,8.02,0.12
+River flow (GloFAS),Share of a reference,5090,"Guijo, El",9.52,0.17
+River flow (GloFAS),Share of a reference,5127,Huesna,16.61,0.19
+River flow (GloFAS),Share of a reference,5140,Villanueva De Las Torres,6.41,0.29
+River flow (GloFAS),Share of a reference,5142,Porcuna,13.72,0.2
+Storm rainfall (wettest 3 days),Absolute value,5001,Arroyo Maria,63.51,0.12
+Storm rainfall (wettest 3 days),Absolute value,5004,Mengibar,63.51,0.0
+Storm rainfall (wettest 3 days),Absolute value,5025,Llano De Vela,63.51,0.15
+Storm rainfall (wettest 3 days),Absolute value,5029,Mengibar Guadalbullon,63.51,0.12
+Storm rainfall (wettest 3 days),Absolute value,5045,Loja,63.51,0.22
+Storm rainfall (wettest 3 days),Absolute value,5057,Guadaira Encauzamiento,63.51,0.5
+Storm rainfall (wettest 3 days),Absolute value,5076,Aznalcazar Puente,63.51,0.5
+Storm rainfall (wettest 3 days),Absolute value,5077,Central De Cala,63.51,0.37
+Storm rainfall (wettest 3 days),Absolute value,5080,Puente Tocon,63.51,0.06
+Storm rainfall (wettest 3 days),Absolute value,5081,Castro Del Rio,63.51,0.24
+Storm rainfall (wettest 3 days),Absolute value,5090,"Guijo, El",63.51,0.35
+Storm rainfall (wettest 3 days),Absolute value,5127,Huesna,63.51,0.29
+Storm rainfall (wettest 3 days),Absolute value,5140,Villanueva De Las Torres,63.51,0.0
+Storm rainfall (wettest 3 days),Absolute value,5142,Porcuna,63.51,0.25
+Storm rainfall (wettest 3 days),Quantile,5001,Arroyo Maria,44.62,0.17
+Storm rainfall (wettest 3 days),Quantile,5004,Mengibar,44.72,0.17
+Storm rainfall (wettest 3 days),Quantile,5025,Llano De Vela,50.53,0.2
+Storm rainfall (wettest 3 days),Quantile,5029,Mengibar Guadalbullon,62.56,0.18
+Storm rainfall (wettest 3 days),Quantile,5045,Loja,66.43,0.17
+Storm rainfall (wettest 3 days),Quantile,5057,Guadaira Encauzamiento,81.3,0.17
+Storm rainfall (wettest 3 days),Quantile,5076,Aznalcazar Puente,71.86,0.18
+Storm rainfall (wettest 3 days),Quantile,5077,Central De Cala,69.21,0.21
+Storm rainfall (wettest 3 days),Quantile,5080,Puente Tocon,53.84,0.17
+Storm rainfall (wettest 3 days),Quantile,5081,Castro Del Rio,71.17,0.18
+Storm rainfall (wettest 3 days),Quantile,5090,"Guijo, El",69.37,0.17
+Storm rainfall (wettest 3 days),Quantile,5127,Huesna,74.63,0.19
+Storm rainfall (wettest 3 days),Quantile,5140,Villanueva De Las Torres,49.93,0.19
+Storm rainfall (wettest 3 days),Quantile,5142,Porcuna,65.78,0.2
+Storm rainfall (wettest 3 days),Return period,5001,Arroyo Maria,47.86,0.17
+Storm rainfall (wettest 3 days),Return period,5004,Mengibar,45.49,0.13
+Storm rainfall (wettest 3 days),Return period,5025,Llano De Vela,47.6,0.2
+Storm rainfall (wettest 3 days),Return period,5029,Mengibar Guadalbullon,58.39,0.24
+Storm rainfall (wettest 3 days),Return period,5045,Loja,61.72,0.22
+Storm rainfall (wettest 3 days),Return period,5057,Guadaira Encauzamiento,81.59,0.17
+Storm rainfall (wettest 3 days),Return period,5076,Aznalcazar Puente,73.98,0.14
+Storm rainfall (wettest 3 days),Return period,5077,Central De Cala,70.94,0.11
+Storm rainfall (wettest 3 days),Return period,5080,Puente Tocon,56.59,0.17
+Storm rainfall (wettest 3 days),Return period,5081,Castro Del Rio,66.98,0.24
+Storm rainfall (wettest 3 days),Return period,5090,"Guijo, El",70.67,0.13
+Storm rainfall (wettest 3 days),Return period,5127,Huesna,69.83,0.24
+Storm rainfall (wettest 3 days),Return period,5140,Villanueva De Las Torres,48.56,0.19
+Storm rainfall (wettest 3 days),Return period,5142,Porcuna,65.31,0.2
+Storm rainfall (wettest 3 days),Share of a reference,5001,Arroyo Maria,49.09,0.17
+Storm rainfall (wettest 3 days),Share of a reference,5004,Mengibar,44.95,0.17
+Storm rainfall (wettest 3 days),Share of a reference,5025,Llano De Vela,48.53,0.2
+Storm rainfall (wettest 3 days),Share of a reference,5029,Mengibar Guadalbullon,59.87,0.24
+Storm rainfall (wettest 3 days),Share of a reference,5045,Loja,59.88,0.22
+Storm rainfall (wettest 3 days),Share of a reference,5057,Guadaira Encauzamiento,81.21,0.17
+Storm rainfall (wettest 3 days),Share of a reference,5076,Aznalcazar Puente,74.5,0.14
+Storm rainfall (wettest 3 days),Share of a reference,5077,Central De Cala,72.72,0.11
+Storm rainfall (wettest 3 days),Share of a reference,5080,Puente Tocon,53.37,0.17
+Storm rainfall (wettest 3 days),Share of a reference,5081,Castro Del Rio,66.73,0.24
+Storm rainfall (wettest 3 days),Share of a reference,5090,"Guijo, El",72.87,0.13
+Storm rainfall (wettest 3 days),Share of a reference,5127,Huesna,67.1,0.24
+Storm rainfall (wettest 3 days),Share of a reference,5140,Villanueva De Las Torres,48.12,0.19
+Storm rainfall (wettest 3 days),Share of a reference,5142,Porcuna,65.56,0.2
+Wet-season rainfall (Oct–Apr total),Absolute value,5001,Arroyo Maria,437.69,0.0
+Wet-season rainfall (Oct–Apr total),Absolute value,5004,Mengibar,437.69,0.0
+Wet-season rainfall (Oct–Apr total),Absolute value,5025,Llano De Vela,437.69,0.0
+Wet-season rainfall (Oct–Apr total),Absolute value,5029,Mengibar Guadalbullon,437.69,0.12
+Wet-season rainfall (Oct–Apr total),Absolute value,5045,Loja,437.69,0.17
+Wet-season rainfall (Oct–Apr total),Absolute value,5057,Guadaira Encauzamiento,437.69,0.33
+Wet-season rainfall (Oct–Apr total),Absolute value,5076,Aznalcazar Puente,437.69,0.32
+Wet-season rainfall (Oct–Apr total),Absolute value,5077,Central De Cala,437.69,0.21
+Wet-season rainfall (Oct–Apr total),Absolute value,5080,Puente Tocon,437.69,0.06
+Wet-season rainfall (Oct–Apr total),Absolute value,5081,Castro Del Rio,437.69,0.24
+Wet-season rainfall (Oct–Apr total),Absolute value,5090,"Guijo, El",437.69,0.26
+Wet-season rainfall (Oct–Apr total),Absolute value,5127,Huesna,437.69,0.24
+Wet-season rainfall (Oct–Apr total),Absolute value,5140,Villanueva De Las Torres,437.69,0.0
+Wet-season rainfall (Oct–Apr total),Absolute value,5142,Porcuna,437.69,0.2
+Wet-season rainfall (Oct–Apr total),Quantile,5001,Arroyo Maria,303.0,0.17
+Wet-season rainfall (Oct–Apr total),Quantile,5004,Mengibar,335.98,0.17
+Wet-season rainfall (Oct–Apr total),Quantile,5025,Llano De Vela,293.24,0.2
+Wet-season rainfall (Oct–Apr total),Quantile,5029,Mengibar Guadalbullon,403.28,0.18
+Wet-season rainfall (Oct–Apr total),Quantile,5045,Loja,441.64,0.17
+Wet-season rainfall (Oct–Apr total),Quantile,5057,Guadaira Encauzamiento,555.44,0.17
+Wet-season rainfall (Oct–Apr total),Quantile,5076,Aznalcazar Puente,541.22,0.18
+Wet-season rainfall (Oct–Apr total),Quantile,5077,Central De Cala,468.8,0.21
+Wet-season rainfall (Oct–Apr total),Quantile,5080,Puente Tocon,384.1,0.17
+Wet-season rainfall (Oct–Apr total),Quantile,5081,Castro Del Rio,510.24,0.18
+Wet-season rainfall (Oct–Apr total),Quantile,5090,"Guijo, El",507.94,0.17
+Wet-season rainfall (Oct–Apr total),Quantile,5127,Huesna,483.9,0.19
+Wet-season rainfall (Oct–Apr total),Quantile,5140,Villanueva De Las Torres,316.52,0.19
+Wet-season rainfall (Oct–Apr total),Quantile,5142,Porcuna,456.54,0.2
+Wet-season rainfall (Oct–Apr total),Return period,5001,Arroyo Maria,308.74,0.17
+Wet-season rainfall (Oct–Apr total),Return period,5004,Mengibar,330.95,0.22
+Wet-season rainfall (Oct–Apr total),Return period,5025,Llano De Vela,300.04,0.15
+Wet-season rainfall (Oct–Apr total),Return period,5029,Mengibar Guadalbullon,404.0,0.18
+Wet-season rainfall (Oct–Apr total),Return period,5045,Loja,437.73,0.17
+Wet-season rainfall (Oct–Apr total),Return period,5057,Guadaira Encauzamiento,521.92,0.22
+Wet-season rainfall (Oct–Apr total),Return period,5076,Aznalcazar Puente,518.57,0.23
+Wet-season rainfall (Oct–Apr total),Return period,5077,Central De Cala,457.98,0.21
+Wet-season rainfall (Oct–Apr total),Return period,5080,Puente Tocon,375.08,0.22
+Wet-season rainfall (Oct–Apr total),Return period,5081,Castro Del Rio,471.4,0.24
+Wet-season rainfall (Oct–Apr total),Return period,5090,"Guijo, El",486.58,0.22
+Wet-season rainfall (Oct–Apr total),Return period,5127,Huesna,465.28,0.19
+Wet-season rainfall (Oct–Apr total),Return period,5140,Villanueva De Las Torres,311.65,0.29
+Wet-season rainfall (Oct–Apr total),Return period,5142,Porcuna,437.66,0.2
+Wet-season rainfall (Oct–Apr total),Share of a reference,5001,Arroyo Maria,309.64,0.17
+Wet-season rainfall (Oct–Apr total),Share of a reference,5004,Mengibar,328.04,0.26
+Wet-season rainfall (Oct–Apr total),Share of a reference,5025,Llano De Vela,300.55,0.15
+Wet-season rainfall (Oct–Apr total),Share of a reference,5029,Mengibar Guadalbullon,409.41,0.18
+Wet-season rainfall (Oct–Apr total),Share of a reference,5045,Loja,436.99,0.17
+Wet-season rainfall (Oct–Apr total),Share of a reference,5057,Guadaira Encauzamiento,527.66,0.22
+Wet-season rainfall (Oct–Apr total),Share of a reference,5076,Aznalcazar Puente,514.06,0.23
+Wet-season rainfall (Oct–Apr total),Share of a reference,5077,Central De Cala,485.05,0.16
+Wet-season rainfall (Oct–Apr total),Share of a reference,5080,Puente Tocon,373.74,0.22
+Wet-season rainfall (Oct–Apr total),Share of a reference,5081,Castro Del Rio,461.67,0.24
+Wet-season rainfall (Oct–Apr total),Share of a reference,5090,"Guijo, El",484.04,0.22
+Wet-season rainfall (Oct–Apr total),Share of a reference,5127,Huesna,475.25,0.19
+Wet-season rainfall (Oct–Apr total),Share of a reference,5140,Villanueva De Las Torres,306.79,0.29
+Wet-season rainfall (Oct–Apr total),Share of a reference,5142,Porcuna,449.19,0.2

@@ -90,13 +90,17 @@ differs from the table. Borehole ZEERIJP-03-SIDETRACK1, operator NAM. Please cit
 ### Derived values in this repository (`data/`)
 
 Each water year's largest daily flow at 14 Guadalquivir gauges and at the matched GloFAS river cell, and the gauge
-list. Derived by `rebuild_data.py` from the two sources below. Licence: **CC BY 4.0**, © 2026 KAI Water & Energy, with
+list, derived by `rebuild_data.py`; each water year's largest catchment rainfall and its October–April total, with the
+catchments and rainfall cells behind them, derived by `rebuild_rainfall.py`. Sources below. Licence: **CC BY 4.0**, © 2026 KAI Water & Energy, with
 the source credits below.
 
 | File | SHA-256 |
 |---|---|
 | `annual_maxima.csv` | `4a42889d01e6ed7281eb1ef5388dd32814be5e1a72d0f4ab1bf2d48ec5636011` |
 | `gauges.csv` | `10392dea0bf872a2261e910e1b2b0175e69a7bb741e222092fd93578aae14402` |
+| `rainfall_maxima.csv` | `40879e973ca4cfc1a8be11ca7d0e9c2366693cbaa9086fa7479d5d5aff675f95` |
+| `rain_catchments.csv` | `b18d1c5c0ae93bf220f5c28174b1d8d2ff79373095609fc0399140168721c4db` |
+| `rain_cell_weights.csv` | `515efd13b4f61aeccc8874388b21758917434c78285de0db4cd97d48e443201a` |
 
 ### Sources (not vendored)
 
@@ -114,3 +118,8 @@ the source credits below.
   Open-Meteo flood API (https://open-meteo.com/en/docs/flood-api; data CC BY 4.0, free API for non-commercial use).
   *Contains modified Copernicus Emergency Management Service information 2026.* GloFAS data are provided for
   information purposes only and are not a flood warning.
+* **NASA POWER** daily precipitation (PRECTOTCORR), https://power.larc.nasa.gov, read through the daily point API.
+  *These data were obtained from the NASA Langley Research Center (LaRC) POWER Project funded through the NASA Earth
+  Science/Applied Science Program.*
+* **HydroBASINS** level 8, Europe (Lehner and Grill, 2013), https://www.hydrosheds.org: catchments for the rainfall.
+  Not vendored; only the sub-catchment IDs used are published.
