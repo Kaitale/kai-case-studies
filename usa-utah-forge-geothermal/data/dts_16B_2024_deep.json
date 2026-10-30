@@ -1,0 +1,14 @@
+{
+ "window_h": [
+  156.0,
+  184.0
+ ],
+ "md_ft": [
+  3200.0,
+  9240.0
+ ],
+ "slope_c_per_km_md": 9.810823,
+ "T_top_c": 172.4,
+ "T_bottom_c": 190.79,
+ "traces_in_window": 714
+}

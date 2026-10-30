@@ -18,6 +18,12 @@ Phase 3 (notebooks 2 and 3):
 * data/circulation_2024_aug_daily.csv  extended circulation test (GDR 1683): daily medians of the 30-second data
 * data/circulation_2024_summary.json   the steady 10 bpm window (days 14-26) with the field meter calibration, and the
                                 April 2024 9-hour test (GDR 1611) final step
+
+Phase 4 (notebooks 4 and 5):
+* data/tracers_2024_circulation.csv  QuantumPro tracers 1–10 (GDR 1701): injection time and the concentration (ppb) in each
+                                16B sample, hours since the GDR 1683 test start
+* data/dts_16B_2024.csv         16B fibre temperatures (GDR 1721): 200-ft medians before the test (4 Aug) and on days 6.5–7.7
+                                of the test, with the spread over that window
 """
 import json
 import pathlib
@@ -91,3 +97,24 @@ summ["april_2024"] = {"final_rate_bpm": float(np.nanmedian(q[last])), "final_whp
                       "reported_production_bpm_end": 8.2, "reported_T_wellhead_end_f": 282.0}
 (out / "circulation_2024_summary.json").write_text(json.dumps({k: (round(v, 6) if isinstance(v, float) else v) for k, v in summ.items()}, indent=1))
 print("wrote phase 3 data:", ", ".join(sorted(f.name for f in out.iterdir())))
+
+# ---------------------------------------------------------------------- phase 4
+t_h, trs = ft.read_tracers(ft.fetch("tracer"))
+rows = [{"tracer": x["tracer"], "injected_t_h": round(x["injected_t_h"], 4), "sample_t_h": round(float(t), 4), "c_ppb": round(c, 4)}
+        for x in trs for t, c in zip(t_h, x["c_ppb"])]
+pd.DataFrame(rows).to_csv(out / "tracers_2024_circulation.csv", index=False)
+ts, zs, As = ft.read_dts(ft.fetch("dts_static"))
+tf, zf, Af = ft.read_dts(ft.fetch("dts_flowing"))
+w = (tf >= 156.0) & (tf < 184.0)
+b, Ts = ft.dts_bins(zs, np.median(As, 0))
+_, Tf = ft.dts_bins(zf, np.median(Af[w], 0))
+_, Sf = ft.dts_bins(zf, np.std(Af[w], 0))
+pd.DataFrame({"md_ft": b, "static_4aug_c": np.round(Ts, 3), "flowing_days_6p5_7p7_c": np.round(Tf, 3),
+              "flowing_sd_c": np.round(Sf, 3)}).to_csv(out / "dts_16B_2024.csv", index=False)
+deep = (zf >= 3200) & (zf <= 9240)
+prof = np.median(Af[w], 0)
+(out / "dts_16B_2024_deep.json").write_text(json.dumps({"window_h": [156.0, 184.0], "md_ft": [3200.0, 9240.0],
+    "slope_c_per_km_md": round(float(np.polyfit(zf[deep] * ft.FT, prof[deep], 1)[0] * 1000), 6),
+    "T_top_c": round(float(np.median(prof[(zf >= 3200) & (zf < 3300)])), 4), "T_bottom_c": round(float(np.median(prof[(zf > 9140) & (zf <= 9240)])), 4),
+    "traces_in_window": int(w.sum())}, indent=1))
+print("wrote phase 4 data: tracers_2024_circulation.csv, dts_16B_2024.csv, dts_16B_2024_deep.json")

@@ -140,6 +140,9 @@ Energy, via the Geothermal Data Repository (OpenEI), CC BY 4.0.*
 | `stimulated_dfn.csv` | `adbdc05538a1ecd7a55624ef3eab22460b4a0c025b86316da39c62fdf24ff7fb` |
 | `circulation_2024_aug_daily.csv` | `b4cd2afb8fc104e6f772cbea4ed3a5b9faabfb231bc8dc8781898289eada903a` |
 | `circulation_2024_summary.json` | `41b5630e709b736ead6c13c795d463ee030ab7c2b30da6c5d2d3a98caad04048` |
+| `tracers_2024_circulation.csv` | `cb13beb115a83c97c40de49c77e1b1b31badaac09f171dd62bc26e1680622c11` |
+| `dts_16B_2024.csv` | `e8a88483864002e57ae0015cdf96e9e5213a20a188b17abcfc74b77c8cbe33e3` |
+| `dts_16B_2024_deep.json` | `e06f2ed3d77c5e4833d7f5ceac741201cfb14bfd8faa0c8014a733013b372ea8` |
 
 ### Sources (not vendored; all CC BY 4.0, licence read from each GDR page on 30 Oct 2026)
 
@@ -154,3 +157,6 @@ Energy, via the Geothermal Data Repository (OpenEI), CC BY 4.0.*
 | `2024 05 May New MEQ DFN.zip` (stimulated DFN) | [1646](https://gdr.openei.org/submissions/1646), DOI 10.15121/2440870 | `fe9845773de0054c682b9acdfb25b9c276024a660d80d1803e1785d019d7d095` |
 | `Extended Circulation Test.zip` (Aug-Sep 2024) | [1683](https://gdr.openei.org/submissions/1683), DOI 10.15121/2475065 | `ce5a8d4c69ac649024b472219d38601dbd6227ff29cd8c737fe5fe39670786f7` |
 | `16A-16B Injection-Circulation.zip` (27 Apr 2024) | [1611](https://gdr.openei.org/submissions/1611), DOI 10.15121/2371032 | `68ee7e43dde01e6aca5f5c205105ce1d7a530e67582e1cc340af00d8842d74cf` |
+| `Qpro_tracers.zip` (QuantumPro tracer data, report and slides, 2024) | [1701](https://gdr.openei.org/submissions/1701), DOI 10.15121/2507443 | `4fae497068ccf5185d04576d252355d37515b218ff46ce2e514d420b05caa53b` |
+| `Utah Forge 16B(78)-32 - DTS - mmf 2 - evo 4 - part 1.h5` (16B DTS, 4 Aug 2024) | [1721](https://gdr.openei.org/submissions/1721) | `168951d5fda18c25b226707fa32a403bc0e3842ffd14b90431131efe82a40898` |
+| `Utah Forge 16B(78)-32 - DTS - mmf 2 - evo 4 - part 2.h5` (16B DTS, 12–16 Aug 2024) | [1721](https://gdr.openei.org/submissions/1721) | `77faaec9d7d10982c215ed233d5477ed5b87892464ea0a89a4c87c4e755eedb7` |
