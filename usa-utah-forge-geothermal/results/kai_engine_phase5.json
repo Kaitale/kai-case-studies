@@ -1,0 +1,5990 @@
+{
+ "case": "usa-utah-forge-geothermal / phase 5",
+ "generated": "2026-10-30",
+ "credit": "Utah FORGE, U.S. Department of Energy, via the Geothermal Data Repository (OpenEI), CC BY 4.0",
+ "label": "simulated (KAI Reservoir Lab TPFA solver, equivalent-continuum fractured granite; dual-continuum heat where stated); not field data",
+ "sources": {
+  "fmi": {
+   "sha256": "5bad91b813661bbd51fe7d8083c96ad4a5f85e7702ae218156393716dfbbcb4c",
+   "gdr": 1299,
+   "doi": null,
+   "title": "Utah FORGE: Well 58-32 (MU-ESW1) FMI Log Fracture Results",
+   "licence": "CC BY 4.0",
+   "url": "https://gdr.openei.org/files/1299/University_of_Utah_MU-ESW1_FMI-HD_7390-7527ft_Dip%20Final%203rdRun_Frac_Aps_Only.txt",
+   "sha256_checked": "5bad91b813661bbd51fe7d8083c96ad4a5f85e7702ae218156393716dfbbcb4c"
+  },
+  "dfn_feb": {
+   "sha256": "107fef6f2c11f6de3f9916ccea5df09d16c21da062126b8644f2464c9d18b809",
+   "gdr": 1646,
+   "doi": "10.15121/2440870",
+   "title": "Utah FORGE: 2024 Discrete Fracture Network Model Data (Feb 2024 reference DFN)",
+   "licence": "CC BY 4.0",
+   "url": "https://gdr.openei.org/files/1646/2024%2002A%20Feb%20Reference%20DFN.zip",
+   "sha256_checked": "107fef6f2c11f6de3f9916ccea5df09d16c21da062126b8644f2464c9d18b809"
+  },
+  "dfn_may": {
+   "sha256": "fe9845773de0054c682b9acdfb25b9c276024a660d80d1803e1785d019d7d095",
+   "gdr": 1646,
+   "doi": "10.15121/2440870",
+   "title": "Utah FORGE: 2024 Discrete Fracture Network Model Data (May 2024 MEQ DFN)",
+   "licence": "CC BY 4.0",
+   "url": "https://gdr.openei.org/files/1646/2024%2005%20May%20New%20MEQ%20DFN.zip",
+   "sha256_checked": "fe9845773de0054c682b9acdfb25b9c276024a660d80d1803e1785d019d7d095"
+  },
+  "ect": {
+   "sha256": "ce5a8d4c69ac649024b472219d38601dbd6227ff29cd8c737fe5fe39670786f7",
+   "gdr": 1683,
+   "doi": "10.15121/2475065",
+   "title": "Utah FORGE: Wells 16A(78)-32 and 16B(78)-32 Extended Circulation Test Data - August and September 2024",
+   "licence": "CC BY 4.0",
+   "url": "https://gdr.openei.org/files/1683/Extended%20Circulation%20Test.zip",
+   "sha256_checked": "ce5a8d4c69ac649024b472219d38601dbd6227ff29cd8c737fe5fe39670786f7"
+  },
+  "circ_apr": {
+   "sha256": "68ee7e43dde01e6aca5f5c205105ce1d7a530e67582e1cc340af00d8842d74cf",
+   "gdr": 1611,
+   "doi": "10.15121/2371032",
+   "title": "Utah FORGE: Wells 16A(78)-32 and 16B(78)-32 Stimulation Pressure and Circulation Data April, 2024",
+   "licence": "CC BY 4.0",
+   "url": "https://gdr.openei.org/files/1611/16A-16B%20Injection-Circulation.zip",
+   "sha256_checked": "68ee7e43dde01e6aca5f5c205105ce1d7a530e67582e1cc340af00d8842d74cf"
+  },
+  "tracer": {
+   "sha256": "4fae497068ccf5185d04576d252355d37515b218ff46ce2e514d420b05caa53b",
+   "gdr": 1701,
+   "doi": "10.15121/2507443",
+   "title": "Utah FORGE: QuantumPro Well 16A(78)-32 and 16B(78)-32 Stimulation and Circulation Tracer Test Results - 2024",
+   "licence": "CC BY 4.0",
+   "url": "https://gdr.openei.org/files/1701/Qpro_tracers.zip",
+   "sha256_checked": "4fae497068ccf5185d04576d252355d37515b218ff46ce2e514d420b05caa53b"
+  },
+  "dts_static": {
+   "sha256": "168951d5fda18c25b226707fa32a403bc0e3842ffd14b90431131efe82a40898",
+   "gdr": 1721,
+   "doi": null,
+   "title": "Utah FORGE: Well 16B(78)-32 DTS ... Circulation Test Fiber Optic Data - August 2024 (DTS part 1)",
+   "licence": "CC BY 4.0",
+   "url": "https://gdr.openei.org/files/1721/Utah%20Forge%2016B%2878%29-32%20-%20DTS%20-%20mmf%202%20-%20evo%204%20-%20part%201.h5",
+   "sha256_checked": "168951d5fda18c25b226707fa32a403bc0e3842ffd14b90431131efe82a40898"
+  },
+  "dts_flowing": {
+   "sha256": "77faaec9d7d10982c215ed233d5477ed5b87892464ea0a89a4c87c4e755eedb7",
+   "gdr": 1721,
+   "doi": null,
+   "title": "Utah FORGE: Well 16B(78)-32 DTS ... Circulation Test Fiber Optic Data - August 2024 (DTS part 2)",
+   "licence": "CC BY 4.0",
+   "url": "https://gdr.openei.org/files/1721/Utah%20Forge%2016B%2878%29-32%20-%20DTS%20-%20mmf%202%20-%20evo%204%20-%20part%202.h5",
+   "sha256_checked": "77faaec9d7d10982c215ed233d5477ed5b87892464ea0a89a4c87c4e755eedb7"
+  },
+  "pt_16b": {
+   "sha256": "362ee668691231f55f8116c622f942098b0b1945f9b3e5cca4dfe4521b13ecd3",
+   "gdr": 1608,
+   "doi": "10.15121/2368548",
+   "bytes": 177439253,
+   "title": "Utah FORGE: Well 16B(78)-32 Pressure-Temperature Logs March - April 2024",
+   "licence": "CC BY 4.0",
+   "url": "https://gdr.openei.org/files/1608/16B%20Baker%20P_T.zip",
+   "sha256_checked": "362ee668691231f55f8116c622f942098b0b1945f9b3e5cca4dfe4521b13ecd3"
+  },
+  "minifrac": {
+   "sha256": "ae07b973b1e9d90dabef58fd95c24222457b1ba0e66e4fef2afb00fe04541290",
+   "gdr": 1570,
+   "doi": null,
+   "bytes": 7506925,
+   "title": "Utah FORGE 2439: Well 16B(78)-32 Field-Test Data from Mini-Frac Tests (Baker Hughes Minifrac.zip)",
+   "licence": "CC BY 4.0",
+   "url": "https://gdr.openei.org/files/1570/Baker%20Hughes%20Minifrac.zip",
+   "sha256_checked": "ae07b973b1e9d90dabef58fd95c24222457b1ba0e66e4fef2afb00fe04541290"
+  },
+  "minifrac_report": {
+   "sha256": "97ad150007031670bf968a72b41105b64afa7f9d4639558e3e534a3ce6763eea",
+   "gdr": 1596,
+   "doi": null,
+   "bytes": 22530090,
+   "title": "Utah FORGE 2439: Report on Minifrac Tests for Stress Characterization",
+   "licence": "CC BY 4.0",
+   "url": "https://gdr.openei.org/files/1596/Battelle-2-2439-AF1_Milestone%203.4%20%28In-Situ%20Stress%20Measurement%29%20Report.pdf",
+   "sha256_checked": "97ad150007031670bf968a72b41105b64afa7f9d4639558e3e534a3ce6763eea"
+  },
+  "temp_surveys": {
+   "sha256": "c1a35f7914b5f59117f03b03e38c71f6c4d066afa0b0373b528f0a9f6a3a26b7",
+   "gdr": 1421,
+   "doi": null,
+   "bytes": null,
+   "title": "Utah FORGE: Deep Wells Temperature Surveys as of September 2022",
+   "licence": "CC BY 4.0",
+   "url": "https://gdr.openei.org/files/1421/Utah%20FORGE%20Deep%20Well%20Temperature%20Profiles_Sept%202022.xlsx",
+   "sha256_checked": "c1a35f7914b5f59117f03b03e38c71f6c4d066afa0b0373b528f0a9f6a3a26b7"
+  }
+ },
+ "wellbore_implied_T_bottom_c": {
+  "P10": 199.97403647313038,
+  "P50": 202.88457132593163,
+  "P90": 205.85298138010114,
+  "mean": 203.1069477513753,
+  "n": 24,
+  "beyond_run": 0
+ },
+ "geotherm": {
+  "gauge_16B": {
+   "md_m": 2150.873016,
+   "tvd_m": 2042.8901866167776,
+   "model_c": 183.63552229655014,
+   "daily": [
+    {
+     "day": 0,
+     "date": "2024-03-26",
+     "T_c": 163.84,
+     "p_psi": 2548.4449999999997
+    },
+    {
+     "day": 1,
+     "date": "2024-03-27",
+     "T_c": 166.08,
+     "p_psi": 2772.63
+    },
+    {
+     "day": 2,
+     "date": "2024-03-28",
+     "T_c": 167.84,
+     "p_psi": 2739.11
+    },
+    {
+     "day": 3,
+     "date": "2024-03-29",
+     "T_c": 169.16,
+     "p_psi": 2702.2
+    },
+    {
+     "day": 4,
+     "date": "2024-03-30",
+     "T_c": 170.01,
+     "p_psi": 2685.91
+    },
+    {
+     "day": 5,
+     "date": "2024-03-31",
+     "T_c": 170.84,
+     "p_psi": 2679.275
+    },
+    {
+     "day": 6,
+     "date": "2024-04-01",
+     "T_c": 171.43,
+     "p_psi": 2675.19
+    },
+    {
+     "day": 7,
+     "date": "2024-04-02",
+     "T_c": 171.93,
+     "p_psi": 2673.11
+    }
+   ],
+   "last_c": 171.93,
+   "warming_c_per_day_last3": 0.5449999999999926,
+   "recovery_fit": {
+    "T_inf_c": 173.3159179671845,
+    "A_c": 10.833244888686526,
+    "tau_days": 3.705005367646617
+   },
+   "window": [
+    "2024-03-26",
+    "2024-04-02"
+   ],
+   "model_minus_last_c": 11.705522296550129,
+   "model_minus_fit_c": 10.319604329365632
+  },
+  "log_16A": {
+   "date": "2021-08-16",
+   "recovery_days": 216,
+   "md_range_m": [
+    24.8412,
+    3348.8376000000003
+   ],
+   "samples": 21319,
+   "rmse_c": 7.111220120825339,
+   "bias_c": 6.984532078417527,
+   "bins": [
+    {
+     "tvd_m": [
+      600,
+      900
+     ],
+     "log_c": 87.50681394955139,
+     "model_c": 92.48168520184288,
+     "bias_c": 4.9748712522914875
+    },
+    {
+     "tvd_m": [
+      900,
+      1200
+     ],
+     "log_c": 106.73232594097398,
+     "model_c": 114.45013856132067,
+     "bias_c": 7.717812620346697
+    },
+    {
+     "tvd_m": [
+      1200,
+      1500
+     ],
+     "log_c": 127.3910643304554,
+     "model_c": 135.8527714935228,
+     "bias_c": 8.461707163067393
+    },
+    {
+     "tvd_m": [
+      1500,
+      1800
+     ],
+     "log_c": 147.3134882907285,
+     "model_c": 156.0396195030316,
+     "bias_c": 8.726131212303072
+    },
+    {
+     "tvd_m": [
+      1800,
+      2100
+     ],
+     "log_c": 168.9136709953604,
+     "model_c": 176.53922443441837,
+     "bias_c": 7.625553439057955
+    },
+    {
+     "tvd_m": [
+      2100,
+      2400
+     ],
+     "log_c": 192.9417142596245,
+     "model_c": 199.43678527567386,
+     "bias_c": 6.495071016049348
+    },
+    {
+     "tvd_m": [
+      2400,
+      2700
+     ],
+     "log_c": 212.97643272226216,
+     "model_c": 218.85375579640422,
+     "bias_c": 5.877323074142072
+    }
+   ],
+   "open_interval": {
+    "md_m": [
+     2825.496,
+     3333.99384
+    ],
+    "covered_m": [
+     2825.496,
+     3273.552
+    ],
+    "log_c": 212.51332037477803,
+    "model_c": 218.42010416914295,
+    "bias_c": 5.906783794364893
+   },
+   "at_gauge_tvd": {
+    "tvd_m": 2042.8901866167776,
+    "log_c": 175.96580450388785
+   }
+  },
+  "producing_zone_16B": {
+   "md_m": [
+    2816.3520000000003,
+    3261.655656
+   ],
+   "tvd_m": [
+    2330.567364249332,
+    2518.1628228037516
+   ],
+   "model_c": 215.3165196473514,
+   "log_16A_same_tvd_c": 207.07493667394388,
+   "model_minus_log_c": 8.241582973407496,
+   "covered_by_log": true
+  }
+ },
+ "minifrac": {
+  "tests": [
+   {
+    "test": 1,
+    "file": "MF-1 (5658)/MF_station1_5657ftMD_FINAL.las",
+    "md_ft": 5657.31885,
+    "tvd_ft_kb": 5655.2,
+    "tvd_ft_table": 5655.2,
+    "p_initial_psi": 2431.67749,
+    "pore_gradient_psi_ft_kb": 0.4299896537699816,
+    "cycles": [
+     {
+      "shut_in_s": 2680.25,
+      "isip_psi": 4527.610357284802,
+      "max_psi": 4539.39502,
+      "volume_l": 5.8960007800000005,
+      "gradient_psi_ft_kb": 0.800610121177819,
+      "gradient_psi_ft_ground": 0.8051661611333053
+     },
+     {
+      "shut_in_s": 4769.5,
+      "isip_psi": 4383.559129699318,
+      "max_psi": 4402.7832,
+      "volume_l": 4.2879949475,
+      "gradient_psi_ft_kb": 0.7751377722625757,
+      "gradient_psi_ft_ground": 0.7795488564695046
+     }
+    ]
+   },
+   {
+    "test": 2,
+    "file": "MF-2 (5495)/MF_station2_5495ftMD_FINAL.las",
+    "md_ft": 5494.2793,
+    "tvd_ft_kb": 5494.0,
+    "tvd_ft_table": 5494.0,
+    "p_initial_psi": 2358.23291,
+    "pore_gradient_psi_ft_kb": 0.4292378795049145,
+    "cycles": [
+     {
+      "shut_in_s": 2630.5,
+      "isip_psi": 3362.3909442096206,
+      "max_psi": 3531.19482,
+      "volume_l": 2.6799988999999997,
+      "gradient_psi_ft_kb": 0.6120114569001858,
+      "gradient_psi_ft_ground": 0.6155970238391836
+     },
+     {
+      "shut_in_s": 6705.75,
+      "isip_psi": 3277.274491811868,
+      "max_psi": 3356.14868,
+      "volume_l": 5.359999040000001,
+      "gradient_psi_ft_kb": 0.5965188372427863,
+      "gradient_psi_ft_ground": 0.6000136381933115
+     },
+     {
+      "shut_in_s": 12767.75,
+      "isip_psi": 3338.0726188996323,
+      "max_psi": 3330.76367,
+      "volume_l": 7.503995747499999,
+      "gradient_psi_ft_kb": 0.6075851144702643,
+      "gradient_psi_ft_ground": 0.6111447489746672
+     }
+    ]
+   },
+   {
+    "test": 3,
+    "file": "MF-3 (5201)/MF_station3_5202ftMD_FINAL.las",
+    "md_ft": 5201.85889,
+    "tvd_ft_kb": 5201.1,
+    "tvd_ft_table": 5201.1,
+    "p_initial_psi": 2228.83545,
+    "pore_gradient_psi_ft_kb": 0.42853155101805385,
+    "cycles": [
+     {
+      "shut_in_s": 1879.25,
+      "isip_psi": 2743.5580271041435,
+      "max_psi": 2751.55542,
+      "volume_l": 2.41200126,
+      "gradient_psi_ft_kb": 0.5274957272700281,
+      "gradient_psi_ft_ground": 0.5307612596204646
+     },
+     {
+      "shut_in_s": 4179.5,
+      "isip_psi": 2899.8422537045526,
+      "max_psi": 2927.07886,
+      "volume_l": 8.849999834999998,
+      "gradient_psi_ft_kb": 0.5575440298599436,
+      "gradient_psi_ft_ground": 0.5609955802179397
+     },
+     {
+      "shut_in_s": 8010.75,
+      "isip_psi": 2880.8489437976687,
+      "max_psi": 2890.27979,
+      "volume_l": 13.75500018,
+      "gradient_psi_ft_kb": 0.5538922427558918,
+      "gradient_psi_ft_ground": 0.5573211862408676
+     },
+     {
+      "shut_in_s": 12101.5,
+      "isip_psi": 2876.874752309781,
+      "max_psi": 2874.16309,
+      "volume_l": 14.88299812,
+      "gradient_psi_ft_kb": 0.5531281367998655,
+      "gradient_psi_ft_ground": 0.5565523499854482
+     }
+    ]
+   },
+   {
+    "test": 4,
+    "file": "MF-4 (5980)/MF_station4_5980ftMD_FINAL.las",
+    "md_ft": 5980.23828,
+    "tvd_ft_kb": 5966.18,
+    "tvd_ft_table": 5966.2,
+    "p_initial_psi": 2545.76318,
+    "pore_gradient_psi_ft_kb": 0.42669902349577116,
+    "cycles": [
+     {
+      "shut_in_s": 1440.5,
+      "isip_psi": 3360.675693112217,
+      "max_psi": 3645.1582,
+      "volume_l": 24.187997305,
+      "gradient_psi_ft_kb": 0.5632876804106173,
+      "gradient_psi_ft_ground": 0.5663252029955641
+     },
+     {
+      "shut_in_s": 3007.75,
+      "isip_psi": 3672.864379825971,
+      "max_psi": 3609.89087,
+      "volume_l": 12.4129175475,
+      "gradient_psi_ft_kb": 0.6156140746383734,
+      "gradient_psi_ft_ground": 0.6189337667253051
+     },
+     {
+      "shut_in_s": 5476.0,
+      "isip_psi": 3632.377069998879,
+      "max_psi": 3626.01123,
+      "volume_l": 11.504992850000002,
+      "gradient_psi_ft_kb": 0.6088279384797104,
+      "gradient_psi_ft_ground": 0.6121110364024817
+     }
+    ]
+   },
+   {
+    "test": 5,
+    "file": "MF-5 (5918)/MF_station5_5919ftMD_FINAL.las",
+    "md_ft": 5918.86572,
+    "tvd_ft_kb": 5909.23,
+    "tvd_ft_table": 5909.0,
+    "p_initial_psi": 2521.13135,
+    "pore_gradient_psi_ft_kb": 0.42664295517351675,
+    "cycles": [
+     {
+      "shut_in_s": 845.75,
+      "isip_psi": 3064.36396319805,
+      "max_psi": 3110.58984,
+      "volume_l": 20.354999512499997,
+      "gradient_psi_ft_kb": 0.5185724642970488,
+      "gradient_psi_ft_ground": 0.5213959574830405
+     },
+     {
+      "shut_in_s": 1845.0,
+      "isip_psi": 3265.7683101902494,
+      "max_psi": 3915.25464,
+      "volume_l": 3.7520002749999994,
+      "gradient_psi_ft_kb": 0.5526554746033323,
+      "gradient_psi_ft_ground": 0.5556645409810829
+     },
+     {
+      "shut_in_s": 3246.5,
+      "isip_psi": 3604.783892413201,
+      "max_psi": 3615.60938,
+      "volume_l": 10.6199962475,
+      "gradient_psi_ft_kb": 0.6100259919504235,
+      "gradient_psi_ft_ground": 0.6133474259835333
+     },
+     {
+      "shut_in_s": 6487.25,
+      "isip_psi": 3623.01641170343,
+      "max_psi": 3630.60303,
+      "volume_l": 29.2049980475,
+      "gradient_psi_ft_kb": 0.6131114225886334,
+      "gradient_psi_ft_ground": 0.6164496559949892
+     }
+    ]
+   },
+   {
+    "test": 6,
+    "file": "MF-6 (5639)/MF_station6_5639ftMD_FINAL.las",
+    "md_ft": 5639.20264,
+    "tvd_ft_kb": 5637.64,
+    "tvd_ft_table": 5637.6,
+    "p_initial_psi": 2407.184325,
+    "pore_gradient_psi_ft_kb": 0.42698439861360427,
+    "cycles": [
+     {
+      "shut_in_s": 1806.0,
+      "isip_psi": 3470.3861359918246,
+      "max_psi": 3473.68115,
+      "volume_l": 13.112997004999999,
+      "gradient_psi_ft_kb": 0.6155742715022287,
+      "gradient_psi_ft_ground": 0.6190882996396173
+     },
+     {
+      "shut_in_s": 6741.75,
+      "isip_psi": 3414.021812034149,
+      "max_psi": 3420.49512,
+      "volume_l": 27.434996199999993,
+      "gradient_psi_ft_kb": 0.6055764135407988,
+      "gradient_psi_ft_ground": 0.6090333685420664
+     }
+    ]
+   },
+   {
+    "test": 7,
+    "file": "MF-7 (5616)/MF_station7_5616ftMD_FINAL.las",
+    "md_ft": 5616.48242,
+    "tvd_ft_kb": 5614.67,
+    "tvd_ft_table": 5614.7,
+    "p_initial_psi": 2396.04175,
+    "pore_gradient_psi_ft_kb": 0.42674667433704916,
+    "cycles": [
+     {
+      "shut_in_s": 6307.0,
+      "isip_psi": 3447.3159351367563,
+      "max_psi": 3448.41138,
+      "volume_l": 88.1949877,
+      "gradient_psi_ft_kb": 0.6139837132256671,
+      "gradient_psi_ft_ground": 0.6175030827788058
+     },
+     {
+      "shut_in_s": 13635.25,
+      "isip_psi": 3471.4850897919505,
+      "max_psi": 3473.7876,
+      "volume_l": 50.99401022,
+      "gradient_psi_ft_kb": 0.6182883570703087,
+      "gradient_psi_ft_ground": 0.6218324009464916
+     }
+    ]
+   }
+  ],
+  "local_shmin": {
+   "depth_16A_top_m": 2373.3577393435985,
+   "test_depth_tvd_m": [
+    1585.2952800000003,
+    1818.4916640000001
+   ],
+   "mf2_isip_psi": [
+    3362.3909442096206,
+    3277.274491811868,
+    3338.0726188996323
+   ],
+   "mf2_report_isip_psi": [
+    3288.0,
+    3237.0,
+    3323.0
+   ],
+   "mf2_gradient_psi_ft_ground": 0.6111447489746672,
+   "all_tests_last_cycle_gradient_psi_ft": {
+    "min": 0.5565523499854482,
+    "median": 0.6121110364024817,
+    "max": 0.7795488564695046
+   },
+   "gradients_pa_m": {
+    "gdr1222_recommended": 17000.0,
+    "minifrac_isip_mf2": 13824.457139128375,
+    "report_cooling_mid": 18096.475065616796,
+    "report_cooling_high": 21263.35820209973
+   },
+   "shmin_mpa": {
+    "gdr1222_recommended": 40.347081568841176,
+    "minifrac_isip_mf2": 32.810382343374194,
+    "report_cooling_mid": 42.94940915182008,
+    "report_cooling_high": 50.465555753388585
+   },
+   "note": "The tests are at 1,585-1,820 m TVD in 16B's vertical section; 16A's top completion is deeper. The gradient is carried down unchanged (an assumption). An ISIP is an upper bound of the closure pressure."
+  }
+ },
+ "spacing": {
+  "fmi_mean_spacing_m": 0.2738716433469365,
+  "fmi_p10_per_m": 3.6513455273396636,
+  "dfn_cell_spacing_m": {
+   "P10": 21.953541052377023,
+   "P50": 37.86706563840375,
+   "P90": 151.46826255361503
+  },
+  "stimulated_cells": 1394,
+  "cells": 9720,
+  "cell_m": 35.0
+ },
+ "ltne_median": {
+  "lte": {
+   "block_m": null,
+   "shape": "slab",
+   "phi_scale": 1.0,
+   "stim_aperture_factor": 0.14976747929979398,
+   "T_bottomhole_c": 214.49737908362368,
+   "T_misfit_c": 11.612807757692053,
+   "injector_bhp_mpa": 42.025399811096925,
+   "recovery": 0.9048949182514889,
+   "forecast": {
+    "pressure_feasible": false,
+    "injector_bhp_max_mpa": 41.10816020305207,
+    "T_prod_end_c": 117.8454449384707,
+    "T_prod_10y_c": 138.53132562069598,
+    "breakthrough_years": 0.5126241452305929,
+    "power_initial_mw": 5.578992096606159,
+    "power_end_mw": 2.417414516742794,
+    "T_prod_yearly_c": [
+     191.97936010473802,
+     174.8767822674163,
+     165.63133092031572,
+     159.3253224085995,
+     154.45528045409614,
+     150.33733181242448,
+     146.76706322682563,
+     143.59857807034285,
+     140.89050013300974,
+     138.53132562069598,
+     136.47443937374535,
+     134.6215586416646,
+     133.00921479944404,
+     131.5269694913267,
+     130.18813565252984,
+     128.96110577257505,
+     127.84087186478027,
+     126.78958560536633,
+     125.79888783910327,
+     124.86516675948097,
+     124.0298142558899,
+     123.17983610026717,
+     122.38314195188627,
+     121.66899675577451,
+     120.93088253098608,
+     120.29077590441011,
+     119.60496282842419,
+     119.02242451776225,
+     118.38122320751793,
+     117.8454449384707
+    ],
+    "wall_s": 18.172
+   }
+  },
+  "scan": [
+   {
+    "block_m": 1.0,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.14985597466357703,
+    "T_bottomhole_c": 214.43177899332963,
+    "T_misfit_c": 11.547207667397998,
+    "injector_bhp_mpa": 42.03066510666044,
+    "recovery": 0.9050372000118545,
+    "forecast": {
+     "pressure_feasible": false,
+     "injector_bhp_max_mpa": 40.96287403841994,
+     "T_prod_end_c": 119.48303187717185,
+     "T_prod_10y_c": 140.1491430562791,
+     "breakthrough_years": 0.4431010941606656,
+     "power_initial_mw": 5.5340346863423235,
+     "power_end_mw": 2.4862754074645737,
+     "T_prod_yearly_c": [
+      190.94399494028306,
+      175.1724504877237,
+      166.3329739179785,
+      160.23219532185576,
+      155.46712254552693,
+      151.4074995240297,
+      148.02870288710076,
+      145.05845758793035,
+      142.49002530183145,
+      140.1491430562791,
+      138.1203092956881,
+      136.38192969588368,
+      134.76400962870892,
+      133.29346472415978,
+      131.9161163004283,
+      130.68576540397427,
+      129.54481890963788,
+      128.49105695085765,
+      127.50913200645402,
+      126.56565224577233,
+      125.70035459067006,
+      124.86863352209659,
+      124.06732740966461,
+      123.3407382574944,
+      122.60253591983289,
+      121.94857236082584,
+      121.26602585325237,
+      120.6685007204717,
+      120.03720220694436,
+      119.48303187717185
+     ],
+     "wall_s": 15.021
+    }
+   },
+   {
+    "block_m": 2.0,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.15025825624209938,
+    "T_bottomhole_c": 214.1272566841432,
+    "T_misfit_c": 11.24268535821156,
+    "injector_bhp_mpa": 42.03579201829778,
+    "recovery": 0.905407258753589,
+    "forecast": {
+     "pressure_feasible": false,
+     "injector_bhp_max_mpa": 40.837563638872076,
+     "T_prod_end_c": 119.40047387668295,
+     "T_prod_10y_c": 140.06706208162137,
+     "breakthrough_years": 0.43218375976192935,
+     "power_initial_mw": 5.528767340234793,
+     "power_end_mw": 2.4828030584946315,
+     "T_prod_yearly_c": [
+      190.8226458314504,
+      175.10502416460358,
+      166.2605432828614,
+      160.15245594239934,
+      155.38243952876255,
+      151.32109400720543,
+      147.94315489339363,
+      144.9742512321115,
+      142.40629964051587,
+      140.06706208162137,
+      138.03854752227642,
+      136.2984591050301,
+      134.68019629251754,
+      133.20959076014537,
+      131.83366071495885,
+      130.60294043410718,
+      129.4616493617619,
+      128.40737840071316,
+      127.42586284609307,
+      126.48207927439609,
+      125.61577238763995,
+      124.78487180950867,
+      123.98337573614072,
+      123.25695332513428,
+      122.51862882518935,
+      121.86482017008821,
+      121.18239053637738,
+      120.58510186800328,
+      119.95422153360532,
+      119.40047387668295
+     ],
+     "wall_s": 15.793
+    }
+   },
+   {
+    "block_m": 4.0,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.15195268265201714,
+    "T_bottomhole_c": 212.56937019561866,
+    "T_misfit_c": 9.684798869687029,
+    "injector_bhp_mpa": 42.05477349155772,
+    "recovery": 0.9062486090643013,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 40.317123248289825,
+     "T_prod_end_c": 119.056485159274,
+     "T_prod_10y_c": 139.73661083515904,
+     "breakthrough_years": 0.3916720819241804,
+     "power_initial_mw": 5.5060461801323175,
+     "power_end_mw": 2.468335943458846,
+     "T_prod_yearly_c": [
+      190.29909378402806,
+      174.80360070814902,
+      165.84283532341215,
+      159.7381603741776,
+      154.97221244932442,
+      150.99955949277393,
+      147.5321022665095,
+      144.65311984861327,
+      141.98789869833425,
+      139.73661083515904,
+      137.70452371332894,
+      135.90425158038235,
+      134.28944656267836,
+      132.82597756764903,
+      131.4910386549866,
+      130.25886080808283,
+      129.11776022170415,
+      128.0706529551218,
+      127.07846479635813,
+      126.13562258695363,
+      125.28797795948743,
+      124.4367928666029,
+      123.64143336799015,
+      122.90920519060249,
+      122.17534230408634,
+      121.5179382898476,
+      120.84013615749875,
+      120.23951537483629,
+      119.61511951016065,
+      119.056485159274
+     ],
+     "wall_s": 17.394
+    }
+   },
+   {
+    "block_m": 8.0,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.1566767383467806,
+    "T_bottomhole_c": 206.74714750738718,
+    "T_misfit_c": 3.8625761814555517,
+    "injector_bhp_mpa": 42.06960320781783,
+    "recovery": 0.9061130474929299,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 38.930607501766644,
+     "T_prod_end_c": 118.3120156863384,
+     "T_prod_10y_c": 138.9847649851463,
+     "breakthrough_years": 0.26445069574620417,
+     "power_initial_mw": 5.426703120433426,
+     "power_end_mw": 2.4370306723491924,
+     "T_prod_yearly_c": [
+      188.46954056348096,
+      174.01025979386074,
+      165.21365980257318,
+      159.04514671548753,
+      154.11148466214385,
+      150.15211612829768,
+      146.79583677480522,
+      143.85145623778354,
+      141.30594546067005,
+      138.9847649851463,
+      136.96555353930853,
+      135.21753160081502,
+      133.59688754192942,
+      132.1232449035116,
+      130.7532687635977,
+      129.517257844392,
+      128.37085254858738,
+      127.30691525647049,
+      126.33138496302105,
+      125.3837769082531,
+      124.50458452526459,
+      123.68506319625068,
+      122.8795656616146,
+      122.15784362283921,
+      121.41813068513054,
+      120.76816916721224,
+      120.08519772535372,
+      119.49213181250511,
+      118.8599959683755,
+      118.3120156863384
+     ],
+     "wall_s": 14.119
+    }
+   },
+   {
+    "block_m": 16.0,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.16362568707837996,
+    "T_bottomhole_c": 195.56972907331317,
+    "T_misfit_c": -7.314842252618462,
+    "injector_bhp_mpa": 42.066807287489965,
+    "recovery": 0.9065164000515838,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 37.10501201749149,
+     "T_prod_end_c": 117.67533052702562,
+     "T_prod_10y_c": 138.3639866612927,
+     "breakthrough_years": 0.07775222459687885,
+     "power_initial_mw": 5.193328997388022,
+     "power_end_mw": 2.4102629901153083,
+     "T_prod_yearly_c": [
+      183.0767840910097,
+      171.79155846886727,
+      163.99672327179985,
+      158.08612260037364,
+      153.35113338772416,
+      149.32805865757322,
+      145.9795720481509,
+      143.11757408034816,
+      140.61399176819342,
+      138.3639866612927,
+      136.40547424258597,
+      134.60568581024384,
+      132.9859497779339,
+      131.51313394614067,
+      130.16588881686815,
+      128.93084307727145,
+      127.77449430442954,
+      126.69256094699504,
+      125.68991525029759,
+      124.77044000514083,
+      123.86777494661901,
+      123.06643650819198,
+      122.25255235562281,
+      121.47637387274114,
+      120.78355811685887,
+      120.0748565816887,
+      119.44570731520469,
+      118.81595347825144,
+      118.21419906662935,
+      117.67533052702562
+     ],
+     "wall_s": 12.976
+    }
+   },
+   {
+    "block_m": 32.0,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.17151171935603676,
+    "T_bottomhole_c": 181.43204554671115,
+    "T_misfit_c": -21.45252577922048,
+    "injector_bhp_mpa": 42.10501292917857,
+    "recovery": 0.908037242964641,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 35.34579220326918,
+     "T_prod_end_c": 117.47850450696775,
+     "T_prod_10y_c": 137.9415976378951,
+     "breakthrough_years": 0.02122571156226895,
+     "power_initial_mw": 4.6885825999229835,
+     "power_end_mw": 2.4019889441714293,
+     "T_prod_yearly_c": [
+      171.35741166392316,
+      163.45257385630745,
+      158.40790846164302,
+      154.155718447412,
+      150.56946176215797,
+      147.43280862756964,
+      144.71371376200082,
+      142.1295734822648,
+      139.8566631898513,
+      137.9415976378951,
+      136.06540230207455,
+      134.37697707412096,
+      132.85522701051272,
+      131.36581036987343,
+      130.05641587452672,
+      128.83459132390306,
+      127.69173439676355,
+      126.62043818331308,
+      125.60768508047094,
+      124.67741361175472,
+      123.77221438444063,
+      122.90611254043681,
+      122.1283623907214,
+      121.33797336920135,
+      120.64045903733573,
+      119.91287371107143,
+      119.28124759453597,
+      118.60727394048043,
+      118.03008911326789,
+      117.47850450696775
+     ],
+     "wall_s": 11.382
+    }
+   }
+  ],
+  "needed": {
+   "P50": {
+    "block_m": 10.62115739498255,
+    "bracketed": true,
+    "runs": [
+     {
+      "block_m": 1.0,
+      "T_bottomhole_c": 214.43177899332963,
+      "stim_aperture_factor": 0.14985597466357703
+     },
+     {
+      "block_m": 64.0,
+      "T_bottomhole_c": 165.49085109438528,
+      "stim_aperture_factor": 0.18002443052460998
+     },
+     {
+      "block_m": 2.667799858246727,
+      "T_bottomhole_c": 213.75937128031723,
+      "stim_aperture_factor": 0.15069452970794467
+     },
+     {
+      "block_m": 8.5832105523021,
+      "T_bottomhole_c": 205.82805882032577,
+      "stim_aperture_factor": 0.15731227882008894
+     },
+     {
+      "block_m": 13.886425158785135,
+      "T_bottomhole_c": 198.18088459334797,
+      "stim_aperture_factor": 0.16210527498941923
+     },
+     {
+      "block_m": 9.625981542786477,
+      "T_bottomhole_c": 204.20976203681377,
+      "stim_aperture_factor": 0.15838986558305984
+     },
+     {
+      "block_m": 10.985011182140836,
+      "T_bottomhole_c": 202.17541343295036,
+      "stim_aperture_factor": 0.1596866266497063
+     },
+     {
+      "block_m": 10.260046572112113,
+      "T_bottomhole_c": 203.24869676037855,
+      "stim_aperture_factor": 0.15900942648455488
+     },
+     {
+      "block_m": 10.62115739498255,
+      "T_bottomhole_c": 202.7105123788039,
+      "stim_aperture_factor": 0.15935078612358844
+     }
+    ]
+   },
+   "P10": {
+    "block_m": 12.370863401765643,
+    "bracketed": true,
+    "runs": [
+     {
+      "block_m": 1.0,
+      "T_bottomhole_c": 214.43177899332963,
+      "stim_aperture_factor": 0.14985597466357703
+     },
+     {
+      "block_m": 64.0,
+      "T_bottomhole_c": 165.49085109438528,
+      "stim_aperture_factor": 0.18002443052460998
+     },
+     {
+      "block_m": 3.416389887719228,
+      "T_bottomhole_c": 213.16541983155344,
+      "stim_aperture_factor": 0.15134678868266704
+     },
+     {
+      "block_m": 12.167185038847007,
+      "T_bottomhole_c": 200.48889029493122,
+      "stim_aperture_factor": 0.16072485144201581
+     },
+     {
+      "block_m": 14.364453208916132,
+      "T_bottomhole_c": 197.56909645219469,
+      "stim_aperture_factor": 0.16246489704262973
+     },
+     {
+      "block_m": 12.370863401765643,
+      "T_bottomhole_c": 200.2065136118277,
+      "stim_aperture_factor": 0.16089601729845351
+     }
+    ]
+   },
+   "P90": {
+    "block_m": 8.713701945060809,
+    "bracketed": true,
+    "runs": [
+     {
+      "block_m": 1.0,
+      "T_bottomhole_c": 214.43177899332963,
+      "stim_aperture_factor": 0.14985597466357703
+     },
+     {
+      "block_m": 64.0,
+      "T_bottomhole_c": 165.49085109438528,
+      "stim_aperture_factor": 0.18002443052460998
+     },
+     {
+      "block_m": 2.073018417181625,
+      "T_bottomhole_c": 214.094082712594,
+      "stim_aperture_factor": 0.15029759347734792
+     },
+     {
+      "block_m": 5.604164729989475,
+      "T_bottomhole_c": 210.46321704660505,
+      "stim_aperture_factor": 0.15385036667136295
+     },
+     {
+      "block_m": 12.028218099775088,
+      "T_bottomhole_c": 200.68294179817713,
+      "stim_aperture_factor": 0.16060681262850132
+     },
+     {
+      "block_m": 7.092419559851064,
+      "T_bottomhole_c": 208.18135668408485,
+      "stim_aperture_factor": 0.15564173427149175
+     },
+     {
+      "block_m": 9.109750425915928,
+      "T_bottomhole_c": 205.00583368232301,
+      "stim_aperture_factor": 0.1578657219474187
+     },
+     {
+      "block_m": 8.198198040966492,
+      "T_bottomhole_c": 206.43411398279852,
+      "stim_aperture_factor": 0.15689537647122412
+     },
+     {
+      "block_m": 8.713701945060809,
+      "T_bottomhole_c": 205.6234738916173,
+      "stim_aperture_factor": 0.15745123181502552
+     }
+    ]
+   },
+   "P50_geotherm_corrected": {
+    "block_m": 5.268020436459234,
+    "bracketed": true,
+    "runs": [
+     {
+      "block_m": 1.0,
+      "T_bottomhole_c": 214.43177899332963,
+      "stim_aperture_factor": 0.14985597466357703
+     },
+     {
+      "block_m": 64.0,
+      "T_bottomhole_c": 165.49085109438528,
+      "stim_aperture_factor": 0.18002443052460998
+     },
+     {
+      "block_m": 1.515716566510398,
+      "T_bottomhole_c": 214.30763623082584,
+      "stim_aperture_factor": 0.15002668118887594
+     },
+     {
+      "block_m": 2.396271449019886,
+      "T_bottomhole_c": 213.92670113771482,
+      "stim_aperture_factor": 0.1505000451185817
+     },
+     {
+      "block_m": 4.578417982220965,
+      "T_bottomhole_c": 211.877039029315,
+      "stim_aperture_factor": 0.15261169091689392
+     },
+     {
+      "block_m": 6.222382058929002,
+      "T_bottomhole_c": 209.53584248031393,
+      "stim_aperture_factor": 0.15460414675580184
+     },
+     {
+      "block_m": 4.8547110234484006,
+      "T_bottomhole_c": 211.5163585488122,
+      "stim_aperture_factor": 0.15293981965733217
+     },
+     {
+      "block_m": 5.268020436459234,
+      "T_bottomhole_c": 210.94736328149702,
+      "stim_aperture_factor": 0.15343982351248023
+     }
+    ]
+   },
+   "P50_transport_porosity_x30": {
+    "block_m": 10.611798144726645,
+    "bracketed": true,
+    "runs": [
+     {
+      "block_m": 1.0,
+      "T_bottomhole_c": 214.4300365425588,
+      "stim_aperture_factor": 0.14985857409131517
+     },
+     {
+      "block_m": 64.0,
+      "T_bottomhole_c": 165.2498955308281,
+      "stim_aperture_factor": 0.18004477387872317
+     },
+     {
+      "block_m": 2.654706022078528,
+      "T_bottomhole_c": 213.78290851692373,
+      "stim_aperture_factor": 0.15068683118085027
+     },
+     {
+      "block_m": 8.529629854803614,
+      "T_bottomhole_c": 205.9304588978116,
+      "stim_aperture_factor": 0.15725693555316148
+     },
+     {
+      "block_m": 13.963084298871829,
+      "T_bottomhole_c": 197.99714800248762,
+      "stim_aperture_factor": 0.1621674760675463
+     },
+     {
+      "block_m": 9.589223046332787,
+      "T_bottomhole_c": 204.26563228161942,
+      "stim_aperture_factor": 0.15835545197459494
+     },
+     {
+      "block_m": 10.98275882915911,
+      "T_bottomhole_c": 202.15114469258478,
+      "stim_aperture_factor": 0.15968731242419512
+     },
+     {
+      "block_m": 10.241412097418525,
+      "T_bottomhole_c": 203.26373588995392,
+      "stim_aperture_factor": 0.15899409129732942
+     },
+     {
+      "block_m": 10.611798144726645,
+      "T_bottomhole_c": 202.70418110774818,
+      "stim_aperture_factor": 0.1593446593159245
+     }
+    ]
+   }
+  },
+  "at_needed": {
+   "slab": {
+    "block_m": 10.62115739498255,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.15935078612358844,
+    "T_bottomhole_c": 202.7105123788039,
+    "T_misfit_c": -0.17405894712771897,
+    "injector_bhp_mpa": 42.06440376517312,
+    "recovery": 0.9061128381204125,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 38.21422692759515,
+     "T_prod_end_c": 117.99530603905858,
+     "T_prod_10y_c": 138.7038851643587,
+     "breakthrough_years": 0.1731721966278235,
+     "power_initial_mw": 5.359405565154328,
+     "power_end_mw": 2.423714886023859,
+     "T_prod_yearly_c": [
+      186.91618159816662,
+      173.45607332436043,
+      164.74950686982604,
+      158.62705574164175,
+      153.88561363238588,
+      149.81035058110606,
+      146.50975236395178,
+      143.57339910410062,
+      140.94082745219055,
+      138.7038851643587,
+      136.6859858745258,
+      134.89094244868684,
+      133.27408861607083,
+      131.8051498881543,
+      130.459037655355,
+      129.2217233351822,
+      128.07271976528492,
+      127.03447201734905,
+      126.02401960431376,
+      125.07589660759075,
+      124.22623534261515,
+      123.37213459164339,
+      122.57372570589102,
+      121.84208124505935,
+      121.10593140123291,
+      120.45105910532928,
+      119.77222370420562,
+      119.17479390967107,
+      118.55107572575571,
+      117.99530603905858
+     ],
+     "wall_s": 15.466
+    }
+   },
+   "slab_geotherm_corrected": {
+    "block_m": 5.268020436459234,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.15343982351248023,
+    "T_bottomhole_c": 210.94736328149702,
+    "T_misfit_c": 8.062791955565388,
+    "injector_bhp_mpa": 42.06789675366241,
+    "recovery": 0.9062995387235349,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 39.86383546923862,
+     "T_prod_end_c": 118.79293613398605,
+     "T_prod_10y_c": 139.4573827699931,
+     "breakthrough_years": 0.3555442661566747,
+     "power_initial_mw": 5.4846119684564245,
+     "power_end_mw": 2.4572528351298617,
+     "T_prod_yearly_c": [
+      189.8050448036008,
+      174.54996483978098,
+      165.68447090270703,
+      159.53891056420252,
+      154.7417785551703,
+      150.67226307966598,
+      147.3036971638381,
+      144.34590360960433,
+      141.78745529830053,
+      139.4573827699931,
+      137.43305667625515,
+      135.68773115498374,
+      134.06843940689708,
+      132.5966815996948,
+      131.22507200226747,
+      129.99188160511304,
+      128.8484568248014,
+      127.79019802753541,
+      126.81194745053173,
+      125.8665032041051,
+      124.99404830879729,
+      124.16912887182566,
+      123.36641081274743,
+      122.64222126144533,
+      121.90376137685841,
+      121.2519660978258,
+      120.56978962595117,
+      119.974700502492,
+      119.34388664869697,
+      118.79293613398605
+     ],
+     "wall_s": 16.537
+    }
+   }
+  },
+  "variants": {
+   "cube_same_D": {
+    "block_m": 10.62115739498255,
+    "shape": "cube",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.15263220180011075,
+    "T_bottomhole_c": 212.26974233967712,
+    "T_misfit_c": 9.385171013745492,
+    "injector_bhp_mpa": 42.04956123693377,
+    "recovery": 0.9056277261320973
+   },
+   "cube_3D": {
+    "block_m": 31.86347218494765,
+    "shape": "cube",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.1604081364460303,
+    "T_bottomhole_c": 201.43873859071334,
+    "T_misfit_c": -1.4458327352182891,
+    "injector_bhp_mpa": 42.04367104047186,
+    "recovery": 0.9056410185723822
+   },
+   "transport_porosity_x30": {
+    "block_m": 10.62115739498255,
+    "shape": "slab",
+    "phi_scale": 30.0,
+    "stim_aperture_factor": 0.15935340729114125,
+    "T_bottomhole_c": 202.6901358340296,
+    "T_misfit_c": -0.19443549190202702,
+    "injector_bhp_mpa": 42.0820439505869,
+    "recovery": 0.9059197655219925
+   },
+   "shells_4": null
+  }
+ },
+ "front_correction": {
+  "members": 12,
+  "failed": 0,
+  "errors": [],
+  "rates": {
+   "10": {
+    "tof_coarse_kai_flux_undefined_members": 12,
+    "coarse_usual": {
+     "breakthrough_change": {
+      "P10": -0.3236418196892601,
+      "P50": 0.24731081716239411,
+      "P90": 0.6220211771833027,
+      "mean": 0.16032240205142778,
+      "n": 12,
+      "beyond_run": 0
+     },
+     "breakthrough_years": {
+      "P10": 1.122962096451763,
+      "P50": 2.0427417975116544,
+      "P90": 2.7779951440500703,
+      "mean": 1.9346308772123555,
+      "n": 12,
+      "beyond_run": 0
+     }
+    },
+    "coarse_kai": {
+     "breakthrough_change": {
+      "P10": -0.25596534214453714,
+      "P50": 0.5395396276909319,
+      "P90": 1.152485890986813,
+      "mean": 0.5116402734430915,
+      "n": 12,
+      "beyond_run": 0
+     },
+     "breakthrough_years": {
+      "P10": 1.346921220130047,
+      "P50": 2.535823860479021,
+      "P90": 3.208757260011892,
+      "mean": 2.4203086012361736,
+      "n": 12,
+      "beyond_run": 0
+     },
+     "T30_change_c": {
+      "P10": -0.013430770053722075,
+      "P50": 2.4311689183518155,
+      "P90": 5.075296016852992,
+      "mean": 1.716578741496857,
+      "n": 12,
+      "beyond_run": 0
+     }
+    },
+    "tof_fine_flux": {
+     "breakthrough_change": {
+      "P10": -0.5889268351050493,
+      "P50": -0.4815159467389071,
+      "P90": -0.4327879643435137,
+      "mean": -0.5061839563170887,
+      "n": 12,
+      "beyond_run": 0
+     },
+     "breakthrough_years": {
+      "P10": 0.554034602634388,
+      "P50": 0.8685087668307391,
+      "P90": 1.030603151121231,
+      "mean": 0.8385744842416409,
+      "n": 12,
+      "beyond_run": 0
+     }
+    },
+    "tof_coarse_kai_flux": {
+     "breakthrough_change": {
+      "P10": null,
+      "P50": null,
+      "P90": null,
+      "mean": null,
+      "n": 0
+     },
+     "breakthrough_years": {
+      "P10": 0.0,
+      "P50": 0.0,
+      "P90": 0.0,
+      "mean": 0.0,
+      "n": 12,
+      "beyond_run": 0
+     }
+    },
+    "tof_fine_flux_conduction": {
+     "breakthrough_change": {
+      "P10": -0.46193471753638105,
+      "P50": -0.34737409411051956,
+      "P90": -0.30112035256569386,
+      "mean": -0.3713250150342844,
+      "n": 12,
+      "beyond_run": 0
+     },
+     "breakthrough_years": {
+      "P10": 0.6793734196735294,
+      "P50": 1.0672544034407787,
+      "P90": 1.2661399965696036,
+      "mean": 1.0836544316609504,
+      "n": 12,
+      "beyond_run": 0
+     }
+    },
+    "fine": {
+     "breakthrough_years": {
+      "P10": 1.2759722593470637,
+      "P50": 1.669363858440957,
+      "P90": 1.8543290266374792,
+      "mean": 1.6990143811595964,
+      "n": 12,
+      "beyond_run": 0
+     },
+     "T_prod_end_c": {
+      "P10": 125.1447961898811,
+      "P50": 128.91595706722927,
+      "P90": 134.7117995507345,
+      "mean": 130.0995321628957,
+      "n": 12,
+      "beyond_run": 0
+     }
+    },
+    "checks": {
+     "median": false,
+     "p10_p90": false,
+     "T30": true
+    }
+   },
+   "40": {
+    "tof_coarse_kai_flux_undefined_members": 12,
+    "coarse_usual": {
+     "breakthrough_change": {
+      "P10": -0.2647945235069995,
+      "P50": 0.39294875070419166,
+      "P90": 0.844051087172596,
+      "mean": 0.30916457359835964,
+      "n": 12,
+      "beyond_run": 0
+     },
+     "breakthrough_years": {
+      "P10": 0.2710836308096414,
+      "P50": 0.4943479825638516,
+      "P90": 0.6779090667144279,
+      "mean": 0.46820473923013606,
+      "n": 12,
+      "beyond_run": 0
+     }
+    },
+    "coarse_kai": {
+     "breakthrough_change": {
+      "P10": -0.16486737273423846,
+      "P50": 0.7242740813217983,
+      "P90": 1.414980244087259,
+      "mean": 0.6702527777210405,
+      "n": 12,
+      "beyond_run": 0
+     },
+     "breakthrough_years": {
+      "P10": 0.31735716924991997,
+      "P50": 0.598884305289034,
+      "P90": 0.7642717682123507,
+      "mean": 0.574365509010479,
+      "n": 12,
+      "beyond_run": 0
+     },
+     "T30_change_c": {
+      "P10": -4.6051312018129025,
+      "P50": -3.5882978135093637,
+      "P90": -1.2792988224395017,
+      "mean": -3.2687163708241065,
+      "n": 12,
+      "beyond_run": 0
+     }
+    },
+    "tof_fine_flux": {
+     "breakthrough_change": {
+      "P10": -0.5286728232534231,
+      "P50": -0.39567076594244266,
+      "P90": -0.33198944471047975,
+      "mean": -0.42507338816265866,
+      "n": 12,
+      "beyond_run": 0
+     },
+     "breakthrough_years": {
+      "P10": 0.13850865065859677,
+      "P50": 0.21712719170768485,
+      "P90": 0.25765078778030764,
+      "mean": 0.20964362106041037,
+      "n": 12,
+      "beyond_run": 0
+     }
+    },
+    "tof_coarse_kai_flux": {
+     "breakthrough_change": {
+      "P10": null,
+      "P50": null,
+      "P90": null,
+      "mean": null,
+      "n": 0
+     },
+     "breakthrough_years": {
+      "P10": 0.0,
+      "P50": 0.0,
+      "P90": 0.0,
+      "mean": 0.0,
+      "n": 12,
+      "beyond_run": 0
+     }
+    },
+    "tof_fine_flux_conduction": {
+     "breakthrough_change": {
+      "P10": -0.45956049899434215,
+      "P50": -0.34051068865935197,
+      "P90": -0.29958868321571375,
+      "mean": -0.35718426607085174,
+      "n": 12,
+      "beyond_run": 0
+     },
+     "breakthrough_years": {
+      "P10": 0.1475966122549252,
+      "P50": 0.22917815241940787,
+      "P90": 0.2771024664243074,
+      "mean": 0.2363724053384362,
+      "n": 12,
+      "beyond_run": 0
+     }
+    },
+    "fine": {
+     "breakthrough_years": {
+      "P10": 0.2751014774808822,
+      "P50": 0.3551134291147331,
+      "P90": 0.3929645535125832,
+      "mean": 0.3667488341691403,
+      "n": 12,
+      "beyond_run": 0
+     },
+     "T_prod_end_c": {
+      "P10": 86.12685523870132,
+      "P50": 88.54124664247811,
+      "P90": 98.67340094298446,
+      "mean": 91.67803325100546,
+      "n": 12,
+      "beyond_run": 0
+     }
+    },
+    "checks": {
+     "median": false,
+     "p10_p90": false,
+     "T30": false
+    }
+   }
+  },
+  "criterion": {
+   "median_abs_max": 0.15,
+   "p10_p90_abs_max": 0.3,
+   "T30_median_c": [
+    1.4,
+    3.4
+   ],
+   "T30_p10_p90_c": [
+    -1.0,
+    6.0
+   ]
+  },
+  "pass": false
+ },
+ "front_members": [
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 4.474388370357003,
+    "bg_aperture_factor": 0.00040930077970853426,
+    "rotation_deg": 2.7146232804902013,
+    "stim_aperture_sigma": 0.04355695748967946,
+    "Kni": 8063837131.950205,
+    "Vm": 0.0003733740971508376,
+    "seed": 100
+   },
+   "rates": {
+    "10": {
+     "fine": {
+      "breakthrough_years": 1.8412579639278803,
+      "T_prod_end_c": 128.79054790313972,
+      "T_prod_10y_c": 159.59175576250883,
+      "power_end_mw": 2.8782950390743594,
+      "wall_s": 83.585,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 2.368688389265869,
+      "T_prod_end_c": 140.590581956504,
+      "T_prod_10y_c": 175.8075262082637,
+      "power_end_mw": 3.3770214025345218,
+      "wall_s": 0.915,
+      "cells": 1215,
+      "breakthrough_change": 0.28645113051559745,
+      "T30_change_c": 11.800034053364271
+     },
+     "coarse_kai": {
+      "breakthrough_years": 2.890191079502379,
+      "T_prod_end_c": 130.82495839344998,
+      "T_prod_10y_c": 173.66734724483,
+      "power_end_mw": 2.9641346070947954,
+      "wall_s": 0.916,
+      "cells": 1215,
+      "breakthrough_change": 0.5696828668900107,
+      "T30_change_c": 2.0344104903102505
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 1.033371512370361,
+      "particles": 1856,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.4387687479890586
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 560,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 1.258487037608216,
+      "breakthrough_change": -0.3165069413068351
+     }
+    },
+    "40": {
+     "fine": {
+      "breakthrough_years": 0.39305145130909547,
+      "T_prod_end_c": 87.96376400761362,
+      "T_prod_10y_c": 107.67263702126559,
+      "power_end_mw": 4.662722271510679,
+      "wall_s": 54.958,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 0.5745629802351847,
+      "T_prod_end_c": 95.84896171228971,
+      "T_prod_10y_c": 127.66832564820054,
+      "power_end_mw": 5.980869910817746,
+      "wall_s": 1.095,
+      "cells": 1215,
+      "breakthrough_change": 0.4618009380745134,
+      "T30_change_c": 7.885197704676088
+     },
+     "coarse_kai": {
+      "breakthrough_years": 0.6871630606052965,
+      "T_prod_end_c": 84.37937172652676,
+      "T_prod_10y_c": 113.09211778870335,
+      "power_end_mw": 4.064115697392955,
+      "wall_s": 1.016,
+      "cells": 1215,
+      "breakthrough_change": 0.7482776321436653,
+      "T30_change_c": -3.5843922810868634
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.2583428780925902,
+      "particles": 1856,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.34272503706027657
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 560,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.27531134217207925,
+      "breakthrough_change": -0.2995539356103928
+     }
+    }
+   },
+   "stim_aperture_factor": {
+    "fine": 0.16336394636631832,
+    "coarse_usual": 0.1410370905945966
+   },
+   "global_upscale": {
+    "fallback_faces": 218,
+    "faces": 3294
+   },
+   "coarse_kai_august_dp_mpa": 17.08753658625104,
+   "august_dp_target_mpa": 20.90364605726696,
+   "coarse_usual_uncalibrated_august_dp_mpa": 13.887273107051437,
+   "seconds": 174.4,
+   "seconds_phase5": 195.7
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 3.90714939225852,
+    "bg_aperture_factor": 0.0028524086228719774,
+    "rotation_deg": 11.324712933039812,
+    "stim_aperture_sigma": 0.7806454745951219,
+    "Kni": 13865538631.703741,
+    "Vm": 0.00031877796031608535,
+    "seed": 101
+   },
+   "rates": {
+    "10": {
+     "fine": {
+      "breakthrough_years": 3.2026392842239337,
+      "T_prod_end_c": 155.81482687477597,
+      "T_prod_10y_c": 185.64295298220196,
+      "power_end_mw": 4.0237842043174785,
+      "wall_s": 64.771,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 2.1403294064526945,
+      "T_prod_end_c": 153.0855158500688,
+      "T_prod_10y_c": 180.67397232055728,
+      "power_end_mw": 3.9075353968116517,
+      "wall_s": 0.911,
+      "cells": 1215,
+      "breakthrough_change": -0.3316982599333409,
+      "T30_change_c": -2.7293110247071866
+     },
+     "coarse_kai": {
+      "breakthrough_years": 2.230887378345765,
+      "T_prod_end_c": 148.99668767248363,
+      "T_prod_10y_c": 181.6689610778011,
+      "power_end_mw": 3.733634783600046,
+      "wall_s": 0.983,
+      "cells": 1215,
+      "breakthrough_change": -0.30342221512893375,
+      "T30_change_c": -6.818139202292343
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 1.4318027828947355,
+      "particles": 1920,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.5529303627955431
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 640,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 2.111510092377721,
+      "breakthrough_change": -0.34069687373819124
+     }
+    },
+    "40": {
+     "fine": {
+      "breakthrough_years": 0.7278075161412477,
+      "T_prod_end_c": 112.9682872403927,
+      "T_prod_10y_c": 145.15355357696131,
+      "power_end_mw": 8.850051619734712,
+      "wall_s": 46.16,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 0.5258348822524183,
+      "T_prod_end_c": 113.14588091332367,
+      "T_prod_10y_c": 144.3705521343748,
+      "power_end_mw": 8.879877517435594,
+      "wall_s": 1.059,
+      "cells": 1215,
+      "breakthrough_change": -0.2775083101087844,
+      "T30_change_c": 0.17759367293096773
+     },
+     "coarse_kai": {
+      "breakthrough_years": 0.5466376125626966,
+      "T_prod_end_c": 106.00465953022223,
+      "T_prod_10y_c": 137.5033998363374,
+      "power_end_mw": 7.681597179616237,
+      "wall_s": 1.081,
+      "cells": 1215,
+      "breakthrough_change": -0.24892557380980795,
+      "T30_change_c": -6.963627710170471
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.3579506957236855,
+      "particles": 1920,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.5081794460965461
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 640,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.4383225605700989,
+      "breakthrough_change": -0.3977493350246848
+     }
+    }
+   },
+   "stim_aperture_factor": {
+    "fine": 0.07943383896253121,
+    "coarse_usual": 0.06628575839984807
+   },
+   "global_upscale": {
+    "fallback_faces": 144,
+    "faces": 3294
+   },
+   "coarse_kai_august_dp_mpa": 17.888562383814325,
+   "august_dp_target_mpa": 20.90364605726696,
+   "coarse_usual_uncalibrated_august_dp_mpa": 13.668834745413687,
+   "seconds": 145.5,
+   "seconds_phase5": 162.9
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 4.99692151783211,
+    "bg_aperture_factor": 0.001219370353306235,
+    "rotation_deg": -7.138425178304199,
+    "stim_aperture_sigma": 0.8376111709184638,
+    "Kni": 5102213859.963671,
+    "Vm": 0.0004640032132621915,
+    "seed": 102
+   },
+   "rates": {
+    "10": {
+     "fine": {
+      "breakthrough_years": 1.4074585409658635,
+      "T_prod_end_c": 120.53444149330929,
+      "T_prod_10y_c": 145.46694632215193,
+      "power_end_mw": 2.5305043960217697,
+      "wall_s": 45.278,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 0.6159582563830216,
+      "T_prod_end_c": 123.92159926577087,
+      "T_prod_10y_c": 153.15646986460908,
+      "power_end_mw": 2.6730828041904138,
+      "wall_s": 0.909,
+      "cells": 1215,
+      "breakthrough_change": -0.5623613495852444,
+      "T30_change_c": 3.3871577724615776
+     },
+     "coarse_kai": {
+      "breakthrough_years": 2.8555387066294178,
+      "T_prod_end_c": 125.8006723166656,
+      "T_prod_10y_c": 167.90139941884377,
+      "power_end_mw": 2.752243192811823,
+      "wall_s": 0.934,
+      "cells": 1215,
+      "breakthrough_change": 1.0288616847426386,
+      "T30_change_c": 5.2662308233563095
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.5769091487609769,
+      "particles": 1840,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.5901057601561215
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 592,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.7214683770670302,
+      "breakthrough_change": -0.48739635586571173
+     }
+    },
+    "40": {
+     "fine": {
+      "breakthrough_years": 0.30730497103258825,
+      "T_prod_end_c": 87.29636326503002,
+      "T_prod_10y_c": 104.46475873782137,
+      "power_end_mw": 4.551237818114374,
+      "wall_s": 56.174,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 0.14983697581378433,
+      "T_prod_end_c": 89.86095544953528,
+      "T_prod_10y_c": 111.39289570510591,
+      "power_end_mw": 4.979702253351688,
+      "wall_s": 0.971,
+      "cells": 1215,
+      "breakthrough_change": -0.5124160363878565,
+      "T30_change_c": 2.5645921845052584
+     },
+     "coarse_kai": {
+      "breakthrough_years": 0.6611607535448036,
+      "T_prod_end_c": 86.37263473262384,
+      "T_prod_10y_c": 109.18008745029401,
+      "power_end_mw": 4.3969556631226325,
+      "wall_s": 1.053,
+      "cells": 1215,
+      "breakthrough_change": 1.151480828062136,
+      "T30_change_c": -0.9237285324061872
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.14422728719024425,
+      "particles": 1840,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.5306705039439481
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 592,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.16360197709331056,
+      "breakthrough_change": -0.4676233952754336
+     }
+    }
+   },
+   "stim_aperture_factor": {
+    "fine": 0.09386685276623062,
+    "coarse_usual": 0.06735318402999582
+   },
+   "global_upscale": {
+    "fallback_faces": 145,
+    "faces": 3294
+   },
+   "coarse_kai_august_dp_mpa": 16.525247103969047,
+   "august_dp_target_mpa": 20.90364605726696,
+   "coarse_usual_uncalibrated_august_dp_mpa": 8.322769682552497,
+   "seconds": 140.2,
+   "seconds_phase5": 162.2
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 3.500160978647029,
+    "bg_aperture_factor": 0.0007467500125651666,
+    "rotation_deg": 5.760407941102208,
+    "stim_aperture_sigma": 0.29254505622958255,
+    "Kni": 46925554868.858894,
+    "Vm": 0.00019049635926228115,
+    "seed": 103
+   },
+   "rates": {
+    "10": {
+     "fine": {
+      "breakthrough_years": 1.734539517448622,
+      "T_prod_end_c": 129.26524693308374,
+      "T_prod_10y_c": 159.06623360983605,
+      "power_end_mw": 2.898319281942077,
+      "wall_s": 58.397,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 2.130507302807968,
+      "T_prod_end_c": 139.2972508359275,
+      "T_prod_10y_c": 174.14211799511185,
+      "power_end_mw": 3.3222566552169415,
+      "wall_s": 0.93,
+      "cells": 1215,
+      "breakthrough_change": 0.2282840957937846,
+      "T30_change_c": 10.032003902843769
+     },
+     "coarse_kai": {
+      "breakthrough_years": 2.6817818531304067,
+      "T_prod_end_c": 129.2413898357021,
+      "T_prod_10y_c": 170.99538945497775,
+      "power_end_mw": 2.8973128433576236,
+      "wall_s": 0.976,
+      "cells": 1215,
+      "breakthrough_change": 0.5461059411751583,
+      "T30_change_c": -0.02385709738163655
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.9850043467940423,
+      "particles": 1872,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.432123432827342
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 592,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 1.2295300228165338,
+      "breakthrough_change": -0.2911490280572676
+     }
+    },
+    "40": {
+     "fine": {
+      "breakthrough_years": 0.36797644349863395,
+      "T_prod_end_c": 89.03962730471706,
+      "T_prod_10y_c": 109.86920361604977,
+      "power_end_mw": 4.842463453904751,
+      "wall_s": 60.521,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 0.5199574747910679,
+      "T_prod_end_c": 94.75702073636938,
+      "T_prod_10y_c": 127.20465554859364,
+      "power_end_mw": 5.798219266077915,
+      "wall_s": 1.042,
+      "cells": 1215,
+      "breakthrough_change": 0.41301837108765405,
+      "T30_change_c": 5.717393431652326
+     },
+     "coarse_kai": {
+      "breakthrough_years": 0.6361076522485294,
+      "T_prod_end_c": 84.42859824394854,
+      "T_prod_10y_c": 112.17135640074045,
+      "power_end_mw": 4.072334422391751,
+      "wall_s": 0.995,
+      "cells": 1215,
+      "breakthrough_change": 0.7286640584939803,
+      "T30_change_c": -4.611029060768516
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.2462510866985107,
+      "particles": 1872,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.3307966011160579
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 592,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.27730148023011053,
+      "breakthrough_change": -0.24641513029042583
+     }
+    }
+   },
+   "stim_aperture_factor": {
+    "fine": 0.14330025538193558,
+    "coarse_usual": 0.12275281245942414
+   },
+   "global_upscale": {
+    "fallback_faces": 213,
+    "faces": 3294
+   },
+   "coarse_kai_august_dp_mpa": 16.247321620730784,
+   "august_dp_target_mpa": 20.90364605726696,
+   "coarse_usual_uncalibrated_august_dp_mpa": 13.397582037863646,
+   "seconds": 154.5,
+   "seconds_phase5": 174.2
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 2.888460153877427,
+    "bg_aperture_factor": 0.0006688660314799164,
+    "rotation_deg": -11.25392386858083,
+    "stim_aperture_sigma": 0.4803441894005007,
+    "Kni": 16517920865.26046,
+    "Vm": 0.00016642571762269008,
+    "seed": 104
+   },
+   "rates": {
+    "10": {
+     "fine": {
+      "breakthrough_years": 1.2619263606491762,
+      "T_prod_end_c": 125.76338999296985,
+      "T_prod_10y_c": 153.05948000592267,
+      "power_end_mw": 2.750672138949131,
+      "wall_s": 63.35,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 1.5988734496566548,
+      "T_prod_end_c": 139.56996101885002,
+      "T_prod_10y_c": 170.18297384687074,
+      "power_end_mw": 3.333802092046367,
+      "wall_s": 0.883,
+      "cells": 1215,
+      "breakthrough_change": 0.2670101041665711,
+      "T30_change_c": 13.806571025880174
+     },
+     "coarse_kai": {
+      "breakthrough_years": 1.2697702427508917,
+      "T_prod_end_c": 128.25593664592267,
+      "T_prod_10y_c": 164.40248385595535,
+      "power_end_mw": 2.855747211525013,
+      "wall_s": 0.938,
+      "cells": 1215,
+      "breakthrough_change": 0.006215800181621045,
+      "T30_change_c": 2.492546652952825
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.5514929863981003,
+      "particles": 1856,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.5629753022082887
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 576,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.6746962021853626,
+      "breakthrough_change": -0.4653442362212983
+     }
+    },
+    "40": {
+     "fine": {
+      "breakthrough_years": 0.27209681555506665,
+      "T_prod_end_c": 86.36023345939499,
+      "T_prod_10y_c": 104.80878719956583,
+      "power_end_mw": 4.394884544907399,
+      "wall_s": 66.569,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 0.3815150459557441,
+      "T_prod_end_c": 97.37430709219144,
+      "T_prod_10y_c": 128.8430880811792,
+      "power_end_mw": 6.236081906679756,
+      "wall_s": 1.017,
+      "cells": 1215,
+      "breakthrough_change": 0.4021297719985022,
+      "T30_change_c": 11.014073632796453
+     },
+     "coarse_kai": {
+      "breakthrough_years": 0.29959418496642326,
+      "T_prod_end_c": 85.08523607405907,
+      "T_prod_10y_c": 112.86989750843716,
+      "power_end_mw": 4.181970829168114,
+      "wall_s": 1.044,
+      "cells": 1215,
+      "breakthrough_change": 0.10105729960588872,
+      "T30_change_c": -1.2749973853359222
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.13787324659952482,
+      "particles": 1856,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.4932934208793701
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 576,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.1458182383839935,
+      "breakthrough_change": -0.4640942853868756
+     }
+    }
+   },
+   "stim_aperture_factor": {
+    "fine": 0.12514070173677078,
+    "coarse_usual": 0.10596876349049889
+   },
+   "global_upscale": {
+    "fallback_faces": 191,
+    "faces": 3294
+   },
+   "coarse_kai_august_dp_mpa": 16.967565582963733,
+   "august_dp_target_mpa": 20.90364605726696,
+   "coarse_usual_uncalibrated_august_dp_mpa": 12.964057598064546,
+   "seconds": 174.2,
+   "seconds_phase5": 195.6
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 4.124338974591961,
+    "bg_aperture_factor": 0.0023252673331803217,
+    "rotation_deg": 2.2631692800756937,
+    "stim_aperture_sigma": 0.9027046878935483,
+    "Kni": 54706845214.077194,
+    "Vm": 0.0004416987829340583,
+    "seed": 105
+   },
+   "rates": {
+    "10": {
+     "fine": {
+      "breakthrough_years": 1.5057379361651566,
+      "T_prod_end_c": 135.21039014284045,
+      "T_prod_10y_c": 161.6765226110486,
+      "power_end_mw": 3.14937279108991,
+      "wall_s": 42.053,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 1.1275961598831554,
+      "T_prod_end_c": 141.16748528814983,
+      "T_prod_10y_c": 167.30693061856556,
+      "power_end_mw": 3.4014583088431536,
+      "wall_s": 0.896,
+      "cells": 1215,
+      "breakthrough_change": -0.25113385749253303,
+      "T30_change_c": 5.957095145309381
+     },
+     "coarse_kai": {
+      "breakthrough_years": 1.0764571999160093,
+      "T_prod_end_c": 135.29079631873796,
+      "T_prod_10y_c": 164.60899244575316,
+      "power_end_mw": 3.1527717254469025,
+      "wall_s": 0.918,
+      "cells": 1215,
+      "breakthrough_change": -0.285096580180777,
+      "T30_change_c": 0.08040617589750809
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.8132615973225968,
+      "particles": 1920,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.4598916731859545
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 672,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.9840032436904305,
+      "breakthrough_change": -0.3464976739601119
+     }
+    },
+    "40": {
+     "fine": {
+      "breakthrough_years": 0.3199929894234956,
+      "T_prod_end_c": 99.16905928960557,
+      "T_prod_10y_c": 120.85622436131662,
+      "power_end_mw": 6.536469477668953,
+      "wall_s": 48.41,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 0.2718755014978986,
+      "T_prod_end_c": 102.981061106505,
+      "T_prod_10y_c": 130.63504356828722,
+      "power_end_mw": 7.174858800967692,
+      "wall_s": 1.045,
+      "cells": 1215,
+      "breakthrough_change": -0.15037044409093536,
+      "T30_change_c": 3.812001816899425
+     },
+     "coarse_kai": {
+      "breakthrough_years": 0.25778169364569326,
+      "T_prod_end_c": 97.85104753323385,
+      "T_prod_10y_c": 122.05016028634746,
+      "power_end_mw": 6.315863250899898,
+      "wall_s": 1.029,
+      "cells": 1215,
+      "breakthrough_change": -0.19441455854980816,
+      "T30_change_c": -1.3180117563717175
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.2033153993306496,
+      "particles": 1920,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.3646254572734676
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 672,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.21874727262821356,
+      "breakthrough_change": -0.31639979668832086
+     }
+    }
+   },
+   "stim_aperture_factor": {
+    "fine": 0.06316749562749763,
+    "coarse_usual": 0.052847620191914094
+   },
+   "global_upscale": {
+    "fallback_faces": 98,
+    "faces": 3294
+   },
+   "coarse_kai_august_dp_mpa": 16.77896111326496,
+   "august_dp_target_mpa": 20.90364605726696,
+   "coarse_usual_uncalibrated_august_dp_mpa": 13.208561266494687,
+   "seconds": 130.4,
+   "seconds_phase5": 149.4
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 4.335909968992827,
+    "bg_aperture_factor": 0.0004279233584257835,
+    "rotation_deg": -1.4222840439573918,
+    "stim_aperture_sigma": 0.11069334953460737,
+    "Kni": 27193008769.394123,
+    "Vm": 0.0001406826910329299,
+    "seed": 106
+   },
+   "rates": {
+    "10": {
+     "fine": {
+      "breakthrough_years": 1.8084637925251226,
+      "T_prod_end_c": 129.0413662313188,
+      "T_prod_10y_c": 160.40585719023466,
+      "power_end_mw": 2.888874930046901,
+      "wall_s": 60.224,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 1.954976292215341,
+      "T_prod_end_c": 139.57476529983327,
+      "T_prod_10y_c": 173.79951676882035,
+      "power_end_mw": 3.334005496152368,
+      "wall_s": 0.911,
+      "cells": 1215,
+      "breakthrough_change": 0.08101489247160765,
+      "T30_change_c": 10.533399068514484
+     },
+     "coarse_kai": {
+      "breakthrough_years": 2.0412800165424425,
+      "T_prod_end_c": 131.53971293315615,
+      "T_prod_10y_c": 172.4947846459836,
+      "power_end_mw": 2.9943065791977683,
+      "wall_s": 0.929,
+      "cells": 1215,
+      "breakthrough_change": 0.12873701147881045,
+      "T30_change_c": 2.498346701837363
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.9601700054502881,
+      "particles": 1856,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.4690687148844592
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 576,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 1.2669903253430912,
+      "breakthrough_change": -0.29941073159445597
+     }
+    },
+    "40": {
+     "fine": {
+      "breakthrough_years": 0.3878354712759141,
+      "T_prod_end_c": 88.04286598023917,
+      "T_prod_10y_c": 107.85278676690146,
+      "power_end_mw": 4.675936495671648,
+      "wall_s": 68.462,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 0.4687384903366352,
+      "T_prod_end_c": 94.44784896143373,
+      "T_prod_10y_c": 127.4139413541773,
+      "power_end_mw": 5.7465105625864,
+      "wall_s": 0.962,
+      "cells": 1215,
+      "breakthrough_change": 0.20860139170500225,
+      "T30_change_c": 6.404982981194564
+     },
+     "coarse_kai": {
+      "breakthrough_years": 0.4772240278013904,
+      "T_prod_end_c": 84.01934838503341,
+      "T_prod_10y_c": 114.11764254697643,
+      "power_end_mw": 4.004009057659049,
+      "wall_s": 1.042,
+      "cells": 1215,
+      "breakthrough_change": 0.23048061135667353,
+      "T30_change_c": -4.02351759520576
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.24004250136257316,
+      "particles": 1856,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.3810713069310724
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 576,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.2704386556609223,
+      "breakthrough_change": -0.3026974691839709
+     }
+    }
+   },
+   "stim_aperture_factor": {
+    "fine": 0.15773555725073515,
+    "coarse_usual": 0.13447008781082312
+   },
+   "global_upscale": {
+    "fallback_faces": 224,
+    "faces": 3294
+   },
+   "coarse_kai_august_dp_mpa": 17.16446972645604,
+   "august_dp_target_mpa": 20.90364605726696,
+   "coarse_usual_uncalibrated_august_dp_mpa": 13.186957774538632,
+   "seconds": 168.9,
+   "seconds_phase5": 193.6
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 3.7447132424656258,
+    "bg_aperture_factor": 0.0013597498003035497,
+    "rotation_deg": 0.2242445130126285,
+    "stim_aperture_sigma": 0.7246423489462166,
+    "Kni": 17599095271.806602,
+    "Vm": 0.0002557813650162648,
+    "seed": 107
+   },
+   "rates": {
+    "10": {
+     "fine": {
+      "breakthrough_years": 1.7395531883671154,
+      "T_prod_end_c": 130.16531206585063,
+      "T_prod_10y_c": 160.86388361927192,
+      "power_end_mw": 2.936295298787803,
+      "wall_s": 50.413,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 2.962382487985774,
+      "T_prod_end_c": 142.82124750133124,
+      "T_prod_10y_c": 178.12444256541136,
+      "power_end_mw": 3.4715392274727286,
+      "wall_s": 0.826,
+      "cells": 1215,
+      "breakthrough_change": 0.7029559704158885,
+      "T30_change_c": 12.655935435480615
+     },
+     "coarse_kai": {
+      "breakthrough_years": 2.389865867827636,
+      "T_prod_end_c": 131.31872368580673,
+      "T_prod_10y_c": 167.44365594090544,
+      "power_end_mw": 2.9849771766975866,
+      "wall_s": 0.86,
+      "cells": 1215,
+      "breakthrough_change": 0.373838916688116,
+      "T30_change_c": 1.1534116199561026
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.6717711482085023,
+      "particles": 1872,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.6138254623653786
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 528,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 1.0775978146519924,
+      "breakthrough_change": -0.38053183894680886
+     }
+    },
+    "40": {
+     "fine": {
+      "breakthrough_years": 0.3686231837814195,
+      "T_prod_end_c": 94.21247582339437,
+      "T_prod_10y_c": 115.91613866969811,
+      "power_end_mw": 5.707146645134662,
+      "wall_s": 56.15,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 0.7193155719939409,
+      "T_prod_end_c": 100.21791498337527,
+      "T_prod_10y_c": 128.51902865606937,
+      "power_end_mw": 6.712067816845789,
+      "wall_s": 1.04,
+      "cells": 1215,
+      "breakthrough_change": 0.9513573851081205,
+      "T30_change_c": 6.005439159980895
+     },
+     "coarse_kai": {
+      "breakthrough_years": 0.5616609583295387,
+      "T_prod_end_c": 91.36183304608693,
+      "T_prod_10y_c": 117.46006160447205,
+      "power_end_mw": 5.230539988449818,
+      "wall_s": 0.989,
+      "cells": 1215,
+      "breakthrough_change": 0.5236723652807027,
+      "T30_change_c": -2.850642777307442
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.1679427870521258,
+      "particles": 1872,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.5444052505614787
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 528,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.21425985847335213,
+      "breakthrough_change": -0.41875642146154146
+     }
+    }
+   },
+   "stim_aperture_factor": {
+    "fine": 0.1669162475829641,
+    "coarse_usual": 0.1361039492249805
+   },
+   "global_upscale": {
+    "fallback_faces": 184,
+    "faces": 3294
+   },
+   "coarse_kai_august_dp_mpa": 17.657524679714466,
+   "august_dp_target_mpa": 20.90364605726696,
+   "coarse_usual_uncalibrated_august_dp_mpa": 12.058719272071,
+   "seconds": 140.1,
+   "seconds_phase5": 159.3
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 3.3204037639064152,
+    "bg_aperture_factor": 0.001189550340830573,
+    "rotation_deg": -8.80054378671299,
+    "stim_aperture_sigma": 0.6606843609715274,
+    "Kni": 22992779969.464672,
+    "Vm": 0.00018802965477743029,
+    "seed": 108
+   },
+   "rates": {
+    "10": {
+     "fine": {
+      "breakthrough_years": 1.0242410756423952,
+      "T_prod_end_c": 125.968660309617,
+      "T_prod_10y_c": 149.6452037660196,
+      "power_end_mw": 2.7593223290283175,
+      "wall_s": 50.124,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 1.1224472005149417,
+      "T_prod_end_c": 128.9982946480795,
+      "T_prod_10y_c": 156.01215016782783,
+      "power_end_mw": 2.8870580450549546,
+      "wall_s": 0.897,
+      "cells": 1215,
+      "breakthrough_change": 0.09588184579587633,
+      "T30_change_c": 3.0296343384625146
+     },
+     "coarse_kai": {
+      "breakthrough_years": 2.218733463175965,
+      "T_prod_end_c": 131.6283572756933,
+      "T_prod_10y_c": 172.52081068050865,
+      "power_end_mw": 2.9980490317874056,
+      "wall_s": 0.915,
+      "cells": 1215,
+      "breakthrough_change": 1.1662219139028323,
+      "T30_change_c": 5.659696966076311
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.5183036982722008,
+      "particles": 1856,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.4939631785933549
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 640,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.5825380854437284,
+      "breakthrough_change": -0.43124904937212605
+     }
+    },
+    "40": {
+     "fine": {
+      "breakthrough_years": 0.21972084512419535,
+      "T_prod_end_c": 91.59766971000347,
+      "T_prod_10y_c": 109.8548645370432,
+      "power_end_mw": 5.269960789472276,
+      "wall_s": 58.184,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 0.2709956451776128,
+      "T_prod_end_c": 91.55411872397522,
+      "T_prod_10y_c": 117.8116920363601,
+      "power_end_mw": 5.262680987489398,
+      "wall_s": 1.016,
+      "cells": 1215,
+      "breakthrough_change": 0.23336338445464655,
+      "T30_change_c": -0.043550986028250804
+     },
+     "coarse_kai": {
+      "breakthrough_years": 0.5344512177676888,
+      "T_prod_end_c": 87.68715562259025,
+      "T_prod_10y_c": 114.25038675856113,
+      "power_end_mw": 4.616515362035122,
+      "wall_s": 0.981,
+      "cells": 1215,
+      "breakthrough_change": 1.432410167845453,
+      "T30_change_c": -3.910514087413219
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.12957592456804984,
+      "particles": 1856,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.41027022495381293
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 640,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.13359057376627026,
+      "breakthrough_change": -0.39199863494626863
+     }
+    }
+   },
+   "stim_aperture_factor": {
+    "fine": 0.0761613324196358,
+    "coarse_usual": 0.062107921308019634
+   },
+   "global_upscale": {
+    "fallback_faces": 181,
+    "faces": 3294
+   },
+   "coarse_kai_august_dp_mpa": 18.360781136904087,
+   "august_dp_target_mpa": 20.90364605726696,
+   "coarse_usual_uncalibrated_august_dp_mpa": 11.671585389002916,
+   "seconds": 147.0,
+   "seconds_phase5": 166.1
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 2.6160759944467014,
+    "bg_aperture_factor": 0.0005786543295003342,
+    "rotation_deg": 4.448571512532016,
+    "stim_aperture_sigma": 0.3339942083612036,
+    "Kni": 8757695891.457123,
+    "Vm": 0.00042507753203518316,
+    "seed": 109
+   },
+   "rates": {
+    "10": {
+     "fine": {
+      "breakthrough_years": 1.4023853476280503,
+      "T_prod_end_c": 125.12903026409357,
+      "T_prod_10y_c": 153.3142746857261,
+      "power_end_mw": 2.7239434105843094,
+      "wall_s": 58.92,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 1.775893209187251,
+      "T_prod_end_c": 136.28002064800154,
+      "T_prod_10y_c": 173.23511143539884,
+      "power_end_mw": 3.194596176652643,
+      "wall_s": 0.906,
+      "cells": 1215,
+      "breakthrough_change": 0.2663375385310036,
+      "T30_change_c": 11.150990383907967
+     },
+     "coarse_kai": {
+      "breakthrough_years": 3.3001805922036134,
+      "T_prod_end_c": 127.49882144784438,
+      "T_prod_10y_c": 169.42921695282132,
+      "power_end_mw": 2.823821675737525,
+      "wall_s": 0.963,
+      "cells": 1215,
+      "breakthrough_change": 1.3532623167986126,
+      "T30_change_c": 2.369791183750806
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.5913627482099459,
+      "particles": 1872,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.5783165096453995
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 592,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.8306164349713829,
+      "breakthrough_change": -0.407711698944758
+     }
+    },
+    "40": {
+     "fine": {
+      "breakthrough_years": 0.30214343481322203,
+      "T_prod_end_c": 85.94617822738626,
+      "T_prod_10y_c": 103.11994439604436,
+      "power_end_mw": 4.325736145768454,
+      "wall_s": 68.99,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 0.41809633474759467,
+      "T_prod_end_c": 91.72158999781085,
+      "T_prod_10y_c": 121.83803339718322,
+      "power_end_mw": 5.290675100509913,
+      "wall_s": 1.034,
+      "cells": 1215,
+      "breakthrough_change": 0.38376772940988113,
+      "T30_change_c": 5.775411770424597
+     },
+     "coarse_kai": {
+      "breakthrough_years": 0.7832571424323974,
+      "T_prod_end_c": 82.35397488145439,
+      "T_prod_10y_c": 109.93125881769248,
+      "power_end_mw": 3.7260137405418066,
+      "wall_s": 1.012,
+      "cells": 1215,
+      "breakthrough_change": 1.5923354678104742,
+      "T30_change_c": -3.592203345931864
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.1478406870524867,
+      "particles": 1872,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.5106936970386984
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 592,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.19400079286094063,
+      "breakthrough_change": -0.35791822522681205
+     }
+    }
+   },
+   "stim_aperture_factor": {
+    "fine": 0.12073112763764109,
+    "coarse_usual": 0.09794813443467176
+   },
+   "global_upscale": {
+    "fallback_faces": 221,
+    "faces": 3294
+   },
+   "coarse_kai_august_dp_mpa": 14.450076762668404,
+   "august_dp_target_mpa": 20.90364605726696,
+   "coarse_usual_uncalibrated_august_dp_mpa": 11.442331628361549,
+   "seconds": 171.4,
+   "seconds_phase5": 191.5
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 2.7678767059433436,
+    "bg_aperture_factor": 0.0005088693214525451,
+    "rotation_deg": -2.749918415549736,
+    "stim_aperture_sigma": 0.23345637480729678,
+    "Kni": 12202986479.31613,
+    "Vm": 0.00022588500844445772,
+    "seed": 110
+   },
+   "rates": {
+    "10": {
+     "fine": {
+      "breakthrough_years": 1.6041881994332918,
+      "T_prod_end_c": 125.28668952196891,
+      "T_prod_10y_c": 155.07356961308483,
+      "power_end_mw": 2.730585886914862,
+      "wall_s": 60.227,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 2.6226642386574524,
+      "T_prod_end_c": 140.95539190796976,
+      "T_prod_10y_c": 177.09506757227263,
+      "power_end_mw": 3.3924736809985068,
+      "wall_s": 0.835,
+      "cells": 1215,
+      "breakthrough_change": 0.6348856322368881,
+      "T30_change_c": 15.668702386000845
+     },
+     "coarse_kai": {
+      "breakthrough_years": 3.2441535022907266,
+      "T_prod_end_c": 128.64357228029203,
+      "T_prod_10y_c": 171.949750222713,
+      "power_end_mw": 2.8720957888221665,
+      "wall_s": 0.943,
+      "cells": 1215,
+      "breakthrough_change": 1.0223023105623028,
+      "T30_change_c": 3.356882758323124
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.9237559363388813,
+      "particles": 1856,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.4241598730964268
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 624,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 1.0569109922295647,
+      "breakthrough_change": -0.34115523814292026
+     }
+    },
+    "40": {
+     "fine": {
+      "breakthrough_years": 0.3422504147308322,
+      "T_prod_end_c": 86.10092432529092,
+      "T_prod_10y_c": 104.11072515370661,
+      "power_end_mw": 4.351578650470443,
+      "wall_s": 66.408,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 0.6350576305616852,
+      "T_prod_end_c": 95.03755446327132,
+      "T_prod_10y_c": 127.18591670216252,
+      "power_end_mw": 5.845140915775978,
+      "wall_s": 1.031,
+      "cells": 1215,
+      "breakthrough_change": 0.8555350212245485,
+      "T30_change_c": 8.936630137980401
+     },
+     "coarse_kai": {
+      "breakthrough_years": 0.7728394023909122,
+      "T_prod_end_c": 84.48104287861199,
+      "T_prod_10y_c": 111.50256142195609,
+      "power_end_mw": 4.081090503553778,
+      "wall_s": 1.046,
+      "cells": 1215,
+      "breakthrough_change": 1.2581109302635118,
+      "T30_change_c": -1.6198814466789315
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.23093898408472008,
+      "particles": 1856,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.32523388096886485
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 624,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.2396090322106022,
+      "breakthrough_change": -0.2999014116636025
+     }
+    }
+   },
+   "stim_aperture_factor": {
+    "fine": 0.17048087980078824,
+    "coarse_usual": 0.1505920837099799
+   },
+   "global_upscale": {
+    "fallback_faces": 235,
+    "faces": 3294
+   },
+   "coarse_kai_august_dp_mpa": 16.881248334258448,
+   "august_dp_target_mpa": 20.90364605726696,
+   "coarse_usual_uncalibrated_august_dp_mpa": 14.759828955591079,
+   "seconds": 161.5,
+   "seconds_phase5": 180.4
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 3.8193147874044437,
+    "bg_aperture_factor": 0.0008032636722216321,
+    "rotation_deg": -5.281030478682192,
+    "stim_aperture_sigma": 0.3747593695767701,
+    "Kni": 5774063319.768786,
+    "Vm": 0.00016176170182068304,
+    "seed": 111
+   },
+   "rates": {
+    "10": {
+     "fine": {
+      "breakthrough_years": 1.8557813669385457,
+      "T_prod_end_c": 130.2244842217809,
+      "T_prod_10y_c": 159.1182770039053,
+      "power_end_mw": 2.93879231554151,
+      "wall_s": 59.532,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 2.795254133538139,
+      "T_prod_end_c": 144.45508199060865,
+      "T_prod_10y_c": 179.03788608752686,
+      "power_end_mw": 3.540819449917539,
+      "wall_s": 0.877,
+      "cells": 1215,
+      "breakthrough_change": 0.5062410817010343,
+      "T30_change_c": 14.23059776882775
+     },
+     "coarse_kai": {
+      "breakthrough_years": 2.8448633125188327,
+      "T_prod_end_c": 132.75370204695656,
+      "T_prod_10y_c": 173.95590796281104,
+      "power_end_mw": 3.045569423317609,
+      "wall_s": 0.923,
+      "cells": 1215,
+      "breakthrough_change": 0.5329733142067055,
+      "T30_change_c": 2.529217825175664
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 1.0056878998790595,
+      "particles": 1856,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.45807845805773584
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 560,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 1.2095045515463507,
+      "breakthrough_change": -0.34825051426092724
+     }
+    },
+    "40": {
+     "fine": {
+      "breakthrough_years": 0.3921824733439725,
+      "T_prod_end_c": 91.43895037899766,
+      "T_prod_10y_c": 112.42218988327623,
+      "power_end_mw": 5.243430197981818,
+      "wall_s": 66.277,
+      "cells": 32805
+     },
+     "coarse_usual": {
+      "breakthrough_years": 0.6826703373980659,
+      "T_prod_end_c": 98.0729616790239,
+      "T_prod_10y_c": 131.5576573840808,
+      "power_end_mw": 6.35300265540736,
+      "wall_s": 1.026,
+      "cells": 1215,
+      "breakthrough_change": 0.7406956807050236,
+      "T30_change_c": 6.634011300026245
+     },
+     "coarse_kai": {
+      "breakthrough_years": 0.6745084018303789,
+      "T_prod_end_c": 86.88689990778528,
+      "T_prod_10y_c": 115.61042423702506,
+      "power_end_mw": 4.482845955977097,
+      "wall_s": 1.056,
+      "cells": 1215,
+      "breakthrough_change": 0.7198841041496162,
+      "T30_change_c": -4.552050471212382
+     },
+     "tof_fine_flux": {
+      "breakthrough_years": 0.2514219749697644,
+      "particles": 1856,
+      "arrived_share": 1.0,
+      "breakthrough_change": -0.3589158311283098
+     },
+     "tof_coarse_kai_flux": {
+      "breakthrough_years": 0.0,
+      "particles": 560,
+      "arrived_share": 1.0,
+      "breakthrough_change": null
+     },
+     "tof_fine_flux_conduction": {
+      "breakthrough_years": 0.2654670800113406,
+      "breakthrough_change": -0.3231031520918919
+     }
+    }
+   },
+   "stim_aperture_factor": {
+    "fine": 0.18351382883887288,
+    "coarse_usual": 0.1622638063196846
+   },
+   "global_upscale": {
+    "fallback_faces": 201,
+    "faces": 3294
+   },
+   "coarse_kai_august_dp_mpa": 18.35891194954032,
+   "august_dp_target_mpa": 20.90364605726696,
+   "coarse_usual_uncalibrated_august_dp_mpa": 14.780162769801196,
+   "seconds": 163.9,
+   "seconds_phase5": 185.3
+  }
+ ],
+ "front_convergence": {
+  "runs": [
+   {
+    "cell_m": 52.5,
+    "stim_aperture_factor": 0.10564992527989782,
+    "tof_years": 0.874059966954397,
+    "tof_conduction_years": 0.899623725811304,
+    "arrived_share": 1.0
+   },
+   {
+    "cell_m": 35.0,
+    "stim_aperture_factor": 0.11219040544802845,
+    "tof_years": 0.8593510325012738,
+    "tof_conduction_years": 1.0522699649381835,
+    "arrived_share": 1.0
+   },
+   {
+    "cell_m": 23.333333333333332,
+    "stim_aperture_factor": 0.11811720346150727,
+    "tof_years": 0.7886459245914087,
+    "tof_conduction_years": 1.0173501064699197,
+    "arrived_share": 1.0
+   }
+  ],
+  "phase4": {
+   "cells_m": [
+    52.5,
+    35.0,
+    23.333333333333332
+   ],
+   "heat_run_breakthrough_years": [
+    2.67,
+    1.65,
+    1.37
+   ],
+   "converged_years": 1.26,
+   "gci_years": 0.13
+  }
+ },
+ "ltne_ensemble": {
+  "members": 8,
+  "failed": 0,
+  "errors": [],
+  "block_sampled_m": {
+   "P10": 0.7122664847085427,
+   "P50": 2.7639799198529724,
+   "P90": 20.01138275779123,
+   "mean": 8.015148639616159,
+   "n": 8,
+   "beyond_run": 0
+  },
+  "lte": {
+   "T_misfit_c": {
+    "P10": 9.808560818982361,
+    "P50": 10.858859969561593,
+    "P90": 13.094335893093154,
+    "mean": 11.367424751551777,
+    "n": 8,
+    "beyond_run": 0
+   },
+   "T_bottomhole_c": {
+    "P10": 212.693132144914,
+    "P50": 213.74343129549322,
+    "P90": 215.9789072190248,
+    "mean": 214.2519960774834,
+    "n": 8,
+    "beyond_run": 0
+   },
+   "injector_bhp_mpa": {
+    "P10": 42.12562043087023,
+    "P50": 42.32722210913833,
+    "P90": 42.498735215333525,
+    "mean": 42.31893932693525,
+    "n": 8,
+    "beyond_run": 0
+   },
+   "T30_c": {
+    "P10": 123.19693399535863,
+    "P50": 129.1651782060984,
+    "P90": 140.8078551112428,
+    "mean": 131.48877086329003,
+    "n": 8,
+    "beyond_run": 0
+   },
+   "breakthrough_years": {
+    "P10": 1.1699272982531734,
+    "P50": 1.765380530606477,
+    "P90": 2.364911956795411,
+    "mean": 1.7954049140169128,
+    "n": 8,
+    "beyond_run": 0
+   }
+  },
+  "ltne_sampled": {
+   "T_misfit_c": {
+    "P10": 4.218318073127756,
+    "P50": 10.196548850812604,
+    "P90": 13.160172751284346,
+    "mean": 9.027543196798202,
+    "n": 8,
+    "beyond_run": 0
+   },
+   "T_bottomhole_c": {
+    "P10": 207.1028893990594,
+    "P50": 213.08112017674424,
+    "P90": 216.04474407721597,
+    "mean": 211.91211452272984,
+    "n": 8,
+    "beyond_run": 0
+   },
+   "injector_bhp_mpa": {
+    "P10": 42.13940914629179,
+    "P50": 42.3712426791771,
+    "P90": 42.59164145662432,
+    "mean": 42.354852363956766,
+    "n": 8,
+    "beyond_run": 0
+   },
+   "T30_c": {
+    "P10": 124.67862554019459,
+    "P50": 130.94997770024838,
+    "P90": 141.39692148404745,
+    "mean": 132.8472093590825,
+    "n": 8,
+    "beyond_run": 0
+   },
+   "breakthrough_years": {
+    "P10": 0.47554573237741316,
+    "P50": 1.2557850497741434,
+    "P90": 1.9948568899645933,
+    "mean": 1.2665292983529666,
+    "n": 8,
+    "beyond_run": 0
+   }
+  },
+  "explained_by_sampled_c": {
+   "P10": -0.09535406236441588,
+   "P50": -0.06286441996302017,
+   "P90": 6.09375183766404,
+   "mean": 2.3398815547535747,
+   "n": 8,
+   "beyond_run": 0
+  },
+  "explained_share_sampled": {
+   "P10": -0.007713733010343047,
+   "P50": -0.005316916172629792,
+   "P90": 0.5626294837673995,
+   "mean": 0.21608677587997988,
+   "n": 8,
+   "beyond_run": 0
+  },
+  "block_needed_m": {
+   "P50": {
+    "P10": 20.929708222850167,
+    "P50": 29.060120121415956,
+    "P90": 41.12952172569376,
+    "mean": 30.635238008631635,
+    "n": 8,
+    "beyond_run": 0
+   },
+   "P50_geotherm_corrected": {
+    "P10": 10.25309855552459,
+    "P50": 13.051245909545178,
+    "P90": 19.78856029827079,
+    "mean": 14.331271987785303,
+    "n": 8,
+    "beyond_run": 0
+   }
+  },
+  "at_block_needed_P50": {
+   "T30_c": {
+    "P10": 124.30746643101017,
+    "P50": 130.42658460799294,
+    "P90": 138.10350833943474,
+    "mean": 131.20788455407072,
+    "n": 8,
+    "beyond_run": 0
+   },
+   "T30_change_c": {
+    "P10": -2.6298599621886183,
+    "P50": 0.14939166745752175,
+    "P90": 1.4030351498662725,
+    "mean": -0.2808863092192908,
+    "n": 8,
+    "beyond_run": 0
+   },
+   "breakthrough_years": {
+    "P10": 0.16901981035336688,
+    "P50": 0.2302421844518429,
+    "P90": 0.2804242967988844,
+    "mean": 0.22776234670607332,
+    "n": 8,
+    "beyond_run": 0
+   },
+   "breakthrough_change": {
+    "P10": -0.9148971909825808,
+    "P50": -0.8623365361578965,
+    "P90": -0.8007347614067604,
+    "mean": -0.8577273025309919,
+    "n": 8,
+    "beyond_run": 0
+   },
+   "injector_bhp_mpa": {
+    "P10": 42.27870891757378,
+    "P50": 42.41918758002343,
+    "P90": 42.82141629022098,
+    "mean": 42.523302656659084,
+    "n": 8,
+    "beyond_run": 0
+   }
+  }
+ },
+ "ltne_members": [
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 4.474388370357003,
+    "bg_aperture_factor": 0.00040930077970853426,
+    "rotation_deg": 2.7146232804902013,
+    "stim_aperture_sigma": 0.04355695748967946,
+    "Kni": 8063837131.950205,
+    "Vm": 0.0003733740971508376,
+    "seed": 100
+   },
+   "block_sampled_m": 1.9874847089152219,
+   "lte": {
+    "block_m": null,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.14948657758631495,
+    "T_bottomhole_c": 213.32031939084663,
+    "T_misfit_c": 10.435748064915003,
+    "injector_bhp_mpa": 42.61126070928732,
+    "recovery": 0.9518931808458969,
+    "forecast": {
+     "pressure_feasible": false,
+     "injector_bhp_max_mpa": 42.314086333555785,
+     "T_prod_end_c": 128.0501369677192,
+     "T_prod_10y_c": 157.14191411990515,
+     "breakthrough_years": 1.7189100249014537,
+     "power_initial_mw": 6.407425723353329,
+     "power_end_mw": 2.847068417710567,
+     "T_prod_yearly_c": [
+      210.93642334404726,
+      202.89597357223616,
+      194.22592186634589,
+      185.8192779266725,
+      178.6168167118842,
+      172.72074511005397,
+      167.83795766883458,
+      163.74902259445489,
+      160.20707535945175,
+      157.14191411990515,
+      154.43437519900976,
+      152.02521915208695,
+      149.82444748001214,
+      147.8469726504117,
+      146.0122481870815,
+      144.32062765563214,
+      142.7318943433457,
+      141.2298598714073,
+      139.8097892561916,
+      138.4644873429683,
+      137.18756633994167,
+      135.9752546190406,
+      134.82375558403444,
+      133.71365771749632,
+      132.6611656573282,
+      131.66364459194097,
+      130.70328412674573,
+      129.7784894446878,
+      128.90642097329322,
+      128.0501369677192
+     ],
+     "wall_s": 43.81
+    }
+   },
+   "ltne_sampled": {
+    "block_m": 1.9874847089152219,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.14997076670151546,
+    "T_bottomhole_c": 213.39237343072767,
+    "T_misfit_c": 10.507802104796042,
+    "injector_bhp_mpa": 42.61382644063801,
+    "recovery": 0.952274702416359,
+    "forecast": {
+     "pressure_feasible": false,
+     "injector_bhp_max_mpa": 41.95150009336993,
+     "T_prod_end_c": 129.98391831918062,
+     "T_prod_10y_c": 157.46298378684872,
+     "breakthrough_years": 1.3953624756888652,
+     "power_initial_mw": 6.322444429123701,
+     "power_end_mw": 2.9286409346043474,
+     "T_prod_yearly_c": [
+      209.0028209314263,
+      199.44966121681117,
+      190.61684039752265,
+      183.13982999957864,
+      176.9204235040856,
+      171.71190956034178,
+      167.31218356688564,
+      163.55113838704892,
+      160.30576746728832,
+      157.46298378684872,
+      154.89420629216409,
+      152.6254977790906,
+      150.53320693567704,
+      148.62126727696744,
+      146.85982549475145,
+      145.22814053692667,
+      143.71070375122721,
+      142.29214117575955,
+      140.96195066988193,
+      139.70989078491962,
+      138.52805348307214,
+      137.39213502105426,
+      136.31598503681343,
+      135.2908620990762,
+      134.3218313081866,
+      133.3733355854633,
+      132.4711630438331,
+      131.6117454719902,
+      130.77242994371136,
+      129.98391831918062
+     ],
+     "wall_s": 36.001
+    }
+   },
+   "needed": {
+    "P50": {
+     "block_m": 27.527437209707177,
+     "bracketed": true,
+     "runs": [
+      {
+       "block_m": 1.0,
+       "T_bottomhole_c": 213.38690522365758,
+       "stim_aperture_factor": 0.14959918069275277
+      },
+      {
+       "block_m": 64.0,
+       "T_bottomhole_c": 187.301870869229,
+       "stim_aperture_factor": 0.18077086750634472
+      },
+      {
+       "block_m": 5.335837733293108,
+       "T_bottomhole_c": 213.19763989849974,
+       "stim_aperture_factor": 0.15291300466156313
+      },
+      {
+       "block_m": 21.970265083440477,
+       "T_bottomhole_c": 206.09335206050366,
+       "stim_aperture_factor": 0.16688118958280523
+      },
+      {
+       "block_m": 35.60902239408121,
+       "T_bottomhole_c": 199.26388957126238,
+       "stim_aperture_factor": 0.17312365627441428
+      },
+      {
+       "block_m": 25.481944526071945,
+       "T_bottomhole_c": 204.28794651941308,
+       "stim_aperture_factor": 0.16877032701767225
+      },
+      {
+       "block_m": 29.491346977824254,
+       "T_bottomhole_c": 202.25830606498403,
+       "stim_aperture_factor": 0.17066056856694695
+      },
+      {
+       "block_m": 27.527437209707177,
+       "T_bottomhole_c": 203.24694190616077,
+       "stim_aperture_factor": 0.16976629796341675
+      }
+     ]
+    },
+    "P50_geotherm_corrected": {
+     "block_m": 12.213184625802953,
+     "bracketed": true,
+     "runs": [
+      {
+       "block_m": 1.0,
+       "T_bottomhole_c": 213.38690522365758,
+       "stim_aperture_factor": 0.14959918069275277
+      },
+      {
+       "block_m": 64.0,
+       "T_bottomhole_c": 187.301870869229,
+       "stim_aperture_factor": 0.18077086750634472
+      },
+      {
+       "block_m": 1.515716566510398,
+       "T_bottomhole_c": 213.39022890265412,
+       "stim_aperture_factor": 0.14976273247524544
+      },
+      {
+       "block_m": 2.7557224834354765,
+       "T_bottomhole_c": 213.3885486814351,
+       "stim_aperture_factor": 0.1504395816221234
+      },
+      {
+       "block_m": 6.5502099151439825,
+       "T_bottomhole_c": 212.9685818713561,
+       "stim_aperture_factor": 0.15426961408180703
+      },
+      {
+       "block_m": 15.653592798741379,
+       "T_bottomhole_c": 209.3177097920835,
+       "stim_aperture_factor": 0.16274376523921796
+      },
+      {
+       "block_m": 8.789111161512878,
+       "T_bottomhole_c": 212.32482507158647,
+       "stim_aperture_factor": 0.15668627288214398
+      },
+      {
+       "block_m": 12.213184625802953,
+       "T_bottomhole_c": 210.952301538751,
+       "stim_aperture_factor": 0.15995493709900205
+      }
+     ]
+    }
+   },
+   "ltne_needed_P50": {
+    "block_m": 27.527437209707177,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.16976629796341675,
+    "T_bottomhole_c": 203.24694190616077,
+    "T_misfit_c": 0.3623705802291397,
+    "injector_bhp_mpa": 42.657690384220004,
+    "recovery": 0.95354186823444,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 35.98512622866411,
+     "T_prod_end_c": 127.28749713065262,
+     "T_prod_10y_c": 155.66824899375533,
+     "breakthrough_years": 0.24788647485212634,
+     "power_initial_mw": 5.708868742029166,
+     "power_end_mw": 2.8149120721329015,
+     "T_prod_yearly_c": [
+      194.96671779720091,
+      187.35747298702952,
+      181.49686392982932,
+      176.53743535223964,
+      172.02310974216672,
+      168.12013503701863,
+      164.5526223189277,
+      161.28072228004007,
+      158.38269987007752,
+      155.66824899375533,
+      153.18121545570693,
+      150.95597897115857,
+      148.85685567714563,
+      146.8998641993823,
+      145.08103793201963,
+      143.38210748479932,
+      141.78892449732632,
+      140.29385726600538,
+      138.89017759484526,
+      137.54181371725937,
+      136.28065765904097,
+      135.08074074544191,
+      133.94022104197947,
+      132.8651928160961,
+      131.82583419710247,
+      130.83102552245904,
+      129.90218817644467,
+      128.9843650484789,
+      128.12798230148175,
+      127.28749713065262
+     ],
+     "wall_s": 12.522
+    }
+   },
+   "seconds": 681.8
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 3.90714939225852,
+    "bg_aperture_factor": 0.0028524086228719774,
+    "rotation_deg": 11.324712933039812,
+    "stim_aperture_sigma": 0.7806454745951219,
+    "Kni": 13865538631.703741,
+    "Vm": 0.00031877796031608535,
+    "seed": 101
+   },
+   "block_sampled_m": 0.8331826171363135,
+   "lte": {
+    "block_m": null,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.07464456567786457,
+    "T_bottomhole_c": 212.70153778457293,
+    "T_misfit_c": 9.816966458641303,
+    "injector_bhp_mpa": 42.29659390270329,
+    "recovery": 0.9536475060866157,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 40.172994814452096,
+     "T_prod_end_c": 152.36441041330426,
+     "T_prod_10y_c": 183.93925153336974,
+     "breakthrough_years": 3.2110208705844907,
+     "power_initial_mw": 6.477356685533828,
+     "power_end_mw": 3.8768444696200763,
+     "T_prod_yearly_c": [
+      212.525614192023,
+      209.63639753073457,
+      205.8473477289472,
+      202.10364802907677,
+      198.52308145055906,
+      195.16635808813558,
+      192.0370776740447,
+      189.11544796803878,
+      186.4718348870109,
+      183.93925153336974,
+      181.59382984073568,
+      179.372554661049,
+      177.27455699982838,
+      175.28077248373054,
+      173.3229294075988,
+      171.45206244595767,
+      169.6645961598211,
+      168.05565581111483,
+      166.42767622884995,
+      164.87812145616175,
+      163.39281346897388,
+      161.97751559957464,
+      160.52334608756752,
+      159.21860718821208,
+      157.9730874521167,
+      156.77634293585402,
+      155.63891847894945,
+      154.4393825380615,
+      153.38012529249528,
+      152.36441041330426
+     ],
+     "wall_s": 14.563
+    }
+   },
+   "ltne_sampled": {
+    "block_m": 0.8331826171363135,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.07468518319083758,
+    "T_bottomhole_c": 212.7698669227608,
+    "T_misfit_c": 9.885295596829167,
+    "injector_bhp_mpa": 42.29862035866636,
+    "recovery": 0.9538090671761155,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 39.81911839668824,
+     "T_prod_end_c": 152.8382443685476,
+     "T_prod_10y_c": 182.61448904966878,
+     "breakthrough_years": 2.7701843635115924,
+     "power_initial_mw": 6.450837632457281,
+     "power_end_mw": 3.897010221598917,
+     "T_prod_yearly_c": [
+      211.92317523068152,
+      208.16829735686818,
+      204.1024143789755,
+      200.32850483549313,
+      196.83122738680143,
+      193.54377620730136,
+      190.5326607040581,
+      187.73801275508825,
+      185.11936598343607,
+      182.61448904966878,
+      180.35822211616545,
+      178.2501831116441,
+      176.20468553494177,
+      174.26749451413153,
+      172.5242015573373,
+      170.79857119792848,
+      169.14936341109947,
+      167.58046789210758,
+      166.07862912593473,
+      164.63829992181687,
+      163.26228019349918,
+      161.93855865851413,
+      160.5906233877745,
+      159.3768250687516,
+      158.205822118478,
+      157.08153854244628,
+      155.91950245723484,
+      154.88144641831363,
+      153.88416800976412,
+      152.8382443685476
+     ],
+     "wall_s": 13.069
+    }
+   },
+   "needed": {
+    "P50": {
+     "block_m": 50.01479445931986,
+     "bracketed": true,
+     "runs": [
+      {
+       "block_m": 1.0,
+       "T_bottomhole_c": 212.7713083546347,
+       "stim_aperture_factor": 0.07470589408153847
+      },
+      {
+       "block_m": 64.0,
+       "T_bottomhole_c": 199.5237952411562,
+       "stim_aperture_factor": 0.09204654553543505
+      },
+      {
+       "block_m": 22.28271993306072,
+       "T_bottomhole_c": 209.7180190821552,
+       "stim_aperture_factor": 0.08448091994652587
+      },
+      {
+       "block_m": 51.968724295083476,
+       "T_bottomhole_c": 202.18901018686995,
+       "stim_aperture_factor": 0.09056468832205528
+      },
+      {
+       "block_m": 45.0335266898209,
+       "T_bottomhole_c": 203.836636573122,
+       "stim_aperture_factor": 0.08953318836237686
+      },
+      {
+       "block_m": 50.01479445931986,
+       "T_bottomhole_c": 202.64484545400262,
+       "stim_aperture_factor": 0.09028943702256745
+      }
+     ]
+    },
+    "P50_geotherm_corrected": {
+     "block_m": 17.212062587996012,
+     "bracketed": true,
+     "runs": [
+      {
+       "block_m": 1.0,
+       "T_bottomhole_c": 212.7713083546347,
+       "stim_aperture_factor": 0.07470589408153847
+      },
+      {
+       "block_m": 64.0,
+       "T_bottomhole_c": 199.5237952411562,
+       "stim_aperture_factor": 0.09204654553543505
+      },
+      {
+       "block_m": 1.6761081853566613,
+       "T_bottomhole_c": 212.77932625072708,
+       "stim_aperture_factor": 0.07483178874599529
+      },
+      {
+       "block_m": 3.759407893068313,
+       "T_bottomhole_c": 212.80929295634473,
+       "stim_aperture_factor": 0.07566492512038964
+      },
+      {
+       "block_m": 10.645428556240345,
+       "T_bottomhole_c": 212.31859554536715,
+       "stim_aperture_factor": 0.07978229105278946
+      },
+      {
+       "block_m": 23.914810842030782,
+       "T_bottomhole_c": 209.2900799995723,
+       "stim_aperture_factor": 0.08497608361842476
+      },
+      {
+       "block_m": 12.981537866525555,
+       "T_bottomhole_c": 211.91354204721745,
+       "stim_aperture_factor": 0.08093726795572366
+      },
+      {
+       "block_m": 17.212062587996012,
+       "T_bottomhole_c": 210.99218444243405,
+       "stim_aperture_factor": 0.08272532913143718
+      }
+     ]
+    }
+   },
+   "ltne_needed_P50": {
+    "block_m": 50.01479445931986,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.09028943702256745,
+    "T_bottomhole_c": 202.64484545400262,
+    "T_misfit_c": -0.23972587192901074,
+    "injector_bhp_mpa": 42.386030932691796,
+    "recovery": 0.975602743308381,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 33.14679128431281,
+     "T_prod_end_c": 149.7904155583302,
+     "T_prod_10y_c": 174.34934491072897,
+     "breakthrough_years": 0.2738399244069484,
+     "power_initial_mw": 5.837911125398444,
+     "power_end_mw": 3.767369276741822,
+     "T_prod_yearly_c": [
+      197.92937332438157,
+      192.9147656945133,
+      189.43521541724002,
+      186.63361055617855,
+      184.17414046256042,
+      181.96716066925939,
+      179.93359630678884,
+      177.95091127084993,
+      176.15292039420524,
+      174.34934491072897,
+      172.73120653399752,
+      171.0897072735727,
+      169.52000205878488,
+      168.01059018509076,
+      166.56809143694295,
+      165.17971929037049,
+      163.84953503226694,
+      162.56462221912273,
+      161.3267857934265,
+      160.03640833718936,
+      158.8926659647717,
+      157.783381724468,
+      156.61598581911696,
+      155.58394241221347,
+      154.58458094303398,
+      153.52617778828812,
+      152.5923757309251,
+      151.59895984102084,
+      150.72391537011387,
+      149.7904155583302
+     ],
+     "wall_s": 10.649
+    }
+   },
+   "seconds": 233.9
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 4.99692151783211,
+    "bg_aperture_factor": 0.001219370353306235,
+    "rotation_deg": -7.138425178304199,
+    "stim_aperture_sigma": 0.8376111709184638,
+    "Kni": 5102213859.963671,
+    "Vm": 0.0004640032132621915,
+    "seed": 102
+   },
+   "block_sampled_m": 0.4301288423770773,
+   "lte": {
+    "block_m": null,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.0847623133193753,
+    "T_bottomhole_c": 216.8580791395283,
+    "T_misfit_c": 13.973507813596655,
+    "injector_bhp_mpa": 42.391830421133875,
+    "recovery": 0.9104304404968526,
+    "forecast": {
+     "pressure_feasible": false,
+     "injector_bhp_max_mpa": 41.439452519499575,
+     "T_prod_end_c": 119.91623993166402,
+     "T_prod_10y_c": 149.7975050243807,
+     "breakthrough_years": 1.8118510363115001,
+     "power_initial_mw": 6.615419166717615,
+     "power_end_mw": 2.504497274079221,
+     "T_prod_yearly_c": [
+      215.6578237098984,
+      207.04803275421037,
+      194.39094049953297,
+      183.49066638993315,
+      175.29860887841073,
+      168.6492224945669,
+      162.9548736752639,
+      157.95953570952332,
+      153.61947940668554,
+      149.7975050243807,
+      146.5169221825167,
+      143.5165802028025,
+      140.95695957583635,
+      138.66975904288296,
+      136.6346246117006,
+      134.80046772498739,
+      133.14703419878086,
+      131.6356996785219,
+      130.24159168626008,
+      129.03323981267096,
+      127.83348839945914,
+      126.70657190594449,
+      125.72856220703083,
+      124.73658482201795,
+      123.79136761351802,
+      122.97262141444041,
+      122.11703521549967,
+      121.37618042569636,
+      120.59302718435374,
+      119.91623993166402
+     ],
+     "wall_s": 18.467
+    }
+   },
+   "ltne_sampled": {
+    "block_m": 0.4301288423770773,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.08475996692950369,
+    "T_bottomhole_c": 216.94360269610985,
+    "T_misfit_c": 14.059031370178218,
+    "injector_bhp_mpa": 42.39439862016953,
+    "recovery": 0.9105154242011682,
+    "forecast": {
+     "pressure_feasible": false,
+     "injector_bhp_max_mpa": 41.27683285567364,
+     "T_prod_end_c": 121.97305545396456,
+     "T_prod_10y_c": 150.99734464396798,
+     "breakthrough_years": 1.5319216400784723,
+     "power_initial_mw": 6.547238407844281,
+     "power_end_mw": 2.59104361414679,
+     "T_prod_yearly_c": [
+      214.11189482671963,
+      203.86007991136904,
+      191.9892328436729,
+      182.16715559027006,
+      174.5159455208659,
+      168.23774000021055,
+      163.0531027141779,
+      158.49252569093656,
+      154.53555365684144,
+      150.99734464396798,
+      147.9366460758169,
+      145.20795418901642,
+      142.77894070579322,
+      140.59096337008413,
+      138.61164525356585,
+      136.82395382603386,
+      135.18772746357743,
+      133.7767864506153,
+      132.38697249737194,
+      131.09301471817062,
+      129.9739322072465,
+      128.83996146029125,
+      127.85660786704821,
+      126.8520086290804,
+      125.89679599632044,
+      125.0686373767521,
+      124.2012299166365,
+      123.45159893344162,
+      122.65673235185366,
+      121.97305545396456
+     ],
+     "wall_s": 14.82
+    }
+   },
+   "needed": {
+    "P50": {
+     "block_m": 33.79635041166829,
+     "bracketed": true,
+     "runs": [
+      {
+       "block_m": 1.0,
+       "T_bottomhole_c": 216.94706723266592,
+       "stim_aperture_factor": 0.08479959497653773
+      },
+      {
+       "block_m": 64.0,
+       "T_bottomhole_c": 185.07563229152856,
+       "stim_aperture_factor": 0.1036855028326979
+      },
+      {
+       "block_m": 6.265172127684909,
+       "T_bottomhole_c": 216.7315472957851,
+       "stim_aperture_factor": 0.0876559682110108
+      },
+      {
+       "block_m": 25.773921801670845,
+       "T_bottomhole_c": 207.96729416408374,
+       "stim_aperture_factor": 0.0959480379510162
+      },
+      {
+       "block_m": 41.85426141153983,
+       "T_bottomhole_c": 197.52238534300574,
+       "stim_aperture_factor": 0.0999922035188742
+      },
+      {
+       "block_m": 30.122094284414136,
+       "T_bottomhole_c": 205.12341138575175,
+       "stim_aperture_factor": 0.0972154995153286
+      },
+      {
+       "block_m": 34.98580123849127,
+       "T_bottomhole_c": 201.92263255309996,
+       "stim_aperture_factor": 0.0984643754261532
+      },
+      {
+       "block_m": 32.647338654963676,
+       "T_bottomhole_c": 203.45787846739893,
+       "stim_aperture_factor": 0.09788366699348526
+      }
+     ]
+    },
+    "P50_geotherm_corrected": {
+     "block_m": 21.236885880996905,
+     "bracketed": true,
+     "runs": [
+      {
+       "block_m": 1.0,
+       "T_bottomhole_c": 216.94706723266592,
+       "stim_aperture_factor": 0.08479959497653773
+      },
+      {
+       "block_m": 64.0,
+       "T_bottomhole_c": 185.07563229152856,
+       "stim_aperture_factor": 0.1036855028326979
+      },
+      {
+       "block_m": 2.1373509566728783,
+       "T_bottomhole_c": 216.95332467563782,
+       "stim_aperture_factor": 0.08502945066239664
+      },
+      {
+       "block_m": 6.1121267410236015,
+       "T_bottomhole_c": 216.74960874184939,
+       "stim_aperture_factor": 0.08754289044850812
+      },
+      {
+       "block_m": 18.147649465379345,
+       "T_bottomhole_c": 212.55116269355136,
+       "stim_aperture_factor": 0.0939606183134341
+      },
+      {
+       "block_m": 26.63411174501681,
+       "T_bottomhole_c": 207.41053578592687,
+       "stim_aperture_factor": 0.09621185426116292
+      },
+      {
+       "block_m": 19.303226923193883,
+       "T_bottomhole_c": 211.9093624786041,
+       "stim_aperture_factor": 0.0943994120383272
+      },
+      {
+       "block_m": 21.236885880996905,
+       "T_bottomhole_c": 210.8018346461239,
+       "stim_aperture_factor": 0.09442862077643314
+      }
+     ]
+    }
+   },
+   "ltne_needed_P50": {
+    "block_m": 33.79635041166829,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.09817330991030022,
+    "T_bottomhole_c": 202.7020700000097,
+    "T_misfit_c": -0.18250132592191903,
+    "injector_bhp_mpa": 43.20344340422327,
+    "recovery": 0.9240169030715968,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 34.94708646721912,
+     "T_prod_end_c": 121.14136064921203,
+     "T_prod_10y_c": 149.5224034293752,
+     "breakthrough_years": 0.16774285336320088,
+     "power_initial_mw": 5.571378769093794,
+     "power_end_mw": 2.5560414253720354,
+     "T_prod_yearly_c": [
+      191.80407173380593,
+      182.58066236950918,
+      176.19656583054888,
+      170.99336884307823,
+      166.4809620904373,
+      162.47181674335474,
+      158.8473404633923,
+      155.45198830321266,
+      152.35028604951844,
+      149.5224034293752,
+      146.94134718354093,
+      144.63872321759237,
+      142.39485789775375,
+      140.38400818379193,
+      138.51102165336337,
+      136.77055470795437,
+      135.1407701746977,
+      133.63449641725592,
+      132.21232064277663,
+      130.87237700182206,
+      129.65431844433144,
+      128.4654872225887,
+      127.39471120550462,
+      126.32951779114201,
+      125.31922349130242,
+      124.4241472195089,
+      123.50806348355728,
+      122.70430369613803,
+      121.86812029075504,
+      121.14136064921203
+     ],
+     "wall_s": 11.062
+    }
+   },
+   "seconds": 562.1
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 3.500160978647029,
+    "bg_aperture_factor": 0.0007467500125651666,
+    "rotation_deg": 5.760407941102208,
+    "stim_aperture_sigma": 0.29254505622958255,
+    "Kni": 46925554868.858894,
+    "Vm": 0.00019049635926228115,
+    "seed": 103
+   },
+   "block_sampled_m": 14.320079257565963,
+   "lte": {
+    "block_m": null,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.1315478364543324,
+    "T_bottomhole_c": 212.6735189857098,
+    "T_misfit_c": 9.78894765977816,
+    "injector_bhp_mpa": 42.450510003639046,
+    "recovery": 0.9467542261941794,
+    "forecast": {
+     "pressure_feasible": false,
+     "injector_bhp_max_mpa": 41.165551458757975,
+     "T_prod_end_c": 128.13553949812064,
+     "T_prod_10y_c": 158.48148311071625,
+     "breakthrough_years": 1.8818666834920168,
+     "power_initial_mw": 6.409197102330537,
+     "power_end_mw": 2.8506698644703463,
+     "T_prod_yearly_c": [
+      210.97670019928503,
+      203.83479370338796,
+      195.34749449095995,
+      187.09107941685977,
+      180.01763152436322,
+      174.1918833158926,
+      169.30780247090624,
+      165.1712663074977,
+      161.61239488035633,
+      158.48148311071625,
+      155.70742978941195,
+      153.22184919726874,
+      150.9248211426021,
+      148.85041189887647,
+      146.8893659408599,
+      145.06540490413138,
+      143.3667365512078,
+      141.77549436830125,
+      140.28167950888616,
+      138.87592413179456,
+      137.54446285214615,
+      136.29359665757164,
+      135.0821098298619,
+      133.94621058611557,
+      132.86685805750372,
+      131.85587879006192,
+      130.84837282371976,
+      129.90816930103844,
+      129.00717290247988,
+      128.13553949812064
+     ],
+     "wall_s": 15.618
+    }
+   },
+   "ltne_sampled": {
+    "block_m": 14.320079257565963,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.14330474375067487,
+    "T_bottomhole_c": 209.61171234438632,
+    "T_misfit_c": 6.727141018454688,
+    "injector_bhp_mpa": 42.58213360633275,
+    "recovery": 0.9525592443095214,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 36.713695546211945,
+     "T_prod_end_c": 129.35878911536727,
+     "T_prod_10y_c": 157.94447762605964,
+     "breakthrough_years": 0.8790033649817199,
+     "power_initial_mw": 6.096398693650201,
+     "power_end_mw": 2.9022655402248763,
+     "T_prod_yearly_c": [
+      203.84698197295754,
+      195.64490568797632,
+      188.3221847141256,
+      181.97769504370956,
+      176.48986966396478,
+      171.75087100471657,
+      167.6642394874169,
+      164.04854778762845,
+      160.8476859904495,
+      157.94447762605964,
+      155.3848258036876,
+      153.01483689597785,
+      150.88955048234936,
+      148.89776401609845,
+      147.0589039667227,
+      145.3482256841983,
+      143.75032417688203,
+      142.2525584788449,
+      140.85802682990487,
+      139.5054510748482,
+      138.253410352438,
+      137.0665107004016,
+      135.9402946818428,
+      134.88719468588957,
+      133.8453845146173,
+      132.86655527221103,
+      131.94183631140322,
+      131.03922585733918,
+      130.18467719075585,
+      129.35878911536727
+     ],
+     "wall_s": 12.612
+    }
+   },
+   "needed": {
+    "P50": {
+     "block_m": 26.691652345338994,
+     "bracketed": true,
+     "runs": [
+      {
+       "block_m": 1.0,
+       "T_bottomhole_c": 212.7596452161298,
+       "stim_aperture_factor": 0.13166114553918074
+      },
+      {
+       "block_m": 64.0,
+       "T_bottomhole_c": 186.9067034289268,
+       "stim_aperture_factor": 0.16013015747352427
+      },
+      {
+       "block_m": 4.896754839999404,
+       "T_bottomhole_c": 212.6819852286651,
+       "stim_aperture_factor": 0.13447656804989144
+      },
+      {
+       "block_m": 20.174105610856845,
+       "T_bottomhole_c": 206.6855985060023,
+       "stim_aperture_factor": 0.14700925686273
+      },
+      {
+       "block_m": 35.42145222032879,
+       "T_bottomhole_c": 198.95407800416274,
+       "stim_aperture_factor": 0.15340625675849087
+      },
+      {
+       "block_m": 24.236820081000385,
+       "T_bottomhole_c": 204.57949363315214,
+       "stim_aperture_factor": 0.14907054021084745
+      },
+      {
+       "block_m": 28.89253402197396,
+       "T_bottomhole_c": 202.18859494514783,
+       "stim_aperture_factor": 0.15107133345187132
+      },
+      {
+       "block_m": 26.691652345338994,
+       "T_bottomhole_c": 203.3124243585886,
+       "stim_aperture_factor": 0.1501668224276828
+      }
+     ]
+    },
+    "P50_geotherm_corrected": {
+     "block_m": 11.594470148198315,
+     "bracketed": true,
+     "runs": [
+      {
+       "block_m": 1.0,
+       "T_bottomhole_c": 212.7596452161298,
+       "stim_aperture_factor": 0.13166114553918074
+      },
+      {
+       "block_m": 64.0,
+       "T_bottomhole_c": 186.9067034289268,
+       "stim_aperture_factor": 0.16013015747352427
+      },
+      {
+       "block_m": 1.515716566510398,
+       "T_bottomhole_c": 212.7651056465761,
+       "stim_aperture_factor": 0.13182208192353043
+      },
+      {
+       "block_m": 2.3680882414907254,
+       "T_bottomhole_c": 212.77304546739623,
+       "stim_aperture_factor": 0.13223936689518062
+      },
+      {
+       "block_m": 4.792482314011835,
+       "T_bottomhole_c": 212.69179765218541,
+       "stim_aperture_factor": 0.1343652669978393
+      },
+      {
+       "block_m": 11.594470148198315,
+       "T_bottomhole_c": 210.82502298575002,
+       "stim_aperture_factor": 0.1411706863728256
+      }
+     ]
+    }
+   },
+   "ltne_needed_P50": {
+    "block_m": 26.691652345338994,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.1501668224276828,
+    "T_bottomhole_c": 203.3124243585886,
+    "T_misfit_c": 0.4278530326569694,
+    "injector_bhp_mpa": 42.627108767080394,
+    "recovery": 0.9553347028020346,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 34.82558368674983,
+     "T_prod_end_c": 129.43846932435778,
+     "T_prod_10y_c": 157.4257827034513,
+     "breakthrough_years": 0.29578783238006856,
+     "power_initial_mw": 5.7488960191085665,
+     "power_end_mw": 2.905627099522993,
+     "T_prod_yearly_c": [
+      195.88628806789887,
+      188.53434938213732,
+      182.8027662770315,
+      177.93189137317387,
+      173.5710421503669,
+      169.65853319423206,
+      166.15926559587712,
+      162.9573818151448,
+      160.10836968523918,
+      157.4257827034513,
+      155.03771468136546,
+      152.8046253606971,
+      150.72583092578807,
+      148.79962848629424,
+      147.01105045094738,
+      145.3390221038937,
+      143.77029269759464,
+      142.29698633128532,
+      140.90761174420268,
+      139.59585490967282,
+      138.33934020810418,
+      137.1563266930497,
+      136.03073789312705,
+      134.95936399682978,
+      133.94012833726364,
+      132.9556477561822,
+      132.02286237950847,
+      131.1252467392728,
+      130.25489494953092,
+      129.43846932435778
+     ],
+     "wall_s": 12.054
+    }
+   },
+   "seconds": 260.3
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 2.888460153877427,
+    "bg_aperture_factor": 0.0006688660314799164,
+    "rotation_deg": -11.25392386858083,
+    "stim_aperture_sigma": 0.4803441894005007,
+    "Kni": 16517920865.26046,
+    "Vm": 0.00016642571762269008,
+    "seed": 104
+   },
+   "block_sampled_m": 8.074266685484252,
+   "lte": {
+    "block_m": null,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.11506773502096768,
+    "T_bottomhole_c": 213.36929574285153,
+    "T_misfit_c": 10.484724416919903,
+    "injector_bhp_mpa": 42.35785031557338,
+    "recovery": 0.9483784853861381,
+    "forecast": {
+     "pressure_feasible": false,
+     "injector_bhp_max_mpa": 40.93471841088035,
+     "T_prod_end_c": 124.60294573694205,
+     "T_prod_10y_c": 149.77355171321827,
+     "breakthrough_years": 0.9081354599117463,
+     "power_initial_mw": 6.102939502203491,
+     "power_end_mw": 2.701780837296496,
+     "T_prod_yearly_c": [
+      203.99642320499194,
+      191.0631290022503,
+      182.4541530567022,
+      175.12709377460544,
+      168.78097050106132,
+      163.48160482532296,
+      159.12369940915957,
+      155.4939588078494,
+      152.4039581186963,
+      149.77355171321827,
+      147.45863840857376,
+      145.40202510663525,
+      143.51407163648042,
+      141.80747025353074,
+      140.20758672043883,
+      138.7342807344948,
+      137.358260449125,
+      136.06710738994457,
+      134.8427986999635,
+      133.68031591845224,
+      132.57805574587536,
+      131.52933895110527,
+      130.55131686072576,
+      129.58224745561733,
+      128.6569137005157,
+      127.80463948895299,
+      126.94554259399929,
+      126.1376631825036,
+      125.36924316058831,
+      124.60294573694205
+     ],
+     "wall_s": 15.122
+    }
+   },
+   "ltne_sampled": {
+    "block_m": 8.074266685484252,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.12103742802675282,
+    "T_bottomhole_c": 210.17904925540506,
+    "T_misfit_c": 7.29447792947343,
+    "injector_bhp_mpa": 42.36936477025002,
+    "recovery": 0.9489911912014093,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 38.09523343116313,
+     "T_prod_end_c": 125.83815557715032,
+     "T_prod_10y_c": 150.24696316621257,
+     "breakthrough_years": 0.6061284071776959,
+     "power_initial_mw": 5.929210661302744,
+     "power_end_mw": 2.7538227324588016,
+     "T_prod_yearly_c": [
+      200.02212230293705,
+      188.63844356234216,
+      180.12771400555368,
+      173.3329908540241,
+      167.7297987455145,
+      163.0140034202378,
+      159.09473302899258,
+      155.72788475851632,
+      152.82475791038505,
+      150.24696316621257,
+      148.01860998893267,
+      145.99557953108422,
+      144.1820211925065,
+      142.50325360470273,
+      140.95689737138648,
+      139.51947330091838,
+      138.1761709456899,
+      136.91397256233094,
+      135.7224930915149,
+      134.59729964095052,
+      133.54279200420413,
+      132.51948106538114,
+      131.5429652223475,
+      130.61710873241347,
+      129.7486764962931,
+      128.88913915076333,
+      128.08168989709435,
+      127.3047931262301,
+      126.54120458425909,
+      125.83815557715032
+     ],
+     "wall_s": 14.342
+    }
+   },
+   "needed": {
+    "P50": {
+     "block_m": 16.166037540444595,
+     "bracketed": true,
+     "runs": [
+      {
+       "block_m": 1.0,
+       "T_bottomhole_c": 213.4090675578201,
+       "stim_aperture_factor": 0.11515278270152972
+      },
+      {
+       "block_m": 64.0,
+       "T_bottomhole_c": 177.4358909891387,
+       "stim_aperture_factor": 0.14145342126456278
+      },
+      {
+       "block_m": 3.3761772285517,
+       "T_bottomhole_c": 213.06448069135615,
+       "stim_aperture_factor": 0.1163900142010168
+      },
+      {
+       "block_m": 12.483310754391711,
+       "T_bottomhole_c": 206.38173247201482,
+       "stim_aperture_factor": 0.12478231087228299
+      },
+      {
+       "block_m": 22.29039182519958,
+       "T_bottomhole_c": 198.65032819733904,
+       "stim_aperture_factor": 0.1305154171889251
+      },
+      {
+       "block_m": 14.788326305781073,
+       "T_bottomhole_c": 204.4212978876081,
+       "stim_aperture_factor": 0.12639324368887386
+      },
+      {
+       "block_m": 17.573788342296456,
+       "T_bottomhole_c": 202.16432936286037,
+       "stim_aperture_factor": 0.12809626674421776
+      },
+      {
+       "block_m": 16.166037540444595,
+       "T_bottomhole_c": 203.28814036139724,
+       "stim_aperture_factor": 0.12726544175058144
+      }
+     ]
+    },
+    "P50_geotherm_corrected": {
+     "block_m": 7.123231505952563,
+     "bracketed": true,
+     "runs": [
+      {
+       "block_m": 1.0,
+       "T_bottomhole_c": 213.4090675578201,
+       "stim_aperture_factor": 0.11515278270152972
+      },
+      {
+       "block_m": 64.0,
+       "T_bottomhole_c": 177.4358909891387,
+       "stim_aperture_factor": 0.14145342126456278
+      },
+      {
+       "block_m": 1.515716566510398,
+       "T_bottomhole_c": 213.3754154158558,
+       "stim_aperture_factor": 0.11530144333757719
+      },
+      {
+       "block_m": 2.355614562949403,
+       "T_bottomhole_c": 213.291784098058,
+       "stim_aperture_factor": 0.11568449103384662
+      },
+      {
+       "block_m": 4.62827636505482,
+       "T_bottomhole_c": 212.56325797187054,
+       "stim_aperture_factor": 0.11753698819705974
+      },
+      {
+       "block_m": 9.029421585422307,
+       "T_bottomhole_c": 209.37876274387077,
+       "stim_aperture_factor": 0.12193234077674882
+      },
+      {
+       "block_m": 5.6233171175875,
+       "T_bottomhole_c": 211.99731858573028,
+       "stim_aperture_factor": 0.11855594991275674
+      },
+      {
+       "block_m": 7.123231505952563,
+       "T_bottomhole_c": 210.9367927604663,
+       "stim_aperture_factor": 0.12010048704118276
+      }
+     ]
+    }
+   },
+   "ltne_needed_P50": {
+    "block_m": 16.166037540444595,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.12726544175058144,
+    "T_bottomhole_c": 203.28814036139724,
+    "T_misfit_c": 0.4035690354656083,
+    "injector_bhp_mpa": 42.325576157219174,
+    "recovery": 0.9489183839635817,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 35.883316103133524,
+     "T_prod_end_c": 125.66436890892366,
+     "T_prod_10y_c": 150.18810111712352,
+     "breakthrough_years": 0.25183611588910104,
+     "power_initial_mw": 5.713809202140308,
+     "power_end_mw": 2.7464995410246353,
+     "T_prod_yearly_c": [
+      195.080246578814,
+      185.61249508124385,
+      178.15048826205413,
+      172.02046481799374,
+      166.84096895437023,
+      162.51643460291538,
+      158.72973777460285,
+      155.4980480539523,
+      152.67170237497524,
+      150.18810111712352,
+      147.91870509056818,
+      145.92201369919457,
+      144.06480291215087,
+      142.37504312547838,
+      140.81828318873255,
+      139.3702399406504,
+      138.01903010727102,
+      136.75059624178317,
+      135.55221178793823,
+      134.4206999414142,
+      133.36054210883725,
+      132.34605175088882,
+      131.37102878842376,
+      130.4346592785184,
+      129.57668604762455,
+      128.7136850067292,
+      127.88657770464836,
+      127.13070310159543,
+      126.35919102086841,
+      125.66436890892366
+     ],
+     "wall_s": 14.047
+    }
+   },
+   "seconds": 272.3
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 4.124338974591961,
+    "bg_aperture_factor": 0.0023252673331803217,
+    "rotation_deg": 2.2631692800756937,
+    "stim_aperture_sigma": 0.9027046878935483,
+    "Kni": 54706845214.077194,
+    "Vm": 0.0004416987829340583,
+    "seed": 105
+   },
+   "block_sampled_m": 1.6444809496761843,
+   "lte": {
+    "block_m": null,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.0597497080295623,
+    "T_bottomhole_c": 215.37353147512846,
+    "T_misfit_c": 12.488960149196828,
+    "injector_bhp_mpa": 42.18430596597394,
+    "recovery": 0.9213260559068913,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 39.83308484839617,
+     "T_prod_end_c": 135.85504569607357,
+     "T_prod_10y_c": 161.10538899209632,
+     "breakthrough_years": 1.2821238003994995,
+     "power_initial_mw": 6.396316220056054,
+     "power_end_mw": 3.1766264193666522,
+     "T_prod_yearly_c": [
+      210.6837943371705,
+      198.77407516186764,
+      189.12749811130183,
+      182.1585252519066,
+      176.81125097815467,
+      172.60585294633248,
+      169.1405570528208,
+      166.1513076500576,
+      163.43341604031366,
+      161.10538899209632,
+      158.95872305437902,
+      157.00688186106822,
+      155.1538900743045,
+      153.55959112100197,
+      151.96369512297565,
+      150.47625011267525,
+      149.08375264173586,
+      147.75980583191156,
+      146.49932546458268,
+      145.31385046033574,
+      144.21268040339558,
+      143.02039800020984,
+      141.99232329759414,
+      141.02288776791286,
+      140.027914600765,
+      139.13791976402877,
+      138.34493871732798,
+      137.42564929630544,
+      136.68151614876697,
+      135.85504569607357
+     ],
+     "wall_s": 13.498
+    }
+   },
+   "ltne_sampled": {
+    "block_m": 1.6444809496761843,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.059879750327109224,
+    "T_bottomhole_c": 215.49182338431953,
+    "T_misfit_c": 12.6072520583879,
+    "injector_bhp_mpa": 42.19300697010952,
+    "recovery": 0.9219064572239924,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 39.57168645305532,
+     "T_prod_end_c": 136.49349739069024,
+     "T_prod_10y_c": 161.32072333597546,
+     "breakthrough_years": 1.1162076238594216,
+     "power_initial_mw": 6.31398739110913,
+     "power_end_mw": 3.2036239117414667,
+     "T_prod_yearly_c": [
+      208.81025314615545,
+      197.52687329549892,
+      188.87557914431966,
+      182.27742812661364,
+      177.1225229678288,
+      172.86737406028936,
+      169.40676944888804,
+      166.32642851262318,
+      163.68242005725992,
+      161.32072333597546,
+      159.23069970610294,
+      157.2331493651955,
+      155.39349223331334,
+      153.81547442204192,
+      152.2358453706126,
+      150.76799662231113,
+      149.38455725146056,
+      148.0921836066926,
+      146.756101620462,
+      145.60642210216633,
+      144.5242559953891,
+      143.39464129610334,
+      142.41212254940817,
+      141.49011480748203,
+      140.5066995071221,
+      139.67031925891234,
+      138.77525833089996,
+      138.00687529868998,
+      137.18428415284532,
+      136.49349739069024
+     ],
+     "wall_s": 12.214
+    }
+   },
+   "needed": {
+    "P50": {
+     "block_m": 22.971281372452555,
+     "bracketed": true,
+     "runs": [
+      {
+       "block_m": 1.0,
+       "T_bottomhole_c": 215.49321631687639,
+       "stim_aperture_factor": 0.0597898140509069
+      },
+      {
+       "block_m": 64.0,
+       "T_bottomhole_c": 181.14387257140095,
+       "stim_aperture_factor": 0.0735574364675433
+      },
+      {
+       "block_m": 4.6025247565828336,
+       "T_bottomhole_c": 215.23111403852124,
+       "stim_aperture_factor": 0.06099423517309138
+      },
+      {
+       "block_m": 18.660850226849433,
+       "T_bottomhole_c": 206.48294860040372,
+       "stim_aperture_factor": 0.06679306471204016
+      },
+      {
+       "block_m": 30.488741650062767,
+       "T_bottomhole_c": 198.15005258260578,
+       "stim_aperture_factor": 0.06945710042761487
+      },
+      {
+       "block_m": 21.36203329733274,
+       "T_bottomhole_c": 204.4789111949588,
+       "stim_aperture_factor": 0.06751270873309903
+      },
+      {
+       "block_m": 24.65015452447047,
+       "T_bottomhole_c": 202.1103543589756,
+       "stim_aperture_factor": 0.06828827941467269
+      },
+      {
+       "block_m": 22.971281372452555,
+       "T_bottomhole_c": 203.30850181440513,
+       "stim_aperture_factor": 0.06790468664685861
+      }
+     ]
+    },
+    "P50_geotherm_corrected": {
+     "block_m": 12.815591023562527,
+     "bracketed": true,
+     "runs": [
+      {
+       "block_m": 1.0,
+       "T_bottomhole_c": 215.49321631687639,
+       "stim_aperture_factor": 0.0597898140509069
+      },
+      {
+       "block_m": 64.0,
+       "T_bottomhole_c": 181.14387257140095,
+       "stim_aperture_factor": 0.0735574364675433
+      },
+      {
+       "block_m": 1.6968042813988566,
+       "T_bottomhole_c": 215.49142914825785,
+       "stim_aperture_factor": 0.05988943119092178
+      },
+      {
+       "block_m": 3.847478554835189,
+       "T_bottomhole_c": 215.36401425398736,
+       "stim_aperture_factor": 0.060616877445928516
+      },
+      {
+       "block_m": 10.621264443747219,
+       "T_bottomhole_c": 212.35759313019452,
+       "stim_aperture_factor": 0.06400855451399297
+      },
+      {
+       "block_m": 16.560870787982623,
+       "T_bottomhole_c": 208.06058229147192,
+       "stim_aperture_factor": 0.06617088790813554
+      },
+      {
+       "block_m": 11.440398074691313,
+       "T_bottomhole_c": 211.80479135275357,
+       "stim_aperture_factor": 0.06435039936622491
+      },
+      {
+       "block_m": 12.815591023562527,
+       "T_bottomhole_c": 210.83574110680308,
+       "stim_aperture_factor": 0.06488932990246377
+      }
+     ]
+    }
+   },
+   "ltne_needed_P50": {
+    "block_m": 22.971281372452555,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.06790468664685861,
+    "T_bottomhole_c": 203.30850181440513,
+    "T_misfit_c": 0.423930488473502,
+    "injector_bhp_mpa": 42.45234422735506,
+    "recovery": 0.9387817117371745,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 34.86137282040408,
+     "T_prod_end_c": 133.09483381705095,
+     "T_prod_10y_c": 157.23910385595582,
+     "breakthrough_years": 0.2125978940515595,
+     "power_initial_mw": 5.748392378192481,
+     "power_end_mw": 3.0599781279573697,
+     "T_prod_yearly_c": [
+      195.87472092343347,
+      187.80843135343665,
+      181.62122417632253,
+      176.38422432343685,
+      172.06666824554318,
+      168.32617533215569,
+      165.03621616318557,
+      162.14589361450027,
+      159.48135398033045,
+      157.23910385595582,
+      155.08899586062864,
+      153.1269395389862,
+      151.33250156184158,
+      149.68131647403428,
+      148.15923957558564,
+      146.73742373113333,
+      145.41332721829264,
+      144.16445396837042,
+      142.99528688458454,
+      141.806215354742,
+      140.76047196887578,
+      139.77186503689109,
+      138.7643524032055,
+      137.86345196952544,
+      136.95777311251814,
+      136.13579315059533,
+      135.31111048825682,
+      134.55271995545925,
+      133.79651100887025,
+      133.09483381705095
+     ],
+     "wall_s": 11.315
+    }
+   },
+   "seconds": 271.2
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 4.335909968992827,
+    "bg_aperture_factor": 0.0004279233584257835,
+    "rotation_deg": -1.4222840439573918,
+    "stim_aperture_sigma": 0.11069334953460737,
+    "Kni": 27193008769.394123,
+    "Vm": 0.0001406826910329299,
+    "seed": 106
+   },
+   "block_sampled_m": 33.291090924983536,
+   "lte": {
+    "block_m": null,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.146942017356854,
+    "T_bottomhole_c": 214.1175668481349,
+    "T_misfit_c": 11.232995522203282,
+    "injector_bhp_mpa": 42.27047578154293,
+    "recovery": 0.9534362393282073,
+    "forecast": {
+     "pressure_feasible": false,
+     "injector_bhp_max_mpa": 40.9667132321419,
+     "T_prod_end_c": 130.19481691407614,
+     "T_prod_10y_c": 161.48408083341332,
+     "breakthrough_years": 1.5470375856487892,
+     "power_initial_mw": 6.40643527230601,
+     "power_end_mw": 2.9375403732595102,
+     "T_prod_yearly_c": [
+      210.91390241763966,
+      202.3937349826013,
+      195.1275261668827,
+      188.56301781556076,
+      182.51992530834855,
+      177.17717015657269,
+      172.49673530729655,
+      168.38074692363816,
+      164.71158949475642,
+      161.48408083341332,
+      158.5536401668846,
+      155.85179772079064,
+      153.43286017022328,
+      151.19018732199245,
+      149.17151239123586,
+      147.26875679086587,
+      145.4982066640248,
+      143.85279762624282,
+      142.3231982135814,
+      140.9087983850647,
+      139.52906830297786,
+      138.2661241489505,
+      137.07535233579415,
+      135.94403139921843,
+      134.86640214312158,
+      133.84930931518417,
+      132.87376956041498,
+      131.93858165325446,
+      131.05754624643026,
+      130.19481691407614
+     ],
+     "wall_s": 16.342
+    }
+   },
+   "ltne_sampled": {
+    "block_m": 33.291090924983536,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.16946549960695334,
+    "T_bottomhole_c": 201.24896919329655,
+    "T_misfit_c": -1.6356021326350856,
+    "injector_bhp_mpa": 42.37312058810418,
+    "recovery": 0.9572517780476613,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 34.231206419970675,
+     "T_prod_end_c": 131.91603708131618,
+     "T_prod_10y_c": 159.45341117704396,
+     "breakthrough_years": 0.17085282451008674,
+     "power_initial_mw": 5.655057394996702,
+     "power_end_mw": 3.0101952811032313,
+     "T_prod_yearly_c": [
+      193.72964532146278,
+      186.7072957110386,
+      181.74288516424542,
+      177.56725863181254,
+      173.85317841699478,
+      170.47929234443225,
+      167.30509073620033,
+      164.5172733938681,
+      161.8429245478381,
+      159.45341117704396,
+      157.18576928485774,
+      155.0591116483535,
+      153.07866695883214,
+      151.22444794178625,
+      149.48741072039536,
+      147.84911009499888,
+      146.25829569752958,
+      144.81148760145433,
+      143.43815881493097,
+      142.13605880707559,
+      140.86667306704302,
+      139.68854541612504,
+      138.56404432727047,
+      137.47681075833248,
+      136.44873799324603,
+      135.4627233159384,
+      134.5165932475386,
+      133.6248447026283,
+      132.74002832939414,
+      131.91603708131618
+     ],
+     "wall_s": 11.977
+    }
+   },
+   "needed": {
+    "P50": {
+     "block_m": 30.592803033124735,
+     "bracketed": true,
+     "runs": [
+      {
+       "block_m": 1.0,
+       "T_bottomhole_c": 214.20672719380116,
+       "stim_aperture_factor": 0.14704722389900735
+      },
+      {
+       "block_m": 64.0,
+       "T_bottomhole_c": 189.00482427037494,
+       "stim_aperture_factor": 0.17785344512180903
+      },
+      {
+       "block_m": 6.477997218408916,
+       "T_bottomhole_c": 213.6257954069245,
+       "stim_aperture_factor": 0.15162104141388086
+      },
+      {
+       "block_m": 26.046083479624087,
+       "T_bottomhole_c": 204.62611526294396,
+       "stim_aperture_factor": 0.16632803413409952
+      },
+      {
+       "block_m": 35.17359010947588,
+       "T_bottomhole_c": 200.40317126781687,
+       "stim_aperture_factor": 0.17017363477277142
+      },
+      {
+       "block_m": 28.16014472145161,
+       "T_bottomhole_c": 203.62133249099963,
+       "stim_aperture_factor": 0.16732030552841323
+      },
+      {
+       "block_m": 30.592803033124735,
+       "T_bottomhole_c": 202.4844247252717,
+       "stim_aperture_factor": 0.1683799020576621
+      }
+     ]
+    },
+    "P50_geotherm_corrected": {
+     "block_m": 13.28690079552783,
+     "bracketed": true,
+     "runs": [
+      {
+       "block_m": 1.0,
+       "T_bottomhole_c": 214.20672719380116,
+       "stim_aperture_factor": 0.14704722389900735
+      },
+      {
+       "block_m": 64.0,
+       "T_bottomhole_c": 189.00482427037494,
+       "stim_aperture_factor": 0.17785344512180903
+      },
+      {
+       "block_m": 1.6625691589637108,
+       "T_bottomhole_c": 214.20566221872684,
+       "stim_aperture_factor": 0.14726538136049244
+      },
+      {
+       "block_m": 3.6817562532810935,
+       "T_bottomhole_c": 214.1296273545758,
+       "stim_aperture_factor": 0.14863595778766694
+      },
+      {
+       "block_m": 10.058125108387351,
+       "T_bottomhole_c": 212.34733303143548,
+       "stim_aperture_factor": 0.15537518933433983
+      },
+      {
+       "block_m": 17.730112990830705,
+       "T_bottomhole_c": 208.70078165302613,
+       "stim_aperture_factor": 0.1615755614311681
+      },
+      {
+       "block_m": 11.272789474203782,
+       "T_bottomhole_c": 211.81717492138293,
+       "stim_aperture_factor": 0.15651590445335892
+      },
+      {
+       "block_m": 13.28690079552783,
+       "T_bottomhole_c": 210.8807266136816,
+       "stim_aperture_factor": 0.15826313623966548
+      }
+     ]
+    }
+   },
+   "ltne_needed_P50": {
+    "block_m": 30.592803033124735,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.1683799020576621,
+    "T_bottomhole_c": 202.4844247252717,
+    "T_misfit_c": -0.400146600659923,
+    "injector_bhp_mpa": 42.36487535541511,
+    "recovery": 0.9570108989452506,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 34.41143883432011,
+     "T_prod_end_c": 131.83143115241037,
+     "T_prod_10y_c": 159.77220764456354,
+     "breakthrough_years": 0.20284060107071542,
+     "power_initial_mw": 5.718687869422192,
+     "power_end_mw": 3.006622976446614,
+     "T_prod_yearly_c": [
+      195.19234748032818,
+      188.23767296144598,
+      183.11640944431412,
+      178.7370854373285,
+      174.80076805897014,
+      171.2517533826906,
+      167.9295719457805,
+      165.01944722541,
+      162.21793571406806,
+      159.77220764456354,
+      157.40466014043196,
+      155.21594196291633,
+      153.1807539529534,
+      151.28984439903329,
+      149.51894281855556,
+      147.8603149640177,
+      146.29828405697862,
+      144.82650547898416,
+      143.39634275614515,
+      142.0818304072094,
+      140.83213374039184,
+      139.64561639544726,
+      138.49630486573113,
+      137.41513578734055,
+      136.39668761614027,
+      135.39056596676318,
+      134.44264846219187,
+      133.53768086375268,
+      132.6607318949841,
+      131.83143115241037
+     ],
+     "wall_s": 11.483
+    }
+   },
+   "seconds": 284.4
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 3.7447132424656258,
+    "bg_aperture_factor": 0.0013597498003035497,
+    "rotation_deg": 0.2242445130126285,
+    "stim_aperture_sigma": 0.7246423489462166,
+    "Kni": 17599095271.806602,
+    "Vm": 0.0002557813650162648,
+    "seed": 107
+   },
+   "block_sampled_m": 3.5404751307907225,
+   "lte": {
+    "block_m": null,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.1535445797812472,
+    "T_bottomhole_c": 215.6021192530947,
+    "T_misfit_c": 12.717547927163082,
+    "injector_bhp_mpa": 41.98868751562822,
+    "recovery": 0.9020620043945949,
+    "forecast": {
+     "pressure_feasible": false,
+     "injector_bhp_max_mpa": 41.20864029591428,
+     "T_prod_end_c": 132.79103174842015,
+     "T_prod_10y_c": 164.97184561268918,
+     "breakthrough_years": 2.002293850885806,
+     "power_initial_mw": 6.56853821584768,
+     "power_end_mw": 3.0471460713226723,
+     "T_prod_yearly_c": [
+      214.59503150731325,
+      207.85248914766015,
+      198.86689772443376,
+      191.35454540729884,
+      185.29407695985577,
+      180.14719476685292,
+      175.64988132396618,
+      171.63617913120464,
+      168.16404518030237,
+      164.97184561268918,
+      162.02656155937947,
+      159.3218906544944,
+      156.89443813243014,
+      154.61282263647763,
+      152.5158066928218,
+      150.57372844125143,
+      148.77491477052024,
+      147.10236213795173,
+      145.537678972839,
+      144.05530726100943,
+      142.65056520891144,
+      141.29758689663004,
+      140.04688248593703,
+      138.8566239992889,
+      137.70501934800797,
+      136.6337296758442,
+      135.59502772236812,
+      134.6228449895114,
+      133.68164890818764,
+      132.79103174842015
+     ],
+     "wall_s": 16.468
+    }
+   },
+   "ltne_sampled": {
+    "block_m": 3.5404751307907225,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.15511027854828663,
+    "T_bottomhole_c": 215.6595189548329,
+    "T_misfit_c": 12.77494762890126,
+    "injector_bhp_mpa": 42.01434755738374,
+    "recovery": 0.9039442409258173,
+    "forecast": {
+     "pressure_feasible": false,
+     "injector_bhp_max_mpa": 40.43968253722592,
+     "T_prod_end_c": 134.37597756644325,
+     "T_prod_10y_c": 165.13548380848883,
+     "breakthrough_years": 1.6625736870158798,
+     "power_initial_mw": 6.494126406304732,
+     "power_end_mw": 3.114106114224083,
+     "T_prod_yearly_c": [
+      212.9064424647814,
+      204.97575133928905,
+      196.68726376712684,
+      189.80842021581262,
+      184.15653886607222,
+      179.35245257588122,
+      175.19598632683437,
+      171.48459930621857,
+      168.09086670786763,
+      165.13548380848883,
+      162.36117817745077,
+      159.91719826463424,
+      157.60805714984025,
+      155.4743032361981,
+      153.49928176913858,
+      151.66261169755452,
+      149.9424726577904,
+      148.28509386202512,
+      146.77491969224783,
+      145.35090613026148,
+      144.00326381811843,
+      142.69556832563828,
+      141.48625642972758,
+      140.3107300523326,
+      139.2137257900785,
+      138.1512946824168,
+      137.1486648537489,
+      136.18219455920126,
+      135.26067555674624,
+      134.37597756644325
+     ],
+     "wall_s": 14.438
+    }
+   },
+   "needed": {
+    "P50": {
+     "block_m": 37.321547696996866,
+     "bracketed": true,
+     "runs": [
+      {
+       "block_m": 1.0,
+       "T_bottomhole_c": 215.65196500941312,
+       "stim_aperture_factor": 0.15365612286876323
+      },
+      {
+       "block_m": 64.0,
+       "T_bottomhole_c": 191.02948828801814,
+       "stim_aperture_factor": 0.18595310816939906
+      },
+      {
+       "block_m": 8.640745766555428,
+       "T_bottomhole_c": 215.1933914116297,
+       "stim_aperture_factor": 0.16050241372374763
+      },
+      {
+       "block_m": 33.38228851864398,
+       "T_bottomhole_c": 204.43367549959072,
+       "stim_aperture_factor": 0.17666312987614166
+      },
+      {
+       "block_m": 41.73921028018606,
+       "T_bottomhole_c": 200.40062385915002,
+       "stim_aperture_factor": 0.17983269177259542
+      },
+      {
+       "block_m": 35.203017507189585,
+       "T_bottomhole_c": 203.53335713079457,
+       "stim_aperture_factor": 0.1774116935684393
+      },
+      {
+       "block_m": 37.321547696996866,
+       "T_bottomhole_c": 202.49945446405593,
+       "stim_aperture_factor": 0.1782394224693381
+      }
+     ]
+    },
+    "P50_geotherm_corrected": {
+     "block_m": 19.167849334245314,
+     "bracketed": true,
+     "runs": [
+      {
+       "block_m": 1.0,
+       "T_bottomhole_c": 215.65196500941312,
+       "stim_aperture_factor": 0.15365612286876323
+      },
+      {
+       "block_m": 64.0,
+       "T_bottomhole_c": 191.02948828801814,
+       "stim_aperture_factor": 0.18595310816939906
+      },
+      {
+       "block_m": 2.1477835545880115,
+       "T_bottomhole_c": 215.6594422689316,
+       "stim_aperture_factor": 0.15410600281015527
+      },
+      {
+       "block_m": 6.170240121199739,
+       "T_bottomhole_c": 215.53841787380406,
+       "stim_aperture_factor": 0.15784841216933748
+      },
+      {
+       "block_m": 18.420603150017858,
+       "T_bottomhole_c": 211.8339941070861,
+       "stim_aperture_factor": 0.16869443535075912
+      },
+      {
+       "block_m": 24.22173998661411,
+       "T_bottomhole_c": 209.04332124539863,
+       "stim_aperture_factor": 0.17224917189926403
+      },
+      {
+       "block_m": 19.167849334245314,
+       "T_bottomhole_c": 211.49190747599565,
+       "stim_aperture_factor": 0.16919525904130295
+      }
+     ]
+    }
+   },
+   "ltne_needed_P50": {
+    "block_m": 37.321547696996866,
+    "shape": "slab",
+    "phi_scale": 1.0,
+    "stim_aperture_factor": 0.1782394224693381,
+    "T_bottomhole_c": 202.49945446405593,
+    "T_misfit_c": -0.3851168618757015,
+    "injector_bhp_mpa": 42.16935202506785,
+    "recovery": 0.9140965145866159,
+    "forecast": {
+     "pressure_feasible": true,
+     "injector_bhp_max_mpa": 34.7605605899224,
+     "T_prod_end_c": 131.41469989162806,
+     "T_prod_10y_c": 159.48477280083094,
+     "breakthrough_years": 0.16956707763486661,
+     "power_initial_mw": 5.646626768562903,
+     "power_end_mw": 2.989028875449127,
+     "T_prod_yearly_c": [
+      193.53574702848147,
+      186.0072286672441,
+      181.08182622700588,
+      177.0302673704131,
+      173.46744352848873,
+      170.12859161069252,
+      167.2186180879227,
+      164.37158257140163,
+      161.9029299785856,
+      159.48477280083094,
+      157.22212790030147,
+      155.11599116649913,
+      153.13645731302753,
+      151.28241640140058,
+      149.53060815701195,
+      147.78632857994057,
+      146.2355891319529,
+      144.76033660606643,
+      143.36093340479923,
+      141.96689117819147,
+      140.70380280328797,
+      139.5029357508708,
+      138.30313305556822,
+      137.20382980594755,
+      136.11816998792185,
+      135.1071841022603,
+      134.11780746258648,
+      133.18477923088108,
+      132.2780792950672,
+      131.41469989162806
+     ],
+     "wall_s": 11.725
+    }
+   },
+   "seconds": 391.1
+  }
+ ],
+ "ltne_targets_c": {
+  "P50": 202.88457132593163,
+  "P10": 199.97403647313038,
+  "P90": 205.85298138010114,
+  "P50_geotherm_corrected": 211.12615429933913
+ },
+ "feasibility": {
+  "members": 10,
+  "failed": 0,
+  "cases": {
+   "gdr1222_recommended": {
+    "shmin_mpa": 40.347081568841176,
+    "max_feasible_rate_kg_s": {
+     "P10": 9.274212121537337,
+     "P50": 9.53490261179349,
+     "P90": 10.133476305016375,
+     "mean": 9.574750239303828,
+     "n": 10,
+     "beyond_run": 0
+    },
+    "feasible_members_by_rate": {
+     "2.5": 10,
+     "5": 10,
+     "7.5": 10,
+     "10": 2,
+     "15": 0,
+     "20": 0
+    },
+    "members_with_no_feasible_rate": 0
+   },
+   "minifrac_isip_mf2": {
+    "shmin_mpa": 32.810382343374194,
+    "max_feasible_rate_kg_s": {
+     "P10": 5.340578329983259,
+     "P50": 5.786683178059798,
+     "P90": 6.250312365168773,
+     "mean": 5.735232443615267,
+     "n": 10,
+     "beyond_run": 0
+    },
+    "feasible_members_by_rate": {
+     "2.5": 10,
+     "5": 9,
+     "7.5": 0,
+     "10": 0,
+     "15": 0,
+     "20": 0
+    },
+    "members_with_no_feasible_rate": 0
+   },
+   "report_cooling_mid": {
+    "shmin_mpa": 42.94940915182008,
+    "max_feasible_rate_kg_s": {
+     "P10": 10.89059326713699,
+     "P50": 11.45035788308677,
+     "P90": 11.78311866940283,
+     "mean": 11.401889711804115,
+     "n": 10,
+     "beyond_run": 0
+    },
+    "feasible_members_by_rate": {
+     "2.5": 10,
+     "5": 10,
+     "7.5": 10,
+     "10": 10,
+     "15": 0,
+     "20": 0
+    },
+    "members_with_no_feasible_rate": 0
+   },
+   "report_cooling_high": {
+    "shmin_mpa": 50.465555753388585,
+    "max_feasible_rate_kg_s": {
+     "P10": 15.977736063950323,
+     "P50": 17.240285901578616,
+     "P90": 20.0,
+     "mean": 17.820580937061443,
+     "n": 10,
+     "beyond_run": 0
+    },
+    "feasible_members_by_rate": {
+     "2.5": 10,
+     "5": 10,
+     "7.5": 10,
+     "10": 10,
+     "15": 10,
+     "20": 3
+    },
+    "members_with_no_feasible_rate": 0
+   }
+  },
+  "injector_bhp_max_mpa": {
+   "2.5": {
+    "P10": 25.799089266362827,
+    "P50": 26.067445781632724,
+    "P90": 26.694318472683104,
+    "mean": 26.21066875866573,
+    "n": 10,
+    "beyond_run": 0
+   },
+   "5": {
+    "P10": 30.36590814090811,
+    "P50": 31.169493859206764,
+    "P90": 32.1191732137926,
+    "mean": 31.328609148422693,
+    "n": 10,
+    "beyond_run": 0
+   },
+   "7.5": {
+    "P10": 35.267803746186615,
+    "P50": 36.386156770261024,
+    "P90": 37.26806330480955,
+    "mean": 36.44991804667839,
+    "n": 10,
+    "beyond_run": 0
+   },
+   "10": {
+    "P10": 40.1390038178465,
+    "P50": 41.18709587733613,
+    "P90": 41.58335809721899,
+    "mean": 41.103896033914125,
+    "n": 10,
+    "beyond_run": 0
+   },
+   "15": {
+    "P10": 46.33451350626361,
+    "P50": 47.80774862917728,
+    "P90": 48.788569078856945,
+    "mean": 47.6340853176563,
+    "n": 10,
+    "beyond_run": 0
+   },
+   "20": {
+    "P10": 48.812891863408694,
+    "P50": 53.77409513169367,
+    "P90": 57.43900994666862,
+    "mean": 53.21249941448023,
+    "n": 10,
+    "beyond_run": 0
+   }
+  }
+ },
+ "feasibility_members": [
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 4.474388370357003,
+    "bg_aperture_factor": 0.00040930077970853426,
+    "rotation_deg": 2.7146232804902013,
+    "stim_aperture_sigma": 0.04355695748967946,
+    "Kni": 8063837131.950205,
+    "Vm": 0.0003733740971508376,
+    "seed": 100
+   },
+   "stim_aperture_factor": 0.14948657758631495,
+   "rates": {
+    "2.5": {
+     "injector_bhp_max_mpa": 27.25955195395624,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 174.62615824152422,
+     "breakthrough_years": 7.162825930927784
+    },
+    "5": {
+     "injector_bhp_max_mpa": 33.327040409332,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 150.0695191213021,
+     "breakthrough_years": 3.5123398425648795
+    },
+    "7.5": {
+     "injector_bhp_max_mpa": 38.62571572454681,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 135.61204543108343,
+     "breakthrough_years": 2.3129993051023607
+    },
+    "10": {
+     "injector_bhp_max_mpa": 42.314086333555785,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 128.0501369677192,
+     "breakthrough_years": 1.7189100249014537
+    },
+    "15": {
+     "injector_bhp_max_mpa": 45.84557482002026,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 115.13586513362046,
+     "breakthrough_years": 1.1577785822611752
+    },
+    "20": {
+     "injector_bhp_max_mpa": 47.64177475293675,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 104.67613268968027,
+     "breakthrough_years": 0.9392531532582988
+    }
+   },
+   "seconds": 243.4
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 3.90714939225852,
+    "bg_aperture_factor": 0.0028524086228719774,
+    "rotation_deg": 11.324712933039812,
+    "stim_aperture_sigma": 0.7806454745951219,
+    "Kni": 13865538631.703741,
+    "Vm": 0.00031877796031608535,
+    "seed": 101
+   },
+   "stim_aperture_factor": 0.07464456567786457,
+   "rates": {
+    "2.5": {
+     "injector_bhp_max_mpa": 25.695239188662203,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 190.98459655840819,
+     "breakthrough_years": 12.599898200380553
+    },
+    "5": {
+     "injector_bhp_max_mpa": 30.350465329294074,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 174.05465611323763,
+     "breakthrough_years": 6.420999217175441
+    },
+    "7.5": {
+     "injector_bhp_max_mpa": 35.2833288391151,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 161.79255506529805,
+     "breakthrough_years": 4.294083782030761
+    },
+    "10": {
+     "injector_bhp_max_mpa": 40.172994814452096,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 152.36441041330426,
+     "breakthrough_years": 3.2110208705844907
+    },
+    "15": {
+     "injector_bhp_max_mpa": 47.69246305858885,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 138.73617848421392,
+     "breakthrough_years": 2.113685049440733
+    },
+    "20": {
+     "injector_bhp_max_mpa": 53.31588769799925,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 128.85431053238815,
+     "breakthrough_years": 1.5624438433310297
+    }
+   },
+   "seconds": 84.2
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 4.99692151783211,
+    "bg_aperture_factor": 0.001219370353306235,
+    "rotation_deg": -7.138425178304199,
+    "stim_aperture_sigma": 0.8376111709184638,
+    "Kni": 5102213859.963671,
+    "Vm": 0.0004640032132621915,
+    "seed": 102
+   },
+   "stim_aperture_factor": 0.0847623133193753,
+   "rates": {
+    "2.5": {
+     "injector_bhp_max_mpa": 26.121272810734624,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 173.64589238019758,
+     "breakthrough_years": 7.452833109915351
+    },
+    "5": {
+     "injector_bhp_max_mpa": 31.316102325159388,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 145.89638302978173,
+     "breakthrough_years": 3.7013613193031634
+    },
+    "7.5": {
+     "injector_bhp_max_mpa": 36.69366239964231,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 129.94035247943728,
+     "breakthrough_years": 2.44128791903673
+    },
+    "10": {
+     "injector_bhp_max_mpa": 41.439452519499575,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 119.91623993166402,
+     "breakthrough_years": 1.8118510363115001
+    },
+    "15": {
+     "injector_bhp_max_mpa": 46.38884002695732,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 111.25695201960282,
+     "breakthrough_years": 1.1838220384004408
+    },
+    "20": {
+     "injector_bhp_max_mpa": 50.04703047141725,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 102.84184534406707,
+     "breakthrough_years": 0.8944677826587206
+    }
+   },
+   "seconds": 169.5
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 3.500160978647029,
+    "bg_aperture_factor": 0.0007467500125651666,
+    "rotation_deg": 5.760407941102208,
+    "stim_aperture_sigma": 0.29254505622958255,
+    "Kni": 46925554868.858894,
+    "Vm": 0.00019049635926228115,
+    "seed": 103
+   },
+   "stim_aperture_factor": 0.1315478364543324,
+   "rates": {
+    "2.5": {
+     "injector_bhp_max_mpa": 26.32299838937324,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 175.08076108634515,
+     "breakthrough_years": 7.690737285488121
+    },
+    "5": {
+     "injector_bhp_max_mpa": 31.494246638746578,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 152.17070098438444,
+     "breakthrough_years": 3.829456198989242
+    },
+    "7.5": {
+     "injector_bhp_max_mpa": 36.5235061339639,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 137.883891363712,
+     "breakthrough_years": 2.5362415514569085
+    },
+    "10": {
+     "injector_bhp_max_mpa": 41.165551458757975,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 128.13553949812064,
+     "breakthrough_years": 1.8818666834920168
+    },
+    "15": {
+     "injector_bhp_max_mpa": 48.26970471919788,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 115.36154998855368,
+     "breakthrough_years": 1.2358015026451787
+    },
+    "20": {
+     "injector_bhp_max_mpa": 55.03842727974288,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 106.07305882626436,
+     "breakthrough_years": 0.9220472140127797
+    }
+   },
+   "seconds": 110.3
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 2.888460153877427,
+    "bg_aperture_factor": 0.0006688660314799164,
+    "rotation_deg": -11.25392386858083,
+    "stim_aperture_sigma": 0.4803441894005007,
+    "Kni": 16517920865.26046,
+    "Vm": 0.00016642571762269008,
+    "seed": 104
+   },
+   "stim_aperture_factor": 0.11506773502096768,
+   "rates": {
+    "2.5": {
+     "injector_bhp_max_mpa": 26.006951316188214,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 166.59545172675791,
+     "breakthrough_years": 3.8910332630648536
+    },
+    "5": {
+     "injector_bhp_max_mpa": 30.902821854865714,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 145.52239106289974,
+     "breakthrough_years": 1.8919032102838844
+    },
+    "7.5": {
+     "injector_bhp_max_mpa": 35.96268587650314,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 133.18390426788437,
+     "breakthrough_years": 1.2332960322279816
+    },
+    "10": {
+     "injector_bhp_max_mpa": 40.93471841088035,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 124.60294573694205,
+     "breakthrough_years": 0.9081354599117463
+    },
+    "15": {
+     "injector_bhp_max_mpa": 48.171781046738445,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 112.74297496872849,
+     "breakthrough_years": 0.5903260797837283
+    },
+    "20": {
+     "injector_bhp_max_mpa": 54.8478105417233,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 104.18856373898888,
+     "breakthrough_years": 0.43635568857670326
+    }
+   },
+   "seconds": 123.6
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 4.124338974591961,
+    "bg_aperture_factor": 0.0023252673331803217,
+    "rotation_deg": 2.2631692800756937,
+    "stim_aperture_sigma": 0.9027046878935483,
+    "Kni": 54706845214.077194,
+    "Vm": 0.0004416987829340583,
+    "seed": 105
+   },
+   "stim_aperture_factor": 0.0597497080295623,
+   "rates": {
+    "2.5": {
+     "injector_bhp_max_mpa": 25.81062816388512,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 174.5206722302459,
+     "breakthrough_years": 5.370787325671323
+    },
+    "5": {
+     "injector_bhp_max_mpa": 30.367624008865228,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 156.02578685779187,
+     "breakthrough_years": 2.649941322576131
+    },
+    "7.5": {
+     "injector_bhp_max_mpa": 35.12807790983024,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 144.39490460277784,
+     "breakthrough_years": 1.7369630494315798
+    },
+    "10": {
+     "injector_bhp_max_mpa": 39.83308484839617,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 135.85504569607357,
+     "breakthrough_years": 1.2821238003994995
+    },
+    "15": {
+     "injector_bhp_max_mpa": 48.60595178791904,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 124.18243714637664,
+     "breakthrough_years": 0.8291729919079516
+    },
+    "20": {
+     "injector_bhp_max_mpa": 57.18042631149928,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 115.84432769280751,
+     "breakthrough_years": 0.6059887887396679
+    }
+   },
+   "seconds": 85.7
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 4.335909968992827,
+    "bg_aperture_factor": 0.0004279233584257835,
+    "rotation_deg": -1.4222840439573918,
+    "stim_aperture_sigma": 0.11069334953460737,
+    "Kni": 27193008769.394123,
+    "Vm": 0.0001406826910329299,
+    "seed": 106
+   },
+   "stim_aperture_factor": 0.146942017356854,
+   "rates": {
+    "2.5": {
+     "injector_bhp_max_mpa": 26.013618752530824,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 177.2850791470273,
+     "breakthrough_years": 6.463816554898011
+    },
+    "5": {
+     "injector_bhp_max_mpa": 31.02288539325414,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 154.67558289878335,
+     "breakthrough_years": 3.1666509460875036
+    },
+    "7.5": {
+     "injector_bhp_max_mpa": 36.10861143828094,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 140.11801747389956,
+     "breakthrough_years": 2.085510701072201
+    },
+    "10": {
+     "injector_bhp_max_mpa": 40.9667132321419,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 130.19481691407614,
+     "breakthrough_years": 1.5470375856487892
+    },
+    "15": {
+     "injector_bhp_max_mpa": 47.92303419976572,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 116.79906074737363,
+     "breakthrough_years": 1.0153051652051992
+    },
+    "20": {
+     "injector_bhp_max_mpa": 54.23230256538808,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 106.78515174162386,
+     "breakthrough_years": 0.7571160190554859
+    }
+   },
+   "seconds": 114.2
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 3.7447132424656258,
+    "bg_aperture_factor": 0.0013597498003035497,
+    "rotation_deg": 0.2242445130126285,
+    "stim_aperture_sigma": 0.7246423489462166,
+    "Kni": 17599095271.806602,
+    "Vm": 0.0002557813650162648,
+    "seed": 107
+   },
+   "stim_aperture_factor": 0.1535445797812472,
+   "rates": {
+    "2.5": {
+     "injector_bhp_max_mpa": 26.38201226800412,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 181.1718751300201,
+     "breakthrough_years": 8.295946960821393
+    },
+    "5": {
+     "injector_bhp_max_mpa": 31.66071319119178,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 157.22496607437108,
+     "breakthrough_years": 4.085967433842574
+    },
+    "7.5": {
+     "injector_bhp_max_mpa": 36.80757170239338,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 142.43717304943507,
+     "breakthrough_years": 2.6964076348016146
+    },
+    "10": {
+     "injector_bhp_max_mpa": 41.20864029591428,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 132.79103174842015,
+     "breakthrough_years": 2.002293850885806
+    },
+    "15": {
+     "injector_bhp_max_mpa": 46.60387269151679,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 119.4934301716423,
+     "breakthrough_years": 1.3119241736017881
+    },
+    "20": {
+     "injector_bhp_max_mpa": 51.11205587410837,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 109.467431992267,
+     "breakthrough_years": 0.9722063855455915
+    }
+   },
+   "seconds": 139.7
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 3.3204037639064152,
+    "bg_aperture_factor": 0.001189550340830573,
+    "rotation_deg": -8.80054378671299,
+    "stim_aperture_sigma": 0.6606843609715274,
+    "Kni": 22992779969.464672,
+    "Vm": 0.00018802965477743029,
+    "seed": 108
+   },
+   "stim_aperture_factor": 0.06295862019996136,
+   "rates": {
+    "2.5": {
+     "injector_bhp_max_mpa": 25.86289999078107,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 159.3158297249548,
+     "breakthrough_years": 2.6248388159532254
+    },
+    "5": {
+     "injector_bhp_max_mpa": 30.859226585896426,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 136.59577509031232,
+     "breakthrough_years": 1.2604253206480338
+    },
+    "7.5": {
+     "injector_bhp_max_mpa": 36.24880740655816,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 124.16936278287059,
+     "breakthrough_years": 0.8140028570045154
+    },
+    "10": {
+     "injector_bhp_max_mpa": 41.50216607095935,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 116.19859128183319,
+     "breakthrough_years": 0.5960407861884138
+    },
+    "15": {
+     "injector_bhp_max_mpa": 50.43212469729811,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 106.58624620893374,
+     "breakthrough_years": 0.3869819487615436
+    },
+    "20": {
+     "injector_bhp_max_mpa": 59.76626266319264,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 99.85252878786373,
+     "breakthrough_years": 0.28887560104773047
+    }
+   },
+   "seconds": 96.3
+  },
+  {
+   "ok": true,
+   "params": {
+    "p10_per_m": 2.6160759944467014,
+    "bg_aperture_factor": 0.0005786543295003342,
+    "rotation_deg": 4.448571512532016,
+    "stim_aperture_sigma": 0.3339942083612036,
+    "Kni": 8757695891.457123,
+    "Vm": 0.00042507753203518316,
+    "seed": 109
+   },
+   "stim_aperture_factor": 0.10837912298267041,
+   "rates": {
+    "2.5": {
+     "injector_bhp_max_mpa": 26.631514752541644,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 173.4760169279888,
+     "breakthrough_years": 7.6539273523139135
+    },
+    "5": {
+     "injector_bhp_max_mpa": 31.98496574762156,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 148.73893507587852,
+     "breakthrough_years": 3.6914540732535195
+    },
+    "7.5": {
+     "injector_bhp_max_mpa": 37.11721303594986,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 133.6327055086182,
+     "breakthrough_years": 2.431701166783167
+    },
+    "10": {
+     "injector_bhp_max_mpa": 41.50155235458378,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 123.76372114266306,
+     "breakthrough_years": 1.8158515255259438
+    },
+    "15": {
+     "injector_bhp_max_mpa": 46.407506128560605,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 113.48667517099919,
+     "breakthrough_years": 1.2185086713619404
+    },
+    "20": {
+     "injector_bhp_max_mpa": 48.943015986794464,
+     "shmin_injector_mpa": 40.347081568841176,
+     "T_prod_end_c": 102.41803141634021,
+     "breakthrough_years": 0.9809219433471382
+    }
+   },
+   "seconds": 186.0
+  }
+ ],
+ "seconds": 817.5
+}
