@@ -24,6 +24,11 @@ Phase 4 (notebooks 4 and 5):
                                 16B sample, hours since the GDR 1683 test start
 * data/dts_16B_2024.csv         16B fibre temperatures (GDR 1721): 200-ft medians before the test (4 Aug) and on days 6.5–7.7
                                 of the test, with the spread over that window
+
+Phase 5 (notebook 6):
+* data/pt_16B_gdr1608_hourly.csv  16B Baker P-T gauge at 7,056.67 ft MD (GDR 1608): hourly median temperature (°C, the
+                                °F part of the record converted), readings per hour, and whether the hour is before the
+                                16A stimulation reached the gauge
 """
 import json
 import pathlib
@@ -118,3 +123,8 @@ prof = np.median(Af[w], 0)
     "T_top_c": round(float(np.median(prof[(zf >= 3200) & (zf < 3300)])), 4), "T_bottom_c": round(float(np.median(prof[(zf > 9140) & (zf <= 9240)])), 4),
     "traces_in_window": int(w.sum())}, indent=1))
 print("wrote phase 4 data: tracers_2024_circulation.csv, dts_16B_2024.csv, dts_16B_2024_deep.json")
+
+# ---------------------------------------------------------------------- phase 5
+pt = ft.read_pt1608_hourly(ft.fetch("pt1608"))
+pt.assign(time=pt.time.dt.strftime("%Y-%m-%dT%H:%M")).to_csv(out / "pt_16B_gdr1608_hourly.csv", index=False)
+print("wrote phase 5 data: pt_16B_gdr1608_hourly.csv")

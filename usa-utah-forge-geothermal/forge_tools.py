@@ -61,6 +61,8 @@ FILES = {   # pinned 30 Oct 2026; all CC BY 4.0
                    "168951d5fda18c25b226707fa32a403bc0e3842ffd14b90431131efe82a40898"),
     "dts_flowing": ("1721/Utah Forge 16B(78)-32 - DTS - mmf 2 - evo 4 - part 2.h5",
                     "77faaec9d7d10982c215ed233d5477ed5b87892464ea0a89a4c87c4e755eedb7"),
+    # phase 5
+    "pt1608": ("1608/16B Baker P_T.zip", "362ee668691231f55f8116c622f942098b0b1945f9b3e5cca4dfe4521b13ecd3"),
 }
 CELL, NXY, NZ = 50.0, 50, 55
 Z_BOTTOM, Z_TOP = -1500.0, 1250.0
@@ -364,3 +366,40 @@ def dts_bins(md_ft, T_c, width=200.0, top=0.0, bottom=10400.0):
     """Median temperature in ``width``-ft bins."""
     b = np.arange(top, bottom, width)
     return b, np.array([np.median(T_c[(md_ft >= x) & (md_ft < x + width)]) if ((md_ft >= x) & (md_ft < x + width)).any() else np.nan for x in b])
+
+
+# ---------------------------------------------------------------------- phase 5: GDR 1608 gauge in 16B
+def read_pt1608_hourly(zip_path, quiet_until="2024-04-03T00:00:00"):
+    """Hourly medians of the 16B Baker P-T gauge (GDR 1608), temperature in °C.
+
+    The workbooks state no units. The first ones carry a CONVERT(C, "C", "F") helper column (°C); around 10:00 on
+    2 April 2024 the readings jump from 171.9 to 341.6 within an hour at constant pressure, the same temperature in
+    °F. Every hour from the first reading above 250 on is converted from °F, and that switch hour is dropped.
+    ``quiet`` marks the hours before the 16A stimulation reaches the gauge (03:00 on 3 April)."""
+    import datetime as dt
+
+    import openpyxl
+    import pandas as pd
+
+    rows = {}
+    with zipfile.ZipFile(zip_path) as z:
+        for n in sorted(z.namelist()):
+            if not n.endswith(".xlsx"):
+                continue
+            wb = openpyxl.load_workbook(io.BytesIO(z.read(n)), read_only=True)
+            it = wb.worksheets[0].iter_rows(values_only=True)
+            next(it, None)
+            for r in it:
+                t, p, T = r[0], r[1], r[2]
+                if not isinstance(t, dt.datetime) or p is None or T is None:
+                    continue
+                a = rows.setdefault(t.replace(minute=0, second=0, microsecond=0), ([], []))
+                a[0].append(float(p)); a[1].append(float(T))
+    times = sorted(rows)
+    T = np.array([np.median(rows[k][1]) for k in times])
+    i = int(np.argmax(T > 250.0)) if (T > 250.0).any() else len(T)
+    T = np.where(np.arange(len(T)) >= i, (T - 32.0) / 1.8, T)
+    df = pd.DataFrame({"time": times, "T_c": np.round(T, 3), "readings": [len(rows[k][1]) for k in times]})
+    df = df.drop(index=i) if i < len(df) else df
+    df["quiet"] = df.time < pd.Timestamp(quiet_until)
+    return df.reset_index(drop=True)
