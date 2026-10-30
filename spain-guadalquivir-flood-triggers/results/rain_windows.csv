@@ -1,0 +1,8 @@
+index,median_rank_corr,caught_1in5,false_payouts_1in5,peirce_1in5
+glofas_max_m3s,0.42,30,27,0.381
+rain_max_1d_mm,0.18,19,37,0.153
+rain_max_3d_mm,0.3,23,28,0.259
+rain_max_5d_mm,0.34,23,33,0.237
+rain_max_10d_mm,0.42,25,41,0.235
+rain_max_30d_mm,0.5,26,32,0.292
+rain_oct_apr_mm,0.52,31,28,0.393

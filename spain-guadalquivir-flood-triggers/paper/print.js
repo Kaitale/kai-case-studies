@@ -4,7 +4,7 @@ const { chromium } = require('playwright');
 const dir = require('path').resolve(process.argv[2] || __dirname);
 (async () => {
   const b = await chromium.launch(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {});
-  for (const [src, out, title] of [['paper.html', 'paper.pdf', 'Kakooza (2026) · Parametric flood triggers from a global flood model'], ['technical_report.html', 'technical_report.pdf', 'KAI-Hydro technical report KH-TR-2026-01']]) {
+  for (const [src, out, title] of [['paper.html', 'paper.pdf', 'Kakooza (2026) · River flow or rainfall? Parametric flood triggers from global data'], ['technical_report.html', 'technical_report.pdf', 'KAI-Hydro technical report KH-TR-2026-01']]) {
     const p = await b.newPage();
     await p.goto('file://' + dir + '/' + src, { waitUntil: 'load' });
     await p.pdf({ path: dir + '/' + out, format: 'A4', printBackground: true, margin: { top: '18mm', bottom: '18mm', left: '18mm', right: '18mm' },
