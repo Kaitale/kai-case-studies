@@ -1,0 +1,22 @@
+{
+ "injection_kg_s": 26.480344,
+ "produced_kg_s": 24.520145,
+ "recovery": 0.925975,
+ "whp_16A_mpa": 19.625919,
+ "whp_16B_mpa": 1.734107,
+ "T_16B_raw_c": 183.483333,
+ "manual_offset_c": 6.288889,
+ "T_16B_wellhead_c": 189.772222,
+ "meter_slopes": {
+  "sep1": 0.8796110706038931,
+  "sep2": 0.8803890028303973
+ },
+ "april_2024": {
+  "final_rate_bpm": 13.89,
+  "final_whp_mpa": 24.262649882999998,
+  "rate_bpm_max": 16.64,
+  "hours": 8.969166666666666,
+  "reported_production_bpm_end": 8.2,
+  "reported_T_wellhead_end_f": 282.0
+ }
+}
