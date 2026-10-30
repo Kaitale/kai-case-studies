@@ -1,0 +1,25 @@
+set,T,written_as,hits,misses,false_payouts,hit_rate,false_alarm_rate,false_payout_share,peirce,p_vs_chance
+matched_v4,2,return period,93,50,50,0.65,0.35,0.35,0.301,2.8e-07
+matched_v4,2,fixed m3/s,33,110,20,0.231,0.14,0.377,0.091,0.034
+matched_v4,5,return period,30,30,27,0.5,0.119,0.474,0.381,1.4e-09
+matched_v4,5,fixed m3/s,6,54,10,0.1,0.044,0.625,0.056,0.093
+matched_v4,10,return period,13,23,19,0.361,0.076,0.594,0.285,1.6e-05
+matched_v4,10,fixed m3/s,2,34,4,0.056,0.016,0.667,0.04,0.17
+matched_v4,25,return period,3,8,15,0.273,0.055,0.833,0.218,0.025
+matched_v4,25,fixed m3/s,0,11,3,0.0,0.011,1.0,-0.011,1.0
+matched_v5,2,return period,97,46,41,0.678,0.287,0.297,0.392,2.2e-11
+matched_v5,2,fixed m3/s,85,58,39,0.594,0.273,0.315,0.322,3e-08
+matched_v5,5,return period,33,27,34,0.55,0.15,0.507,0.4,1.2e-09
+matched_v5,5,fixed m3/s,26,34,30,0.433,0.133,0.536,0.301,1.2e-06
+matched_v5,10,return period,15,21,23,0.417,0.092,0.605,0.325,3.9e-06
+matched_v5,10,fixed m3/s,14,22,23,0.389,0.092,0.622,0.297,1.8e-05
+matched_v5,25,return period,3,8,12,0.273,0.044,0.8,0.229,0.015
+matched_v5,25,fixed m3/s,4,7,16,0.364,0.058,0.8,0.305,0.0042
+full_v5,2,return period,137,63,59,0.685,0.285,0.301,0.4,3.2e-16
+full_v5,2,fixed m3/s,110,90,51,0.55,0.246,0.317,0.304,2.6e-10
+full_v5,5,return period,53,36,44,0.596,0.138,0.454,0.457,4.6e-17
+full_v5,5,fixed m3/s,41,48,31,0.461,0.097,0.431,0.363,2.9e-13
+full_v5,10,return period,19,33,33,0.365,0.093,0.635,0.272,1.6e-06
+full_v5,10,fixed m3/s,16,36,21,0.308,0.059,0.568,0.249,9.5e-07
+full_v5,25,return period,4,15,15,0.211,0.039,0.789,0.172,0.0085
+full_v5,25,fixed m3/s,2,17,9,0.105,0.023,0.818,0.082,0.088

@@ -1,0 +1,608 @@
+{
+ "matched_v4": {
+  "gauge_years": 286,
+  "median_ratio10": 0.217,
+  "gauges_ratio10_within_x2": 4,
+  "median_rank_corr": 0.421,
+  "rho_vs_share_caught": [
+   0.797,
+   0.00064
+  ],
+  "per_gauge": [
+   {
+    "gauge_id": 5001,
+    "ratio10": 0.206,
+    "rho": -0.197
+   },
+   {
+    "gauge_id": 5004,
+    "ratio10": 0.198,
+    "rho": 0.71
+   },
+   {
+    "gauge_id": 5025,
+    "ratio10": 0.13,
+    "rho": -0.062
+   },
+   {
+    "gauge_id": 5029,
+    "ratio10": 0.829,
+    "rho": 0.4
+   },
+   {
+    "gauge_id": 5045,
+    "ratio10": 0.46,
+    "rho": 0.542
+   },
+   {
+    "gauge_id": 5057,
+    "ratio10": 0.112,
+    "rho": 0.329
+   },
+   {
+    "gauge_id": 5076,
+    "ratio10": 0.232,
+    "rho": 0.752
+   },
+   {
+    "gauge_id": 5077,
+    "ratio10": 0.142,
+    "rho": 0.688
+   },
+   {
+    "gauge_id": 5080,
+    "ratio10": 0.559,
+    "rho": 0.391
+   },
+   {
+    "gauge_id": 5081,
+    "ratio10": 0.228,
+    "rho": 0.735
+   },
+   {
+    "gauge_id": 5090,
+    "ratio10": 0.099,
+    "rho": 0.442
+   },
+   {
+    "gauge_id": 5127,
+    "ratio10": 0.193,
+    "rho": 0.518
+   },
+   {
+    "gauge_id": 5140,
+    "ratio10": 1.16,
+    "rho": 0.019
+   },
+   {
+    "gauge_id": 5142,
+    "ratio10": 0.711,
+    "rho": 0.301
+   }
+  ],
+  "skill": [
+   {
+    "T": 2,
+    "written_as": "return period",
+    "hits": 93,
+    "misses": 50,
+    "false_payouts": 50,
+    "hit_rate": 0.65,
+    "false_alarm_rate": 0.35,
+    "false_payout_share": 0.35,
+    "peirce": 0.301,
+    "p_vs_chance": 2.8e-07
+   },
+   {
+    "T": 2,
+    "written_as": "fixed m3/s",
+    "hits": 33,
+    "misses": 110,
+    "false_payouts": 20,
+    "hit_rate": 0.231,
+    "false_alarm_rate": 0.14,
+    "false_payout_share": 0.377,
+    "peirce": 0.091,
+    "p_vs_chance": 0.034
+   },
+   {
+    "T": 5,
+    "written_as": "return period",
+    "hits": 30,
+    "misses": 30,
+    "false_payouts": 27,
+    "hit_rate": 0.5,
+    "false_alarm_rate": 0.119,
+    "false_payout_share": 0.474,
+    "peirce": 0.381,
+    "p_vs_chance": 1.4e-09
+   },
+   {
+    "T": 5,
+    "written_as": "fixed m3/s",
+    "hits": 6,
+    "misses": 54,
+    "false_payouts": 10,
+    "hit_rate": 0.1,
+    "false_alarm_rate": 0.044,
+    "false_payout_share": 0.625,
+    "peirce": 0.056,
+    "p_vs_chance": 0.093
+   },
+   {
+    "T": 10,
+    "written_as": "return period",
+    "hits": 13,
+    "misses": 23,
+    "false_payouts": 19,
+    "hit_rate": 0.361,
+    "false_alarm_rate": 0.076,
+    "false_payout_share": 0.594,
+    "peirce": 0.285,
+    "p_vs_chance": 1.6e-05
+   },
+   {
+    "T": 10,
+    "written_as": "fixed m3/s",
+    "hits": 2,
+    "misses": 34,
+    "false_payouts": 4,
+    "hit_rate": 0.056,
+    "false_alarm_rate": 0.016,
+    "false_payout_share": 0.667,
+    "peirce": 0.04,
+    "p_vs_chance": 0.17
+   },
+   {
+    "T": 25,
+    "written_as": "return period",
+    "hits": 3,
+    "misses": 8,
+    "false_payouts": 15,
+    "hit_rate": 0.273,
+    "false_alarm_rate": 0.055,
+    "false_payout_share": 0.833,
+    "peirce": 0.218,
+    "p_vs_chance": 0.025
+   },
+   {
+    "T": 25,
+    "written_as": "fixed m3/s",
+    "hits": 0,
+    "misses": 11,
+    "false_payouts": 3,
+    "hit_rate": 0.0,
+    "false_alarm_rate": 0.011,
+    "false_payout_share": 1.0,
+    "peirce": -0.011,
+    "p_vs_chance": 1.0
+   }
+  ],
+  "pair": {
+   "2": {
+    "rp_only": 63,
+    "abs_only": 3,
+    "mcnemar_p": 1.3e-15
+   },
+   "5": {
+    "rp_only": 24,
+    "abs_only": 0,
+    "mcnemar_p": 1.2e-07
+   },
+   "10": {
+    "rp_only": 11,
+    "abs_only": 0,
+    "mcnemar_p": 0.00098
+   },
+   "25": {
+    "rp_only": 3,
+    "abs_only": 0,
+    "mcnemar_p": 0.25
+   }
+  }
+ },
+ "matched_v5": {
+  "gauge_years": 286,
+  "median_ratio10": 1.047,
+  "gauges_ratio10_within_x2": 10,
+  "median_rank_corr": 0.545,
+  "rho_vs_share_caught": [
+   0.415,
+   0.14
+  ],
+  "per_gauge": [
+   {
+    "gauge_id": 5001,
+    "ratio10": 0.495,
+    "rho": 0.1
+   },
+   {
+    "gauge_id": 5004,
+    "ratio10": 1.073,
+    "rho": 0.63
+   },
+   {
+    "gauge_id": 5025,
+    "ratio10": 1.095,
+    "rho": 0.038
+   },
+   {
+    "gauge_id": 5029,
+    "ratio10": 1.19,
+    "rho": 0.461
+   },
+   {
+    "gauge_id": 5045,
+    "ratio10": 1.745,
+    "rho": 0.587
+   },
+   {
+    "gauge_id": 5057,
+    "ratio10": 0.095,
+    "rho": 0.465
+   },
+   {
+    "gauge_id": 5076,
+    "ratio10": 1.208,
+    "rho": 0.773
+   },
+   {
+    "gauge_id": 5077,
+    "ratio10": 0.345,
+    "rho": 0.651
+   },
+   {
+    "gauge_id": 5080,
+    "ratio10": 0.682,
+    "rho": 0.633
+   },
+   {
+    "gauge_id": 5081,
+    "ratio10": 1.762,
+    "rho": 0.765
+   },
+   {
+    "gauge_id": 5090,
+    "ratio10": 1.02,
+    "rho": 0.603
+   },
+   {
+    "gauge_id": 5127,
+    "ratio10": 0.336,
+    "rho": 0.242
+   },
+   {
+    "gauge_id": 5140,
+    "ratio10": 1.608,
+    "rho": 0.503
+   },
+   {
+    "gauge_id": 5142,
+    "ratio10": 0.877,
+    "rho": 0.346
+   }
+  ],
+  "skill": [
+   {
+    "T": 2,
+    "written_as": "return period",
+    "hits": 97,
+    "misses": 46,
+    "false_payouts": 41,
+    "hit_rate": 0.678,
+    "false_alarm_rate": 0.287,
+    "false_payout_share": 0.297,
+    "peirce": 0.392,
+    "p_vs_chance": 2.2e-11
+   },
+   {
+    "T": 2,
+    "written_as": "fixed m3/s",
+    "hits": 85,
+    "misses": 58,
+    "false_payouts": 39,
+    "hit_rate": 0.594,
+    "false_alarm_rate": 0.273,
+    "false_payout_share": 0.315,
+    "peirce": 0.322,
+    "p_vs_chance": 3e-08
+   },
+   {
+    "T": 5,
+    "written_as": "return period",
+    "hits": 33,
+    "misses": 27,
+    "false_payouts": 34,
+    "hit_rate": 0.55,
+    "false_alarm_rate": 0.15,
+    "false_payout_share": 0.507,
+    "peirce": 0.4,
+    "p_vs_chance": 1.2e-09
+   },
+   {
+    "T": 5,
+    "written_as": "fixed m3/s",
+    "hits": 26,
+    "misses": 34,
+    "false_payouts": 30,
+    "hit_rate": 0.433,
+    "false_alarm_rate": 0.133,
+    "false_payout_share": 0.536,
+    "peirce": 0.301,
+    "p_vs_chance": 1.2e-06
+   },
+   {
+    "T": 10,
+    "written_as": "return period",
+    "hits": 15,
+    "misses": 21,
+    "false_payouts": 23,
+    "hit_rate": 0.417,
+    "false_alarm_rate": 0.092,
+    "false_payout_share": 0.605,
+    "peirce": 0.325,
+    "p_vs_chance": 3.9e-06
+   },
+   {
+    "T": 10,
+    "written_as": "fixed m3/s",
+    "hits": 14,
+    "misses": 22,
+    "false_payouts": 23,
+    "hit_rate": 0.389,
+    "false_alarm_rate": 0.092,
+    "false_payout_share": 0.622,
+    "peirce": 0.297,
+    "p_vs_chance": 1.8e-05
+   },
+   {
+    "T": 25,
+    "written_as": "return period",
+    "hits": 3,
+    "misses": 8,
+    "false_payouts": 12,
+    "hit_rate": 0.273,
+    "false_alarm_rate": 0.044,
+    "false_payout_share": 0.8,
+    "peirce": 0.229,
+    "p_vs_chance": 0.015
+   },
+   {
+    "T": 25,
+    "written_as": "fixed m3/s",
+    "hits": 4,
+    "misses": 7,
+    "false_payouts": 16,
+    "hit_rate": 0.364,
+    "false_alarm_rate": 0.058,
+    "false_payout_share": 0.8,
+    "peirce": 0.305,
+    "p_vs_chance": 0.0042
+   }
+  ],
+  "pair": {
+   "2": {
+    "rp_only": 21,
+    "abs_only": 9,
+    "mcnemar_p": 0.043
+   },
+   "5": {
+    "rp_only": 9,
+    "abs_only": 2,
+    "mcnemar_p": 0.065
+   },
+   "10": {
+    "rp_only": 3,
+    "abs_only": 2,
+    "mcnemar_p": 1.0
+   },
+   "25": {
+    "rp_only": 1,
+    "abs_only": 2,
+    "mcnemar_p": 1.0
+   }
+  }
+ },
+ "full_v5": {
+  "gauge_years": 407,
+  "median_ratio10": 0.938,
+  "gauges_ratio10_within_x2": 11,
+  "median_rank_corr": 0.627,
+  "rho_vs_share_caught": [
+   0.319,
+   0.27
+  ],
+  "per_gauge": [
+   {
+    "gauge_id": 5001,
+    "ratio10": 0.501,
+    "rho": 0.181
+   },
+   {
+    "gauge_id": 5004,
+    "ratio10": 1.065,
+    "rho": 0.619
+   },
+   {
+    "gauge_id": 5025,
+    "ratio10": 0.978,
+    "rho": 0.217
+   },
+   {
+    "gauge_id": 5029,
+    "ratio10": 0.982,
+    "rho": 0.564
+   },
+   {
+    "gauge_id": 5045,
+    "ratio10": 1.516,
+    "rho": 0.703
+   },
+   {
+    "gauge_id": 5057,
+    "ratio10": 0.089,
+    "rho": 0.593
+   },
+   {
+    "gauge_id": 5076,
+    "ratio10": 1.344,
+    "rho": 0.674
+   },
+   {
+    "gauge_id": 5077,
+    "ratio10": 0.294,
+    "rho": 0.636
+   },
+   {
+    "gauge_id": 5080,
+    "ratio10": 0.531,
+    "rho": 0.756
+   },
+   {
+    "gauge_id": 5081,
+    "ratio10": 1.052,
+    "rho": 0.655
+   },
+   {
+    "gauge_id": 5090,
+    "ratio10": 0.958,
+    "rho": 0.649
+   },
+   {
+    "gauge_id": 5127,
+    "ratio10": 0.317,
+    "rho": 0.26
+   },
+   {
+    "gauge_id": 5140,
+    "ratio10": 0.621,
+    "rho": 0.665
+   },
+   {
+    "gauge_id": 5142,
+    "ratio10": 0.919,
+    "rho": 0.393
+   }
+  ],
+  "skill": [
+   {
+    "T": 2,
+    "written_as": "return period",
+    "hits": 137,
+    "misses": 63,
+    "false_payouts": 59,
+    "hit_rate": 0.685,
+    "false_alarm_rate": 0.285,
+    "false_payout_share": 0.301,
+    "peirce": 0.4,
+    "p_vs_chance": 3.2e-16
+   },
+   {
+    "T": 2,
+    "written_as": "fixed m3/s",
+    "hits": 110,
+    "misses": 90,
+    "false_payouts": 51,
+    "hit_rate": 0.55,
+    "false_alarm_rate": 0.246,
+    "false_payout_share": 0.317,
+    "peirce": 0.304,
+    "p_vs_chance": 2.6e-10
+   },
+   {
+    "T": 5,
+    "written_as": "return period",
+    "hits": 53,
+    "misses": 36,
+    "false_payouts": 44,
+    "hit_rate": 0.596,
+    "false_alarm_rate": 0.138,
+    "false_payout_share": 0.454,
+    "peirce": 0.457,
+    "p_vs_chance": 4.6e-17
+   },
+   {
+    "T": 5,
+    "written_as": "fixed m3/s",
+    "hits": 41,
+    "misses": 48,
+    "false_payouts": 31,
+    "hit_rate": 0.461,
+    "false_alarm_rate": 0.097,
+    "false_payout_share": 0.431,
+    "peirce": 0.363,
+    "p_vs_chance": 2.9e-13
+   },
+   {
+    "T": 10,
+    "written_as": "return period",
+    "hits": 19,
+    "misses": 33,
+    "false_payouts": 33,
+    "hit_rate": 0.365,
+    "false_alarm_rate": 0.093,
+    "false_payout_share": 0.635,
+    "peirce": 0.272,
+    "p_vs_chance": 1.6e-06
+   },
+   {
+    "T": 10,
+    "written_as": "fixed m3/s",
+    "hits": 16,
+    "misses": 36,
+    "false_payouts": 21,
+    "hit_rate": 0.308,
+    "false_alarm_rate": 0.059,
+    "false_payout_share": 0.568,
+    "peirce": 0.249,
+    "p_vs_chance": 9.5e-07
+   },
+   {
+    "T": 25,
+    "written_as": "return period",
+    "hits": 4,
+    "misses": 15,
+    "false_payouts": 15,
+    "hit_rate": 0.211,
+    "false_alarm_rate": 0.039,
+    "false_payout_share": 0.789,
+    "peirce": 0.172,
+    "p_vs_chance": 0.0085
+   },
+   {
+    "T": 25,
+    "written_as": "fixed m3/s",
+    "hits": 2,
+    "misses": 17,
+    "false_payouts": 9,
+    "hit_rate": 0.105,
+    "false_alarm_rate": 0.023,
+    "false_payout_share": 0.818,
+    "peirce": 0.082,
+    "p_vs_chance": 0.088
+   }
+  ],
+  "pair": {
+   "2": {
+    "rp_only": 32,
+    "abs_only": 5,
+    "mcnemar_p": 7.4e-06
+   },
+   "5": {
+    "rp_only": 15,
+    "abs_only": 3,
+    "mcnemar_p": 0.0075
+   },
+   "10": {
+    "rp_only": 7,
+    "abs_only": 4,
+    "mcnemar_p": 0.55
+   },
+   "25": {
+    "rp_only": 3,
+    "abs_only": 1,
+    "mcnemar_p": 0.62
+   }
+  }
+ }
+}
