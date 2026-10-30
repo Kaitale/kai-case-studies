@@ -151,6 +151,7 @@ Energy, via the Geothermal Data Repository (OpenEI), CC BY 4.0.*
 | `tracers_2024_circulation.csv` | `cb13beb115a83c97c40de49c77e1b1b31badaac09f171dd62bc26e1680622c11` |
 | `dts_16B_2024.csv` | `e8a88483864002e57ae0015cdf96e9e5213a20a188b17abcfc74b77c8cbe33e3` |
 | `dts_16B_2024_deep.json` | `e06f2ed3d77c5e4833d7f5ceac741201cfb14bfd8faa0c8014a733013b372ea8` |
+| `pt_16B_gdr1608_hourly.csv` | `0b6163ad91234457531190a47fd609e66ce3c91b2cce5d6fb41168eb768d1e6f` |
 
 ### Sources (not vendored; all CC BY 4.0, licence read from each GDR page on 30 Oct 2026)
 
@@ -168,3 +169,6 @@ Energy, via the Geothermal Data Repository (OpenEI), CC BY 4.0.*
 | `Qpro_tracers.zip` (QuantumPro tracer data, report and slides, 2024) | [1701](https://gdr.openei.org/submissions/1701), DOI 10.15121/2507443 | `4fae497068ccf5185d04576d252355d37515b218ff46ce2e514d420b05caa53b` |
 | `Utah Forge 16B(78)-32 - DTS - mmf 2 - evo 4 - part 1.h5` (16B DTS, 4 Aug 2024) | [1721](https://gdr.openei.org/submissions/1721) | `168951d5fda18c25b226707fa32a403bc0e3842ffd14b90431131efe82a40898` |
 | `Utah Forge 16B(78)-32 - DTS - mmf 2 - evo 4 - part 2.h5` (16B DTS, 12–16 Aug 2024) | [1721](https://gdr.openei.org/submissions/1721) | `77faaec9d7d10982c215ed233d5477ed5b87892464ea0a89a4c87c4e755eedb7` |
+| `16B Baker P_T.zip` (16B P–T gauge at 7,056.67 ft MD, 26 Mar–20 Apr 2024) | [1608](https://gdr.openei.org/submissions/1608), DOI 10.15121/2368548 | `362ee668691231f55f8116c622f942098b0b1945f9b3e5cca4dfe4521b13ecd3` |
+| `Battelle-2-2439-AF1_Milestone 3.4 (In-Situ Stress Measurement) Report.pdf` (16B minifracs; Shmin gradients quoted, no file data used) | [1596](https://gdr.openei.org/submissions/1596) | `97ad150007031670bf968a72b41105b64afa7f9d4639558e3e534a3ce6763eea` |
+| `CSM FORGE 16A(78)-32 Stage 1 - Pressure falloff Analysis_8.04.2022 (1).pdf` (16A stage 1 falloff; finding quoted) | [1408](https://gdr.openei.org/submissions/1408) | `70a6d388ae4551012b21af4ef29154ae0a0b8bfa47e7b71807229ac5be8383d7` |

@@ -23,6 +23,9 @@ CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
 | [1611](https://gdr.openei.org/submissions/1611) | Utah FORGE: Wells 16A(78)-32 and 16B(78)-32 Stimulation Pressure and Circulation Data, April 2024 | [10.15121/2371032](https://doi.org/10.15121/2371032) | CC BY 4.0 | validation (notebook 3) |
 | [1701](https://gdr.openei.org/submissions/1701) | Utah FORGE: QuantumPro Well 16A(78)-32 and 16B(78)-32 Stimulation and Circulation Tracer Test Results - 2024 (Guo, Oliver and Shokanov, 2024) | [10.15121/2507443](https://doi.org/10.15121/2507443) | CC BY 4.0 | tracer injection times and concentrations at 16B (notebook 4) |
 | [1721](https://gdr.openei.org/submissions/1721) | Utah FORGE: Well 16B(78)-32 DTS, RFS DSS Strain, and Absolute Strain Circulation Test Fiber Optic Data - August 2024 (Neubrex) | — | CC BY 4.0 | the two DTS files only (notebook 4); the strain files are not used |
+| [1608](https://gdr.openei.org/submissions/1608) | Utah FORGE: Well 16B(78)-32 Baker Hughes Pressure-Temperature Gauge Data, March–April 2024 | [10.15121/2368548](https://doi.org/10.15121/2368548) | CC BY 4.0 | hourly temperature at the gauge (notebook 6) |
+| [1596](https://gdr.openei.org/submissions/1596) | Utah FORGE 2439: Report on Minifrac Tests for Stress Characterization (Battelle, 2023) | — | CC BY 4.0 | Shmin gradients quoted from the report (notebook 6); no file data used |
+| [1408](https://gdr.openei.org/submissions/1408) | Utah FORGE: Well 16A(78)-32 Stage 1 Pressure Falloff Analysis (Colorado School of Mines, 2022) | — | CC BY 4.0 | quoted: no closure stress observed (notebook 6) |
 | [1222](https://gdr.openei.org/submissions/1222) | Utah FORGE: Discrete Fracture Network (DFN) Data (Finnila and Podgorney, 2020) | — | CC BY 4.0 | stress summary only (SHmax direction and range, Shmin gradient), quoted; no file used |
 
 Only derived values are published here (`data/`); the GDR files are not redistributed. `rebuild_data.py` downloads them
