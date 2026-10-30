@@ -49,13 +49,12 @@ What changes:
   and the rank correlation against it, remain the screen before a trigger enters a contract.
 
 Over every year both cover (1985-2022, 407 gauge-years, 89 flood years) the return-period trigger paid 53 flood years
-with 44 false payouts, and the fixed m³/s trigger 41 with 31. The paper and the notebook above are GloFAS 4.0; a
-version 2 with both models follows.
+with 44 false payouts, and the fixed m³/s trigger 41 with 31. Paper and technical report version 2.0 include this comparison (section 4.5 and Table 4 of the paper).
 
 ## Paper, report and how to cite
 
-* **Research paper:** [paper/paper.pdf](paper/paper.pdf), Kakooza, C. (2026), *Writing parametric flood triggers from a
-  global flood model: a gauge-by-gauge test in the Guadalquivir basin, Spain*, version 1.0.
+* **Research paper:** [paper/paper.pdf](paper/paper.pdf), Kakooza, C. (2026), *River flow or rainfall, GloFAS 4.0 or 5.0?
+  Writing parametric flood triggers from global data, tested gauge by gauge in the Guadalquivir basin, Spain*, version 2.0.
 * **Technical report for insurers, brokers and risk pools:** [paper/technical_report.pdf](paper/technical_report.pdf)
   (KAI-Hydro KH-TR-2026-01), with every return level and the 1-in-5 trigger at every gauge.
 * Every number in both comes from the files here: `paper/paper_stats.py` recomputes the statistics and

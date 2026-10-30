@@ -14,7 +14,7 @@ import pandas as pd
 HERE = pathlib.Path(__file__).resolve().parent
 CASE = HERE.parent
 R = CASE / "results"
-VERSION, DATE = "1.0", "30 October 2026"
+VERSION, DATE = "2.0", "30 October 2026"
 AUTHOR, AFFIL = "Charles Kakooza", "KAI Water &amp; Energy, Kampala, Uganda"
 REPO = "https://github.com/Kaitale/kai-case-studies/tree/main/spain-guadalquivir-flood-triggers"
 CASE_URL = "https://kai-water.charkaks0.workers.dev/case-guadalquivir"
@@ -32,7 +32,14 @@ tm = pd.read_csv(R / "trigger_methods.csv")
 win = pd.read_csv(R / "rain_windows.csv").set_index("index")
 rw = json.loads((R / "rain_vs_river.json").read_text())
 rcat = pd.read_csv(CASE / "data" / "rain_catchments.csv")
-TITLE = "River flow or rainfall? Writing parametric flood triggers from global data, tested gauge by gauge in the Guadalquivir basin, Spain"
+v45 = json.loads((R / "v4_v5_comparison.json").read_text())
+V4M, V5M, V5F = v45["matched_v4"], v45["matched_v5"], v45["full_v5"]
+def vk(d, T, m):
+    return next(r for r in d["skill"] if r["T"] == T and r["written_as"] == m)
+V5R, V5A, V4R, V4A = vk(V5M, 5, "return period"), vk(V5M, 5, "fixed m3/s"), vk(V4M, 5, "return period"), vk(V4M, 5, "fixed m3/s")
+V5FR, V5FA = vk(V5F, 5, "return period"), vk(V5F, 5, "fixed m3/s")
+assert (V4R["hits"], V4A["hits"]) == (30, 6)  # GloFAS 4.0 on the matched years reproduces the version 1 result
+TITLE = "River flow or rainfall, GloFAS 4.0 or 5.0? Writing parametric flood triggers from global data, tested gauge by gauge in the Guadalquivir basin, Spain"
 RIV, STORM, SEAS = "River flow (GloFAS)", "Storm rainfall (wettest 3 days)", "Wet-season rainfall (Oct–Apr total)"
 
 
@@ -196,7 +203,11 @@ from one gauge to the next and lost skill (Peirce {aR.peirce:.2f}). Storm rainfa
 than river flow ({int(rQ.hits)} of 60, Peirce {rQ.peirce:.2f}); the October–April rainfall total matched it
 ({int(rS.hits)} of 60, Peirce {rS.peirce:.2f}), and the two disagreed on few flood years ({rw['river_only_caught']} against
 {rw['rain_only_caught']}). Requiring both to pass cut false payouts from {rw['river']['false_payout_share']:.0%} to
-{rw['both']['false_payout_share']:.0%} of payouts, at the cost of {rw['river']['hits'] - rw['both']['hits']} flood years. Basis
+{rw['both']['false_payout_share']:.0%} of payouts, at the cost of {rw['river']['hits'] - rw['both']['hits']} flood years. These results
+use GloFAS 4.0. Repeated on the same gauge-years with GloFAS 5.0, the model's 10-year flood was {V5M['median_ratio10']:.2f} of the
+gauged one, and the trigger written in m³/s caught {V5A['hits']} of 60 flood years (Peirce {V5A['peirce']:.2f}) against
+{V5R['hits']} for the model's own 1-in-5 level (Peirce {V5R['peirce']:.2f}; McNemar p = {p_fmt(V5M['pair']['5']['mcnemar_p'])}): the bias
+had largely gone, the frequency-based trigger still scored higher, and about half of all payouts were still false. Basis
 risk remained high in every design, and the rank correlation of the gauge's annual maxima with the index's predicted where it
 would be (Spearman ρ = {RHO_SH[0]:.2f} across gauges for river flow). Triggers from global data should be set from each site's
 own record, written in the index's own terms, screened with local evidence and calibrated before they enter a contract. Data,
@@ -211,7 +222,7 @@ def paper():
 <p class="meta"><b>{AUTHOR}</b> · {AFFIL}</p>
 <p class="meta">Correspondence: through {CASE_URL.replace('/case-guadalquivir', '/contact')}</p>
 <div class="abstract"><h2>Abstract</h2><p>{ABSTRACT}</p>
-<p class="kw"><b>Keywords:</b> parametric insurance; flood trigger; basis risk; GloFAS; rainfall index; NASA POWER; flood frequency; L-moments; verification; Guadalquivir</p></div>
+<p class="kw"><b>Keywords:</b> parametric insurance; flood trigger; basis risk; GloFAS; GloFAS 5.0; rainfall index; NASA POWER; flood frequency; L-moments; verification; Guadalquivir</p></div>
 
 <h2>1. Introduction</h2>
 <p>Parametric (index) insurance pays a fixed sum when a measured index passes an agreed level, instead of after a loss
@@ -250,7 +261,10 @@ redistributed; they are fetched from CEDEX and checked against published SHA-256
 version 4.0, at 0.05° resolution, retrieved through the Open-Meteo flood API, which serves the Copernicus Emergency Management
 Service data under CC BY 4.0. For each gauge, all cells within ±0.1° (about 10 km) were retrieved, and the cell whose mean flow
 over the common period was closest to the gauge's (in log ratio) was used. This choice uses the gauge and is therefore the
-model's best case; at an ungauged site the cell has to be found from the upstream area alone.</p>
+model's best case; at an ungauged site the cell has to be found from the upstream area alone. Version 2 of this paper adds
+the GloFAS reanalysis version 5.0 (consolidated, 0.05°), downloaded for the whole basin from the Copernicus Early Warning Data
+Store for water years 1984–2022, with cells chosen the same way. GloFAS 5.0 is compared with 4.0 on the same {N_GY} gauge-years
+(section 4.5); the 39 yearly files are listed with their SHA-256 values in the data package.</p>
 <p><b>Rainfall.</b> Daily precipitation (PRECTOTCORR: MERRA-2, bias-corrected, on a 0.5° × 0.625° grid) from the NASA POWER
 daily API {c('nasa', 'gelaro')}, the source of the Model Library study. Each gauge's catchment was taken from HydroBASINS level 8
 {c('lehner')}: of the sub-catchments within about 13 km of the gauge, the one whose upstream area best matched the gauge's
@@ -300,7 +314,7 @@ builds the catchments and catchment rainfall from HydroBASINS and NASA POWER, an
 four ways on the three indices.</p>
 
 <h2>4. Results</h2>
-<h3>4.1 The model sees these floods at about a fifth of their size</h3>
+<h3>4.1 GloFAS 4.0 sees these floods at about a fifth of their size</h3>
 <p>GloFAS mean flow was within a factor of 2 of the gauge at only 4 of {S['gauges']} gauges (median ratio {MEANR:.2f}), and the
 model's 10-year flood was {S['median_ratio_glofas_to_observed']['10']:.2f} of the gauged one at the median gauge, within a
 factor of 2 at {WITHIN2} gauges (Figure 2; Table 1). The low bias held at every return period (median ratios
@@ -367,6 +381,33 @@ to two-fifths.</p>
 {table_gauges()}
 <p class="tnote">Mean-flow ratio: GloFAS mean flow ÷ gauged mean flow over the common days. Q10 ratio: GloFAS ÷ gauge. Rank corr.: Spearman correlation of annual maxima. Years: water years both sources cover.</p></div>
 
+
+<h3>4.5 GloFAS 5.0: the bias has largely gone; the advice on frequency stands</h3>
+<p>On the same {V5M['gauge_years']} gauge-years, GloFAS 5.0's 10-year flood was {V5M['median_ratio10']:.2f} of the gauged one at the
+median gauge (4.0: {V4M['median_ratio10']:.2f}) and within a factor of 2 at {V5M['gauges_ratio10_within_x2']} of {S['gauges']} gauges
+(4.0: {V4M['gauges_ratio10_within_x2']}); its mean flow was within a factor of 2 at 13 of {S['gauges']} gauges (Figure 7; Table 4).
+The model also ranked the big years better (median rank correlation {V5M['median_rank_corr']:.2f} against {V4M['median_rank_corr']:.2f}).
+With the bias gone, a trigger written in m³/s from a gauge-based design flow worked: at 1-in-5 it caught {V5A['hits']} of 60 flood
+years (Peirce {V5A['peirce']:.2f}; 4.0: {V4A['hits']}, {V4A['peirce']:.2f}). Written as the model's own 1-in-5 level it caught
+{V5R['hits']} (Peirce {V5R['peirce']:.2f}); {V5M['pair']['5']['rp_only']} flood years were caught by the return-period trigger alone and
+{V5M['pair']['5']['abs_only']} by the fixed-flow trigger alone (McNemar p = {p_fmt(V5M['pair']['5']['mcnemar_p'])}). Basis risk did not
+fall: {V5R['false_payouts']} false payouts for the return-period trigger and {V5A['false_payouts']} for the fixed-flow one, so about half
+of all payouts were still false. The link between a gauge's rank correlation and the share of floods caught weakened
+(Spearman ρ = {V5M['rho_vs_share_caught'][0]:.2f}, p = {V5M['rho_vs_share_caught'][1]:.2g}). Over every year that GloFAS 5.0 and the
+gauges both cover (1985–2022, {V5F['gauge_years']} gauge-years, {V5FR['hits'] + V5FR['misses']} flood years), the return-period trigger
+caught {V5FR['hits']} with {V5FR['false_payouts']} false payouts (Peirce {V5FR['peirce']:.2f}) and the fixed-flow trigger {V5FA['hits']}
+with {V5FA['false_payouts']} (Peirce {V5FA['peirce']:.2f}; McNemar p = {p_fmt(V5F['pair']['5']['mcnemar_p'])}).</p>
+{fig('gq_v4_v5.png', 7, f'GloFAS 4.0 against 5.0 on the same {V5M["gauge_years"]} gauge-years. Left: the 10-year flood at each gauge against the model (log scales; shading: within a factor of 2). Right: 1-in-5 flood years paid and false payouts, pooled over {S["gauges"]} gauges, for the two ways of writing the trigger.')}
+<div class="tblock"><p class="tcap"><b>Table 4.</b> GloFAS 4.0 and 5.0 on the same {V5M['gauge_years']} gauge-years (60 flood years at 1-in-5).</p>
+<table><thead><tr><th style="text-align:left">Measure</th><th>GloFAS 4.0</th><th>GloFAS 5.0</th></tr></thead><tbody>
+<tr><td style="text-align:left">10-year flood, model ÷ gauge (median)</td><td>{V4M['median_ratio10']:.2f}</td><td>{V5M['median_ratio10']:.2f}</td></tr>
+<tr><td style="text-align:left">Gauges with the 10-year flood within ×2</td><td>{V4M['gauges_ratio10_within_x2']}</td><td>{V5M['gauges_ratio10_within_x2']}</td></tr>
+<tr><td style="text-align:left">Rank correlation of annual maxima (median)</td><td>{V4M['median_rank_corr']:.2f}</td><td>{V5M['median_rank_corr']:.2f}</td></tr>
+<tr><td style="text-align:left">Return period: caught · false payouts · Peirce</td><td>{V4R['hits']} · {V4R['false_payouts']} · {V4R['peirce']:.2f}</td><td>{V5R['hits']} · {V5R['false_payouts']} · {V5R['peirce']:.2f}</td></tr>
+<tr><td style="text-align:left">Fixed m³/s: caught · false payouts · Peirce</td><td>{V4A['hits']} · {V4A['false_payouts']} · {V4A['peirce']:.2f}</td><td>{V5A['hits']} · {V5A['false_payouts']} · {V5A['peirce']:.2f}</td></tr>
+<tr><td style="text-align:left">McNemar, flood years caught by one only (RP vs fixed)</td><td>{V4M['pair']['5']['rp_only']} vs {V4M['pair']['5']['abs_only']}, p = {p_fmt(V4M['pair']['5']['mcnemar_p'])}</td><td>{V5M['pair']['5']['rp_only']} vs {V5M['pair']['5']['abs_only']}, p = {p_fmt(V5M['pair']['5']['mcnemar_p'])}</td></tr>
+</tbody></table></div>
+
 <h2>5. Discussion</h2>
 <p><b>Frequency, not magnitude.</b> A global model can be biased in magnitude and still carry useful information on which
 years are large. Writing the trigger as the model's own return period uses that information and discards the bias; writing it
@@ -374,6 +415,11 @@ in m³/s keeps the bias and discards the information. In this basin the differen
 one with none. The same holds for a trigger written as a percentile of the model's flows, or as a share of a named past flood
 in the model, which are also defined in the model's own terms: on this record the quantile, return-period and share triggers
 were interchangeable.</p>
+<p><b>A better model narrows the gap, it does not close it.</b> GloFAS 5.0 removed most of the low bias, and with it most of
+the penalty for writing the trigger in m³/s. The trigger defined by the model's own frequency still caught more flood years, and
+it is the one that does not depend on the model version: when a reanalysis is upgraded, a level written in the model's own terms
+is re-derived from the new record, while a fixed flow can suddenly pay far more or far less often. Basis risk was the same with
+both versions; the model's ranking of years, not its magnitudes, limits the trigger.</p>
 <p><b>One level for all sites hides the frequency.</b> An absolute level is easy to read and to settle, but it pays at a
 different frequency at every site, which Model Library {c('modellib')} showed for drought and which holds more strongly for
 floods: catchments differ in size, climate and regulation, and dividing by area does not remove the spread. Each site needs its
@@ -390,8 +436,8 @@ flood peaks in some years and not in others, which a model without the reservoir
 between rank correlation and the share of floods caught offers a practical screen: a few years of local evidence (a short gauge
 record, flood marks, satellite flood extents or insurance claims) give a rank correlation that indicates, before the policy is
 written, whether the global index can carry the trigger or needs local calibration.</p>
-<p><b>Limits.</b> One basin, strongly regulated and semi-arid, so the size of the bias will differ elsewhere. GloFAS 4.0;
-version 5.0 of the reanalysis is the next test. Daily means, so instantaneous peaks are higher than the values used. 17 to 24
+<p><b>Limits.</b> One basin, strongly regulated and semi-arid, so the size of the bias will differ elsewhere. The four-way and
+rainfall comparisons use GloFAS 4.0; GloFAS 5.0 was compared for the two river-flow triggers. Daily means, so instantaneous peaks are higher than the values used. 17 to 24
 years per gauge, so levels beyond 1-in-25 are extrapolations and the 1-in-25 scores rest on 11 flood years. The cell was
 matched with the gauge's mean flow, the model's best case. Rainfall comes from one reanalysis-based product on a grid of about
 50 km, coarse for the smaller catchments, and the HydroBASINS catchments differ in area from the gauges' by up to a factor of
@@ -399,7 +445,9 @@ matched with the gauge's mean flow, the model's best case. Rainfall comes from o
 where and how losses occur.</p>
 
 <h2>6. Conclusions</h2>
-<p>On {S['gauges']} gauges in the Guadalquivir basin, the GloFAS reanalysis saw floods at about a fifth of their measured size.
+<p>On {S['gauges']} gauges in the Guadalquivir basin, GloFAS 4.0 saw floods at about a fifth of their measured size; GloFAS 5.0
+saw them at about their measured size ({V5M['median_ratio10']:.2f}), which made a trigger written in m³/s work, though still less well
+than one written as the model's own return period, and left basis risk unchanged.
 A parametric trigger written in m³/s from the model was no better than chance; the same trigger written as the model's own
 1-in-5 level caught half the flood years with a false-alarm rate of {r5.false_alarm_rate:.2f}, but a large share of its payouts
 were still false. Set from each gauge's own record, quantile, return-period and share triggers performed alike; one level for all
@@ -407,18 +455,19 @@ gauges did not. Storm rainfall was a weaker index than river flow, wet-season ra
 false payouts. Four recommendations follow for anyone writing flood triggers from global data: set the level from each site's own
 record and write it in the index's own terms, never as a flow read from another source; prefer river flow for event cover and
 test a second index alongside it; screen basis risk with the rank correlation against any local record before the policy is
-written; and calibrate locally before the trigger enters a contract.</p>
+written; and calibrate locally before the trigger enters a contract. Re-test every trigger when the model is upgraded.</p>
 
 <h2>Data and code availability</h2>
 <p class="small">The data package published with this paper on Zenodo contains the derived data (annual maxima at the gauges
-and at their GloFAS cells; catchment rainfall maxima and the catchments and rainfall cells behind them; gauge list), the result files, the figures, the notebook that reproduces every number, the shared
+and at their GloFAS 4.0 and 5.0 cells; catchment rainfall maxima and the catchments and rainfall cells behind them; gauge list), the result files, the figures, the notebook that reproduces every number, the shared
 functions, the scripts that rebuild the derived data from the sources, the script that sets and scores the triggers in four
 ways, and the scripts that compute the statistics quoted here and
 build this paper from them. The same material is maintained at {REPO}
 (code MIT; text, figures and derived data CC BY 4.0). An interactive version with maps is at {CASE_URL}.</p>
 <h2>Acknowledgements and competing interests</h2>
 <p class="small">Gauge data: <i>Fuente: CEDEX, Anuario de Aforos 2021-2022 (MITECO)</i>. Global model: contains modified
-Copernicus Emergency Management Service information 2026 (GloFAS 4.0), served by Open-Meteo (CC BY 4.0). Rainfall: data
+Copernicus Emergency Management Service information 2026 (GloFAS 4.0, served by Open-Meteo, CC BY 4.0; GloFAS 5.0, from the
+Copernicus Early Warning Data Store). Rainfall: data
 obtained from the NASA Langley Research Center POWER Project, funded through the NASA Earth Science/Applied Science Program.
 Catchments: HydroBASINS {c('lehner')}. The comparison of four ways to set a trigger follows Model Library {c('modellib')}, whose
 published figures are quoted; Model Library had no part in this study. The author founded KAI Water &amp; Energy, which offers parametric trigger
@@ -428,7 +477,7 @@ studies (KAI-Hydro).</p>
 <p class="lic">© 2026 {AUTHOR}. This work is licensed under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
 Cite as: Kakooza, C. (2026) {TITLE}. Version {VERSION}. Zenodo.</p>
 """
-    return f"<!doctype html><html lang=en><head><meta charset=utf-8><title>River flow or rainfall? Parametric flood triggers — Guadalquivir</title><style>{CSS}</style></head><body>{body}</body></html>"
+    return f"<!doctype html><html lang=en><head><meta charset=utf-8><title>River flow or rainfall, GloFAS 4.0 or 5.0? Parametric flood triggers — Guadalquivir</title><style>{CSS}</style></head><body>{body}</body></html>"
 
 
 def report():
@@ -457,6 +506,8 @@ def report():
              ("flood_tools.py · rebuild_data.py", "shared functions (L-moments, GEV, LP3, bootstrap, scoring) and the rebuild script"),
              ("rebuild_rainfall.py · compare_triggers.py", "catchments and catchment rainfall; the four-way comparison and its figure"),
              ("paper/paper_stats.py", "the skill scores, per-gauge table, McNemar and Spearman tests, and the skill and basis-risk figures"),
+             ("data/annual_maxima_v5.csv · gauges_v5.csv", "GloFAS 5.0 annual maxima and matched cells, water years 1985–2022"),
+             ("paper/compare_v4_v5.py", "GloFAS 4.0 against 5.0 on the same gauge-years: Table 4 and Figure 7 of the paper"),
              ("paper/build_documents.py · print.js", "builds the paper and this report from the result files, and prints them to PDF")]
     ftbl = "<table><thead><tr><th>File</th><th style='text-align:left'>What it holds</th></tr></thead><tbody>" + "".join(f"<tr><td>{a}</td><td style='text-align:left'>{b}</td></tr>" for a, b in files) + "</tbody></table>"
     wrows = "".join(f"<tr><td>{lab}</td><td>{win.loc[key, 'median_rank_corr']:.2f}</td><td>{int(win.loc[key, 'caught_1in5'])}</td><td>{int(win.loc[key, 'false_payouts_1in5'])}</td><td>{win.loc[key, 'peirce_1in5']:.2f}</td></tr>"
@@ -468,7 +519,7 @@ def report():
     body = f"""
 <div class="cover-line"></div>
 <p class="kicker">KAI-Hydro technical report KH-TR-2026-01 · version {VERSION} · {DATE}</p>
-<h1>Flood triggers from global data, tested on 14 river gauges: river flow or rainfall? The Guadalquivir reference case</h1>
+<h1>Flood triggers from global data, tested on 14 river gauges: river flow or rainfall, GloFAS 4.0 or 5.0? The Guadalquivir reference case</h1>
 <p class="meta"><b>{AUTHOR}</b> · {AFFIL}</p>
 <p class="meta">Companion to the research paper of the same data · interactive case: {CASE_URL}</p>
 
@@ -487,6 +538,9 @@ gauge to the next.</li>
 <li><b>River flow or rainfall.</b> Storm rainfall (wettest 3 days) caught {int(rQ.hits)} of 60 flood years; wet-season rainfall
 (October–April) caught {int(rS.hits)}, as many as river flow. Requiring both to pass cut the share of false payouts from
 {rw['river']['false_payout_share']:.0%} to {rw['both']['false_payout_share']:.0%}.</li>
+<li><b>GloFAS 5.0.</b> On the same gauge-years the new version sees floods at {V5M['median_ratio10']:.0%} of their size. A
+trigger in m³/s now caught {V5A['hits']} of 60 flood years; the model's own 1-in-5 level caught {V5R['hits']}. About half of all
+payouts were still false.</li>
 <li><b>Basis risk.</b> {r5.false_payout_share:.0%} of that trigger's payouts came in years without a flood. Where the model
 ranks a site's big years well, the trigger works; where it does not, it fails. The rank correlation against any short local
 record predicts which (ρ = {RHO_SH[0]:.2f} across gauges).</li>
@@ -521,8 +575,14 @@ wet-season rainfall, following Model Library's Andalucía study. Full method: th
 {table_skill()}</div>
 {fig('gq_rank.png', 6, 'Basis risk by gauge: rank correlation of annual floods, gauge against GloFAS.', '70%')}
 {fig('gq_rho_share.png', 7, 'Share of 1-in-5 flood years caught at each gauge against the rank correlation: a screen for basis risk.', '55%')}
+<h3>GloFAS 4.0 or 5.0</h3>
+{fig('gq_v4_v5.png', 8, f'GloFAS 4.0 against 5.0 on the same {V5M["gauge_years"]} gauge-years: the 10-year flood (left) and 1-in-5 flood years paid and false payouts (right).')}
+<p>GloFAS 5.0 removes most of the low bias (10-year flood {V5M['median_ratio10']:.2f} of the gauged one against {V4M['median_ratio10']:.2f}).
+The fixed-flow trigger now caught {V5A['hits']} of 60 flood years (4.0: {V4A['hits']}); the return-period trigger {V5R['hits']} (4.0:
+{V4R['hits']}). False payouts: {V5R['false_payouts']} and {V5A['false_payouts']}. Write the trigger in the model's own terms and it is
+re-derived when the model is upgraded; a fixed flow is not.</p>
 <h3>River flow or rainfall, four ways</h3>
-{fig('gq_methods.png', 8, 'Triggers set to pay once in five years, four ways, on river flow and on rainfall: skill (left) and how often each pays at each gauge (right).')}
+{fig('gq_methods.png', 9, 'Triggers set to pay once in five years, four ways, on river flow and on rainfall: skill (left) and how often each pays at each gauge (right).')}
 <div class="tblock"><p class="tcap"><b>Table 2.</b> 1-in-5 triggers set four ways on three indices, and two-index triggers ({N_GY} gauge-years, 60 flood years).</p>
 {table_methods()}</div>
 
@@ -539,7 +599,8 @@ payouts from about half to under a third; price the lower payout frequency.</li>
 rise with the size of the event.</p></div>
 <div class="box"><h3>The study a client receives</h3><ol>
 <li><b>Snap</b> the site onto the river by catchment area; flag catchments too small for a 5 km model.</li>
-<li><b>Flood history:</b> 40+ years of daily discharge from GloFAS 5.0, plus any gauge or record the client holds.</li>
+<li><b>Flood history:</b> 40+ years of daily discharge from GloFAS 5.0, plus any gauge or record the client holds; triggers
+re-tested whenever the model is upgraded.</li>
 <li><b>Return levels</b> with 90 % bands; levels beyond the record flagged as extrapolations.</li>
 <li><b>Basis-risk screen:</b> rank correlation of the model's big years against any local evidence (short gauge record, flood
 marks, satellite flood extents, claims).</li>
@@ -548,7 +609,8 @@ marks, satellite flood extents, claims).</li>
 <li><b>Delivery:</b> a trigger sheet, a method note, and the same study as design floods for engineers.</li></ol></div>
 
 <h2>5. Limits</h2>
-<p>One basin, strongly regulated and semi-arid; GloFAS 4.0 (the 5.0 rerun is in progress); daily means rather than instantaneous
+<p>One basin, strongly regulated and semi-arid; four-way and rainfall comparisons on GloFAS 4.0, GloFAS 5.0 for the two
+river-flow triggers; daily means rather than instantaneous
 peaks; 17 to 24 years per gauge; the cell choice uses the gauge's mean flow (best case); rainfall from one product on a 50 km
 grid, over HydroBASINS catchments up to {AREA_R[2]:.1f} times the gauge's area; flood years are defined by flow, not by losses.</p>
 
@@ -572,7 +634,7 @@ catchment rainfall from HydroBASINS (level-8 shapefile, downloaded separately) a
 <i>compare_triggers.py</i> sets and scores the triggers four ways on the three indices.</p>
 <h2>Data credits and licence</h2>
 <p class="small"><i>Fuente: CEDEX, Anuario de Aforos 2021-2022 (MITECO).</i> Contains modified Copernicus Emergency Management
-Service information 2026 (GloFAS 4.0), via Open-Meteo (CC BY 4.0). GloFAS data are provided for information purposes only and
+Service information 2026 (GloFAS 4.0 via Open-Meteo, CC BY 4.0; GloFAS 5.0 from the Copernicus Early Warning Data Store). GloFAS data are provided for information purposes only and
 are not a flood warning. Rainfall: NASA Langley Research Center POWER Project, funded through the NASA Earth Science/Applied
 Science Program. Catchments: HydroBASINS (Lehner and Grill, 2013). Four-way comparison after Model Library, <i>Four ways to set a
 parametric trigger, tested on Andalucía rainfall and yields</i> (9 October 2026). This report: © 2026 {AUTHOR}, CC BY 4.0.</p>
