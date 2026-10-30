@@ -1,0 +1,169 @@
+{
+ "case": "usa-utah-forge-geothermal",
+ "generated": "2026-10-30",
+ "credit": "Utah FORGE, U.S. Department of Energy, via the Geothermal Data Repository (OpenEI), CC BY 4.0",
+ "sources": {
+  "mesh": {
+   "sha256": "ee4b35dffcceb4916d44bc3ac8882e715f154a0f9603d524940aee74a7534704",
+   "gdr": 1205,
+   "doi": "10.15121/1605155",
+   "licence": "CC BY 4.0",
+   "title": "Utah FORGE: Data for 3-D Model Development - Lithology, Temperature, Pressure, and Stress (Mesh Files)",
+   "url": "https://gdr.openei.org/files/1205/Mesh%20Files.zip",
+   "sha256_checked": "ee4b35dffcceb4916d44bc3ac8882e715f154a0f9603d524940aee74a7534704"
+  },
+  "ic": {
+   "sha256": "fc29649f321cff916849032c27c949e383709caeddae75b0a501c8334bbf826b",
+   "gdr": 1205,
+   "doi": "10.15121/1605155",
+   "licence": "CC BY 4.0",
+   "title": "Utah FORGE: Data for 3-D Model Development (Initial Conditions)",
+   "url": "https://gdr.openei.org/files/1205/Initial%20Conditions.zip",
+   "sha256_checked": "fc29649f321cff916849032c27c949e383709caeddae75b0a501c8334bbf826b"
+  },
+  "pt2018": {
+   "sha256": "04de1f0aebe92e6b3963fcc43f054033d0898cab3d9a238f78d8038ec2826ec8",
+   "gdr": 1101,
+   "doi": "10.15121/1493769",
+   "licence": "CC BY 4.0",
+   "title": "Utah FORGE: Milford Deep Test Well 58-32 (MU-ESW1) Pressure and Temperature Logs",
+   "url": "https://gdr.openei.org/files/1101/58-32_Temp_Pres_11_08_18.zip",
+   "sha256_checked": "04de1f0aebe92e6b3963fcc43f054033d0898cab3d9a238f78d8038ec2826ec8"
+  },
+  "wells": {
+   "sha256": "7bfc9cf730b8521a71a878ab38381a772ea06821e20f07c06c7ee5e3a5351471",
+   "gdr": 1358,
+   "doi": null,
+   "licence": "CC BY 4.0",
+   "title": "Utah FORGE: Updated Well, Well Pad, and Seismic Station GPS Coordinates December, 2021",
+   "url": "https://gdr.openei.org/files/1358/Utah%20FORGE%20Well%20and%20Seismic%20Locations.csv",
+   "sha256_checked": "7bfc9cf730b8521a71a878ab38381a772ea06821e20f07c06c7ee5e3a5351471"
+  }
+ },
+ "grid": {
+  "cells": [
+   50,
+   50,
+   55
+  ],
+  "cell_m": 50.0,
+  "elevation_range_m": [
+   -1500.0,
+   1250.0
+  ],
+  "transform": {
+   "E0": 333358.2232000001,
+   "N0": 4262837.092199997,
+   "aE": [
+    0.9063077870470985,
+    0.42261826173042694
+   ],
+   "aN": [
+    -0.4226182616069021,
+    0.9063077869089188
+   ],
+   "azimuth_x_deg": 114.99999999279922,
+   "scale": 0.9999999999529243,
+   "max_residual_m": 3.269812385734727e-07
+  },
+  "lithology_cells": {
+   "Basin Fill": 38890,
+   "Granitiod": 98610
+  }
+ },
+ "structure": {
+  "granite_top_elev_m": {
+   "min": -300.0,
+   "max": 1200.0,
+   "mean": 472.2
+  },
+  "depth_to_granite_m": {
+   "min": 533.0799999999999,
+   "max": 1911.3175000000006,
+   "mean": 1189.7572949999999
+  },
+  "columns_without_granite": 0,
+  "ground_elev_m": {
+   "min": 1607.3399999999979,
+   "max": 1737.6799999999978,
+   "spread_within_columns_m": 2.2737367544323206e-13
+  },
+  "granite_volume_km3": 12.32625,
+  "basin_fill_volume_km3": 4.86125
+ },
+ "well_58_32": {
+  "local_xy_m": [
+   1811.8224525613368,
+   1066.440197476024
+  ],
+  "cell_ij": [
+   36,
+   21
+  ],
+  "surveyed_ground_elev_m": 1684.7724,
+  "model_ground_elev_m": 1685.406744750044,
+  "ground_difference_m": 0.6343447500439652,
+  "granite_top_elev_m": 700.0,
+  "depth_to_granite_m": 985.406744750044,
+  "T_at_granite_top_c": 104.64498882107826,
+  "isotherm_depth_m": {
+   "150": 1541.8602558213504,
+   "175": 1898.9216167234333,
+   "200": 2257.2315055753484,
+   "225": 2633.2978162328245
+  },
+  "log": {
+   "date": "2018-11-08",
+   "max_depth_m": 2295.8572320000003,
+   "T_max_c": 199.34988888888887,
+   "compared_depth_m": [
+    440.0,
+    2290.0
+   ],
+   "n": 186,
+   "bias_c": 1.375968546655476,
+   "rmse_c": 1.6807381517397697,
+   "max_abs_c": 4.355727530127844,
+   "rmse_granite_c": 1.4840084515464713,
+   "gradient_basin_fill_c_per_km": {
+    "log": 94.86143857469489,
+    "model": 88.6679777859961
+   },
+   "gradient_granite_c_per_km": {
+    "log": 71.92756762824968,
+    "model": 73.19280254590863
+   }
+  }
+ },
+ "temperature": {
+  "range_c": [
+   53.99819540000004,
+   262.727262
+  ],
+  "granite_volume_km3_above": {
+   "150": 10.436625,
+   "175": 7.936,
+   "200": 5.2478750000000005,
+   "225": 2.4278750000000002
+  }
+ },
+ "pressure": {
+  "gradient_kpa_per_m": 8.884530694502851,
+  "intercept_mpa": 0.010787904739654334
+ },
+ "stress": {
+  "gradients_kpa_per_m": {
+   "Sv": 21.56,
+   "SHmax": 17.4,
+   "Shmin": 14.6
+  },
+  "at_2000_m_mpa": {
+   "Sv": 43.12,
+   "SHmax": 34.8,
+   "Shmin": 29.2
+  },
+  "regime": "normal faulting (Sv > SHmax > Shmin), as defined in the source workbook",
+  "note": "the workbook defines stresses by depth gradients; effective = total \u2212 pore pressure"
+ },
+ "seconds": 24.3
+}
