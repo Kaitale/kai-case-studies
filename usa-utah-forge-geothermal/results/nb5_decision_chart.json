@@ -1,0 +1,24 @@
+{
+ "published": {
+  "criterion_c": 198.6,
+  "slab_P50": 180.27362267954922,
+  "need_5_P50": 222.04145430462154,
+  "need_5_P10": 276.78088987423286,
+  "need_10_P50": 322.0605024492923,
+  "need_10_P10": 466.46185518000175,
+  "need_20_P50": 625.3172825587562,
+  "need_20_P10": 784.2386270249092,
+  "need_40_P50": null,
+  "need_40_P10": null,
+  "need_60_P50": null,
+  "need_60_P10": null,
+  "need_80_P50": null,
+  "need_80_P10": null,
+  "rmse_T_prod_end_c": 10.252882067926288,
+  "rmse_power_mean_mw": 0.8685742039091628,
+  "rmse_dp_ratio_max": 4.505607979360255,
+  "top_forge_spacing_96m_10kgs": "slab_m",
+  "top_doublet_400m_40kgs": "slab_m",
+  "top_design_and_uncertainty": "rate_kg_s"
+ }
+}
