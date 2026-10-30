@@ -134,6 +134,12 @@ Energy, via the Geothermal Data Repository (OpenEI), CC BY 4.0.*
 | `forge_model.npz` | `8f827f9cad4ea4e5c3ba8b23a948eb2bdbce4f225d74c8f215e94d68f7708d5d` |
 | `well_58_32_log_2018.csv` | `0ee61ff2e65573aa2705c108e4ae0e0925b7388e7674f898dc0c1608d359f3cf` |
 | `wells.csv` | `9d9cbc26ad0757e5061f64b52ffc5a743db9cfcda22ead24b112f49bef084e77` |
+| `fmi_58_32.csv` | `72aa8a3f346a24c92763abee6e0db41df5280fc05b2fb8a7675b07e37908779e` |
+| `trajectories_16A_16B.csv` | `3d466ed7ea156655468a5485fb24e8566510cd6bfa61810a449a59ebadcf20a4` |
+| `natural_fracture_poles.csv` | `7d65ff422b00ae527dd3516405870175cefc96b91b1eadda4ae6027ac4197a51` |
+| `stimulated_dfn.csv` | `adbdc05538a1ecd7a55624ef3eab22460b4a0c025b86316da39c62fdf24ff7fb` |
+| `circulation_2024_aug_daily.csv` | `b4cd2afb8fc104e6f772cbea4ed3a5b9faabfb231bc8dc8781898289eada903a` |
+| `circulation_2024_summary.json` | `41b5630e709b736ead6c13c795d463ee030ab7c2b30da6c5d2d3a98caad04048` |
 
 ### Sources (not vendored; all CC BY 4.0, licence read from each GDR page on 30 Oct 2026)
 
@@ -143,3 +149,8 @@ Energy, via the Geothermal Data Repository (OpenEI), CC BY 4.0.*
 | `Initial Conditions.zip` (temperature, pressure, stress) | [1205](https://gdr.openei.org/submissions/1205), DOI 10.15121/1605155 | `fc29649f321cff916849032c27c949e383709caeddae75b0a501c8334bbf826b` |
 | `58-32_Temp_Pres_11_08_18.zip` (58-32 log, 8 Nov 2018) | [1101](https://gdr.openei.org/submissions/1101), DOI 10.15121/1493769 | `04de1f0aebe92e6b3963fcc43f054033d0898cab3d9a238f78d8038ec2826ec8` |
 | `Utah FORGE Well and Seismic Locations.csv` (Dec 2021) | [1358](https://gdr.openei.org/submissions/1358) | `7bfc9cf730b8521a71a878ab38381a772ea06821e20f07c06c7ee5e3a5351471` |
+| `University_of_Utah_MU-ESW1_FMI-HD_7390-7527ft_Dip Final 3rdRun_Frac_Aps_Only.txt` (58-32 FMI picks) | [1299](https://gdr.openei.org/submissions/1299) | `5bad91b813661bbd51fe7d8083c96ad4a5f85e7702ae218156393716dfbbcb4c` |
+| `2024 02A Feb Reference DFN.zip` (trajectories, natural sets) | [1646](https://gdr.openei.org/submissions/1646), DOI 10.15121/2440870 | `107fef6f2c11f6de3f9916ccea5df09d16c21da062126b8644f2464c9d18b809` |
+| `2024 05 May New MEQ DFN.zip` (stimulated DFN) | [1646](https://gdr.openei.org/submissions/1646), DOI 10.15121/2440870 | `fe9845773de0054c682b9acdfb25b9c276024a660d80d1803e1785d019d7d095` |
+| `Extended Circulation Test.zip` (Aug-Sep 2024) | [1683](https://gdr.openei.org/submissions/1683), DOI 10.15121/2475065 | `ce5a8d4c69ac649024b472219d38601dbd6227ff29cd8c737fe5fe39670786f7` |
+| `16A-16B Injection-Circulation.zip` (27 Apr 2024) | [1611](https://gdr.openei.org/submissions/1611), DOI 10.15121/2371032 | `68ee7e43dde01e6aca5f5c205105ce1d7a530e67582e1cc340af00d8842d74cf` |

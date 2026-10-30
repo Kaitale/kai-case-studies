@@ -13,3 +13,6 @@ spain-guadalquivir-flood-triggers/power_cache/
 
 # Utah FORGE case: raw GDR downloads stay local
 usa-utah-forge-geothermal/gdr_cache/
+
+# Utah FORGE case: GDR downloads stay local (rebuild_data.py)
+usa-utah-forge-geothermal/gdr_cache/
