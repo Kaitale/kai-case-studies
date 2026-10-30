@@ -1,0 +1,15 @@
+gauge_id,name,glofas5_cell_lat,glofas5_cell_lon,km_gauge_to_cell,glofas5_mean_flow_ratio,match
+5004,Mengibar,37.975,-3.825,2.5,1.012,within x2
+5045,Loja,37.225,-4.225,7.6,0.878,within x2
+5080,Puente Tocon,37.225,-3.875,6.5,0.992,within x2
+5140,Villanueva De Las Torres,37.625,-3.075,10.4,0.918,within x2
+5081,Castro Del Rio,37.725,-4.575,7.3,0.965,within x2
+5057,Guadaira Encauzamiento,37.325,-5.975,3.4,0.608,within x2
+5025,Llano De Vela,38.325,-2.925,1.8,1.227,within x2
+5029,Mengibar Guadalbullon,37.875,-3.725,12.1,1.25,within x2
+5077,Central De Cala,37.725,-6.125,6.3,1.456,within x2
+5076,Aznalcazar Puente,37.375,-6.225,8.6,1.172,within x2
+5127,Huesna,37.675,-5.725,3.4,0.651,within x2
+5090,"Guijo, El",37.425,-6.225,1.5,0.911,within x2
+5142,Porcuna,37.825,-4.275,7.8,1.165,within x2
+5001,Arroyo Maria,38.175,-2.925,7.8,0.386,model biased

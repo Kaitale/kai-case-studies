@@ -25,6 +25,33 @@ paid, the ones it would have missed, and the payouts in years without a flood.
 
 ![All gauges: return period against fixed flow](figures/gq_triggers.png)
 
+## Update: GloFAS 5.0 (30 October 2026)
+
+GloFAS 5.0 is now downloaded for the whole basin (Copernicus EWDS, water years 1984-2022) and compared with the same
+14 gauges. `paper/compare_v4_v5.py` compares both versions on the **same 286 gauge-years** (1998-2022), so the
+difference is the model, not the years. Results: `results/v4_v5_comparison.json`, `results/v4_v5_skill.csv`.
+
+| Same 286 gauge-years, 1-in-5 trigger | GloFAS 4.0 | GloFAS 5.0 |
+|---|---|---|
+| Model's 10-year flood ÷ gauge's (median) | 0.22 | **1.05** |
+| Gauges with the 10-year flood within ×2 | 4 of 14 | **10 of 14** |
+| Rank correlation of annual floods (median) | 0.42 | **0.55** |
+| Return-period trigger: flood years paid / false payouts / Peirce | 30 of 60 / 27 / 0.38 | **33 of 60 / 34 / 0.40** |
+| Fixed m³/s trigger: flood years paid / false payouts / Peirce | 6 of 60 / 10 / 0.06 | **26 of 60 / 30 / 0.30** |
+| Return period vs fixed m³/s (McNemar, flood years caught by one only) | 24 vs 0, p = 1.2e-7 | 9 vs 2, p = 0.065 |
+
+What changes:
+- **The low bias is gone.** Version 5.0 sees these floods at about their real size, so a trigger read off a gauge
+  study in m³/s now works far better (26 of 60 against 6 of 60).
+- **The model's own return period is still the safer way to write the trigger** (33 against 26 flood years paid,
+  Peirce 0.40 against 0.30), but the gap is no longer significant on these years.
+- **Basis risk is unchanged:** about half of all payouts still fall in years without a flood. A short local record,
+  and the rank correlation against it, remain the screen before a trigger enters a contract.
+
+Over every year both cover (1985-2022, 407 gauge-years, 89 flood years) the return-period trigger paid 53 flood years
+with 44 false payouts, and the fixed m³/s trigger 41 with 31. The paper and the notebook above are GloFAS 4.0; a
+version 2 with both models follows.
+
 ## Paper, report and how to cite
 
 * **Research paper:** [paper/paper.pdf](paper/paper.pdf), Kakooza, C. (2026), *Writing parametric flood triggers from a

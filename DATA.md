@@ -101,6 +101,8 @@ the source credits below.
 | `rainfall_maxima.csv` | `40879e973ca4cfc1a8be11ca7d0e9c2366693cbaa9086fa7479d5d5aff675f95` |
 | `rain_catchments.csv` | `b18d1c5c0ae93bf220f5c28174b1d8d2ff79373095609fc0399140168721c4db` |
 | `rain_cell_weights.csv` | `515efd13b4f61aeccc8874388b21758917434c78285de0db4cd97d48e443201a` |
+| `annual_maxima_v5.csv` | `107f994cdbc4b5ffc8952a461506e6b11f85c1cf1cbe85987660c9f40f4ae293` |
+| `gauges_v5.csv` | `bec63422e69c992074efc5de83f798ec8433871767324f794a712dbd83882741` |
 
 ### Sources (not vendored)
 
@@ -118,6 +120,12 @@ the source credits below.
   Open-Meteo flood API (https://open-meteo.com/en/docs/flood-api; data CC BY 4.0, free API for non-commercial use).
   *Contains modified Copernicus Emergency Management Service information 2026.* GloFAS data are provided for
   information purposes only and are not a flood warning.
+* **GloFAS reanalysis**, version 5.0 (consolidated), Copernicus Emergency Management Service, downloaded from the
+  Copernicus Early Warning Data Store (dataset `cems-glofas-historical`) for the basin box 38.5 N, 6.45 W to 37.0 N,
+  2.65 W, water years 1984-2022 (`annual_maxima_v5.csv`, `gauges_v5.csv`). The 39 yearly netCDF files are not
+  vendored; their SHA-256 values are in `glofas_v5_files.sha256`. *Contains modified Copernicus Emergency Management
+  Service information 2026 (GloFAS v5.0).* GloFAS data are provided for information purposes only and are not a flood
+  warning.
 * **NASA POWER** daily precipitation (PRECTOTCORR), https://power.larc.nasa.gov, read through the daily point API.
   *These data were obtained from the NASA Langley Research Center (LaRC) POWER Project funded through the NASA Earth
   Science/Applied Science Program.*
