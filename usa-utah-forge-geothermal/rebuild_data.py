@@ -29,6 +29,10 @@ Phase 5 (notebook 6):
 * data/pt_16B_gdr1608_hourly.csv  16B Baker P-T gauge at 7,056.67 ft MD (GDR 1608): hourly median temperature (°C, the
                                 °F part of the record converted), readings per hour, and whether the hour is before the
                                 16A stimulation reached the gauge
+
+Phase 6 (notebook 7):
+* data/temp_16A_gdr1421_5m.csv  16A(78)-32 temperature log of 16 Aug 2021 (GDR 1421 workbook): median °C every 5 m of
+                                measured depth
 """
 import json
 import pathlib
@@ -128,3 +132,7 @@ print("wrote phase 4 data: tracers_2024_circulation.csv, dts_16B_2024.csv, dts_1
 pt = ft.read_pt1608_hourly(ft.fetch("pt1608"))
 pt.assign(time=pt.time.dt.strftime("%Y-%m-%dT%H:%M")).to_csv(out / "pt_16B_gdr1608_hourly.csv", index=False)
 print("wrote phase 5 data: pt_16B_gdr1608_hourly.csv")
+
+# phase 6: the 16A temperature log of 16 Aug 2021 (GDR 1421), median every 5 m of measured depth
+ft.read_16a_survey_5m(ft.fetch("survey1421")).to_csv(out / "temp_16A_gdr1421_5m.csv", index=False)
+print("wrote phase 6 data: temp_16A_gdr1421_5m.csv")
