@@ -21,6 +21,13 @@ Phase 3 (notebooks 2 and 3):
 * oda_homogeneous()    expected Oda permeability tensor of a homogeneous fracture network
 * circulation_daily()  GDR 1683 extended circulation test: daily medians and the steady-window summary
 
+Phase 4 (notebooks 4 and 5):
+
+* read_tracers()       QuantumPro circulation-test tracers 1–10 (GDR 1701): injection times, samples at 16B (ppb)
+* tracer_detection()   per tracer: the first-detection bracket and the peak sample, hours after injection
+* read_dts()           16B fibre temperatures (GDR 1721, HDF5): °C on (time, measured depth)
+* dts_bins()           200-ft medians of a DTS profile; the step and the gradient of the deep section
+
 Data credit: Utah FORGE, U.S. Department of Energy, via the Geothermal Data Repository (OpenEI), CC BY 4.0.
 """
 from __future__ import annotations
@@ -48,6 +55,12 @@ FILES = {   # pinned 30 Oct 2026; all CC BY 4.0
     "dfn_may": ("1646/2024 05 May New MEQ DFN.zip", "fe9845773de0054c682b9acdfb25b9c276024a660d80d1803e1785d019d7d095"),
     "ect": ("1683/Extended Circulation Test.zip", "ce5a8d4c69ac649024b472219d38601dbd6227ff29cd8c737fe5fe39670786f7"),
     "circ_apr": ("1611/16A-16B Injection-Circulation.zip", "68ee7e43dde01e6aca5f5c205105ce1d7a530e67582e1cc340af00d8842d74cf"),
+    # phase 4
+    "tracer": ("1701/Qpro_tracers.zip", "4fae497068ccf5185d04576d252355d37515b218ff46ce2e514d420b05caa53b"),
+    "dts_static": ("1721/Utah Forge 16B(78)-32 - DTS - mmf 2 - evo 4 - part 1.h5",
+                   "168951d5fda18c25b226707fa32a403bc0e3842ffd14b90431131efe82a40898"),
+    "dts_flowing": ("1721/Utah Forge 16B(78)-32 - DTS - mmf 2 - evo 4 - part 2.h5",
+                    "77faaec9d7d10982c215ed233d5477ed5b87892464ea0a89a4c87c4e755eedb7"),
 }
 CELL, NXY, NZ = 50.0, 50, 55
 Z_BOTTOM, Z_TOP = -1500.0, 1250.0
@@ -268,3 +281,86 @@ def circulation_daily(ect_zip):
                "T_16B_raw_c": T_raw, "manual_offset_c": float(np.median(dT)) / 1.8, "T_16B_wellhead_c": T_raw + float(np.median(dT)) / 1.8,
                "meter_slopes": slope}
     return daily, summary
+
+
+# ---------------------------------------------------------------------- phase 4
+def read_tracers(tracer_zip):
+    """GDR 1701: the circulation-test tracers 1–10. Times in hours since the GDR 1683 test start (8 Aug 2024 07:00).
+    Injection times are from the report's Table 7 (all at 07:00 except tracer 1 at 07:25)."""
+    import datetime as dt
+    import re
+
+    import openpyxl
+
+    start = dt.datetime(2024, 8, 8, 7, 0)
+    with zipfile.ZipFile(tracer_zip) as z:
+        x = z.read([n for n in z.namelist() if n.endswith(".xlsx")][0])
+        d = z.read([n for n in z.namelist() if n.endswith(".docx")][0])
+    rows = list(openpyxl.load_workbook(io.BytesIO(x), read_only=True, data_only=True).worksheets[0].iter_rows(values_only=True))
+    first = next(i for i, r in enumerate(rows) if r and r[1] == "FloTrac tracer #1")
+    hdr = max(i for i, r in enumerate(rows[:first]) if r and "Time (min)" in r)
+    j = list(rows[hdr]).index("Time (min)")
+    tmin = []
+    for v in rows[hdr][j + 1:]:
+        if not isinstance(v, (int, float)):
+            break
+        tmin.append(float(v))
+    t_h = np.array(tmin) / 60 + (dt.datetime(2024, 8, 9, 17, 26) - start).total_seconds() / 3600
+    with zipfile.ZipFile(io.BytesIO(d)) as dz:
+        txt = re.sub(r"<[^>]+>", "", re.sub(r"</w:p>", "\n", dz.read("word/document.xml").decode("utf8")))
+    i = txt.find("Table 7: Summary of tracers")
+    lines = [ln.strip() for ln in txt[i:i + 3000].splitlines() if ln.strip()]
+    k = lines.index("Comment") + 1
+    table = {}
+    while k + 6 < len(lines) and len(table) < 10:
+        num, d0, h0, _, _, hrs, _ = lines[k:k + 7]
+        mo, dd = (int(v) for v in d0.split("/"))
+        hh, mm = (int(v) for v in re.findall(r"(\d+):(\d+)", h0)[0])
+        table[int(num)] = {"injected_t_h": (dt.datetime(2024, mo, dd, hh + (12 if "PM" in h0 and hh != 12 else 0), mm) - start).total_seconds() / 3600,
+                           "report_first_detection_h": float(hrs)}
+        k += 7
+    out = []
+    for r in rows[first:first + 12]:
+        if r and isinstance(r[1], str) and r[1].startswith("FloTrac tracer #"):
+            n = int(r[1].split("#")[1])
+            c = [float(v) if isinstance(v, (int, float)) else 0.0 for v in r[2:2 + len(t_h)]]
+            out.append({"tracer": n, **table[n], "c_ppb": c})
+    return t_h, out
+
+
+def tracer_detection(sample_t_h, injected_t_h, c_ppb):
+    """First-detection bracket (last clean sample, first positive sample) and the peak sample, hours after injection."""
+    t = np.asarray(sample_t_h, float)
+    c = np.asarray(c_ppb, float)
+    a = t > injected_t_h
+    ta, ca = t[a] - injected_t_h, c[a]
+    pos = np.nonzero(ca > 0)[0]
+    if not len(pos):
+        return None
+    i = pos[0]
+    return {"last_clean_h": float(ta[i - 1]) if i > 0 else 0.0, "first_positive_h": float(ta[i]), "peak_h": float(ta[int(np.argmax(ca))]),
+            "peak_ppb": float(ca.max())}
+
+
+def read_dts(path):
+    """GDR 1721 DTS file: temperature in °C (converted from °F) on (time, depth), depth in ft MD RKB, time in hours since
+    the GDR 1683 test start (the file is in UTC; local time is UTC − 6 h)."""
+    import datetime as dt
+
+    import h5py
+
+    with h5py.File(path, "r") as h:
+        a = h["data"][:].astype(float)
+        unit = h["data"].attrs.get("DataUnitLabel")
+        z = h["depth"][:].astype(float)
+        st = [dt.datetime.strptime(s.decode(), "%m/%d/%Y %H:%M:%S.%f") for s in h["stamps"][:]]
+    if (unit.decode() if isinstance(unit, bytes) else unit) == "F":
+        a = (a - 32) / 1.8
+    t = np.array([(s - dt.datetime(2024, 8, 8, 7, 0)).total_seconds() / 3600 - 6.0 for s in st])
+    return t, z, a
+
+
+def dts_bins(md_ft, T_c, width=200.0, top=0.0, bottom=10400.0):
+    """Median temperature in ``width``-ft bins."""
+    b = np.arange(top, bottom, width)
+    return b, np.array([np.median(T_c[(md_ft >= x) & (md_ft < x + width)]) if ((md_ft >= x) & (md_ft < x + width)).any() else np.nan for x in b])
