@@ -15,6 +15,7 @@ asks the question a geothermal client pays for: *what will a well pair deliver o
 | [4 · Checks and the upscaling check](04_upscaling_check.ipynb) | Is the temperature misfit in the wellbore? Do the tracers agree? Which rates are feasible with pressure-dependent apertures? Does a coarse model change the answer? | A wellbore model accounts for **13 °C** of the misfit; **+11 °C** (P10–P90 10–13) is left at the bottom hole. Tracers arrive in **4.5–10.5 h**, against minutes in the model: the transport porosity is **23–55 ×** the pressure-fitted one. With Barton–Bandis apertures the highest feasible rate is **9.7 kg/s** (9.3–10.5). On 70 m cells the usual coarse model is **+11 °C** optimistic at 30 years (P10–P90 +3 to +14). KAI global + near-well upscaling, not recalibrated, is **+2 °C** (0 to +5). Early breakthrough is unreliable on 70 m cells either way. *Simulated* |
 | [5 · Decision chart](05_decision_chart.ipynb) | This well pair is a test bed, not a power plant: what spacing would a 30-year doublet need? | To keep ≥ 198.6 °C for 30 years: about **320 m** at 10 kg/s (P10 case 470 m), **630 m** at 20 kg/s (780 m), and more than 800 m at 40 kg/s and above. Sobol: rate and spacing first, then the thickness of the stimulated network. *Surrogate of simulated proxy runs*; held-out error 10 °C RMSE |
 | [6 · Phase 5 follow-ups](06_phase5_followups.ipynb) | Does local thermal non-equilibrium explain the last +11 °C? Does a front correction fix coarse-model breakthrough? Is there a local Shmin? Does the 16B gauge (GDR 1608) agree with the temperature model? | A dual-continuum (LTNE) model, refitted to the August pressures, leaves **+4.5 °C** (−2.2 to +10.8) of the 11 °C; the 16B gauge says the temperature model is about **+6 °C** hot there. The front correction **fails** the rule set in advance (corrected breakthrough 11–20 % early), so coarse-model breakthrough is not quoted. No closure at 16A (GDR 1408); with the 16B minifracs (GDR 1596) the highest rate is **< 5**, **11.8** or **16.2 kg/s** (as measured / cooling-adjusted mid / high) against **9.6** with GDR 1222. *Simulated* |
+| [7 · Temperature model, corrected](07_geotherm_correction.ipynb) | Is the FORGE temperature model right at the wells, and what changes when the forecasts correct for it? | Blind against the 16A log of August 2021 (GDR 1421), the model is **+5.9 °C** hot in the 16A open hole and **+8.2 °C** at the depths where 16B produces. The local correction is **+5.9 °C** (P10–P90 5.1–6.7) on average between the wells. With it, the start at 10 kg/s falls **213.7 → 206.8 °C**, the 30-year temperature **129.2 → 126.5 °C** (113.5–142.9), heat after 30 years **2.9 → 2.8 MWth**, and the August 2024 misfit **+11.2 → +4.4 °C** (2.7–5.9). The pressure limit hardly moves (GDR 1222: **9.8 kg/s**); with the 16B minifracs as measured it is **4.9 kg/s** (3.6–6.1). *Simulated* |
 
 ![Depth to the granitoid and a section through 58-32](figures/forge_structure.png)
 
@@ -43,6 +44,7 @@ All from the GDR, CC BY 4.0 (details and DOIs in [LICENCE.md](LICENCE.md)):
   natural-fracture sets (orientation, size) and the connected DFN of the stimulated reservoir.
 * **2024 circulation tests**: the extended test of 8 Aug – 5 Sep 2024 (GDR 1683) and the 9-hour test of 27 April 2024
   (GDR 1611).
+* **16A temperature log of 16 August 2021** (GDR 1421) and the **16B minifrac LAS files** (GDR 1570), phase 6.
 * **2024 nanoparticle tracers** (GDR 1701, QuantumPro; DOI 10.15121/2507443): ten tracers injected into 16A during the
   August test and sampled at 16B.
 * **16B fibre temperatures** (GDR 1721, Neubrex DTS), 4 August and 12–16 August 2024.
@@ -53,7 +55,7 @@ All from the GDR, CC BY 4.0 (details and DOIs in [LICENCE.md](LICENCE.md)):
 grid's map transform), `well_58_32_log_2018.csv` (the log every 5 m) and `wells.csv`; for notebooks 2 and 3
 `fmi_58_32.csv`, `trajectories_16A_16B.csv` (every 10 m), `natural_fracture_poles.csv`, `stimulated_dfn.csv`,
 `circulation_2024_aug_daily.csv` and `circulation_2024_summary.json`; for notebooks 4 and 5
-`tracers_2024_circulation.csv`, `dts_16B_2024.csv` and `dts_16B_2024_deep.json`. `rebuild_data.py` downloads the
+`tracers_2024_circulation.csv`, `dts_16B_2024.csv` and `dts_16B_2024_deep.json`; for notebook 7 `temp_16A_gdr1421_5m.csv`. `rebuild_data.py` downloads the
 GDR files into `gdr_cache/`, checks their SHA-256 and rebuilds `data/` byte for byte.
 
 ## Method
@@ -91,6 +93,12 @@ results in `results/kai_engine_phase5.json`). It re-runs the phase 4 members unc
 * feasibility against the 16B minifrac Shmin (GDR 1596) beside GDR 1222;
 * the GDR 1608 gauge in 16B as a static temperature check (with its °C to °F switch on 2 April 2024 handled).
 `make_notebooks_phase5.py` builds it.
+
+Notebook 7 shows the phase 6 runs (`kai-engine reference forge-phase6 --phase4 results/kai_engine_phase4.json --phase5
+results/kai_engine_phase5.json`; results in `results/kai_engine_phase6.json`, run id inside). It recomputes the
+model-versus-log check along 16A from `data/temp_16A_gdr1421_5m.csv`, shows the correction and its check against the
+16B gauge, and every forecast before and after. The same results file is what the Reservoir Lab copilot cites when it
+answers questions on this case. `make_notebooks_phase6.py` builds it.
 
 ## Limits
 

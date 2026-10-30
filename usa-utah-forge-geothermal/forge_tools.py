@@ -63,6 +63,9 @@ FILES = {   # pinned 30 Oct 2026; all CC BY 4.0
                     "77faaec9d7d10982c215ed233d5477ed5b87892464ea0a89a4c87c4e755eedb7"),
     # phase 5
     "pt1608": ("1608/16B Baker P_T.zip", "362ee668691231f55f8116c622f942098b0b1945f9b3e5cca4dfe4521b13ecd3"),
+    # phase 6
+    "survey1421": ("1421/Utah FORGE Deep Well Temperature Profiles_Sept 2022.xlsx",
+                   "c1a35f7914b5f59117f03b03e38c71f6c4d066afa0b0373b528f0a9f6a3a26b7"),
 }
 CELL, NXY, NZ = 50.0, 50, 55
 Z_BOTTOM, Z_TOP = -1500.0, 1250.0
@@ -403,3 +406,31 @@ def read_pt1608_hourly(zip_path, quiet_until="2024-04-03T00:00:00"):
     df = df.drop(index=i) if i < len(df) else df
     df["quiet"] = df.time < pd.Timestamp(quiet_until)
     return df.reset_index(drop=True)
+
+
+def read_16a_survey_5m(xlsx_path, sheet="16A(78)-32_2nd", step_m=5.0):
+    """GDR 1421 workbook: the 16A(78)-32 temperature log of 16 Aug 2021 (about 216 days after rig release), MD (ft) and
+    temperature (°F) in columns A and C from row 5. Returned as the median temperature (°C) in each ``step_m`` metre
+    bin of measured depth (bin centre)."""
+    import openpyxl
+    import pandas as pd
+
+    ws = openpyxl.load_workbook(xlsx_path, read_only=True, data_only=True)[sheet]
+    md, T = [], []
+    for i, r in enumerate(ws.iter_rows(values_only=True, max_col=3)):
+        if i < 4:
+            continue
+        if isinstance(r[0], (int, float)) and isinstance(r[2], (int, float)):
+            md.append(float(r[0]) * FT); T.append((float(r[2]) - 32.0) / 1.8)
+    df = pd.DataFrame({"md": md, "T": T})
+    df["bin"] = np.floor(df.md / step_m).astype(int)
+    g = df.groupby("bin").T.median()
+    return pd.DataFrame({"md_m": np.round((g.index.values + 0.5) * step_m, 2), "T_c": np.round(g.values, 3)})
+
+
+def along_well(field, transform, E, N, elev):
+    """A node field (z from Z_BOTTOM in CELL steps) interpolated at points along a well: bilinear in plan, linear with
+    elevation."""
+    x, y = to_local(transform, E, N)
+    z = Z_BOTTOM + np.arange(field.shape[0]) * CELL
+    return np.array([np.interp(e, z, column_profile(field, xi, yi)) for xi, yi, e in zip(x, y, elev)])

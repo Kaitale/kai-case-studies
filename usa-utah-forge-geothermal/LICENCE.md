@@ -26,6 +26,8 @@ CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
 | [1608](https://gdr.openei.org/submissions/1608) | Utah FORGE: Well 16B(78)-32 Baker Hughes Pressure-Temperature Gauge Data, March–April 2024 | [10.15121/2368548](https://doi.org/10.15121/2368548) | CC BY 4.0 | hourly temperature at the gauge (notebook 6) |
 | [1596](https://gdr.openei.org/submissions/1596) | Utah FORGE 2439: Report on Minifrac Tests for Stress Characterization (Battelle, 2023) | — | CC BY 4.0 | Shmin gradients quoted from the report (notebook 6); no file data used |
 | [1408](https://gdr.openei.org/submissions/1408) | Utah FORGE: Well 16A(78)-32 Stage 1 Pressure Falloff Analysis (Colorado School of Mines, 2022) | — | CC BY 4.0 | quoted: no closure stress observed (notebook 6) |
+| [1421](https://gdr.openei.org/submissions/1421) | Utah FORGE: Deep Wells Temperature Surveys as of September 2022 | — | CC BY 4.0 | the 16A(78)-32 log of 16 Aug 2021, median every 5 m (notebook 7) |
+| [1570](https://gdr.openei.org/submissions/1570) | Utah FORGE 2439: Well 16B(78)-32 Field-Test Data from Mini-Frac Tests | — | CC BY 4.0 | shut-in pressures read from the Baker Hughes LAS files by the KAI engine, quoted (notebook 7); no file data published |
 | [1222](https://gdr.openei.org/submissions/1222) | Utah FORGE: Discrete Fracture Network (DFN) Data (Finnila and Podgorney, 2020) | — | CC BY 4.0 | stress summary only (SHmax direction and range, Shmin gradient), quoted; no file used |
 
 Only derived values are published here (`data/`); the GDR files are not redistributed. `rebuild_data.py` downloads them
