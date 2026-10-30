@@ -3,7 +3,7 @@
 Run from the case folder:  python paper/compare_v4_v5.py
 Matched: the 286 gauge-years both versions cover (water years 1998-2022), so the two are compared like for like.
 Full v5: every year v5 and the gauges both cover (1985-2022).
-Writes results/v4_v5_comparison.json and results/v4_v5_skill.csv.
+Writes results/v4_v5_comparison.json, results/v4_v5_skill.csv and figures/gq_v4_v5.png.
 """
 from __future__ import annotations
 
@@ -35,7 +35,7 @@ def analyse(am: pd.DataFrame, col: str) -> dict:
         for src, c in (("gauge", "gauge_max_m3s"), ("model", col)):
             b, f = ft.fit_best(s[c].values); fits[(gid, src)] = f[b]
         lg10, lm10 = ft.level(fits[(gid, "gauge")], 10), ft.level(fits[(gid, "model")], 10)
-        rows_g.append({"gauge_id": gid, "ratio10": lm10 / lg10, "rho": float(stats.spearmanr(s.gauge_max_m3s, s[col]).statistic)})
+        rows_g.append({"gauge_id": gid, "q10_gauge": lg10, "q10_model": lm10, "ratio10": lm10 / lg10, "rho": float(stats.spearmanr(s.gauge_max_m3s, s[col]).statistic)})
         for t in LEVELS:
             lg, lm = ft.level(fits[(gid, "gauge")], t), ft.level(fits[(gid, "model")], t)
             flags[(gid, t)] = (s.gauge_max_m3s.values >= lg, s[col].values >= lm, s[col].values >= lg)
@@ -64,6 +64,32 @@ def analyse(am: pd.DataFrame, col: str) -> dict:
             "per_gauge": g.round(3).to_dict("records"), "skill": skill, "pair": pair}
 
 
+def figure(out):
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    plt.rcParams.update({"figure.dpi": 150, "axes.grid": True, "grid.color": "#dfe8e8", "axes.spines.top": False, "axes.spines.right": False,
+                         "font.size": 10, "axes.titleweight": "bold", "axes.titlesize": 11, "legend.frameon": False, "savefig.bbox": "tight", "savefig.facecolor": "white"})
+    V4, V5, GREY = "#eb6834", "#2a78d6", "#898781"
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(11, 4.4), gridspec_kw={"width_ratios": [1, 1.15]})
+    d = np.array([2, 2000.0]); a1.fill_between(d, d / 2, d * 2, color="#2a78d6", alpha=.08, lw=0); a1.plot(d, d, color=GREY, lw=1)
+    for key, col, lab in (("matched_v4", V4, "GloFAS 4.0"), ("matched_v5", V5, "GloFAS 5.0")):
+        g = pd.DataFrame(out[key]["per_gauge"])
+        a1.scatter(g.q10_gauge, g.q10_model, s=34, color=col, edgecolor="white", lw=.8, label=f"{lab} (median ratio {out[key]['median_ratio10']:.2f})", zorder=3)
+    a1.set(xscale="log", yscale="log", xlim=(4, 1000), ylim=(2, 1000), xlabel="10-year flood at the gauge (m³/s)", ylabel="10-year flood in the model (m³/s)",
+           title="The 10-year flood, gauge against model"); a1.legend(loc="upper left", fontsize=8)
+    lab = ["return period\n(model's own 1-in-5)", "fixed m³/s\n(gauge's 1-in-5)"]; x = np.arange(2); w = .2
+    for i, (key, col, name) in enumerate((("matched_v4", V4, "4.0"), ("matched_v5", V5, "5.0"))):
+        sk = [r for r in out[key]["skill"] if r["T"] == 5]
+        for j, (vals, alpha, what) in enumerate((([r["hits"] for r in sk], 1, "flood years paid"), ([r["false_payouts"] for r in sk], .35, "false payouts"))):
+            xs = x + (i * 2 + j - 1.5) * w
+            a2.bar(xs, vals, w * .92, color=col, alpha=alpha, label=f"GloFAS {name}: {what}")
+            for xi, v in zip(xs, vals): a2.text(xi, v + .8, str(v), ha="center", fontsize=8.5, color=col, fontweight="bold")
+    a2.set(xticks=x, xticklabels=lab, ylim=(0, 48), ylabel="gauge-years (60 flood years in all)", title="Same 286 gauge-years, 1-in-5 trigger")
+    a2.legend(loc="upper right", fontsize=7.5, ncol=2)
+    fig.tight_layout(); fig.savefig(HERE / "figures/gq_v4_v5.png"); plt.close(fig)
+
+
 def main():
     am4 = pd.read_csv(HERE / "data/annual_maxima.csv")
     am5 = pd.read_csv(HERE / "data/annual_maxima_v5.csv")
@@ -74,6 +100,7 @@ def main():
     (HERE / "results/v4_v5_comparison.json").write_text(json.dumps(out, indent=1))
     rows = [dict(r, set=k) for k in out for r in out[k]["skill"]]
     pd.DataFrame(rows)[["set", "T", "written_as", "hits", "misses", "false_payouts", "hit_rate", "false_alarm_rate", "false_payout_share", "peirce", "p_vs_chance"]].to_csv(HERE / "results/v4_v5_skill.csv", index=False)
+    figure(out)
     for k, v in out.items():
         s5 = [r for r in v["skill"] if r["T"] == 5]
         print(f"{k}: {v['gauge_years']} gauge-years, median ratio10 {v['median_ratio10']}, within x2 {v['gauges_ratio10_within_x2']}, median rho {v['median_rank_corr']}, rho-vs-share {v['rho_vs_share_caught']}")

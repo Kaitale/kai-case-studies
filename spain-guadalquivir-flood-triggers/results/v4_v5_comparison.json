@@ -11,71 +11,99 @@
   "per_gauge": [
    {
     "gauge_id": 5001,
+    "q10_gauge": 37.493,
+    "q10_model": 7.72,
     "ratio10": 0.206,
     "rho": -0.197
    },
    {
     "gauge_id": 5004,
+    "q10_gauge": 354.574,
+    "q10_model": 70.174,
     "ratio10": 0.198,
     "rho": 0.71
    },
    {
     "gauge_id": 5025,
+    "q10_gauge": 30.834,
+    "q10_model": 4.012,
     "ratio10": 0.13,
     "rho": -0.062
    },
    {
     "gauge_id": 5029,
+    "q10_gauge": 41.87,
+    "q10_model": 34.722,
     "ratio10": 0.829,
     "rho": 0.4
    },
    {
     "gauge_id": 5045,
+    "q10_gauge": 135.031,
+    "q10_model": 62.174,
     "ratio10": 0.46,
     "rho": 0.542
    },
    {
     "gauge_id": 5057,
+    "q10_gauge": 403.623,
+    "q10_model": 45.364,
     "ratio10": 0.112,
     "rho": 0.329
    },
    {
     "gauge_id": 5076,
+    "q10_gauge": 114.179,
+    "q10_model": 26.461,
     "ratio10": 0.232,
     "rho": 0.752
    },
    {
     "gauge_id": 5077,
+    "q10_gauge": 78.846,
+    "q10_model": 11.165,
     "ratio10": 0.142,
     "rho": 0.688
    },
    {
     "gauge_id": 5080,
+    "q10_gauge": 65.56,
+    "q10_model": 36.678,
     "ratio10": 0.559,
     "rho": 0.391
    },
    {
     "gauge_id": 5081,
+    "q10_gauge": 55.519,
+    "q10_model": 12.666,
     "ratio10": 0.228,
     "rho": 0.735
    },
    {
     "gauge_id": 5090,
+    "q10_gauge": 113.312,
+    "q10_model": 11.233,
     "ratio10": 0.099,
     "rho": 0.442
    },
    {
     "gauge_id": 5127,
+    "q10_gauge": 126.111,
+    "q10_model": 24.358,
     "ratio10": 0.193,
     "rho": 0.518
    },
    {
     "gauge_id": 5140,
+    "q10_gauge": 7.335,
+    "q10_model": 8.507,
     "ratio10": 1.16,
     "rho": 0.019
    },
    {
     "gauge_id": 5142,
+    "q10_gauge": 37.647,
+    "q10_model": 26.775,
     "ratio10": 0.711,
     "rho": 0.301
    }
@@ -213,71 +241,99 @@
   "per_gauge": [
    {
     "gauge_id": 5001,
+    "q10_gauge": 37.493,
+    "q10_model": 18.572,
     "ratio10": 0.495,
     "rho": 0.1
    },
    {
     "gauge_id": 5004,
+    "q10_gauge": 354.574,
+    "q10_model": 380.611,
     "ratio10": 1.073,
     "rho": 0.63
    },
    {
     "gauge_id": 5025,
+    "q10_gauge": 30.834,
+    "q10_model": 33.75,
     "ratio10": 1.095,
     "rho": 0.038
    },
    {
     "gauge_id": 5029,
+    "q10_gauge": 41.87,
+    "q10_model": 49.845,
     "ratio10": 1.19,
     "rho": 0.461
    },
    {
     "gauge_id": 5045,
+    "q10_gauge": 135.031,
+    "q10_model": 235.608,
     "ratio10": 1.745,
     "rho": 0.587
    },
    {
     "gauge_id": 5057,
+    "q10_gauge": 403.623,
+    "q10_model": 38.372,
     "ratio10": 0.095,
     "rho": 0.465
    },
    {
     "gauge_id": 5076,
+    "q10_gauge": 114.179,
+    "q10_model": 137.976,
     "ratio10": 1.208,
     "rho": 0.773
    },
    {
     "gauge_id": 5077,
+    "q10_gauge": 78.846,
+    "q10_model": 27.23,
     "ratio10": 0.345,
     "rho": 0.651
    },
    {
     "gauge_id": 5080,
+    "q10_gauge": 65.56,
+    "q10_model": 44.701,
     "ratio10": 0.682,
     "rho": 0.633
    },
    {
     "gauge_id": 5081,
+    "q10_gauge": 55.519,
+    "q10_model": 97.798,
     "ratio10": 1.762,
     "rho": 0.765
    },
    {
     "gauge_id": 5090,
+    "q10_gauge": 113.312,
+    "q10_model": 115.603,
     "ratio10": 1.02,
     "rho": 0.603
    },
    {
     "gauge_id": 5127,
+    "q10_gauge": 126.111,
+    "q10_model": 42.373,
     "ratio10": 0.336,
     "rho": 0.242
    },
    {
     "gauge_id": 5140,
+    "q10_gauge": 7.335,
+    "q10_model": 11.794,
     "ratio10": 1.608,
     "rho": 0.503
    },
    {
     "gauge_id": 5142,
+    "q10_gauge": 37.647,
+    "q10_model": 33.002,
     "ratio10": 0.877,
     "rho": 0.346
    }
@@ -415,71 +471,99 @@
   "per_gauge": [
    {
     "gauge_id": 5001,
+    "q10_gauge": 36.559,
+    "q10_model": 18.308,
     "ratio10": 0.501,
     "rho": 0.181
    },
    {
     "gauge_id": 5004,
+    "q10_gauge": 369.776,
+    "q10_model": 393.878,
     "ratio10": 1.065,
     "rho": 0.619
    },
    {
     "gauge_id": 5025,
+    "q10_gauge": 33.073,
+    "q10_model": 32.35,
     "ratio10": 0.978,
     "rho": 0.217
    },
    {
     "gauge_id": 5029,
+    "q10_gauge": 58.052,
+    "q10_model": 57.005,
     "ratio10": 0.982,
     "rho": 0.564
    },
    {
     "gauge_id": 5045,
+    "q10_gauge": 168.753,
+    "q10_model": 255.892,
     "ratio10": 1.516,
     "rho": 0.703
    },
    {
     "gauge_id": 5057,
+    "q10_gauge": 459.398,
+    "q10_model": 40.83,
     "ratio10": 0.089,
     "rho": 0.593
    },
    {
     "gauge_id": 5076,
+    "q10_gauge": 109.141,
+    "q10_model": 146.68,
     "ratio10": 1.344,
     "rho": 0.674
    },
    {
     "gauge_id": 5077,
+    "q10_gauge": 118.93,
+    "q10_model": 34.974,
     "ratio10": 0.294,
     "rho": 0.636
    },
    {
     "gauge_id": 5080,
+    "q10_gauge": 83.907,
+    "q10_model": 44.584,
     "ratio10": 0.531,
     "rho": 0.756
    },
    {
     "gauge_id": 5081,
+    "q10_gauge": 95.632,
+    "q10_model": 100.605,
     "ratio10": 1.052,
     "rho": 0.655
    },
    {
     "gauge_id": 5090,
+    "q10_gauge": 136.89,
+    "q10_model": 131.111,
     "ratio10": 0.958,
     "rho": 0.649
    },
    {
     "gauge_id": 5127,
+    "q10_gauge": 145.318,
+    "q10_model": 46.051,
     "ratio10": 0.317,
     "rho": 0.26
    },
    {
     "gauge_id": 5140,
+    "q10_gauge": 24.509,
+    "q10_model": 15.217,
     "ratio10": 0.621,
     "rho": 0.665
    },
    {
     "gauge_id": 5142,
+    "q10_gauge": 34.803,
+    "q10_model": 31.97,
     "ratio10": 0.919,
     "rho": 0.393
    }

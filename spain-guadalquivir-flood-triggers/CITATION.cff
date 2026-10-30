@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this paper, its data or code, please cite it as below, and credit CEDEX and the Copernicus Emergency Management Service (see LICENCE.md)."
-title: "River flow or rainfall? Writing parametric flood triggers from global data, tested gauge by gauge in the Guadalquivir basin, Spain"
+title: "River flow or rainfall, GloFAS 4.0 or 5.0? Writing parametric flood triggers from global data, tested gauge by gauge in the Guadalquivir basin, Spain"
 type: dataset
-version: "1.0"
+version: "2.0"
 date-released: "2026-10-30"
 authors:
   - family-names: Kakooza
