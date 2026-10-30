@@ -24,6 +24,13 @@ Phase 4 (notebooks 4 and 5):
                                 16B sample, hours since the GDR 1683 test start
 * data/dts_16B_2024.csv         16B fibre temperatures (GDR 1721): 200-ft medians before the test (4 Aug) and on days 6.5–7.7
                                 of the test, with the spread over that window
+
+Phase 5 (notebook 6):
+* data/minifrac_16B_2023_isip.csv   the seven 16B mini-frac tests (GDR 1570): depth, initial pressure and the instantaneous
+                                shut-in pressure (ISIP) of every injection cycle, derived here (straight line in √Δt)
+* data/minifrac_16B_2023_mf2.csv    the MF-2 test record every 2 s: interval pressure (psi) and rate (cc/s)
+* data/pt_gauge_16B_2024_hourly.csv the 16B gauge at 7,056.67 ft MD (GDR 1608): hourly medians of temperature and pressure
+* data/temperature_16A_2021.csv     the 16A(78)-32 temperature log of 16 Aug 2021 (GDR 1421): 5 m medians along MD
 """
 import json
 import pathlib
@@ -118,3 +125,25 @@ prof = np.median(Af[w], 0)
     "T_top_c": round(float(np.median(prof[(zf >= 3200) & (zf < 3300)])), 4), "T_bottom_c": round(float(np.median(prof[(zf > 9140) & (zf <= 9240)])), 4),
     "traces_in_window": int(w.sum())}, indent=1))
 print("wrote phase 4 data: tracers_2024_circulation.csv, dts_16B_2024.csv, dts_16B_2024_deep.json")
+
+# ---------------------------------------------------------------------- phase 5
+tests = ft.read_minifrac(ft.fetch("minifrac"))
+rows = [{"test": x["test"], "md_ft": x["md_ft"], "tvd_ft_kb": x["tvd_ft_kb"], "p_initial_psi": round(x["p_initial_psi"], 2), "cycle": i + 1,
+         "shut_in_s": round(c["shut_in_s"], 3), "isip_psi": round(c["isip_psi"], 2), "max_psi": round(c["max_psi"], 2), "volume_l": round(c["volume_l"], 3)}
+        for x in tests for i, c in enumerate(x["cycles"])]
+pd.DataFrame(rows).to_csv(out / "minifrac_16B_2023_isip.csv", index=False)
+mf2 = next(x for x in tests if x["test"] == 2)["curves"]
+k = np.arange(0, len(mf2["TIME"]), 16)                          # 0.125 s samples → every 2 s
+pd.DataFrame({"time_s": mf2["TIME"][k].round(3), "p_psi": np.round(mf2["APQJ"][k], 2), "rate_cc_s": np.round(mf2["PTFRC"][k], 3)}).to_csv(
+    out / "minifrac_16B_2023_mf2.csv", index=False)
+g = pd.DataFrame(ft.read_pt_gauge(ft.fetch("pt_16b")), columns=["time", "p_psi", "T_c"])
+g["hour"] = g["time"].dt.floor("h")
+h = g.groupby("hour").agg(T_c=("T_c", "median"), p_psi=("p_psi", "median"), n=("T_c", "size")).reset_index()
+h["hour"] = h["hour"].dt.strftime("%Y-%m-%dT%H:%M")
+h["T_c"] = h["T_c"].round(3); h["p_psi"] = h["p_psi"].round(2)
+h.to_csv(out / "pt_gauge_16B_2024_hourly.csv", index=False)
+md, T = ft.read_16a_survey(ft.fetch("temp_surveys"))
+b5 = np.floor(md / 5.0).astype(int)
+t16 = pd.DataFrame({"b": b5, "T": T}).groupby("b")["T"].median()
+pd.DataFrame({"md_m": (t16.index.values * 5.0 + 2.5).round(2), "T_c": t16.values.round(3)}).to_csv(out / "temperature_16A_2021.csv", index=False)
+print("wrote phase 5 data: minifrac_16B_2023_isip.csv, minifrac_16B_2023_mf2.csv, pt_gauge_16B_2024_hourly.csv, temperature_16A_2021.csv")
