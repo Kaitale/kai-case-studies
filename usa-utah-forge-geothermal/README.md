@@ -14,6 +14,7 @@ asks the question a geothermal client pays for: *what will a well pair deliver o
 | [3 · A well pair over 30 years](03_doublet_30_years.ipynb) | What would 16A(78)-32 / 16B(78)-32 deliver at 10–80 kg/s for 30 years? | Not fitted, the model predicts the August 2024 recovery (**94 %**, P10–P90 91–96 %, measured 93 %) but not the produced temperature (+13 °C after a wellbore estimate) or the April test. Only **10 kg/s** stays pressure-feasible: produced temperature **214 → 130 °C** (P10–P90 116–148) in 30 years, heat **6.4 → 2.9 MWth**, thermal breakthrough after **1.35 ± 0.11 years** (grid-converged, median member; ensemble 0.9–2.6 years on 35 m cells, about 25 % late). *Simulated* |
 | [4 · Checks and the upscaling check](04_upscaling_check.ipynb) | Is the temperature misfit in the wellbore? Do the tracers agree? Which rates are feasible with pressure-dependent apertures? Does a coarse model change the answer? | A wellbore model accounts for **13 °C** of the misfit; **+11 °C** (P10–P90 10–13) is left at the bottom hole. Tracers arrive in **4.5–10.5 h**, against minutes in the model: the transport porosity is **23–55 ×** the pressure-fitted one. With Barton–Bandis apertures the highest feasible rate is **9.7 kg/s** (9.3–10.5). On 70 m cells the usual coarse model is **+11 °C** optimistic at 30 years (P10–P90 +3 to +14). KAI global + near-well upscaling, not recalibrated, is **+2 °C** (0 to +5). Early breakthrough is unreliable on 70 m cells either way. *Simulated* |
 | [5 · Decision chart](05_decision_chart.ipynb) | This well pair is a test bed, not a power plant: what spacing would a 30-year doublet need? | To keep ≥ 198.6 °C for 30 years: about **320 m** at 10 kg/s (P10 case 470 m), **630 m** at 20 kg/s (780 m), and more than 800 m at 40 kg/s and above. Sobol: rate and spacing first, then the thickness of the stimulated network. *Surrogate of simulated proxy runs*; held-out error 10 °C RMSE |
+| [6 · Phase 5 follow-ups](06_phase5_followups.ipynb) | Does local thermal non-equilibrium explain the last +11 °C? Does a front correction fix coarse-model breakthrough? Is there a local Shmin? Does the 16B gauge (GDR 1608) agree with the temperature model? | A dual-continuum (LTNE) model, refitted to the August pressures, leaves **+4.5 °C** (−2.2 to +10.8) of the 11 °C; the 16B gauge says the temperature model is about **+6 °C** hot there. The front correction **fails** the rule set in advance (corrected breakthrough 11–20 % early), so coarse-model breakthrough is not quoted. No closure at 16A (GDR 1408); with the 16B minifracs (GDR 1596) the highest rate is **< 5**, **11.8** or **16.2 kg/s** (as measured / cooling-adjusted mid / high) against **9.6** with GDR 1222. *Simulated* |
 
 ![Depth to the granitoid and a section through 58-32](figures/forge_structure.png)
 
@@ -82,6 +83,14 @@ Notebooks 4 and 5 show the phase 4 runs (`kai-engine reference forge-phase4`; re
 
 They also add a proxy doublet tied to the FORGE ensemble, a Gaussian-process surrogate with its held-out error, and
 Sobol indices. Surrogate values are labelled as such. `make_notebooks_phase4.py` builds the two notebooks.
+
+Notebook 6 shows the phase 5 runs (`kai-engine reference forge-phase5 --phase4 results/kai_engine_phase4.json`;
+results in `results/kai_engine_phase5.json`). It re-runs the phase 4 members unchanged and adds:
+* a dual-continuum (fracture water + eight matrix shells, MINC-like) heat model with local thermal non-equilibrium;
+* a thermal time-of-flight front correction for coarse models, benchmarked against the fine runs with a pass rule set in advance;
+* feasibility against the 16B minifrac Shmin (GDR 1596) beside GDR 1222;
+* the GDR 1608 gauge in 16B as a static temperature check (with its °C to °F switch on 2 April 2024 handled).
+`make_notebooks_phase5.py` builds it.
 
 ## Limits
 
