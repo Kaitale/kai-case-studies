@@ -175,3 +175,40 @@ Energy, via the Geothermal Data Repository (OpenEI), CC BY 4.0.*
 | `CSM FORGE 16A(78)-32 Stage 1 - Pressure falloff Analysis_8.04.2022 (1).pdf` (16A stage 1 falloff; finding quoted) | [1408](https://gdr.openei.org/submissions/1408) | `70a6d388ae4551012b21af4ef29154ae0a0b8bfa47e7b71807229ac5be8383d7` |
 | `Utah FORGE Deep Well Temperature Profiles_Sept 2022.xlsx` (16A log of 16 Aug 2021, sheet 16A(78)-32_2nd) | [1421](https://gdr.openei.org/submissions/1421) | `c1a35f7914b5f59117f03b03e38c71f6c4d066afa0b0373b528f0a9f6a3a26b7` |
 | `Baker Hughes Minifrac.zip` (16B minifrac LAS files; shut-in pressures derived by the engine are quoted, no file data published) | [1570](https://gdr.openei.org/submissions/1570) | `ae07b973b1e9d90dabef58fd95c24222457b1ba0e66e4fef2afb00fe04541290` |
+
+## KAI Academy practice: boreholes and water points (`academy-borehole-practice/data/`)
+
+### Synthetic practice register (`practice_boreholes.csv`, `practice_logs.csv`)
+
+* **Invented data**, made by `academy-borehole-practice/make_practice_data.py` (fixed seed; rerun to get the same
+  files). The table has the shape of a national borehole register in weathered crystalline basement; no record, place
+  or coordinate is real. Every row carries `Synthetic = True`. Licence: CC BY 4.0, KAI Water & Energy.
+
+### GWELLS, Township of Langley, British Columbia (`langley_wells.csv.gz`, `langley_lithology.csv.gz`)
+
+* **Source:** GWELLS, the Province of British Columbia groundwater wells database, full export
+  (https://s3.ca-central-1.amazonaws.com/gwells-export/export/v2/gwells.zip), cut to water-supply wells with a
+  lithology log between 49.00–49.20° N and 122.72–122.45° W; depths converted from feet to metres. Ground elevation
+  (`ground_m`) from the Copernicus DEM GLO-30 (5th percentile in a 150 m window).
+* **Licence:** [Open Government Licence – British Columbia](https://www2.gov.bc.ca/gov/content/data/policy-standards/open-data/open-government-licence-bc).
+  "Contains information licensed under the Open Government Licence – British Columbia." Copernicus DEM:
+  © DLR e.V. 2010–2014 and © Airbus Defence and Space GmbH 2014–2018, provided under COPERNICUS by the European Union
+  and ESA; all rights reserved.
+
+### Water Point Data Exchange, Uganda: Nakasongola and Luwero (`uganda_waterpoints_nakasongola_luwero.csv`)
+
+* **Source:** WPDx Plus (https://data.waterpointdata.org/resource/eqje-vguj), all records with
+  `clean_country_name = 'Uganda'` and `clean_adm2` Nakasongola or Luwero, selected columns, extracted 1 Nov 2026.
+  Records reported by the Ministry of Water and Environment, Uganda (1,575), Ugandan Water Project, World Vision and
+  others (column `source`).
+* **Licence:** [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/), the licence under
+  which data are shared through WPDx (https://www.waterpointdata.org/?p=1507). Cite the Water Point Data Exchange and
+  the reporting organisation.
+
+| File | SHA-256 |
+|---|---|
+| `practice_boreholes.csv` | `356b1fc5aef4eca32d00886e36bcd03673cc587e7b89dc0d5aea18064e44a142` |
+| `practice_logs.csv` | `6ec3721a00cf64eff5e5016a994a515a038583d14be609010d1afa719e4dd7f1` |
+| `langley_wells.csv.gz` | `7144325f3b8ea82025b0c9a5a0f4da2ff57ffd54b1330ee6cb1056941e6a61d0` |
+| `langley_lithology.csv.gz` | `2429edd55a3c5d0bb4cfc3a10418588b61f61174bb609f28b539c9a3722591a1` |
+| `uganda_waterpoints_nakasongola_luwero.csv` | `0b425f1c37dacbda67ec60b2222eed9caf78888e72ab3c14218fa1af276c7c93` |
