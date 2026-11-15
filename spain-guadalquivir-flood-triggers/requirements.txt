@@ -8,3 +8,6 @@ nbclient>=0.10
 ipykernel>=6
 nbformat>=5.9
 geopandas>=0.14   # only for rebuild_rainfall.py (catchments from HydroBASINS)
+rasterio>=1.3       # flood maps (notebook 2)
+netCDF4>=1.6        # only for flood_maps.py (SFINCS output)
+pyflwdir>=0.5       # only for flood_maps.py (river path)

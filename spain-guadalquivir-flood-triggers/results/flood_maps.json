@@ -1,0 +1,313 @@
+{
+ "reach": {
+  "crs": "EPSG:25830",
+  "bbox": [
+   402000.0,
+   4203300.0,
+   431100.0,
+   4213500.0
+  ],
+  "dx_m": 30.0,
+  "river_km": 54.2,
+  "model_cells": 100231,
+  "source_xy": [
+   430215.0,
+   4204545.0
+  ],
+  "event_water_year": 2011
+ },
+ "settings": {
+  "base_flow_m3s": 30.0,
+  "flood_depth_m": 0.15,
+  "hand_max_m": 25.0,
+  "channel_depth_m": 1.5,
+  "tstop_h": 48,
+  "riparian_canopy_removed": {
+   "within_m": 300,
+   "opening_m": 210.0,
+   "cells": 13158,
+   "mean_lowering_m": 1.4
+  },
+  "manning": {
+   "Trees (mostly olive groves)": 0.07,
+   "Shrubland": 0.06,
+   "Grassland": 0.04,
+   "Cropland": 0.045,
+   "Built-up": 0.12,
+   "Bare ground": 0.03,
+   "Water": 0.03,
+   "Wetland": 0.05,
+   "Mangroves": 0.08,
+   "Moss": 0.04
+  },
+  "manning_channel": 0.035
+ },
+ "gauge": {
+  "gauge_fit": "GEV",
+  "gauge_years": 27,
+  "gauge_1in5_m3s": 264.2880220951678,
+  "gauge_levels": {
+   "2": 139.5533586866544,
+   "5": 264.2880220951678,
+   "10": 369.7764085850798,
+   "25": 536.4450612127204,
+   "50": 689.784047630838,
+   "100": 872.6706084066893
+  }
+ },
+ "scenarios": [
+  {
+   "id": "measured",
+   "label": "Measured at the gauge",
+   "index_value": 591.2,
+   "unit": "m3/s",
+   "T": 32.47384194961368,
+   "q": 591.2,
+   "read_as": "measured",
+   "pays_1in5": true,
+   "steady_check_m": 0.15826416015625,
+   "flooded_ha": 901.0,
+   "max_depth_m": 5.87,
+   "exposure_ha": {
+    "Trees (mostly olive groves)": 430.9,
+    "Shrubland": 0.2,
+    "Grassland": 40.5,
+    "Cropland": 415.2,
+    "Built-up": 2.4,
+    "Bare ground": 2.6,
+    "Water": 9.2
+   },
+   "vs_measured": {
+    "hit_rate": 1.0,
+    "false_share": 0.0,
+    "csi": 1.0
+   }
+  },
+  {
+   "id": "v4_flow",
+   "label": "GloFAS 4.0, in m3/s",
+   "index_value": 53.33,
+   "unit": "m3/s",
+   "T": 6.040892586804443,
+   "q": 53.33,
+   "read_as": "m3/s",
+   "pays_1in5": false,
+   "steady_check_m": 0.00213623046875,
+   "flooded_ha": 5.5,
+   "max_depth_m": 0.7,
+   "exposure_ha": {
+    "Trees (mostly olive groves)": 2.0,
+    "Grassland": 0.6,
+    "Cropland": 0.1,
+    "Water": 2.8
+   },
+   "vs_measured": {
+    "hit_rate": 0.006093297372889822,
+    "false_share": 0.0,
+    "csi": 0.006093297372889822
+   }
+  },
+  {
+   "id": "v5_flow",
+   "label": "GloFAS 5.0, in m3/s",
+   "index_value": 381.62,
+   "unit": "m3/s",
+   "T": 9.193986868872125,
+   "q": 381.62,
+   "read_as": "m3/s",
+   "pays_1in5": true,
+   "steady_check_m": 0.0213623046875,
+   "flooded_ha": 303.3,
+   "max_depth_m": 4.84,
+   "exposure_ha": {
+    "Trees (mostly olive groves)": 191.6,
+    "Grassland": 17.4,
+    "Cropland": 85.9,
+    "Built-up": 1.1,
+    "Bare ground": 0.9,
+    "Water": 6.5
+   },
+   "vs_measured": {
+    "hit_rate": 0.33662970732194586,
+    "false_share": 0.0,
+    "csi": 0.33662970732194586
+   }
+  },
+  {
+   "id": "v4_rp",
+   "label": "GloFAS 4.0, as a return period",
+   "index_value": 53.33,
+   "unit": "m3/s",
+   "T": 6.040892586804443,
+   "q": 291.68083258680764,
+   "read_as": "return period",
+   "pays_1in5": true,
+   "steady_check_m": 0.1744384765625,
+   "flooded_ha": 130.1,
+   "max_depth_m": 3.92,
+   "exposure_ha": {
+    "Trees (mostly olive groves)": 81.7,
+    "Grassland": 10.5,
+    "Cropland": 31.0,
+    "Built-up": 0.6,
+    "Bare ground": 0.4,
+    "Water": 5.8
+   },
+   "vs_measured": {
+    "hit_rate": 0.14444111477374888,
+    "false_share": 0.0,
+    "csi": 0.14444111477374888
+   }
+  },
+  {
+   "id": "v5_rp",
+   "label": "GloFAS 5.0, as a return period",
+   "index_value": 381.62,
+   "unit": "m3/s",
+   "T": 9.193986868872125,
+   "q": 356.1788638460036,
+   "read_as": "return period",
+   "pays_1in5": true,
+   "steady_check_m": 0.119110107421875,
+   "flooded_ha": 252.0,
+   "max_depth_m": 4.55,
+   "exposure_ha": {
+    "Trees (mostly olive groves)": 155.4,
+    "Grassland": 15.5,
+    "Cropland": 73.2,
+    "Built-up": 0.9,
+    "Bare ground": 0.8,
+    "Water": 6.2
+   },
+   "vs_measured": {
+    "hit_rate": 0.2796923384277295,
+    "false_share": 0.0,
+    "csi": 0.2796923384277295
+   }
+  },
+  {
+   "id": "rain_season",
+   "label": "Rainfall only, Oct-Apr total",
+   "index_value": 349.6,
+   "unit": "mm",
+   "T": 8.545609917432149,
+   "q": 344.5445119325179,
+   "read_as": "return period",
+   "pays_1in5": true,
+   "steady_check_m": 0.0453948974609375,
+   "flooded_ha": 224.5,
+   "max_depth_m": 4.47,
+   "exposure_ha": {
+    "Trees (mostly olive groves)": 137.6,
+    "Grassland": 13.9,
+    "Cropland": 65.2,
+    "Built-up": 0.9,
+    "Bare ground": 0.8,
+    "Water": 6.0
+   },
+   "vs_measured": {
+    "hit_rate": 0.2492258515632804,
+    "false_share": 0.0,
+    "csi": 0.2492258515632804
+   }
+  },
+  {
+   "id": "rain_storm",
+   "label": "Rainfall only, wettest 3 days",
+   "index_value": 35.89,
+   "unit": "mm",
+   "T": 1.9922495367692639,
+   "q": 139.02373230007822,
+   "read_as": "return period",
+   "pays_1in5": false,
+   "steady_check_m": 0.0250396728515625,
+   "flooded_ha": 22.3,
+   "max_depth_m": 2.07,
+   "exposure_ha": {
+    "Trees (mostly olive groves)": 13.2,
+    "Grassland": 1.4,
+    "Cropland": 3.5,
+    "Built-up": 0.1,
+    "Water": 4.0
+   },
+   "vs_measured": {
+    "hit_rate": 0.02477274997502747,
+    "false_share": 0.0,
+    "csi": 0.02477274997502747
+   }
+  },
+  {
+   "id": "design_T10",
+   "label": "Gauge's 10-year flood",
+   "index_value": 369.7764085850798,
+   "unit": "m3/s",
+   "T": 10.0,
+   "q": 369.7764085850798,
+   "read_as": "design",
+   "pays_1in5": null,
+   "steady_check_m": 0.04058837890625,
+   "flooded_ha": 276.8,
+   "max_depth_m": 4.69,
+   "exposure_ha": {
+    "Trees (mostly olive groves)": 172.5,
+    "Grassland": 16.4,
+    "Cropland": 79.6,
+    "Built-up": 1.0,
+    "Bare ground": 0.9,
+    "Water": 6.4
+   }
+  },
+  {
+   "id": "design_T100",
+   "label": "Gauge's 100-year flood",
+   "index_value": 872.6706084066893,
+   "unit": "m3/s",
+   "T": 100.0,
+   "q": 872.6706084066893,
+   "read_as": "design",
+   "pays_1in5": null,
+   "steady_check_m": 0.104522705078125,
+   "flooded_ha": 1873.9,
+   "max_depth_m": 6.84,
+   "exposure_ha": {
+    "Trees (mostly olive groves)": 692.1,
+    "Shrubland": 0.5,
+    "Grassland": 82.9,
+    "Cropland": 1073.0,
+    "Built-up": 8.0,
+    "Bare ground": 4.2,
+    "Water": 13.1
+   }
+  },
+  {
+   "id": "base",
+   "label": "River in its banks",
+   "index_value": 30.0,
+   "unit": "m3/s",
+   "T": null,
+   "q": 30.0,
+   "read_as": "base",
+   "pays_1in5": null,
+   "steady_check_m": 0.0080413818359375,
+   "flooded_ha": 0.0,
+   "max_depth_m": 0.0,
+   "exposure_ha": {}
+  }
+ ],
+ "jrc_check": {
+  "T10": {
+   "jrc_flooded_ha": 1751.7,
+   "kai_flooded_ha": 276.8,
+   "hit_rate": 0.1355906078199661,
+   "false_share": 0.14206762028608583,
+   "csi": 0.13261306532663317
+  },
+  "T100": {
+   "jrc_flooded_ha": 2152.5,
+   "kai_flooded_ha": 1873.9,
+   "hit_rate": 0.6739139524187816,
+   "false_share": 0.22587771961000913,
+   "csi": 0.563172606568833
+  }
+ }
+}

@@ -1,0 +1,8 @@
+index,read as,return period,flow m³/s,1-in-5 trigger,flooded ha,share of measured flood mapped,cropland ha,olive groves and trees ha,built-up ha
+Measured at the gauge,measured,32.5,591,pays,901.0,100,415.2,430.9,2.4
+"GloFAS 4.0, in m3/s",m3/s,6.0,53,no,5.5,1,0.1,2.0,0.0
+"GloFAS 5.0, in m3/s",m3/s,9.2,382,pays,303.3,34,85.9,191.6,1.1
+"GloFAS 4.0, as a return period",return period,6.0,292,pays,130.1,14,31.0,81.7,0.6
+"GloFAS 5.0, as a return period",return period,9.2,356,pays,252.0,28,73.2,155.4,0.9
+"Rainfall only, Oct-Apr total",return period,8.5,345,pays,224.5,25,65.2,137.6,0.9
+"Rainfall only, wettest 3 days",return period,2.0,139,no,22.3,2,3.5,13.2,0.1

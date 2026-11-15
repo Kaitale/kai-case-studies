@@ -4,7 +4,7 @@
 |---|---|
 | Code (`*.py`, `paper/*.py`, `paper/print.js`, the notebook's code cells) | MIT, © 2026 KAI Water & Energy (see the repository's `LICENSE`) |
 | Paper and technical report (`paper/*.pdf`), figures, result files | CC BY 4.0, © 2026 Charles Kakooza |
-| Derived data (`data/*.csv`) | CC BY 4.0, © 2026 KAI Water & Energy, with the source credits below |
+| Derived data (`data/*.csv`, `data/flood_maps/*.tif`) | CC BY 4.0, © 2026 KAI Water & Energy, with the source credits below |
 
 CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
 
@@ -23,3 +23,11 @@ CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
   sub-catchment IDs used for each gauge are published here; `rebuild_rainfall.py` needs the shapefile, downloaded separately.
 * **Method comparison.** The four ways of setting a trigger follow Model Library (2026), *Four ways to set a parametric
   trigger, tested on Andalucía rainfall and yields*; their published figures are quoted in the paper.
+* **Flood maps (`data/flood_maps/`, notebook 2).** Depth maps computed by KAI with SFINCS (Deltares, GNU GPL-3.0,
+  https://github.com/Deltares/SFINCS; built from source and run as a separate program, not distributed here) on:
+  Copernicus DEM GLO-30, *© DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018, provided under COPERNICUS
+  by the European Union and ESA; all rights reserved* (the shaded relief `hillshade.tif` is derived from it);
+  ESA WorldCover 2021 v200, *© ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data (2021)
+  processed by ESA WorldCover consortium*, CC BY 4.0. `jrc_T10_depth_dm.tif` and `jrc_T100_depth_dm.tif` are the
+  Global river flood hazard maps v2.1 (*© European Union, 1995-2026*, Copernicus Emergency Management Service, CC BY 4.0),
+  clipped to the model area and resampled to its 30 m grid in decimetres (changes made).
