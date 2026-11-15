@@ -12,8 +12,8 @@ paid, the ones it would have missed, and the payouts in years without a flood.
 | [1 · Global model against the gauges](01_global_model_flood_triggers.ipynb) | How big is a 10-year flood in the model, and would a trigger set from it pay in the right years? | The model's 10-year flood is **22 %** of the gauged one (median). At 1-in-5, a trigger written in m³/s from the model caught **6 of 60** flood years; the same trigger written as the model's own return period caught **30 of 60**, with 27 false payouts |
 | [`compare_triggers.py`](compare_triggers.py) · River flow or rainfall, four ways | Does a rainfall index do better than river flow, and does it matter how the trigger level is set? | Levels set from each site's own record (quantile, return period, share of the mean flood) perform alike; **one level for all sites pays in 0 % to 78 % of years** from gauge to gauge. Storm rainfall caught **23 of 60** flood years, the October–April total **31 of 60**, river flow 30. Requiring river and season rainfall to agree cut false payouts from 47 % to 29 % of payouts |
 
-**Interactive version, with a map to pick a forecast point:** [kai-water.charkaks0.workers.dev/case-guadalquivir](https://kai-water.charkaks0.workers.dev/case-guadalquivir) ·
-[trigger explorer on the KAI-Hydro page](https://kai-water.charkaks0.workers.dev/kai-hydro#triggers)
+**Interactive version, with a map to pick a forecast point:** [www.kaiwaterenergy.com/case-guadalquivir](https://www.kaiwaterenergy.com/case-guadalquivir) ·
+[trigger explorer on the KAI-Hydro page](https://www.kaiwaterenergy.com/kai-hydro#triggers)
 
 ![Gauges and their GloFAS river cells](figures/gq_map.png)
 
@@ -145,8 +145,8 @@ the median ratios within 0.02.
 pulls the GloFAS 5.0 flood history, fits return levels with their bands, writes the trigger four ways (fixed flow,
 percentile, return period or share of a reference flood, with attachment and exhaustion) and shows its hits, misses
 and false payouts before the policy is written. Engineers get the same study as design floods.
-[Parametric flood triggers](https://kai-water.charkaks0.workers.dev/solution-parametric-triggers) ·
-[KAI-Hydro](https://kai-water.charkaks0.workers.dev/kai-hydro) · [Start free](https://hydro-saas.charkaks0.workers.dev/portal?plan=kaihydro:free)
+[Parametric flood triggers](https://www.kaiwaterenergy.com/solution-parametric-triggers) ·
+[KAI-Hydro](https://www.kaiwaterenergy.com/kai-hydro) · [Start free](https://app.kaiwaterenergy.com/portal?plan=kaihydro:free)
 
 *References:* Hosking, J.R.M. and Wallis, J.R. (1997) *Regional Frequency Analysis: An Approach Based on L-Moments*,
 Cambridge University Press · Harrigan, S. et al. (2020) GloFAS-ERA5 operational global river discharge reanalysis

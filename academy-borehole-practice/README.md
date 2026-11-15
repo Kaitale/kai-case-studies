@@ -1,7 +1,7 @@
 # KAI Academy practice: boreholes and water points
 
 Two practice notebooks for learners: one register you can break things on, and real open records to try the same
-steps on. Part of the [KAI Academy](https://kai-water.charkaks0.workers.dev/academy.html).
+steps on. Part of the [KAI Academy](https://www.kaiwaterenergy.com/academy.html).
 
 | Notebook | Data | You will |
 |---|---|---|

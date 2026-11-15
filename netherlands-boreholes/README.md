@@ -1,6 +1,6 @@
 # Boreholes on real data: the Netherlands
 
-[Interactive version on the KAI platform](https://hydro-saas.charkaks0.workers.dev/demo/reference/boreholes) · [Start free](https://hydro-saas.charkaks0.workers.dev/portal?plan=hydrosaas:free) · [All case studies](../README.md)
+[Interactive version on the KAI platform](https://app.kaiwaterenergy.com/demo/reference/boreholes) · [Start free](https://app.kaiwaterenergy.com/portal?plan=hydrosaas:free) · [All case studies](../README.md)
 
 Three questions every borehole owner asks, each answered on real field data with open-source models.
 
@@ -56,7 +56,7 @@ MODFLOW 6.6.0; newer releases give the same numbers.)
 
 ---
 
-**On the KAI platform:** [Boreholes case](https://hydro-saas.charkaks0.workers.dev/demo/reference/boreholes) ·
-[HydroSaaS](https://kai-water.charkaks0.workers.dev/hydrosaas.html) (borehole drawdown warnings for industrial parks) ·
-[GroundWater Analyst](https://kai-water.charkaks0.workers.dev/groundwater-analyst.html) (3D groundwater models) ·
-[Ask for a borehole study](https://kai-water.charkaks0.workers.dev/contact.html)
+**On the KAI platform:** [Boreholes case](https://app.kaiwaterenergy.com/demo/reference/boreholes) ·
+[HydroSaaS](https://www.kaiwaterenergy.com/hydrosaas.html) (borehole drawdown warnings for industrial parks) ·
+[GroundWater Analyst](https://www.kaiwaterenergy.com/groundwater-analyst.html) (3D groundwater models) ·
+[Ask for a borehole study](https://www.kaiwaterenergy.com/contact.html)

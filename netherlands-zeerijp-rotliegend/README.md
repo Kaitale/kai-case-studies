@@ -20,7 +20,7 @@ the Groningen gas field and cored over 199.8 m. Its core analysis and logs are p
 
 ![REV and upscaling](figures/rev_upscaling.png)
 
-**Try it in the browser:** the [KAI Plug-to-Block Lab](https://kai-water.charkaks0.workers.dev/plug-to-block-lab) runs the same bedding generator and flow solver in a web page. It drills virtual plugs and whole cores, and shows which sample size gives a vertical permeability you can trust.
+**Try it in the browser:** the [KAI Plug-to-Block Lab](https://www.kaiwaterenergy.com/plug-to-block-lab) runs the same bedding generator and flow solver in a web page. It drills virtual plugs and whole cores, and shows which sample size gives a vertical permeability you can trust.
 
 ## Data
 

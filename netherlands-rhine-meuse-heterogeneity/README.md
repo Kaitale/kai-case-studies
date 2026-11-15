@@ -1,6 +1,6 @@
 # Rhine–Meuse delta: facies between boreholes, tested blind against GeoTOP
 
-**KAI-Subsurface and KAI-GeoEnergy · data behind the [KAI Heterogeneity Lab](https://kai-water.charkaks0.workers.dev/heterogeneity-lab).**
+**KAI-Subsurface and KAI-GeoEnergy · data behind the [KAI Heterogeneity Lab](https://www.kaiwaterenergy.com/heterogeneity-lab).**
 
 An 8 × 6 km block of the Holocene Rhine–Meuse delta (Alblasserwaard, RD x 122–130 km, y 427–433 km),
 2.25 to 9.25 m below NAP: river channel sands in clay and peat, a modern analogue for fluvial reservoirs.

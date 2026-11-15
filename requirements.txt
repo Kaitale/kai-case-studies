@@ -15,3 +15,4 @@ ipykernel>=6
 lasio>=0.31        # LAS logs (subsurface case)
 scikit-learn>=1.4  # rock types and log models (subsurface case)
 openpyxl>=3.1      # core analysis workbook (subsurface case)
+netCDF4>=1.6       # SFINCS outputs (flood-map case)

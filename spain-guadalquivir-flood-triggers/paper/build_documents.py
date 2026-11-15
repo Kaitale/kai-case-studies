@@ -17,7 +17,7 @@ R = CASE / "results"
 VERSION, DATE = "2.0", "30 October 2026"
 AUTHOR, AFFIL = "Charles Kakooza", "KAI Water &amp; Energy, Kampala, Uganda"
 REPO = "https://github.com/Kaitale/kai-case-studies/tree/main/spain-guadalquivir-flood-triggers"
-CASE_URL = "https://kai-water.charkaks0.workers.dev/case-guadalquivir"
+CASE_URL = "https://www.kaiwaterenergy.com/case-guadalquivir"
 
 eng = json.loads((R / "kai_engine_results.json").read_text())
 nb = json.loads((R / "nb1_results.json").read_text())

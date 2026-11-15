@@ -1,6 +1,6 @@
 # Pollution source tracing on a real sewer: Bellinge, Denmark
 
-[Interactive version on the KAI platform](https://hydro-saas.charkaks0.workers.dev/demo/reference/bellinge) · [Start free](https://hydro-saas.charkaks0.workers.dev/portal?plan=hydrosaas:free) · [All case studies](../README.md)
+[Interactive version on the KAI platform](https://app.kaiwaterenergy.com/demo/reference/bellinge) · [Start free](https://app.kaiwaterenergy.com/portal?plan=hydrosaas:free) · [All case studies](../README.md)
 
 **Notebook:** [Which manhole did the pollution come from?](01_source_tracing_bellinge.ipynb)
 
@@ -72,7 +72,7 @@ here; the notebook reproduces the network, the tracer physics and the published 
 
 ---
 
-**On the KAI platform:** [Bellinge case](https://hydro-saas.charkaks0.workers.dev/demo/reference/bellinge) ·
-[Pollutant loads in a demo park](https://hydro-saas.charkaks0.workers.dev/demo/park/loads) ·
-[Effluent compliance and pollution tracing](https://kai-water.charkaks0.workers.dev/solution-effluent-compliance.html) ·
-[Ask about a sensor design for your park](https://kai-water.charkaks0.workers.dev/contact.html)
+**On the KAI platform:** [Bellinge case](https://app.kaiwaterenergy.com/demo/reference/bellinge) ·
+[Pollutant loads in a demo park](https://app.kaiwaterenergy.com/demo/park/loads) ·
+[Effluent compliance and pollution tracing](https://www.kaiwaterenergy.com/solution-effluent-compliance.html) ·
+[Ask about a sensor design for your park](https://www.kaiwaterenergy.com/contact.html)
