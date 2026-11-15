@@ -1,6 +1,6 @@
 # River flow or rainfall: can global data set a flood trigger where there is no gauge?
 
-**KAI-Hydro parametric flood triggers, tested in the open on 14 river gauges in Spain's Guadalquivir basin.**
+**KAI-Hydro parametric flood triggers, tested in the open on 14 river gauges in Spain's Guadalquivir basin, and the flood behind them mapped with KAI-River.**
 
 A parametric flood policy pays when a river index crosses an agreed trigger. Where a river has no gauge, the index
 has to come from a global flood model. This case sets triggers from the GloFAS global flood reanalysis as if no gauge
@@ -11,6 +11,7 @@ paid, the ones it would have missed, and the payouts in years without a flood.
 |---|---|---|
 | [1 · Global model against the gauges](01_global_model_flood_triggers.ipynb) | How big is a 10-year flood in the model, and would a trigger set from it pay in the right years? | The model's 10-year flood is **22 %** of the gauged one (median). At 1-in-5, a trigger written in m³/s from the model caught **6 of 60** flood years; the same trigger written as the model's own return period caught **30 of 60**, with 27 false payouts |
 | [`compare_triggers.py`](compare_triggers.py) · River flow or rainfall, four ways | Does a rainfall index do better than river flow, and does it matter how the trigger level is set? | Levels set from each site's own record (quantile, return period, share of the mean flood) perform alike; **one level for all sites pays in 0 % to 78 % of years** from gauge to gauge. Storm rainfall caught **23 of 60** flood years, the October–April total **31 of 60**, river flow 30. Requiring river and season rainfall to agree cut false payouts from 47 % to 29 % of payouts |
+| [2 · From trigger to flood map](02_from_trigger_to_flood_map.ipynb) | What was under water in the biggest flood year, read from the gauge, GloFAS 4.0, GloFAS 5.0 and rainfall only? | The gauge's 591 m³/s (1-in-32) flooded **901 ha** below Mengíbar. GloFAS 4.0 in m³/s: **6 ha**. Every index that paid called the year a 1-in-6 to 1-in-9: **130 to 303 ha**. The trigger got the year right and the size wrong |
 
 **Interactive version, with a map to pick a forecast point:** [www.kaiwaterenergy.com/case-guadalquivir](https://www.kaiwaterenergy.com/case-guadalquivir) ·
 [trigger explorer on the KAI-Hydro page](https://www.kaiwaterenergy.com/kai-hydro#triggers)
@@ -50,6 +51,48 @@ What changes:
 
 Over every year both cover (1985-2022, 407 gauge-years, 89 flood years) the return-period trigger paid 53 flood years
 with 44 false payouts, and the fixed m³/s trigger 41 with 31. Paper and technical report version 2.0 include this comparison (section 4.5 and Table 4 of the paper).
+
+## From trigger to flood map (15 November 2026)
+
+![The 2010-11 flood read seven ways](figures/gq_flood_maps.png)
+
+Notebook 2 maps what was under water. `flood_maps.py` runs the SFINCS flood model (Deltares, open source under GNU
+GPL-3.0, built from source by KAI) on 54 km of the Guadalquivir below the Mengíbar gauge (CEDEX 5004) at 30 m, on the
+Copernicus DEM with roughness from ESA WorldCover, for water year 2010-11, the largest flood in the gauge's record. Each
+way of reading that year gives a flow; each flow gives a map.
+
+| 2010-11 at Mengíbar | Return period | Flow (m³/s) | 1-in-5 trigger | Flooded (ha) | Share of the measured flood mapped |
+|---|---|---|---|---|---|
+| Measured at the gauge | 1-in-32 | 591 | pays | **901** | 100 % |
+| GloFAS 4.0, in m³/s | 1-in-6 | 53 | does not pay | 6 | 1 % |
+| GloFAS 5.0, in m³/s | 1-in-9 | 382 | pays | 303 | 34 % |
+| GloFAS 4.0, as a return period | 1-in-6 | 292 | pays | 130 | 14 % |
+| GloFAS 5.0, as a return period | 1-in-9 | 356 | pays | 252 | 28 % |
+| Rainfall only, October–April total | 1-in-8.5 | 345 | pays | 224 | 25 % |
+| Rainfall only, wettest 3 days | 1-in-2 | 139 | does not pay | 22 | 2 % |
+
+*Return-period readings use the flow of that return period on the gauge's own curve, which is how a return-period
+trigger is written. The flooded area is land outside the river's banks (the river at 30 m³/s) under at least 15 cm of
+water. Per index, with cropland, olive groves and built-up land: [`results/flood_maps_by_index.csv`](results/flood_maps_by_index.csv);
+everything: [`results/flood_maps.json`](results/flood_maps.json); depth maps (GeoTIFF, decimetres):
+[`data/flood_maps/`](data/flood_maps/).*
+
+* **The indices got the year right and the size wrong.** Between a 1-in-9 and a 1-in-32 flood the river leaves its
+  incised channel and fills the meander lobes, so the flooded area grows three to seven times. A payout that steps up
+  with the index would have paid for a flood a quarter of the size.
+* **The flood model, checked.** At the gauge's 100-year flood it agrees with the Copernicus (JRC) global flood hazard
+  map on two-thirds of the area (critical success index 0.56). At the 10-year flood Copernicus floods six times more:
+  at 90 m it cannot see the 60 m channel cut into the valley. Spain's official flood zones (SNCZI) are the next check:
+  put `laminasPB-q10.zip` and `laminasPB-q100.zip` from
+  [MITECO's download page](https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/agua/zi-lamina.html) in
+  `map_cache/` and `flood_maps.py` adds them.
+* **Limits.** Daily mean flows; a surface DEM (riparian canopy taken out, buildings left in) with a burnt 1.5 m
+  channel; tributaries below Mengíbar left out; steady flows; one reach, one year.
+
+Rebuild: build SFINCS from its source (https://github.com/Deltares/SFINCS, tag `v2.5.0_Hautacam_release`), then
+`SFINCS_EXE=/path/to/sfincs python flood_maps.py` (about 25 minutes on two cores; downloads about 280 MB of open data
+into `map_cache/`, checked against [`flood_maps_files.sha256`](flood_maps_files.sha256)), and
+`python make_notebook2.py` to rebuild the notebook.
 
 ## Paper, report and how to cite
 
