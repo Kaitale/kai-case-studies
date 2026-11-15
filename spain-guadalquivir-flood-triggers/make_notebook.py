@@ -44,7 +44,7 @@ This repository holds only what the notebook needs: each year's largest daily fl
 ("code", SETUP),
 ("md", """## Where the gauges are
 
-Each gauge is matched to the GloFAS river cell, within 0.1° (about 10 km), whose mean flow is closest to the gauge's. That uses the gauge, so it is the model's **best case**: at an ungauged site the cell has to be found from the catchment area alone. The interactive map on the [case page](https://kai-water.charkaks0.workers.dev/case-guadalquivir) shows the gauges and their cells over the river network, and lets you pick any point."""),
+Each gauge is matched to the GloFAS river cell, within 0.1° (about 10 km), whose mean flow is closest to the gauge's. That uses the gauge, so it is the model's **best case**: at an ungauged site the cell has to be found from the catchment area alone. The interactive map on the [case page](https://www.kaiwaterenergy.com/case-guadalquivir) shows the gauges and their cells over the river network, and lets you pick any point."""),
 ("code", """fig, ax = plt.subplots(figsize=(9, 4.6))
 ratio = gauges.glofas_mean_flow_ratio
 for gid, g in gauges.iterrows():
@@ -170,7 +170,7 @@ pathlib.Path("results/nb1_results.json").write_text(json.dumps(summary, indent=1
 * **Basis risk is still too high to sell on the model alone.** The return-period trigger paid 27 times in years without a flood, and at the median gauge the model ranks the big years only moderately well (0.42). A contract needs local calibration: a gauge, satellite flood maps or local flood records.
 * **Limits.** One basin, strongly regulated; GloFAS 4.0; annual maxima of daily means (instantaneous peaks are higher); 17 to 24 years per gauge, so levels beyond 1-in-25 are extrapolations. The cell choice uses the gauge (best case).
 
-**In KAI.** This is the test bench behind [KAI-Hydro's parametric flood triggers](https://kai-water.charkaks0.workers.dev/solution-parametric-triggers): pick a point on the map, get the flood history at the river cell, return levels with their bands, four ways to write the trigger, and its hits, misses and false payouts before the policy is written. Next: the same test on GloFAS 5.0 (1980 to today).
+**In KAI.** This is the test bench behind [KAI-Hydro's parametric flood triggers](https://www.kaiwaterenergy.com/solution-parametric-triggers): pick a point on the map, get the flood history at the river cell, return levels with their bands, four ways to write the trigger, and its hits, misses and false payouts before the policy is written. Next: the same test on GloFAS 5.0 (1980 to today).
 
 *References:* Hosking, J.R.M. and Wallis, J.R. (1997) *Regional Frequency Analysis*, Cambridge University Press · Harrigan, S. et al. (2020) GloFAS-ERA5 operational global river discharge reanalysis 1979–present, *Earth Syst. Sci. Data* 12, 2043–2060 · CEDEX, *Anuario de Aforos 2021-2022*."""),
 ])

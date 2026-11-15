@@ -1,6 +1,6 @@
 # Effluent BOD soft sensor on real treatment-plant data
 
-[Interactive version on the KAI platform](https://hydro-saas.charkaks0.workers.dev/demo/reference/soft-sensor) · [Start free](https://hydro-saas.charkaks0.workers.dev/portal?plan=hydrosaas:free) · [All case studies](../README.md)
+[Interactive version on the KAI platform](https://app.kaiwaterenergy.com/demo/reference/soft-sensor) · [Start free](https://app.kaiwaterenergy.com/portal?plan=hydrosaas:free) · [All case studies](../README.md)
 
 **Notebook:** [Effluent BOD on the day, not five days later](01_bod_soft_sensor.ipynb)
 
@@ -60,7 +60,7 @@ comes from its own earlier out-of-sample errors. April–December 1990 warms it 
 
 ---
 
-**On the KAI platform:** [Soft-sensor case](https://hydro-saas.charkaks0.workers.dev/demo/reference/soft-sensor) ·
-[Factory compliance demo](https://hydro-saas.charkaks0.workers.dev/demo) ·
-[Effluent compliance](https://kai-water.charkaks0.workers.dev/solution-effluent-compliance.html) ·
-[Talk to us](https://kai-water.charkaks0.workers.dev/contact.html)
+**On the KAI platform:** [Soft-sensor case](https://app.kaiwaterenergy.com/demo/reference/soft-sensor) ·
+[Factory compliance demo](https://app.kaiwaterenergy.com/demo) ·
+[Effluent compliance](https://www.kaiwaterenergy.com/solution-effluent-compliance.html) ·
+[Talk to us](https://www.kaiwaterenergy.com/contact.html)

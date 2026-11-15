@@ -152,7 +152,7 @@ ax.set_title("Langley wells (GWELLS, OGL-BC)"); ax.set_xlabel("longitude"); ax.s
 * Compare two records of the same thing before mapping either.
 * The method carries over from basement to glacial sediments; the classes and the skill do not, so test again on
   local records. KAI's drilling-odds lab runs that blind test on these Langley wells:
-  [Heterogeneity Lab](https://kai-water.charkaks0.workers.dev/drilling-lab).
+  [Heterogeneity Lab](https://www.kaiwaterenergy.com/drilling-lab).
 
 *Part A is synthetic practice data. Part B: GWELLS, Province of British Columbia, Open Government Licence – British
 Columbia. Ground elevations from the Copernicus DEM GLO-30 (© DLR e.V. 2010–2014 and © Airbus Defence and Space GmbH

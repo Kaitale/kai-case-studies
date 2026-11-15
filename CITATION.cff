@@ -6,9 +6,9 @@ authors:
   - name: "KAI Water & Energy"
     city: Kampala
     country: UG
-    website: "https://kai-water.charkaks0.workers.dev/"
+    website: "https://www.kaiwaterenergy.com/"
 repository-code: "https://github.com/Kaitale/kai-case-studies"
-url: "https://hydro-saas.charkaks0.workers.dev/explore"
+url: "https://app.kaiwaterenergy.com/explore"
 license:
   - MIT
   - CC-BY-4.0

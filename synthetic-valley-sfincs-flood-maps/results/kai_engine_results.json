@@ -1,0 +1,951 @@
+{
+ "schema": "kai.river.result/1",
+ "engine": {
+  "id": "sfincs",
+  "label": "SFINCS",
+  "version": "2.5.0",
+  "runner": "docker",
+  "image": "kai-engine/sfincs:2.5.0",
+  "image_id": "sha256:75a3d5a8d4d6596116d5e189bd15b5d763198c4e5db1476859a5d7b5586e9225",
+  "seconds": 26.0,
+  "source": "Deltares/SFINCS v2.5.0_Hautacam_release @ 9491715c5b38, built by KAI (docker/sfincs/Dockerfile)"
+ },
+ "label": "simulated",
+ "case": "synthetic test valley (KAI-generated terrain, not a real place)",
+ "question": "Where does the water go, and how deep, when a storm surge and a rain burst arrive together?",
+ "inputs": [
+  {
+   "path": "m000/sfincs.bnd",
+   "sha256": "078eca61a583f262c63f418adde4b3d466b1ee536372982008f5e47388a40e16",
+   "bytes": 23
+  },
+  {
+   "path": "m000/sfincs.bzs",
+   "sha256": "b949318bce6f776fe2a75f67567a7d1adcecd1a665de77fcfbab09ae1d7d6e95",
+   "bytes": 3283
+  },
+  {
+   "path": "m000/sfincs.dep",
+   "sha256": "330cc068d207ee25ce8eb1e9962c60b0e798eeb92e6828e9824b6a13f4528ec8",
+   "bytes": 34560
+  },
+  {
+   "path": "m000/sfincs.ind",
+   "sha256": "e7b43a81b23b1bb33cc43656a173553eafd67649db40f1b89ef62fd3afb9da4b",
+   "bytes": 34564
+  },
+  {
+   "path": "m000/sfincs.inp",
+   "sha256": "db098526a0e1aadc03b300e805f73d72b07b9f84c3101d89a343c83aba3f1611",
+   "bytes": 683
+  },
+  {
+   "path": "m000/sfincs.man",
+   "sha256": "feb4834fdc22c0419fc2e53b655acf8068814454bad548e15a9f2e6ad16637de",
+   "bytes": 34560
+  },
+  {
+   "path": "m000/sfincs.msk",
+   "sha256": "58db86d83cf2a2aaf506461e076ba9473a60fbeb5df0075d95e33bcecea747f7",
+   "bytes": 8640
+  },
+  {
+   "path": "m000/sfincs.obs",
+   "sha256": "35bc44f1aa298cd154aaded0f87b10bcea71cbcb69f3fcab6e58f7d9bf791b45",
+   "bytes": 14
+  },
+  {
+   "path": "m000/sfincs.prcp",
+   "sha256": "c28c0cfb94c415db6dbbabd19cb65fdfe72f746daa3bf11e9af7f1e6dd13d677",
+   "bytes": 82
+  },
+  {
+   "path": "m001/sfincs.bnd",
+   "sha256": "078eca61a583f262c63f418adde4b3d466b1ee536372982008f5e47388a40e16",
+   "bytes": 23
+  },
+  {
+   "path": "m001/sfincs.bzs",
+   "sha256": "b949318bce6f776fe2a75f67567a7d1adcecd1a665de77fcfbab09ae1d7d6e95",
+   "bytes": 3283
+  },
+  {
+   "path": "m001/sfincs.dep",
+   "sha256": "330cc068d207ee25ce8eb1e9962c60b0e798eeb92e6828e9824b6a13f4528ec8",
+   "bytes": 34560
+  },
+  {
+   "path": "m001/sfincs.ind",
+   "sha256": "e7b43a81b23b1bb33cc43656a173553eafd67649db40f1b89ef62fd3afb9da4b",
+   "bytes": 34564
+  },
+  {
+   "path": "m001/sfincs.inp",
+   "sha256": "db098526a0e1aadc03b300e805f73d72b07b9f84c3101d89a343c83aba3f1611",
+   "bytes": 683
+  },
+  {
+   "path": "m001/sfincs.man",
+   "sha256": "9511eb097594401f09983f0c7d6ff6d7068a4455a0f5faddbe6ae331dbbe8b03",
+   "bytes": 34560
+  },
+  {
+   "path": "m001/sfincs.msk",
+   "sha256": "58db86d83cf2a2aaf506461e076ba9473a60fbeb5df0075d95e33bcecea747f7",
+   "bytes": 8640
+  },
+  {
+   "path": "m001/sfincs.obs",
+   "sha256": "35bc44f1aa298cd154aaded0f87b10bcea71cbcb69f3fcab6e58f7d9bf791b45",
+   "bytes": 14
+  },
+  {
+   "path": "m001/sfincs.prcp",
+   "sha256": "c28c0cfb94c415db6dbbabd19cb65fdfe72f746daa3bf11e9af7f1e6dd13d677",
+   "bytes": 82
+  },
+  {
+   "path": "m002/sfincs.bnd",
+   "sha256": "078eca61a583f262c63f418adde4b3d466b1ee536372982008f5e47388a40e16",
+   "bytes": 23
+  },
+  {
+   "path": "m002/sfincs.bzs",
+   "sha256": "b949318bce6f776fe2a75f67567a7d1adcecd1a665de77fcfbab09ae1d7d6e95",
+   "bytes": 3283
+  },
+  {
+   "path": "m002/sfincs.dep",
+   "sha256": "330cc068d207ee25ce8eb1e9962c60b0e798eeb92e6828e9824b6a13f4528ec8",
+   "bytes": 34560
+  },
+  {
+   "path": "m002/sfincs.ind",
+   "sha256": "e7b43a81b23b1bb33cc43656a173553eafd67649db40f1b89ef62fd3afb9da4b",
+   "bytes": 34564
+  },
+  {
+   "path": "m002/sfincs.inp",
+   "sha256": "db098526a0e1aadc03b300e805f73d72b07b9f84c3101d89a343c83aba3f1611",
+   "bytes": 683
+  },
+  {
+   "path": "m002/sfincs.man",
+   "sha256": "6e18537b5c3b1993dd6fc57d768290860fc45a718882add988ef28072190d5e0",
+   "bytes": 34560
+  },
+  {
+   "path": "m002/sfincs.msk",
+   "sha256": "58db86d83cf2a2aaf506461e076ba9473a60fbeb5df0075d95e33bcecea747f7",
+   "bytes": 8640
+  },
+  {
+   "path": "m002/sfincs.obs",
+   "sha256": "35bc44f1aa298cd154aaded0f87b10bcea71cbcb69f3fcab6e58f7d9bf791b45",
+   "bytes": 14
+  },
+  {
+   "path": "m002/sfincs.prcp",
+   "sha256": "c28c0cfb94c415db6dbbabd19cb65fdfe72f746daa3bf11e9af7f1e6dd13d677",
+   "bytes": 82
+  },
+  {
+   "path": "m003/sfincs.bnd",
+   "sha256": "078eca61a583f262c63f418adde4b3d466b1ee536372982008f5e47388a40e16",
+   "bytes": 23
+  },
+  {
+   "path": "m003/sfincs.bzs",
+   "sha256": "b949318bce6f776fe2a75f67567a7d1adcecd1a665de77fcfbab09ae1d7d6e95",
+   "bytes": 3283
+  },
+  {
+   "path": "m003/sfincs.dep",
+   "sha256": "330cc068d207ee25ce8eb1e9962c60b0e798eeb92e6828e9824b6a13f4528ec8",
+   "bytes": 34560
+  },
+  {
+   "path": "m003/sfincs.ind",
+   "sha256": "e7b43a81b23b1bb33cc43656a173553eafd67649db40f1b89ef62fd3afb9da4b",
+   "bytes": 34564
+  },
+  {
+   "path": "m003/sfincs.inp",
+   "sha256": "db098526a0e1aadc03b300e805f73d72b07b9f84c3101d89a343c83aba3f1611",
+   "bytes": 683
+  },
+  {
+   "path": "m003/sfincs.man",
+   "sha256": "c73c02514e314e8fc52a61e7eb6a187120e621c81202ddf5ddb1054d28bc1a21",
+   "bytes": 34560
+  },
+  {
+   "path": "m003/sfincs.msk",
+   "sha256": "58db86d83cf2a2aaf506461e076ba9473a60fbeb5df0075d95e33bcecea747f7",
+   "bytes": 8640
+  },
+  {
+   "path": "m003/sfincs.obs",
+   "sha256": "35bc44f1aa298cd154aaded0f87b10bcea71cbcb69f3fcab6e58f7d9bf791b45",
+   "bytes": 14
+  },
+  {
+   "path": "m003/sfincs.prcp",
+   "sha256": "c28c0cfb94c415db6dbbabd19cb65fdfe72f746daa3bf11e9af7f1e6dd13d677",
+   "bytes": 82
+  },
+  {
+   "path": "m004/sfincs.bnd",
+   "sha256": "078eca61a583f262c63f418adde4b3d466b1ee536372982008f5e47388a40e16",
+   "bytes": 23
+  },
+  {
+   "path": "m004/sfincs.bzs",
+   "sha256": "b949318bce6f776fe2a75f67567a7d1adcecd1a665de77fcfbab09ae1d7d6e95",
+   "bytes": 3283
+  },
+  {
+   "path": "m004/sfincs.dep",
+   "sha256": "330cc068d207ee25ce8eb1e9962c60b0e798eeb92e6828e9824b6a13f4528ec8",
+   "bytes": 34560
+  },
+  {
+   "path": "m004/sfincs.ind",
+   "sha256": "e7b43a81b23b1bb33cc43656a173553eafd67649db40f1b89ef62fd3afb9da4b",
+   "bytes": 34564
+  },
+  {
+   "path": "m004/sfincs.inp",
+   "sha256": "db098526a0e1aadc03b300e805f73d72b07b9f84c3101d89a343c83aba3f1611",
+   "bytes": 683
+  },
+  {
+   "path": "m004/sfincs.man",
+   "sha256": "d4901d87049fbaed62c87634e5850942fd86a54978d625ed1c04b35247871338",
+   "bytes": 34560
+  },
+  {
+   "path": "m004/sfincs.msk",
+   "sha256": "58db86d83cf2a2aaf506461e076ba9473a60fbeb5df0075d95e33bcecea747f7",
+   "bytes": 8640
+  },
+  {
+   "path": "m004/sfincs.obs",
+   "sha256": "35bc44f1aa298cd154aaded0f87b10bcea71cbcb69f3fcab6e58f7d9bf791b45",
+   "bytes": 14
+  },
+  {
+   "path": "m004/sfincs.prcp",
+   "sha256": "c28c0cfb94c415db6dbbabd19cb65fdfe72f746daa3bf11e9af7f1e6dd13d677",
+   "bytes": 82
+  },
+  {
+   "path": "masscheck/sfincs.dep",
+   "sha256": "330cc068d207ee25ce8eb1e9962c60b0e798eeb92e6828e9824b6a13f4528ec8",
+   "bytes": 34560
+  },
+  {
+   "path": "masscheck/sfincs.ind",
+   "sha256": "e7b43a81b23b1bb33cc43656a173553eafd67649db40f1b89ef62fd3afb9da4b",
+   "bytes": 34564
+  },
+  {
+   "path": "masscheck/sfincs.inp",
+   "sha256": "6750d20679df63a6a83cd4ed5eef31d3e0d8a4a72be9567100ecd9f8bbad8baa",
+   "bytes": 630
+  },
+  {
+   "path": "masscheck/sfincs.man",
+   "sha256": "6e18537b5c3b1993dd6fc57d768290860fc45a718882add988ef28072190d5e0",
+   "bytes": 34560
+  },
+  {
+   "path": "masscheck/sfincs.msk",
+   "sha256": "d55773ec201b86d5a6c8ce156b5c87e8a5803d1675134672bae22fd9af667551",
+   "bytes": 8640
+  },
+  {
+   "path": "masscheck/sfincs.obs",
+   "sha256": "35bc44f1aa298cd154aaded0f87b10bcea71cbcb69f3fcab6e58f7d9bf791b45",
+   "bytes": 14
+  },
+  {
+   "path": "masscheck/sfincs.prcp",
+   "sha256": "677a0ae21f0c3ff6b11c395a666aa2d6771e7ab9401b54b1677209651cda2822",
+   "bytes": 80
+  }
+ ],
+ "members": [
+  {
+   "member": 0,
+   "n_factor": 0.8,
+   "flooded_area_km2": 3.4425,
+   "max_depth_m": 1.14106,
+   "site_peak_level_m": 1.56635,
+   "max_level_m": 5.37095,
+   "inland_reach_km": 2.275
+  },
+  {
+   "member": 1,
+   "n_factor": 0.9,
+   "flooded_area_km2": 3.3675,
+   "max_depth_m": 1.13908,
+   "site_peak_level_m": 1.55717,
+   "max_level_m": 5.3738,
+   "inland_reach_km": 2.225
+  },
+  {
+   "member": 2,
+   "n_factor": 1.0,
+   "flooded_area_km2": 3.2875,
+   "max_depth_m": 1.1367,
+   "site_peak_level_m": 1.54752,
+   "max_level_m": 5.37724,
+   "inland_reach_km": 2.225
+  },
+  {
+   "member": 3,
+   "n_factor": 1.1,
+   "flooded_area_km2": 3.2175,
+   "max_depth_m": 1.1334,
+   "site_peak_level_m": 1.53659,
+   "max_level_m": 5.38041,
+   "inland_reach_km": 2.225
+  },
+  {
+   "member": 4,
+   "n_factor": 1.2,
+   "flooded_area_km2": 3.14,
+   "max_depth_m": 1.12955,
+   "site_peak_level_m": 1.52429,
+   "max_level_m": 5.38219,
+   "inland_reach_km": 2.225
+  }
+ ],
+ "summary": {
+  "n_members": 5,
+  "flooded_area_km2": {
+   "p10": 3.171,
+   "p50": 3.2875,
+   "p90": 3.4125,
+   "min": 3.14,
+   "max": 3.4425
+  },
+  "max_depth_m": {
+   "p10": 1.13109,
+   "p50": 1.1367,
+   "p90": 1.14027,
+   "min": 1.12955,
+   "max": 1.14106
+  },
+  "site_peak_level_m": {
+   "p10": 1.52921,
+   "p50": 1.54752,
+   "p90": 1.56268,
+   "min": 1.52429,
+   "max": 1.56635
+  },
+  "inland_reach_km": {
+   "p10": 2.225,
+   "p50": 2.225,
+   "p90": 2.255,
+   "min": 2.225,
+   "max": 2.275
+  },
+  "level_series": {
+   "times": [
+    "2000-01-01T00:00:00",
+    "2000-01-01T00:15:00",
+    "2000-01-01T00:30:00",
+    "2000-01-01T00:45:00",
+    "2000-01-01T01:00:00",
+    "2000-01-01T01:15:00",
+    "2000-01-01T01:30:00",
+    "2000-01-01T01:45:00",
+    "2000-01-01T02:00:00",
+    "2000-01-01T02:15:00",
+    "2000-01-01T02:30:00",
+    "2000-01-01T02:45:00",
+    "2000-01-01T03:00:00",
+    "2000-01-01T03:15:00",
+    "2000-01-01T03:30:00",
+    "2000-01-01T03:45:00",
+    "2000-01-01T04:00:00",
+    "2000-01-01T04:15:00",
+    "2000-01-01T04:30:00",
+    "2000-01-01T04:45:00",
+    "2000-01-01T05:00:00",
+    "2000-01-01T05:15:00",
+    "2000-01-01T05:30:00",
+    "2000-01-01T05:45:00",
+    "2000-01-01T06:00:00",
+    "2000-01-01T06:15:00",
+    "2000-01-01T06:30:00",
+    "2000-01-01T06:45:00",
+    "2000-01-01T07:00:00",
+    "2000-01-01T07:15:00",
+    "2000-01-01T07:30:00",
+    "2000-01-01T07:45:00",
+    "2000-01-01T08:00:00",
+    "2000-01-01T08:15:00",
+    "2000-01-01T08:30:00",
+    "2000-01-01T08:45:00",
+    "2000-01-01T09:00:00",
+    "2000-01-01T09:15:00",
+    "2000-01-01T09:30:00",
+    "2000-01-01T09:45:00",
+    "2000-01-01T10:00:00",
+    "2000-01-01T10:15:00",
+    "2000-01-01T10:30:00",
+    "2000-01-01T10:45:00",
+    "2000-01-01T11:00:00",
+    "2000-01-01T11:15:00",
+    "2000-01-01T11:30:00",
+    "2000-01-01T11:45:00",
+    "2000-01-01T12:00:00",
+    "2000-01-01T12:15:00",
+    "2000-01-01T12:30:00",
+    "2000-01-01T12:45:00",
+    "2000-01-01T13:00:00",
+    "2000-01-01T13:15:00",
+    "2000-01-01T13:30:00",
+    "2000-01-01T13:45:00",
+    "2000-01-01T14:00:00",
+    "2000-01-01T14:15:00",
+    "2000-01-01T14:30:00",
+    "2000-01-01T14:45:00",
+    "2000-01-01T15:00:00",
+    "2000-01-01T15:15:00",
+    "2000-01-01T15:30:00",
+    "2000-01-01T15:45:00",
+    "2000-01-01T16:00:00",
+    "2000-01-01T16:15:00",
+    "2000-01-01T16:30:00",
+    "2000-01-01T16:45:00",
+    "2000-01-01T17:00:00",
+    "2000-01-01T17:15:00",
+    "2000-01-01T17:30:00",
+    "2000-01-01T17:45:00",
+    "2000-01-01T18:00:00",
+    "2000-01-01T18:15:00",
+    "2000-01-01T18:30:00",
+    "2000-01-01T18:45:00",
+    "2000-01-01T19:00:00",
+    "2000-01-01T19:15:00",
+    "2000-01-01T19:30:00",
+    "2000-01-01T19:45:00",
+    "2000-01-01T20:00:00",
+    "2000-01-01T20:15:00",
+    "2000-01-01T20:30:00",
+    "2000-01-01T20:45:00",
+    "2000-01-01T21:00:00",
+    "2000-01-01T21:15:00",
+    "2000-01-01T21:30:00",
+    "2000-01-01T21:45:00",
+    "2000-01-01T22:00:00",
+    "2000-01-01T22:15:00",
+    "2000-01-01T22:30:00",
+    "2000-01-01T22:45:00",
+    "2000-01-01T23:00:00",
+    "2000-01-01T23:15:00",
+    "2000-01-01T23:30:00",
+    "2000-01-01T23:45:00",
+    "2000-01-02T00:00:00"
+   ],
+   "p10": [
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.30233,
+    1.30989,
+    1.31746,
+    1.32512,
+    1.33295,
+    1.34093,
+    1.34914,
+    1.35759,
+    1.3587,
+    1.35981,
+    1.36094,
+    1.36208,
+    1.36323,
+    1.36438,
+    1.36552,
+    1.36664,
+    1.38663,
+    1.48333,
+    1.52921,
+    1.49681,
+    1.45277,
+    1.42087,
+    1.39649,
+    1.38181,
+    1.37514,
+    1.37198,
+    1.37016,
+    1.36879,
+    1.36753,
+    1.36624,
+    1.3649,
+    1.36349,
+    1.36202,
+    1.36052,
+    1.359,
+    1.35747,
+    1.35594,
+    1.35444,
+    1.35295,
+    1.3515,
+    1.35009,
+    1.34871,
+    1.34738,
+    1.34609,
+    1.34485,
+    1.34366,
+    1.34251,
+    1.3414,
+    1.34035,
+    1.33933,
+    1.33835,
+    1.33742,
+    1.33653,
+    1.33567,
+    1.33485,
+    1.33407
+   ],
+   "p50": [
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.30233,
+    1.30989,
+    1.31748,
+    1.32516,
+    1.33304,
+    1.34111,
+    1.34944,
+    1.35804,
+    1.35934,
+    1.36064,
+    1.36196,
+    1.36329,
+    1.36462,
+    1.36593,
+    1.36718,
+    1.36844,
+    1.4183,
+    1.51513,
+    1.54752,
+    1.50591,
+    1.46118,
+    1.42414,
+    1.39916,
+    1.38525,
+    1.3783,
+    1.37492,
+    1.37317,
+    1.37212,
+    1.37132,
+    1.37059,
+    1.36984,
+    1.36902,
+    1.36813,
+    1.36715,
+    1.3661,
+    1.36498,
+    1.3638,
+    1.36257,
+    1.36131,
+    1.36002,
+    1.35872,
+    1.35742,
+    1.35612,
+    1.35483,
+    1.35356,
+    1.35231,
+    1.35109,
+    1.3499,
+    1.34873,
+    1.3476,
+    1.3465,
+    1.34543,
+    1.3444,
+    1.3434,
+    1.34243,
+    1.34149
+   ],
+   "p90": [
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.2948,
+    1.30233,
+    1.30991,
+    1.3175,
+    1.32523,
+    1.33318,
+    1.34136,
+    1.34987,
+    1.3587,
+    1.36026,
+    1.36183,
+    1.36342,
+    1.365,
+    1.36652,
+    1.36793,
+    1.36919,
+    1.37158,
+    1.45381,
+    1.54177,
+    1.56268,
+    1.51971,
+    1.46997,
+    1.42535,
+    1.39936,
+    1.38654,
+    1.37971,
+    1.3762,
+    1.37439,
+    1.3734,
+    1.37278,
+    1.37231,
+    1.37187,
+    1.37142,
+    1.37093,
+    1.37039,
+    1.36977,
+    1.3691,
+    1.36835,
+    1.36754,
+    1.36668,
+    1.36575,
+    1.36477,
+    1.36376,
+    1.36271,
+    1.36163,
+    1.36053,
+    1.35942,
+    1.3583,
+    1.35718,
+    1.35607,
+    1.35496,
+    1.35387,
+    1.35279,
+    1.35173,
+    1.35069,
+    1.34967,
+    1.34867
+   ]
+  },
+  "map": {
+   "cols": 40,
+   "rows": 24,
+   "cell_m": 150.0,
+   "extent_m": [
+    0.0,
+    0.0,
+    6000.0,
+    3600.0
+   ],
+   "crs": "local",
+   "classes_m": [
+    0.15,
+    0.5,
+    1.0,
+    2.0
+   ],
+   "member": 2,
+   "grid": [
+    "sss4441211100000000000000000000000000000",
+    "sss4441221110000000000000000000000000000",
+    "sss4442222110000000000000000000000000000",
+    "sss4442222111000000000000000000000000000",
+    "sss4442222211000000000000000000000000000",
+    "sss4442222211100000000000000000000000000",
+    "sss4442322221100000000000000000000000000",
+    "sss4442322221110000000000000000000000000",
+    "sss4442322221110000000000000000000000000",
+    "sss4442332222110000000000000000000000000",
+    "sss4444444444110000000000000000000000000",
+    "sss4444444444444444433000000000000000000",
+    "sss4442332222110444433333333222211000000",
+    "sss4442332222110000000003333222200000000",
+    "sss4442322221110000000000000000000000000",
+    "sss4442322221110000000000000000000000000",
+    "sss4442322221100000000000000000000000000",
+    "sss4442222211100000000000000000000000000",
+    "sss4442222211100000000000000000000000000",
+    "sss4442222111000000000000000000000000000",
+    "sss4442222110000000000000000000000000000",
+    "sss4442221110000000000000000000000000000",
+    "sss4441221100000000000000000000000000000",
+    "sss4441211100000000000000000000000000000"
+   ],
+   "cog": "hmax.tif"
+  },
+  "flood_depth_m": 0.15,
+  "site": {
+   "x_m": 2000.0,
+   "y_m": 2400.0
+  }
+ },
+ "outputs": [
+  {
+   "path": "m000/sfincs_map.nc",
+   "sha256": "0b02f286165a51c1324570049da95ab2002429802e6d565f92457e9f52750670",
+   "bytes": 170957
+  },
+  {
+   "path": "m000/sfincs_his.nc",
+   "sha256": "06600b11d247cf2422b0dd2a23adececb7430e1af964d9aec52475c41818fc09",
+   "bytes": 75734
+  },
+  {
+   "path": "m000/sfincs.inp",
+   "sha256": "db098526a0e1aadc03b300e805f73d72b07b9f84c3101d89a343c83aba3f1611",
+   "bytes": 683
+  },
+  {
+   "path": "m001/sfincs_map.nc",
+   "sha256": "7db147022573ac65459c2a9af70fb67d56e8ed9a76e5599d8d82208953cde4d6",
+   "bytes": 172473
+  },
+  {
+   "path": "m001/sfincs_his.nc",
+   "sha256": "b0d0b3cd39205280ac9d175cf7acc3232f0a445723160f35025cce0b6654436c",
+   "bytes": 75734
+  },
+  {
+   "path": "m001/sfincs.inp",
+   "sha256": "db098526a0e1aadc03b300e805f73d72b07b9f84c3101d89a343c83aba3f1611",
+   "bytes": 683
+  },
+  {
+   "path": "m002/sfincs_map.nc",
+   "sha256": "e5d50739c5ffec6de612447bf4a896a854ea44a665a69fc3a2438d909cb70031",
+   "bytes": 173280
+  },
+  {
+   "path": "m002/sfincs_his.nc",
+   "sha256": "12dbb8a148f72eb934369c614d2dafd6f77624a8aaf6c237d673a80431bdf476",
+   "bytes": 75734
+  },
+  {
+   "path": "m002/sfincs.inp",
+   "sha256": "db098526a0e1aadc03b300e805f73d72b07b9f84c3101d89a343c83aba3f1611",
+   "bytes": 683
+  },
+  {
+   "path": "m003/sfincs_map.nc",
+   "sha256": "780dada5f723e4d000682a0927c0592903a5da72d7fef08d6182f0fcd7d4e27b",
+   "bytes": 173963
+  },
+  {
+   "path": "m003/sfincs_his.nc",
+   "sha256": "a3b78f8a12c09a46e2dc4598ede2484722746c0061a3444431a10c95e3fddb96",
+   "bytes": 75734
+  },
+  {
+   "path": "m003/sfincs.inp",
+   "sha256": "db098526a0e1aadc03b300e805f73d72b07b9f84c3101d89a343c83aba3f1611",
+   "bytes": 683
+  },
+  {
+   "path": "m004/sfincs_map.nc",
+   "sha256": "d526eed8af45a6aa4c51b15ddbb078c2ce744930c6d6e526aaee60aa4290a349",
+   "bytes": 174956
+  },
+  {
+   "path": "m004/sfincs_his.nc",
+   "sha256": "db2d361f60780d0724bc3c498d1053c23f67da57f95f649de26932fce2766293",
+   "bytes": 75734
+  },
+  {
+   "path": "m004/sfincs.inp",
+   "sha256": "db098526a0e1aadc03b300e805f73d72b07b9f84c3101d89a343c83aba3f1611",
+   "bytes": 683
+  },
+  {
+   "path": "hmax.tif",
+   "sha256": "7aa9ad4cd55d37f5a484ea292a026baf4299bfbcda71ee16ab81ec6d8d5a5c34",
+   "bytes": 24331,
+   "kind": "cog",
+   "member": 2
+  }
+ ],
+ "numbers_sha256": "f4a4b8612fe9c8714588a766b46c824927c825ee7aaa323be2469053ed71cc59",
+ "checks": [
+  {
+   "name": "sfincs_finished",
+   "ok": true,
+   "value": true,
+   "limit": true,
+   "note": "SFINCS wrote its map output for every member and the mass check"
+  },
+  {
+   "name": "depths_valid",
+   "ok": true,
+   "value": 0,
+   "limit": 0,
+   "note": "cells with a missing or negative maximum depth"
+  },
+  {
+   "name": "levels_bounded",
+   "ok": true,
+   "value": 0,
+   "limit": 0,
+   "note": "flooded cells whose peak level is above both the highest sea level plus the rain and a margin (1.91 m) and their own ground plus 0.5 m (highest level anywhere 5.38 m)"
+  },
+  {
+   "name": "mass_balance",
+   "ok": true,
+   "value": -0.1812,
+   "limit": 1.0,
+   "note": "closed-basin run: stored volume gain against the rain volume, percent (water films below SFINCS's output threshold may hold up to 0.18 % more)"
+  },
+  {
+   "name": "ensemble_effect",
+   "ok": true,
+   "value": 0.3446,
+   "limit": 0,
+   "note": "the roughness members differ in site peak level or flooded area"
+  }
+ ],
+ "ok": true,
+ "spec": {
+  "schema": "kai.river.spec/1",
+  "name": "SFINCS valley example",
+  "site": {
+   "name": "Synthetic valley (SFINCS)",
+   "lat": 0.0,
+   "lon": 0.0
+  },
+  "engine": "sfincs",
+  "scenario": {
+   "kind": "example",
+   "project": "valley",
+   "roughness_spread": 0.2
+  },
+  "ensemble": {
+   "size": 5,
+   "seed": 0
+  },
+  "tier": "quick"
+ },
+ "spec_sha256": "47f8292f1d9603603916cdea66fdc7f3cea18ff1feb6e3711348701c4cfd3235",
+ "required_cap": "sfincs",
+ "kai_engine_version": "0.4.0"
+}
