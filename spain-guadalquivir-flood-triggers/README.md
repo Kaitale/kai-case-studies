@@ -56,10 +56,9 @@ with 44 false payouts, and the fixed m³/s trigger 41 with 31. Paper and technic
 
 ![The 2010-11 flood read seven ways](figures/gq_flood_maps.png)
 
-Notebook 2 maps what was under water. `flood_maps.py` runs the SFINCS flood model (Deltares, open source under GNU
-GPL-3.0, built from source by KAI) on 54 km of the Guadalquivir below the Mengíbar gauge (CEDEX 5004) at 30 m, on the
-Copernicus DEM with roughness from ESA WorldCover, for water year 2010-11, the largest flood in the gauge's record. Each
-way of reading that year gives a flow; each flow gives a map.
+Notebook 2 maps what was under water. `flood_maps.py` runs SFINCS (Deltares, open source, built from source by KAI)
+at 30 m on 54 km of river below the Mengíbar gauge, for its biggest recorded flood (2010-11), once per reading of that
+year. **Explore the maps interactively:** [kaiwaterenergy.com/case-guadalquivir#flood-maps](https://www.kaiwaterenergy.com/case-guadalquivir#flood-maps).
 
 | 2010-11 at Mengíbar | Return period | Flow (m³/s) | 1-in-5 trigger | Flooded (ha) | Share of the measured flood mapped |
 |---|---|---|---|---|---|
@@ -71,23 +70,18 @@ way of reading that year gives a flow; each flow gives a map.
 | Rainfall only, October–April total | 1-in-8.5 | 345 | pays | 224 | 25 % |
 | Rainfall only, wettest 3 days | 1-in-2 | 139 | does not pay | 22 | 2 % |
 
-*Return-period readings use the flow of that return period on the gauge's own curve, which is how a return-period
-trigger is written. The flooded area is land outside the river's banks (the river at 30 m³/s) under at least 15 cm of
-water. Per index, with cropland, olive groves and built-up land: [`results/flood_maps_by_index.csv`](results/flood_maps_by_index.csv);
-everything: [`results/flood_maps.json`](results/flood_maps.json); depth maps (GeoTIFF, decimetres):
-[`data/flood_maps/`](data/flood_maps/).*
+*Return-period readings map the gauge's flow at that return period, as a return-period trigger is written. Flooded =
+outside the banks, at least 15 cm deep. Per index with land cover: [`results/flood_maps_by_index.csv`](results/flood_maps_by_index.csv);
+all numbers: [`results/flood_maps.json`](results/flood_maps.json); depth maps: [`data/flood_maps/`](data/flood_maps/).*
 
-* **The indices got the year right and the size wrong.** Between a 1-in-9 and a 1-in-32 flood the river leaves its
-  incised channel and fills the meander lobes, so the flooded area grows three to seven times. A payout that steps up
-  with the index would have paid for a flood a quarter of the size.
-* **The flood model, checked.** At the gauge's 100-year flood it agrees with the Copernicus (JRC) global flood hazard
-  map on two-thirds of the area (critical success index 0.56). At the 10-year flood Copernicus floods six times more:
-  at 90 m it cannot see the 60 m channel cut into the valley. Spain's official flood zones (SNCZI) are the next check:
-  put `laminasPB-q10.zip` and `laminasPB-q100.zip` from
-  [MITECO's download page](https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/agua/zi-lamina.html) in
-  `map_cache/` and `flood_maps.py` adds them.
-* **Limits.** Daily mean flows; a surface DEM (riparian canopy taken out, buildings left in) with a burnt 1.5 m
-  channel; tributaries below Mengíbar left out; steady flows; one reach, one year.
+* **Right year, wrong size.** Every index that paid read a 1-in-6 to 1-in-9 flood; the gauge measured a 1-in-32, with
+  three to seven times the land under water. Between those return periods the river leaves its channel.
+* **Checked** against the Copernicus (JRC) global map: two-thirds overlap at the 100-year flood (CSI 0.56). At the
+  10-year flood the 90 m Copernicus map floods six times more, as it cannot resolve the incised channel. Spain's
+  official SNCZI zones are added when `laminasPB-q10.zip` and `laminasPB-q100.zip` (from
+  [MITECO](https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/agua/zi-lamina.html)) are in `map_cache/`.
+* **Limits.** Daily mean flows held steady; surface DEM with riparian canopy removed and a 1.5 m channel burnt in;
+  tributaries below Mengíbar left out; one reach, one year.
 
 Rebuild: build SFINCS from its source (https://github.com/Deltares/SFINCS, tag `v2.5.0_Hautacam_release`), then
 `SFINCS_EXE=/path/to/sfincs python flood_maps.py` (about 25 minutes on two cores; downloads about 280 MB of open data
